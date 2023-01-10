@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-01-09T16:50:02-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Conformal maps</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\DeclareMathOperator{\RE}{Re}
+  \DeclareMathOperator{\IM}{Im}
+  \DeclareMathOperator{\ess}{ess}
+  \DeclareMathOperator{\intr}{int}
+  \DeclareMathOperator{\dist}{dist}
+  \DeclareMathOperator{\dom}{dom}
+  \DeclareMathOperator{\diag}{diag}
+  \DeclareMathOperator{\span}{span}
+  \DeclareMathOperator{\null}{null}
+  \DeclareMathOperator{\rank}{rank}
+  \DeclareMathOperator{\col}{col}
+  \DeclareMathOperator{\cl}{cl}
+  \DeclareMathOperator{\row}{row}
+  \DeclareMathOperator{\proj}{proj}
+  \DeclareMathOperator{\ball}{ball}
+  \DeclareMathOperator\re{\mathrm {Re~}}
+  \DeclareMathOperator\im{\mathrm {Im~}}
+  
+  \newcommand\dd{\mathrm d}
+  \newcommand{\eps}{\varepsilon}
+  \newcommand{\To}{\longrightarrow}
+  \newcommand{\hilbert}{\mathcal{H}}
+  \newcommand{\s}{\mathcal{S}_2}
+  \newcommand{\A}{\mathcal{A}}
+  \newcommand\h{\mathcal{H}}
+  \newcommand{\J}{\mathcal{J}}
+  \newcommand{\M}{\mathcal{M}}
+  \newcommand{\F}{\mathbb{F}}
+  \newcommand{\K}{\mathcal{K}}
+  \newcommand{\N}{\mathcal{N}}
+  \newcommand{\T}{\mathbb{T}}
+  \newcommand{\W}{\mathcal{W}}
+  \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Y}{\mathcal{Y}}
+  \newcommand{\D}{\mathbb{D}}
+  \newcommand{\C}{\mathbb{C}}
+  \newcommand{\BOP}{\mathbf{B}}
+  \newcommand{\Z}{\mathbb{Z}}
+  \newcommand{\BH}{\mathbf{B}(\mathcal{H})}
+  \newcommand{\KH}{\mathcal{K}(\mathcal{H})}
+  \newcommand{\pick}{\mathcal{P}_2}
+  \newcommand{\schur}{\mathcal{S}_2}
+  \newcommand{\R}{\mathbb{R}}
+  \newcommand{\Complex}{\mathbb{C}}
+  \newcommand{\Field}{\mathbb{F}}
+  \newcommand{\RPlus}{\Real^{+}}
+  \newcommand{\Polar}{\mathcal{P}_{\s}}
+  \newcommand{\Poly}{\mathcal{P}(E)}
+  \newcommand{\EssD}{\mathcal{D}}
+  \newcommand{\Lop}{\mathcal{L}}
+  \newcommand{\cc}[1]{\overline{#1}}
+  \newcommand{\abs}[1]{\left\vert#1\right\vert}
+  \newcommand{\set}[1]{\left\{#1\right\}}
+  \newcommand{\seq}[1]{\left\lt#1\right&gt;}
+  \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+  \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+  \newcommand{\tr}{\operatorname{tr}}
+  \newcommand{\ran}[1]{\operatorname{ran}#1}
+  \newcommand{\nt}{\stackrel{\mathrm {nt}}{\to}}
+  \newcommand{\pnt}{\xrightarrow{pnt}}
+  \newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}
+  \newcommand{\ad}{^\ast}
+  \newcommand{\inv}{^{-1}}
+  \newcommand{\adinv}{^{\ast -1}}
+  \newcommand{\invad}{^{-1 \ast}}
+  \newcommand\Pick{\mathcal P}
+  \newcommand\Ha{\mathbb{H}}
+  \newcommand{\HH}{\Ha\times\Ha}
+  \newcommand\Htau{\mathbb{H}(\tau)}
+  \newcommand{\vp}{\varphi}
+  \newcommand{\ph}{\varphi}
+  \newcommand\al{\alpha}
+  \newcommand\ga{\gamma}
+  \newcommand\de{\delta}
+  \newcommand\ep{\varepsilon}
+  \newcommand\la{\lambda}
+  \newcommand\up{\upsilon}
+  \newcommand\si{\sigma}
+  \newcommand\beq{\begin{equation}}
+  \newcommand\ds{\displaystyle}
+  \newcommand\eeq{\end{equation}}
+  \newcommand\df{\stackrel{\rm def}{=}}
+  \newcommand\ii{\mathrm i}
+  \newcommand\net[1]{\langle #1 \rangle}
+  \newcommand{\vectwo}[2]
+  {
+     \begin{pmatrix} #1 \\ #2 \end{pmatrix}
+  }
+  \newcommand{\vecthree}[3]
+  {
+     \begin{pmatrix} #1 \\ #2 \\ #3 \end{pmatrix}
+  }
+  \newcommand\blue{\color{blue}}
+  \newcommand\black{\color{black}}
+  \newcommand\red{\color{red}}
+  
+  \newcommand\nn{\nonumber}
+  \newcommand\bbm{\begin{bmatrix}}
+  \newcommand\ebm{\end{bmatrix}}
+  \newcommand\bpm{\begin{pmatrix}}
+  \newcommand\epm{\end{pmatrix}}
+  \numberwithin{equation}{section}
+  \newcommand\nin{\noindent}
+  \newcommand{\nCr}[2]{\,_{#1}C_{#2}} 
+  \newcommand{\vec}[1]{{\bf #1}}
+  \newcommand{\ps}{\displaystyle \sum_{n=0}^\infty a_n x^n}
+  \newcommand{\psg}{\displaystyle \sum_{n=0}^\infty b_n x^n}
+  \newcommand{\hz}{\,\mathrm{Hz}}
+  \newcommand{\d}{^\prime}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="comp411.html"><span class="title">Notes on complex analysis</span></a></h1>
+<p class="byline">Ryan Tully-Doyle</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-1.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-1.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title">Conformal maps and linear fractional transformations</span></a><ul><li><a href="section-1.html" data-scroll="section-1" class="active">Conformal maps</a></li></ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-1"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Conformal maps</span>
+</h2>
+<p id="p-1">Certain functions behave like little rigid rotations locally. <article class="definition definition-like" id="definition-1"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
+</h6>A function \(f: A \to B\) is called <dfn class="terminology">conformal</dfn> if for each \(z_0 \in A\text{,}\) \(f\) rotates tangent vectors to curves passing through \(z_0\) by a fixed angle \(\theta\) and stretches tangent vectors to curves by a fixed factor \(r\text{.}\)</article></p>
+<p id="p-2">There is a close connection between analytic maps and conformal maps.</p>
+<article class="theorem theorem-like" id="theorem-1"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
+</h6>
+<p id="p-3">Let \(f: A \to B\) be analytic and let \(f^\prime(z_0) \neq 0\) for all \(z_0 \in A\text{.}\) Then \(f\) is conformal.</p></article><p id="p-4">This is pretty straighforward to see via the chain rule. Let \(\gamma(t)\) be a (differentiable) path contained in \(A\) with \(\gamma(0) = z_0\text{.}\) Let \(\sigma(t)\) be the image of \(\gamma\) under \(f\) defined by \(\sigma(t) = f(\gamma(t))\text{.}\) Then the chain rule gives</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma\d(t) = f\d(\gamma(t)) \cdot \gamma\d(t)
+\end{equation*}
+</div>
+<p data-braille="continuation">which in turn gives</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma\d(0) = f\d(z_0) \cdot \gamma\d(0).
+\end{equation*}
+</div>
+<p data-braille="continuation">That is, if \(f\d(z_0) = r e^{i \theta}\) the image of the derivative of any curve \(\gamma\) through \(z_0\) is rotated by \(\theta\) and stretched by \(r\text{.}\)</p>
+<p id="p-5">Note that the condition that \(f\d(z_0) \neq 0\) is necessary. For one, it obviously covers up the relationship between a curve and its image in the relation above. But the problem is deeper. Consider the function \(f(z) = z^2\text{.}\) Consider the lines that run along the \(x-\) and \(y-\)axis. These lines cross at a right angle at \(z = 0\text{,}\) but since both lines are mapped to the real axis under \(f\text{,}\) their images intersect at an angle of \(\pi\) radians. For this reason, points at which \(f\d(z_0) = 0\) are called <dfn class="terminology">singular</dfn> and do not correspond to points of local conformality.</p>
+<p id="p-6">Much of the behavior of analytic functions should be thought about in small neighborhoods around points. The next theorem is one that you learn in first year calculus and describes the relationship between the derivative of a function and the derivative of its inverse (when that inverse exists). Analytic functions away from singular points are <em class="emphasis">locally invertible</em>.</p>
+<article class="theorem theorem-like" id="theorem-2"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse function theorem.</span>
+</h6>
+<p id="p-7">Let \(f:A \to \C\) be analytic and \(f\d(z_0) \neq 0\) for \(z_0 \in A\text{.}\) Then there exists a neighborhood \(U\) of \(z_0\) and a neighborhood \(V\) of \(f(z_0)\) so that</p>
+<ol class="decimal">
+<li id="li-1">the restriction \(f:U \to V\) is a bijection,</li>
+<li id="li-2">\(f\inv:V \to U\) is analytic,</li>
+<li id="li-3">and<div class="displaymath">
+\begin{equation*}
+\frac{d}{dw} f\inv(w) = \frac{1}{f\d(z)} 
+\end{equation*}
+</div>where \(w = f(z)\text{.}\)</li>
+</ol></article><p id="p-8">The inverse function theorem will let us make more connections between conformal maps and their inverses.</p>
+<article class="proposition theorem-like" id="proposition-1"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
+</h6>
+<p id="p-9">If a map \(f:A \to B\) is conformal and bijective, then \(f\inv:B \to A\) is conformal and bijective.</p></article><article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-10">Because \(f\) is bijective, \(f\inv\) exists. Because \(f\) is conformal, for any \(z \in A\text{,}\) we must have \(f\d(z) \neq 0\text{.}\) Then the inverse function theorem gives that \(f\inv\) is analytic and</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{d}{dw} f\inv(w) = \frac{1}{f\d(z)} \neq 0, 
+\end{equation*}
+</div>
+<p data-braille="continuation">and so \(f\inv\) is also conformal.</p></article></div>
+<article class="proposition theorem-like" id="proposition-2"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
+</h6>
+<p id="p-11">If \(f:A \to B\) is conformal and bijective and \(g: B \to C\) is conformal and bijective, then \(g\circ f\) is conformal and bijective.</p></article><article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-12">This is an immediate consequence of the chain rule.</p></article></div>
+<p id="p-13">Because conformality is preserved by inverses and composition, we have the structure necessary to impose ideas from algebra on the family of conformal maps if we can make the functions compatible. An <dfn class="terminology">automorphism</dfn> is a bijection from a set onto itself.</p>
+<article class="theorem theorem-like" id="theorem-3"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
+</h6>
+<p id="p-14">The set of bijective conformal maps from a domain \(A\) to itself (that is, the set of conformal automorphisms of \(A\)) is a group, where the group operation is composition of functions.</p></article><p id="p-15">As part of our study of conformal maps, we're going to be looking a special family of automorphisms defined on the unit disk \(\D\text{,}\) but that's for later!</p>
+<p id="p-16">A typical use of bijective conformal maps is to change problems in one domain to problems in a different domain. It might not be obvious why, but frequently we can use tools in one domain that might not be available in another. Because bijective conformal maps preserve information about paths, solving a problem in one domain can be easily extended to a solution in a conformal relative.</p>
+<article class="definition definition-like" id="definition-2"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
+</h6>
+<p id="p-17">Two domains \(A, B \subset \C\) are called <dfn class="terminology">conformally equivalent</dfn> if there is a bijective conformal map \(f: A \to B\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-4"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span>
+</h6>
+<p id="p-18">Let \(A\) be a simply connected domain that isn't all of \(\C\text{.}\) Then there exists a bijective conformal map \(f: A \to \D\text{.}\) Futher, for any fixed \(z_0 \in A\text{,}\) we can find \(f\) so that \(f(z_0) = 0\) and \(f\d(z_0) &gt; 0\text{.}\) With these conditions, the map \(f\) is unique.</p></article><p id="p-19">There is a pretty easy but very striking corollary.</p>
+<article class="corollary theorem-like" id="corollary-1"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span>
+</h6>
+<p id="p-20">Any two simply connected domains, neither of which is all of \(\C\text{,}\) are conformally equivalent.</p></article><p id="p-21">Of course there are some annoyances here: we have no clue how to actually find the maps! We also don't know what happens at the boundary of the domains in the general case. Our next steps will be to address these questions.</p></section></div></main>
+</div>
+</body>
+</html>
