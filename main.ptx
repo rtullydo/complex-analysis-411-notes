@@ -139,6 +139,17 @@
             </definition>
         </p>
 
+        <p>By way of example, consider the function <m>f(z) = z^2</m> at the point <m>z_0 = 1 + 1i = \sqrt{2}e^{i\pi/4}</m>. The horizontal line through <m>z_0</m> can be parametrized by <m>\gamma(t) = (1 + t) + 1i</m> which passes through <m>z_0</m> at <m>t = 1</m>. The tangent vector at <m>t = 1</m> is <m>\gamma\d(0) = 1</m>. Now look at the image. Composing, we get
+            <me>
+                f(\gamma(t)) = (t + 1i)^2 = (t^2 - 1)  + 2ti.
+            </me> 
+        Then calculating the tangent vector to the image gives
+            <me>
+                f\d(\gamma(t))|_{t = 1} = (2t + 2i)|_{t =1} = 2 + 2i.
+            </me>
+            That is, the tangent vector has increased in length by a factor of <m>2\sqrt{2}</m> and undergone a rotation of <m>\pi/4</m> radians. If we check the vertical line through <m>z_0</m>, which can be parametrized by <m>\gamma_2(t) = 1 + 1ti</m> where <m>\gamma_2(1) = z_0</m>, we find that the tangent vector <m>\gamma_2(1) = i</m> has image <m>f(\gamma_2(1)) = -2 + 2i</m>, which again represents an increase in magnitude of <m>2\sqrt{2}</m> and a rotation of <m>\pi/4</m> radians.
+        </p>
+
         <p>There is a close connection between analytic maps and conformal maps.</p>
         <theorem>
             <p>Let <m>f: A \to B</m> be analytic and let <m>f^\prime(z_0) \neq 0</m> for all <m>z_0 \in A</m>. Then <m>f</m> is conformal.</p>.
@@ -215,6 +226,79 @@
 
         <p>Of course there are some annoyances here: we have no clue how to actually find the maps! We also don't know what happens at the boundary of the domains in the general case. Our next steps will be to address these questions.</p>
     </section>
+
+    <section>
+        <title> Simply connected sets, boundaries, and the Riemann mapping theorem</title>
+        <p>
+            Before we go on, we're going to need to deal with the issue that analytic maps don't always act nicely on the boundaries of their domains. (Remember, analytic and holomorphic are local properties defined on open sets, and the <q>edge</q> of a set isn't open.) Let us recall that a set is called <term>simply connected</term> if it <q>has no holes in it</q>. This intuitive idea of no holes corresponds to the rigorous notion a simply connected set is one in which every simple closed curve can be continuously deformed into a point without leaving the set. The act of continuously deforming a curve within a set is called <term>homotopy</term>. Two curves are said to be <term>homotopic</term> if we can find a homotopy from one curve to the other. More precisely, a homotopy in a domain <m>A</m> from a curve <m>\gamma_1</m> to a a curve <m>\gamma_2</m> is a continuous function <m>H(s, t)</m> where <m>H(s, t) \subset A</m> for all <m>s \in [0,1]</m>, and the endpoints have <m>H(0,t) = \gamma_1(t)</m>, and <m>H(1, t) = \gamma_2(t)</m>.
+        </p>
+
+        <p>Two domains <m>A, B \subset \C</m> are said to be <term>conformally equivalent</term> if there exists a bijective conformal map <m>f: A \to B</m>. The next theorem characterizes which sets are conformally equivalent to simply connected sets.</p>
+
+        <theorem>
+            <title>Riemann Mapping Theorem</title>
+            <p>Let <m>A</m> be a simply connected domain in <m>\C</m> with <m>A \neq \C</m>. Then there exists a bijective conformal map <m>f: A \to \D</m>, where <m>\D</m> is the complex unit disk. For any fixed <m>z_0 \in A</m>, we can find a unique such <m>f</m> so that <m>f(z_0) = 0</m> and <m>f\d(z_0) > 0</m>.</p>
+        </theorem>
+
+        <p>Because the maps in the theorem above are bijections, we get a striking immediate corollary.</p>
+
+        <corollary>
+            <p>Any two simply connected regions, neither one of which is all of <m>\C</m>, are conformally equivalent.</p>
+        </corollary>
+
+        <p>This is a powerful fact! Unfortunately, this theorem doesn't tell us how to fund the conformal maps that connect different sets. We'll take a deeper dive into that in the next couple of lectures.</p>
+
+        <p>Now, we'll turn to the question of what happens to the boundaries of domains under conformal maps. One way to think of the boundary of a domain <m>A</m> in <m>\C</m> is the set of points that can be reached as limits of sequences in <m>A</m>. Another is to think of it as the set of points for which any neighborhood contains points in <m>A</m> and points outside of <m>A</m>. We use the notation <m>\partial A</m> to indicated the boundary of <m>A</m>. Because domains in <m>\C</m> are open, a set and its boundary are disjoint. The <term>closure</term> of a domain <m>A</m> is <m>A \cup \partial A</m> and will be denoted <m>cl(A)</m> (we can also use <m>\cc{A}</m>, but to avoid confusion with the complex conjugate, we'll avoid that in these notes).</p>
+
+        <proposition>
+            <p>Let <m>A, B</m> be domains in <m>\C</m> with boundaries <m>\partial A, \partial B</m>. Suppose that <m>f: A \to f(A)</m> is conformal (that is, <m>f</m> is conformal from its domain to its range). If <m>f(A)</m> has boundary <m>\partial B</m> and additionally <m>f(z_0) \in B</m> for some <m>z_0 \in A</m>, then <m>f(A) = f(B)</m>.</p>
+        </proposition>
+
+        <p>Essentially, the previous proposition implies that we can find the image of a conformal map by computing the image of the boundary and keeping track of where the interior of the domain was mapped via a single point.</p>
+
+        <p>We now come to the question of when a conformal map between domains can be extended to the boundary. Note that this extension will be a <em>continuous</em> extension, not an analytic one, because we can't work on neighborhoods for points in the boundary. For nice sets, conformal maps do indeed extend to the boundary.</p>
+
+        <theorem>
+            <p>Suppose that <m>A, B</m> are bounded, simply connected regions with boundaries <m>\partial A</m> and <m>\partial B</m> that are simple, continuous, closed curves. Then any conformal map of <m>A</m> that is one-to-one onto <m>B</m> can be extended to a continuous map of <m>A \cup \partial A</m> one-to-one onto <m>B \cup \partial B</m>.</p>
+        </theorem>
+    </section>
+
+    <section>
+        <title>Exercise set 1</title>
+        <exercises>
+            <exercise>
+                <p>Let <m>S</m> be the square with corners <m>(0,1), (1,1), (1, 2), (0,2)</m>. Find the image of the square under the map <m>f(z) = z^2</m>. Where does the interior of the square map? Is the image a square?</p>
+            </exercise>
+            <exercise>
+                <p>Let <m>S</m> be the unit square in <m>\C</m>. Find the image of the square under the map <m>f(z) = z^2</m>. Make sure to indicate where the interior maps.</p>
+            </exercise>
+            <exercise>
+                <p>Find the image of the first quadrant under the map <m>f(z) = z^3</m>.</p>
+            </exercise>
+            <exercise>
+                <p>Let <m>z = x + iy</m>. Plot the set <m>A = \{xy>1 \text{ and } x, y >0\}</m>. Find the image of the set under the map <m>f(z) = z^2</m>.</p>
+            </exercise>
+
+            <exercise>
+                <p>Near which points are the following functions conformal?
+                    <ol>
+                        <li> <m>f(z) = z/(1 + 2z)</m>;</li>
+                        <li> <m>f(z) = \cc{z}</m></li>
+                        <li> <m>f(z) = \tan z</m>.</li>
+                    </ol>
+                </p>
+            </exercise>
+            <exercise>
+                <p>Let <m>a, b \in \C</m> be constant. Show that <m>f: \C \to \C</m> defined by <m>f(z) = az + b</m> can be written as a rotation followed by a magnification followed by a translation.</p>
+            </exercise>
+            <exercise>
+                <p>The Riemann mapping theorem concerns sets that are not all of <m>\C</m>. Is there a conformal map from <m>\C</m> that is one-to-one onto the unit disk <m>\D</m>? Is there a conformal map of <m>\D</m> one-to-one onto <m>\C</m>?</p>
+            </exercise>
+
+        </exercises>
+    </section>
+
+
     </chapter>
 
 

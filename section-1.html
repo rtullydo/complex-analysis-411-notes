@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2023-01-09T16:50:02-08:00       *-->
+<!--*       on 2023-01-15T11:55:34-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -178,17 +178,21 @@ MathJax.Hub.Config({
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-1.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-2.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-1.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-2.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
 <li class="link">
-<a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title">Conformal maps and linear fractional transformations</span></a><ul><li><a href="section-1.html" data-scroll="section-1" class="active">Conformal maps</a></li></ul>
+<a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title">Conformal maps and linear fractional transformations</span></a><ul>
+<li><a href="section-1.html" data-scroll="section-1" class="active">Conformal maps</a></li>
+<li><a href="section-2.html" data-scroll="section-2">Simply connected sets, boundaries, and the Riemann mapping theorem</a></li>
+<li><a href="section-3.html" data-scroll="section-3">Exercise set 1</a></li>
+</ul>
 </li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
@@ -198,11 +202,24 @@ MathJax.Hub.Config({
 <p id="p-1">Certain functions behave like little rigid rotations locally. <article class="definition definition-like" id="definition-1"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
 </h6>A function \(f: A \to B\) is called <dfn class="terminology">conformal</dfn> if for each \(z_0 \in A\text{,}\) \(f\) rotates tangent vectors to curves passing through \(z_0\) by a fixed angle \(\theta\) and stretches tangent vectors to curves by a fixed factor \(r\text{.}\)</article></p>
-<p id="p-2">There is a close connection between analytic maps and conformal maps.</p>
+<p id="p-2">By way of example, consider the function \(f(z) = z^2\) at the point \(z_0 = 1 + 1i = \sqrt{2}e^{i\pi/4}\text{.}\) The horizontal line through \(z_0\) can be parametrized by \(\gamma(t) = (1 + t) + 1i\) which passes through \(z_0\) at \(t = 1\text{.}\) The tangent vector at \(t = 1\) is \(\gamma\d(0) = 1\text{.}\) Now look at the image. Composing, we get</p>
+<div class="displaymath">
+\begin{equation*}
+f(\gamma(t)) = (t + 1i)^2 = (t^2 - 1)  + 2ti.
+\end{equation*}
+</div>
+<p data-braille="continuation">Then calculating the tangent vector to the image gives</p>
+<div class="displaymath">
+\begin{equation*}
+f\d(\gamma(t))|_{t = 1} = (2t + 2i)|_{t =1} = 2 + 2i.
+\end{equation*}
+</div>
+<p data-braille="continuation">That is, the tangent vector has increased in length by a factor of \(2\sqrt{2}\) and undergone a rotation of \(\pi/4\) radians. If we check the vertical line through \(z_0\text{,}\) which can be parametrized by \(\gamma_2(t) = 1 + 1ti\) where \(\gamma_2(1) = z_0\text{,}\) we find that the tangent vector \(\gamma_2(1) = i\) has image \(f(\gamma_2(1)) = -2 + 2i\text{,}\) which again represents an increase in magnitude of \(2\sqrt{2}\) and a rotation of \(\pi/4\) radians.</p>
+<p id="p-3">There is a close connection between analytic maps and conformal maps.</p>
 <article class="theorem theorem-like" id="theorem-1"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
 </h6>
-<p id="p-3">Let \(f: A \to B\) be analytic and let \(f^\prime(z_0) \neq 0\) for all \(z_0 \in A\text{.}\) Then \(f\) is conformal.</p></article><p id="p-4">This is pretty straighforward to see via the chain rule. Let \(\gamma(t)\) be a (differentiable) path contained in \(A\) with \(\gamma(0) = z_0\text{.}\) Let \(\sigma(t)\) be the image of \(\gamma\) under \(f\) defined by \(\sigma(t) = f(\gamma(t))\text{.}\) Then the chain rule gives</p>
+<p id="p-4">Let \(f: A \to B\) be analytic and let \(f^\prime(z_0) \neq 0\) for all \(z_0 \in A\text{.}\) Then \(f\) is conformal.</p></article><p id="p-5">This is pretty straighforward to see via the chain rule. Let \(\gamma(t)\) be a (differentiable) path contained in \(A\) with \(\gamma(0) = z_0\text{.}\) Let \(\sigma(t)\) be the image of \(\gamma\) under \(f\) defined by \(\sigma(t) = f(\gamma(t))\text{.}\) Then the chain rule gives</p>
 <div class="displaymath">
 \begin{equation*}
 \sigma\d(t) = f\d(\gamma(t)) \cdot \gamma\d(t)
@@ -215,12 +232,12 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <p data-braille="continuation">That is, if \(f\d(z_0) = r e^{i \theta}\) the image of the derivative of any curve \(\gamma\) through \(z_0\) is rotated by \(\theta\) and stretched by \(r\text{.}\)</p>
-<p id="p-5">Note that the condition that \(f\d(z_0) \neq 0\) is necessary. For one, it obviously covers up the relationship between a curve and its image in the relation above. But the problem is deeper. Consider the function \(f(z) = z^2\text{.}\) Consider the lines that run along the \(x-\) and \(y-\)axis. These lines cross at a right angle at \(z = 0\text{,}\) but since both lines are mapped to the real axis under \(f\text{,}\) their images intersect at an angle of \(\pi\) radians. For this reason, points at which \(f\d(z_0) = 0\) are called <dfn class="terminology">singular</dfn> and do not correspond to points of local conformality.</p>
-<p id="p-6">Much of the behavior of analytic functions should be thought about in small neighborhoods around points. The next theorem is one that you learn in first year calculus and describes the relationship between the derivative of a function and the derivative of its inverse (when that inverse exists). Analytic functions away from singular points are <em class="emphasis">locally invertible</em>.</p>
+<p id="p-6">Note that the condition that \(f\d(z_0) \neq 0\) is necessary. For one, it obviously covers up the relationship between a curve and its image in the relation above. But the problem is deeper. Consider the function \(f(z) = z^2\text{.}\) Consider the lines that run along the \(x-\) and \(y-\)axis. These lines cross at a right angle at \(z = 0\text{,}\) but since both lines are mapped to the real axis under \(f\text{,}\) their images intersect at an angle of \(\pi\) radians. For this reason, points at which \(f\d(z_0) = 0\) are called <dfn class="terminology">singular</dfn> and do not correspond to points of local conformality.</p>
+<p id="p-7">Much of the behavior of analytic functions should be thought about in small neighborhoods around points. The next theorem is one that you learn in first year calculus and describes the relationship between the derivative of a function and the derivative of its inverse (when that inverse exists). Analytic functions away from singular points are <em class="emphasis">locally invertible</em>.</p>
 <article class="theorem theorem-like" id="theorem-2"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse function theorem.</span>
 </h6>
-<p id="p-7">Let \(f:A \to \C\) be analytic and \(f\d(z_0) \neq 0\) for \(z_0 \in A\text{.}\) Then there exists a neighborhood \(U\) of \(z_0\) and a neighborhood \(V\) of \(f(z_0)\) so that</p>
+<p id="p-8">Let \(f:A \to \C\) be analytic and \(f\d(z_0) \neq 0\) for \(z_0 \in A\text{.}\) Then there exists a neighborhood \(U\) of \(z_0\) and a neighborhood \(V\) of \(f(z_0)\) so that</p>
 <ol class="decimal">
 <li id="li-1">the restriction \(f:U \to V\) is a bijection,</li>
 <li id="li-2">\(f\inv:V \to U\) is analytic,</li>
@@ -229,11 +246,11 @@ MathJax.Hub.Config({
 \frac{d}{dw} f\inv(w) = \frac{1}{f\d(z)} 
 \end{equation*}
 </div>where \(w = f(z)\text{.}\)</li>
-</ol></article><p id="p-8">The inverse function theorem will let us make more connections between conformal maps and their inverses.</p>
+</ol></article><p id="p-9">The inverse function theorem will let us make more connections between conformal maps and their inverses.</p>
 <article class="proposition theorem-like" id="proposition-1"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
 </h6>
-<p id="p-9">If a map \(f:A \to B\) is conformal and bijective, then \(f\inv:B \to A\) is conformal and bijective.</p></article><article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-10">Because \(f\) is bijective, \(f\inv\) exists. Because \(f\) is conformal, for any \(z \in A\text{,}\) we must have \(f\d(z) \neq 0\text{.}\) Then the inverse function theorem gives that \(f\inv\) is analytic and</p>
+<p id="p-10">If a map \(f:A \to B\) is conformal and bijective, then \(f\inv:B \to A\) is conformal and bijective.</p></article><article class="hiddenproof" id="proof-1"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-1"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-1"><article class="hiddenproof"><p id="p-11">Because \(f\) is bijective, \(f\inv\) exists. Because \(f\) is conformal, for any \(z \in A\text{,}\) we must have \(f\d(z) \neq 0\text{.}\) Then the inverse function theorem gives that \(f\inv\) is analytic and</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{d}{dw} f\inv(w) = \frac{1}{f\d(z)} \neq 0, 
@@ -243,24 +260,24 @@ MathJax.Hub.Config({
 <article class="proposition theorem-like" id="proposition-2"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
 </h6>
-<p id="p-11">If \(f:A \to B\) is conformal and bijective and \(g: B \to C\) is conformal and bijective, then \(g\circ f\) is conformal and bijective.</p></article><article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-12">This is an immediate consequence of the chain rule.</p></article></div>
-<p id="p-13">Because conformality is preserved by inverses and composition, we have the structure necessary to impose ideas from algebra on the family of conformal maps if we can make the functions compatible. An <dfn class="terminology">automorphism</dfn> is a bijection from a set onto itself.</p>
+<p id="p-12">If \(f:A \to B\) is conformal and bijective and \(g: B \to C\) is conformal and bijective, then \(g\circ f\) is conformal and bijective.</p></article><article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-13">This is an immediate consequence of the chain rule.</p></article></div>
+<p id="p-14">Because conformality is preserved by inverses and composition, we have the structure necessary to impose ideas from algebra on the family of conformal maps if we can make the functions compatible. An <dfn class="terminology">automorphism</dfn> is a bijection from a set onto itself.</p>
 <article class="theorem theorem-like" id="theorem-3"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
 </h6>
-<p id="p-14">The set of bijective conformal maps from a domain \(A\) to itself (that is, the set of conformal automorphisms of \(A\)) is a group, where the group operation is composition of functions.</p></article><p id="p-15">As part of our study of conformal maps, we're going to be looking a special family of automorphisms defined on the unit disk \(\D\text{,}\) but that's for later!</p>
-<p id="p-16">A typical use of bijective conformal maps is to change problems in one domain to problems in a different domain. It might not be obvious why, but frequently we can use tools in one domain that might not be available in another. Because bijective conformal maps preserve information about paths, solving a problem in one domain can be easily extended to a solution in a conformal relative.</p>
+<p id="p-15">The set of bijective conformal maps from a domain \(A\) to itself (that is, the set of conformal automorphisms of \(A\)) is a group, where the group operation is composition of functions.</p></article><p id="p-16">As part of our study of conformal maps, we're going to be looking a special family of automorphisms defined on the unit disk \(\D\text{,}\) but that's for later!</p>
+<p id="p-17">A typical use of bijective conformal maps is to change problems in one domain to problems in a different domain. It might not be obvious why, but frequently we can use tools in one domain that might not be available in another. Because bijective conformal maps preserve information about paths, solving a problem in one domain can be easily extended to a solution in a conformal relative.</p>
 <article class="definition definition-like" id="definition-2"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
 </h6>
-<p id="p-17">Two domains \(A, B \subset \C\) are called <dfn class="terminology">conformally equivalent</dfn> if there is a bijective conformal map \(f: A \to B\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-4"><h6 class="heading">
+<p id="p-18">Two domains \(A, B \subset \C\) are called <dfn class="terminology">conformally equivalent</dfn> if there is a bijective conformal map \(f: A \to B\text{.}\)</p></article><article class="theorem theorem-like" id="theorem-4"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span>
 </h6>
-<p id="p-18">Let \(A\) be a simply connected domain that isn't all of \(\C\text{.}\) Then there exists a bijective conformal map \(f: A \to \D\text{.}\) Futher, for any fixed \(z_0 \in A\text{,}\) we can find \(f\) so that \(f(z_0) = 0\) and \(f\d(z_0) &gt; 0\text{.}\) With these conditions, the map \(f\) is unique.</p></article><p id="p-19">There is a pretty easy but very striking corollary.</p>
+<p id="p-19">Let \(A\) be a simply connected domain that isn't all of \(\C\text{.}\) Then there exists a bijective conformal map \(f: A \to \D\text{.}\) Futher, for any fixed \(z_0 \in A\text{,}\) we can find \(f\) so that \(f(z_0) = 0\) and \(f\d(z_0) &gt; 0\text{.}\) With these conditions, the map \(f\) is unique.</p></article><p id="p-20">There is a pretty easy but very striking corollary.</p>
 <article class="corollary theorem-like" id="corollary-1"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span>
 </h6>
-<p id="p-20">Any two simply connected domains, neither of which is all of \(\C\text{,}\) are conformally equivalent.</p></article><p id="p-21">Of course there are some annoyances here: we have no clue how to actually find the maps! We also don't know what happens at the boundary of the domains in the general case. Our next steps will be to address these questions.</p></section></div></main>
+<p id="p-21">Any two simply connected domains, neither of which is all of \(\C\text{,}\) are conformally equivalent.</p></article><p id="p-22">Of course there are some annoyances here: we have no clue how to actually find the maps! We also don't know what happens at the boundary of the domains in the general case. Our next steps will be to address these questions.</p></section></div></main>
 </div>
 </body>
 </html>
