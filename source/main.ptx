@@ -268,6 +268,26 @@
     </section>
 
     <section>
+        <title>(optional) A proof of the Riemann Mapping Theorem</title>
+        <p>The Riemann Mapping Theorem asserts that a simply connected domain <m>A</m> is conformally equilvalent to the complex unit disk <m>\D</m>. To prove this is going to take a bit of work, so roll up your sleeves! We'll proceed in pieces.</p>
+
+        <p>A sequence of functions <m>f_n</m> is said to be <term>locally uniformly bounded</term> on a domain <m>A</m> if, for any <m>z_0 \in A</m>, there exists a neighborhood <m>U</m> of <m>z_0</m> and a constant <m>M</m> so that <m>\abs{f_n} \lt M</m> on <m>U</m> for all <m>n</m>.</p>
+
+        <theorem><title>Stieljes-Osgood Theorem</title>
+            <p>A locally uniformly bounded sequences of holomorphic functions on a domain <m>A \subset \C</m>, has a locally uniformly convergent subsequence.</p>
+        </theorem>
+
+        <proof>
+            <p>Let <m>A</m> be the domain of the sequence of locally uniformly bounded functions <m>\{f_n\}_{n=1}^\infty</m>.</p>
+
+            <p>It is enough to show that for each closed disk <m>D</m> in <m>A</m> that the sequence <m>f_n</m> converges uniformly on <m>D</m>. Suppose we could do so. Then we could take a countable cover of <m>A</m> by open disks whose closures <m>cl(D_k) \subset A</m> (say by using points with rational real and imaginary parts as centers), which can be arranged into a sequence <m>\{D_k\}</m>. Then by supposition, the sequence <m>f_n</m> has a subsequence <m>f_{1,n}</m> converging uniformly on <m>D_1</m>. Applying the same argument to <m>f_{1,n}</m> on <m>D_2</m> gives a subsequence converging uniformly on <m>D_2</m> (and <m>D_1</m>). Proceed inductively. The sequence <m>f_{k,n}</m> will be a subsequence of every previous subsequence, including <m>f_{n}</m>. Now take the sequence of elements <m>f_{n,n}</m>. It is a subsequence of <m>f_n</m> and it is locally uniformly convergent in <m>A</m>. (This is a form of a <q>diagonal</q> argument, ala Cantor.)</p>
+
+            <p>We can reduce the problem even further. Consider one of the disks, say <m>D_k</m>. Because <m>cl(D_k)</m> is a subset of then open set <m>A</m>, it is contained in an open disk <m>U</m> also contained in <m>A</m> and with <m>cl(U) \subset A</m> on which <m>f_n</m> is uniformly bounded.</p>
+        </proof>
+
+    </section>
+
+    <section>
         <title>Exercise set 1</title>
         <exercises>
             <exercise>
