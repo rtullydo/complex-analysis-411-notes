@@ -261,6 +261,10 @@
         <theorem>
             <p>Suppose that <m>A, B</m> are bounded, simply connected regions with boundaries <m>\partial A</m> and <m>\partial B</m> that are simple, continuous, closed curves. Then any conformal map of <m>A</m> that is one-to-one onto <m>B</m> can be extended to a continuous map of <m>A \cup \partial A</m> one-to-one onto <m>B \cup \partial B</m>.</p>
         </theorem>
+
+        <question>
+            <p>Find a bijective conformal map that takes a bounded region to an unbounded region. Show that there is no bijective conformal map from a simply connected domain to a non-simply connected domain.</p>
+        </question> 
     </section>
 
     <section>
@@ -296,6 +300,26 @@
             </exercise>
 
         </exercises>
+    </section>
+
+    <section>
+        <title>Linear fractional tranformations</title>
+        <p>A couple of you have asked me how to actually find the conformal maps that are guaranteed to exist by the Riemann Mapping Theorem. For a large class of domains, we can readily (for some value of readily) find these!</p>
+
+        <definition>
+            <p>A <term>linear fractional transformation</term> is a degree one complex rational function of the form
+            <me>
+                T(z) = \frac{az + b}{cz + d}
+            </me>
+            for fixed constants <m>a, b, c, d \in \C</m>, and where we assume that <m>ad - bs \neq 0</m>.</p>
+        </definition>
+
+        <question>
+            <p>What happens to <m>T</m> if <m>ad - bd \neq 0</m>?</p>
+        </question>
+
+        <p>We will use the shorthand LFT to stand for linear fractional transformation. From what we learned last term, it should be immediately obvious that an LFT has one pole of order 1 where <m>cz + d = 0</m>.</p>
+
     </section>
 
 
