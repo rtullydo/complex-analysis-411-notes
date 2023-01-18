@@ -271,7 +271,7 @@
         <title>(optional) A proof of the Riemann Mapping Theorem</title>
         <p>The Riemann Mapping Theorem asserts that a simply connected domain <m>A</m> is conformally equilvalent to the complex unit disk <m>\D</m>. To prove this is going to take a bit of work, so roll up your sleeves! We'll proceed in pieces.</p>
 
-        <p>A sequence of functions <m>f_n</m> is said to be <term>locally uniformly bounded</term> on a domain <m>A</m> if, for any <m>z_0 \in A</m>, there exists a neighborhood <m>U</m> of <m>z_0</m> and a constant <m>M</m> so that <m>\abs{f_n} \lt M</m> on <m>U</m> for all <m>n</m>.</p>
+        <p>A sequence of functions <m>f_n</m> is said to be <term>locally uniformly bounded</term> on a domain <m>A</m> if, for any <m>z_0 \in A</m>, there exists a neighborhood <m>U</m> of <m>z_0</m> and a constant <m>M</m> so that <m>\abs{f_n} \lt M</m> on <m>U</m> for all <m>n</m>. Equivalently, a sequence of functions is locally uniformly bounded if the family of functions is uniformly bounded on each compact subset of the domain.</p>
 
         <theorem><title>Stieljes-Osgood Theorem</title>
             <p>A locally uniformly bounded sequences of holomorphic functions on a domain <m>A \subset \C</m>, has a locally uniformly convergent subsequence.</p>
