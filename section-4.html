@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Exercise set 1</title>
+<title>Interlude: Liouville's Theorem</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -186,8 +186,6 @@ window.MathJax = {
   \DeclareMathOperator{\dist}{dist}
   \DeclareMathOperator{\dom}{dom}
   \DeclareMathOperator{\diag}{diag}
-  \DeclareMathOperator{\span}{span}
-  \DeclareMathOperator{\null}{null}
   \DeclareMathOperator{\rank}{rank}
   \DeclareMathOperator{\col}{col}
   \DeclareMathOperator{\cl}{cl}
@@ -197,7 +195,6 @@ window.MathJax = {
   \DeclareMathOperator\re{\mathrm {Re~}}
   \DeclareMathOperator\im{\mathrm {Im~}}
   
-  \newcommand\dd{\mathrm d}
   \newcommand{\eps}{\varepsilon}
   \newcommand{\To}{\longrightarrow}
   \newcommand{\hilbert}{\mathcal{H}}
@@ -283,11 +280,10 @@ window.MathJax = {
   \numberwithin{equation}{section}
   \newcommand\nin{\noindent}
   \newcommand{\nCr}[2]{\,_{#1}C_{#2}} 
-  \newcommand{\vec}[1]{{\bf #1}}
   \newcommand{\ps}{\displaystyle \sum_{n=0}^\infty a_n x^n}
   \newcommand{\psg}{\displaystyle \sum_{n=0}^\infty b_n x^n}
   \newcommand{\hz}{\,\mathrm{Hz}}
-  \newcommand{\d}{^\prime}
+  \newcommand{\dd}{^\prime}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -303,38 +299,69 @@ window.MathJax = {
 <li><div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Conformal maps</span></a></div></li>
 <li><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Simply connected sets, boundaries, and the Riemann mapping theorem</span></a></div></li>
 <li><div class="toc-item"><a href="section-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">(optional) A proof of the Riemann Mapping Theorem</span></a></div></li>
-<li class="active">
-<div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercise set 1</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-4.html#exercises-1" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="active"><div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Interlude: Liouville's Theorem</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercise set 1</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-5.html#exercises-1" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Linear fractional tranformations</span></a></div></li>
+<li><div class="toc-item"><a href="section-6.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Linear fractional tranformations</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-4"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Exercise set 1</span>
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Interlude: Liouville's Theorem</span>
 </h2>
-<section class="exercises" id="exercises-1"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+<div class="para logical" id="p-41">
+<div class="para">In the calculus of real functions, it isn't at all unusual to deal with power series that converge everywhere in <span class="process-math">\(\R\)</span> that represent bounded functions. (A whole class of these in the real world are signals that can be expressed as Fourier series). For example, <span class="process-math">\(f(x) = \sin x\)</span> has a power series representation valid for all real <span class="process-math">\(x\)</span> and it bounded in absolute value by 1. The extension theorem tells us that this same series should have infinite radius of convergence on <span class="process-math">\(\C\)</span> as well, but we should note what happens to the size of the values of the function. Let <span class="process-math">\(z = x + iy\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) = \sin z = \frac{1}{2i} (e^{iz} - e^{-iz}),
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+e^{iz} = e^{ix - y} = e^{ix} e^{-y}
+\end{equation*}
+</div>
+<div class="para">which will be unbounded as we let <span class="process-math">\(y \to -\infty\text{.}\)</span> So even though <span class="process-math">\(\sin z\)</span> remains a function with a convergent power series representation on <span class="process-math">\(\C\)</span> (a so-called <dfn class="terminology">entire</dfn> function), it is an unbounded function. Liouville's theorem asserts that this is the general situation - an entire function that is bounded must necessarily be a constant function.</div>
+</div>
+<div class="para logical" id="p-42">
+<div class="para">The proof of Liouville's theorem follows from a useful set of estimates about the behavior of derivatives of bounded analytic functions called the Cauchy inequalities. First, recall that Cauchy's integral theorem for derivatives gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^{n}(z_0) = \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(C\)</span> is a simple closed curve about <span class="process-math">\(z_0\)</span> inside the domain of <span class="process-math">\(f\text{.}\)</span>
+</div>
+</div>
+<article class="theorem theorem-like" id="theorem-8"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Cauchy inequalities.</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-41">Let <span class="process-math">\(S\)</span> be the square with corners <span class="process-math">\((0,1), (1,1), (1, 2), (0,2)\text{.}\)</span> Find the image of the square under the map <span class="process-math">\(f(z) = z^2\text{.}\)</span> Where does the interior of the square map? Is the image a square?</div></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-42">Let <span class="process-math">\(S\)</span> be the unit square in <span class="process-math">\(\C\text{.}\)</span> Find the image of the square under the map <span class="process-math">\(f(z) = z^2\text{.}\)</span> Make sure to indicate where the interior maps.</div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-43">Find the image of the first quadrant under the map <span class="process-math">\(f(z) = z^3\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-44">Let <span class="process-math">\(z = x + iy\text{.}\)</span> Plot the set <span class="process-math">\(A = \{xy&gt;1 \text{ and } x, y &gt;0\}\text{.}\)</span> Find the image of the set under the map <span class="process-math">\(f(z) = z^2\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para logical" id="p-45">
-<div class="para">Near which points are the following functions conformal?</div>
-<ol class="lower-alpha">
-<li id="li-4"><div class="para" id="p-derived-li-4"><span class="process-math">\(f(z) = z/(1 + 2z)\text{;}\)</span></div></li>
-<li id="li-5"><div class="para" id="p-derived-li-5"><span class="process-math">\(\displaystyle f(z) = \cc{z}\)</span></div></li>
-<li id="li-6"><div class="para" id="p-derived-li-6"><span class="process-math">\(f(z) = \tan z\text{.}\)</span></div></li>
-</ol>
-</div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="p-46">Let <span class="process-math">\(a, b \in \C\)</span> be constant. Show that <span class="process-math">\(f: \C \to \C\)</span> defined by <span class="process-math">\(f(z) = az + b\)</span> can be written as a rotation followed by a magnification followed by a translation.</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="p-47">The Riemann mapping theorem concerns sets that are not all of <span class="process-math">\(\C\text{.}\)</span> Is there a conformal map from <span class="process-math">\(\C\)</span> that is one-to-one onto the unit disk <span class="process-math">\(\D\text{?}\)</span> Is there a conformal map of <span class="process-math">\(\D\)</span> one-to-one onto <span class="process-math">\(\C\text{?}\)</span>
-</div></article></section></section></div>
+<div class="para logical" id="p-43">
+<div class="para">Let <span class="process-math">\(f\)</span> be an analytic function on a domain <span class="process-math">\(A\)</span> with bound <span class="process-math">\(\abs{f(z)} \lt M\)</span> on <span class="process-math">\(A\text{,}\)</span> and let <span class="process-math">\(\gamma\)</span> be a circle of radius <span class="process-math">\(R\)</span> centered at a point <span class="process-math">\(z_0 \in A\)</span> with <span class="process-math">\(\gamma \subset A\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{f^{n}(z_0)} \leq \frac{n!}{R^n} M.
+\end{equation*}
+</div>
+</div></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><div class="para logical" id="p-44">
+<div class="para">Suppose that <span class="process-math">\(\gamma(t) = z_0 + R e^{it}\)</span> parametrizes <span class="process-math">\(\gamma\text{.}\)</span> By the integral theorem for derivatives,  we have</div>
+<div class="displaymath process-math" id="md-1">
+\begin{align*}
+\abs{f^{n}(z_0)} \amp= | \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz |\\
+\amp= \frac{n!}{2\pi} |\oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz|\\
+\amp\leq \frac{n!}{2\pi} \frac{M}{R^{n+1}} 2 \pi R,\\
+\amp= \frac{n!}{R^n}M
+\end{align*}
+</div>
+<div class="para">where the inequality follows from the ML-inequality.</div>
+</div></article></div>
+<article class="theorem theorem-like" id="theorem-9"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Liouville's Theorem.</span>
+</h3>
+<div class="para" id="p-45">A bounded entire function is necessarily constant.</div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-5.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

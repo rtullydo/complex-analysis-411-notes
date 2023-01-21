@@ -11,9 +11,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="li"><h5 class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">1.5.5.c</span><span class="period">.</span>
-</h5>
-<span class="process-math">\(f(z) = \tan z\text{.}\)</span></article><span class="incontext"><a href="section-5.html#li-6" class="internal">in-context</a></span>
+<div class="displaymath process-math">
+\begin{align*}
+\abs{f^{n}(z_0)} \amp= | \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz |\\
+\amp= \frac{n!}{2\pi} |\oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz|\\
+\amp\leq \frac{n!}{2\pi} \frac{M}{R^{n+1}} 2 \pi R,\\
+\amp= \frac{n!}{R^n}M
+\end{align*}
+</div>
+<span class="incontext"><a href="section-4.html#md-1" class="internal">in-context</a></span>
 </body>
 </html>

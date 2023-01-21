@@ -186,8 +186,6 @@ window.MathJax = {
   \DeclareMathOperator{\dist}{dist}
   \DeclareMathOperator{\dom}{dom}
   \DeclareMathOperator{\diag}{diag}
-  \DeclareMathOperator{\span}{span}
-  \DeclareMathOperator{\null}{null}
   \DeclareMathOperator{\rank}{rank}
   \DeclareMathOperator{\col}{col}
   \DeclareMathOperator{\cl}{cl}
@@ -197,7 +195,6 @@ window.MathJax = {
   \DeclareMathOperator\re{\mathrm {Re~}}
   \DeclareMathOperator\im{\mathrm {Im~}}
   
-  \newcommand\dd{\mathrm d}
   \newcommand{\eps}{\varepsilon}
   \newcommand{\To}{\longrightarrow}
   \newcommand{\hilbert}{\mathcal{H}}
@@ -283,11 +280,10 @@ window.MathJax = {
   \numberwithin{equation}{section}
   \newcommand\nin{\noindent}
   \newcommand{\nCr}[2]{\,_{#1}C_{#2}} 
-  \newcommand{\vec}[1]{{\bf #1}}
   \newcommand{\ps}{\displaystyle \sum_{n=0}^\infty a_n x^n}
   \newcommand{\psg}{\displaystyle \sum_{n=0}^\infty b_n x^n}
   \newcommand{\hz}{\,\mathrm{Hz}}
-  \newcommand{\d}{^\prime}
+  \newcommand{\dd}{^\prime}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -303,11 +299,12 @@ window.MathJax = {
 <li><div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Conformal maps</span></a></div></li>
 <li class="active"><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Simply connected sets, boundaries, and the Riemann mapping theorem</span></a></div></li>
 <li><div class="toc-item"><a href="section-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">(optional) A proof of the Riemann Mapping Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Interlude: Liouville's Theorem</span></a></div></li>
 <li>
-<div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercise set 1</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-4.html#exercises-1" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercise set 1</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-5.html#exercises-1" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li><div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Linear fractional tranformations</span></a></div></li>
+<li><div class="toc-item"><a href="section-6.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Linear fractional tranformations</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
@@ -320,7 +317,7 @@ window.MathJax = {
 <article class="theorem theorem-like" id="theorem-5"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann Mapping Theorem.</span>
 </h3>
-<div class="para" id="p-25">Let <span class="process-math">\(A\)</span> be a simply connected domain in <span class="process-math">\(\C\)</span> with <span class="process-math">\(A \neq \C\text{.}\)</span> Then there exists a bijective conformal map <span class="process-math">\(f: A \to \D\text{,}\)</span> where <span class="process-math">\(\D\)</span> is the complex unit disk. For any fixed <span class="process-math">\(z_0 \in A\text{,}\)</span> we can find a unique such <span class="process-math">\(f\)</span> so that <span class="process-math">\(f(z_0) = 0\)</span> and <span class="process-math">\(f\d(z_0) &gt; 0\text{.}\)</span>
+<div class="para" id="p-25">Let <span class="process-math">\(A\)</span> be a simply connected domain in <span class="process-math">\(\C\)</span> with <span class="process-math">\(A \neq \C\text{.}\)</span> Then there exists a bijective conformal map <span class="process-math">\(f: A \to \D\text{,}\)</span> where <span class="process-math">\(\D\)</span> is the complex unit disk. For any fixed <span class="process-math">\(z_0 \in A\text{,}\)</span> we can find a unique such <span class="process-math">\(f\)</span> so that <span class="process-math">\(f(z_0) = 0\)</span> and <span class="process-math">\(f\dd(z_0) &gt; 0\text{.}\)</span>
 </div></article><div class="para" id="p-26">Because the maps in the theorem above are bijections, we get a striking immediate corollary.</div>
 <article class="corollary theorem-like" id="corollary-2"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
@@ -336,7 +333,7 @@ window.MathJax = {
 <article class="theorem theorem-like" id="theorem-6"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="p-33">Suppose that <span class="process-math">\(A, B\)</span> are bounded, simply connected regions with boundaries <span class="process-math">\(\partial A\)</span> and <span class="process-math">\(\partial B\)</span> that are simple, continuous, closed curves. Then any conformal map of <span class="process-math">\(A\)</span> that is one-to-one onto <span class="process-math">\(B\)</span> can be extended to a continuous map of <span class="process-math">\(A \cup \partial A\)</span> one-to-one onto <span class="process-math">\(B \cup \partial B\text{.}\)</span>
+<div class="para" id="p-33">Suppose that <span class="process-math">\(A, B\)</span> are bounded, simply connected regions with boundaries <span class="process-math">\(\partial A\)</span> and <span class="process-math">\(\partial B\)</span> that are simple, continuous, closed curves (these are sometimes called Jordan curves). Then any conformal map of <span class="process-math">\(A\)</span> that is one-to-one onto <span class="process-math">\(B\)</span> can be extended to a continuous map of <span class="process-math">\(A \cup \partial A\)</span> one-to-one onto <span class="process-math">\(B \cup \partial B\text{.}\)</span>
 </div></article><article class="question example-like" id="question-1"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-1"><h3 class="heading">
 <span class="type">Question</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
 </h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-1"><article class="question example-like"><div class="para" id="p-34">Find a bijective conformal map that takes a bounded region to an unbounded region. Show that there is no bijective conformal map from a simply connected domain to a non-simply connected domain.</div></article></div></section></div>

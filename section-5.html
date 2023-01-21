@@ -8,7 +8,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Linear fractional tranformations</title>
+<title>Exercise set 1</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -177,7 +177,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-4.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-4.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-6.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\RE}{Re}
   \DeclareMathOperator{\IM}{Im}
@@ -186,8 +186,6 @@ window.MathJax = {
   \DeclareMathOperator{\dist}{dist}
   \DeclareMathOperator{\dom}{dom}
   \DeclareMathOperator{\diag}{diag}
-  \DeclareMathOperator{\span}{span}
-  \DeclareMathOperator{\null}{null}
   \DeclareMathOperator{\rank}{rank}
   \DeclareMathOperator{\col}{col}
   \DeclareMathOperator{\cl}{cl}
@@ -197,7 +195,6 @@ window.MathJax = {
   \DeclareMathOperator\re{\mathrm {Re~}}
   \DeclareMathOperator\im{\mathrm {Im~}}
   
-  \newcommand\dd{\mathrm d}
   \newcommand{\eps}{\varepsilon}
   \newcommand{\To}{\longrightarrow}
   \newcommand{\hilbert}{\mathcal{H}}
@@ -283,11 +280,10 @@ window.MathJax = {
   \numberwithin{equation}{section}
   \newcommand\nin{\noindent}
   \newcommand{\nCr}[2]{\,_{#1}C_{#2}} 
-  \newcommand{\vec}[1]{{\bf #1}}
   \newcommand{\ps}{\displaystyle \sum_{n=0}^\infty a_n x^n}
   \newcommand{\psg}{\displaystyle \sum_{n=0}^\infty b_n x^n}
   \newcommand{\hz}{\,\mathrm{Hz}}
-  \newcommand{\d}{^\prime}
+  \newcommand{\dd}{^\prime}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -303,38 +299,41 @@ window.MathJax = {
 <li><div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Conformal maps</span></a></div></li>
 <li><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Simply connected sets, boundaries, and the Riemann mapping theorem</span></a></div></li>
 <li><div class="toc-item"><a href="section-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">(optional) A proof of the Riemann Mapping Theorem</span></a></div></li>
-<li>
-<div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercise set 1</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="section-4.html#exercises-1" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+<li><div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Interlude: Liouville's Theorem</span></a></div></li>
+<li class="active">
+<div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercise set 1</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-5.html#exercises-1" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="active"><div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Linear fractional tranformations</span></a></div></li>
+<li><div class="toc-item"><a href="section-6.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Linear fractional tranformations</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-5"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">Linear fractional tranformations</span>
+<span class="type">Section</span> <span class="codenumber">1.5</span> <span class="title">Exercise set 1</span>
 </h2>
-<div class="para" id="p-48">A couple of you have asked me how to actually find the conformal maps that are guaranteed to exist by the Riemann Mapping Theorem. For a large class of domains, we can readily (for some value of readily) find these!</div>
-<article class="definition definition-like" id="definition-3"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span>
+<section class="exercises" id="exercises-1"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<div class="para logical" id="p-49">
-<div class="para">A <dfn class="terminology">linear fractional transformation</dfn> is a degree one complex rational function of the form</div>
-<div class="displaymath process-math">
-\begin{equation*}
-T(z) = \frac{az + b}{cz + d}
-\end{equation*}
-</div>
-<div class="para">for fixed constants <span class="process-math">\(a, b, c, d \in \C\text{,}\)</span> and where we assume that <span class="process-math">\(ad - bs \neq 0\text{.}\)</span>
-</div>
-</div></article><article class="question example-like" id="question-2"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-2"><h3 class="heading">
-<span class="type">Question</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-2"><article class="question example-like"><div class="para" id="p-50">What happens to <span class="process-math">\(T\)</span> if <span class="process-math">\(ad - bd \neq 0\text{?}\)</span>
-</div></article></div>
-<div class="para" id="p-51">We will use the shorthand LFT to stand for linear fractional transformation. From what we learned last term, it should be immediately obvious that an LFT has one pole of order 1 where <span class="process-math">\(cz + d = 0\text{.}\)</span>
-</div></section></div>
+<article class="exercise exercise-like" id="exercise-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-46">Let <span class="process-math">\(S\)</span> be the square with corners <span class="process-math">\((0,1), (1,1), (1, 2), (0,2)\text{.}\)</span> Find the image of the square under the map <span class="process-math">\(f(z) = z^2\text{.}\)</span> Where does the interior of the square map? Is the image a square?</div></article><article class="exercise exercise-like" id="exercise-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-47">Let <span class="process-math">\(S\)</span> be the unit square in <span class="process-math">\(\C\text{.}\)</span> Find the image of the square under the map <span class="process-math">\(f(z) = z^2\text{.}\)</span> Make sure to indicate where the interior maps.</div></article><article class="exercise exercise-like" id="exercise-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-48">Find the image of the first quadrant under the map <span class="process-math">\(f(z) = z^3\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-49">Let <span class="process-math">\(z = x + iy\text{.}\)</span> Plot the set <span class="process-math">\(A = \{xy&gt;1 \text{ and } x, y &gt;0\}\text{.}\)</span> Find the image of the set under the map <span class="process-math">\(f(z) = z^2\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="p-50">
+<div class="para">Near which points are the following functions conformal?</div>
+<ol class="lower-alpha">
+<li id="li-4"><div class="para" id="p-derived-li-4"><span class="process-math">\(f(z) = z/(1 + 2z)\text{;}\)</span></div></li>
+<li id="li-5"><div class="para" id="p-derived-li-5"><span class="process-math">\(\displaystyle f(z) = \cc{z}\)</span></div></li>
+<li id="li-6"><div class="para" id="p-derived-li-6"><span class="process-math">\(f(z) = \tan z\text{.}\)</span></div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-51">Let <span class="process-math">\(a, b \in \C\)</span> be constant. Show that <span class="process-math">\(f: \C \to \C\)</span> defined by <span class="process-math">\(f(z) = az + b\)</span> can be written as a rotation followed by a magnification followed by a translation.</div></article><article class="exercise exercise-like" id="exercise-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-52">The Riemann mapping theorem concerns simply connected sets that are not all of <span class="process-math">\(\C\text{.}\)</span> Is there a conformal map from <span class="process-math">\(\C\)</span> that is one-to-one onto the unit disk <span class="process-math">\(\D\text{?}\)</span> Is there a conformal map of <span class="process-math">\(\D\)</span> one-to-one onto <span class="process-math">\(\C\text{?}\)</span>
+</div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="section-4.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span>
+<a class="previous-button button" href="section-4.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-6.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div class="ptx-page-footer">

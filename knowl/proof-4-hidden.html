@@ -11,12 +11,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">Because <span class="process-math">\(f\)</span> is bijective, <span class="process-math">\(f\inv\)</span> exists. Because <span class="process-math">\(f\)</span> is conformal, for any <span class="process-math">\(z \in A\text{,}\)</span> we must have <span class="process-math">\(f\dd(z) \neq 0\text{.}\)</span> Then the inverse function theorem gives that <span class="process-math">\(f\inv\)</span> is analytic and</div>
+<div class="para">Suppose that <span class="process-math">\(\gamma(t) = z_0 + R e^{it}\)</span> parametrizes <span class="process-math">\(\gamma\text{.}\)</span> By the integral theorem for derivatives,  we have</div>
 <div class="displaymath process-math">
-\begin{equation*}
-\frac{d}{dw} f\inv(w) = \frac{1}{f\dd(z)} \neq 0, 
-\end{equation*}
+\begin{align*}
+\abs{f^{n}(z_0)} \amp= | \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz |\\
+\amp= \frac{n!}{2\pi} |\oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz|\\
+\amp\leq \frac{n!}{2\pi} \frac{M}{R^{n+1}} 2 \pi R,\\
+\amp= \frac{n!}{R^n}M
+\end{align*}
 </div>
-<div class="para">and so <span class="process-math">\(f\inv\)</span> is also conformal.</div>
+<div class="para">where the inequality follows from the ML-inequality.</div>
 </div></article></body>
 </html>

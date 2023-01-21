@@ -11,8 +11,6 @@
           \DeclareMathOperator{\dist}{dist}
           \DeclareMathOperator{\dom}{dom}
           \DeclareMathOperator{\diag}{diag}
-          \DeclareMathOperator{\span}{span}
-          \DeclareMathOperator{\null}{null}
           \DeclareMathOperator{\rank}{rank}
           \DeclareMathOperator{\col}{col}
           \DeclareMathOperator{\cl}{cl}
@@ -22,7 +20,6 @@
           \DeclareMathOperator\re{\mathrm {Re~}}
           \DeclareMathOperator\im{\mathrm {Im~}}
           %\newcommand\half{\tfrac 12}
-          \newcommand\dd{\mathrm d}
           \newcommand{\eps}{\varepsilon}
           \newcommand{\To}{\longrightarrow}
           \newcommand{\hilbert}{\mathcal{H}}
@@ -108,11 +105,10 @@
           \numberwithin{equation}{section}
           \newcommand\nin{\noindent}
           \newcommand{\nCr}[2]{\,_{#1}C_{#2}} % nCr
-          \newcommand{\vec}[1]{{\bf #1}}
           \newcommand{\ps}{\displaystyle \sum_{n=0}^\infty a_n x^n}
           \newcommand{\psg}{\displaystyle \sum_{n=0}^\infty b_n x^n}
           \newcommand{\hz}{\,\mathrm{Hz}}
-          \newcommand{\d}{^\prime}
+          \newcommand{\dd}{^\prime}
         </macros>
     </docinfo>
 
@@ -139,13 +135,13 @@
             </definition>
         </p>
 
-        <p>By way of example, consider the function <m>f(z) = z^2</m> at the point <m>z_0 = 1 + 1i = \sqrt{2}e^{i\pi/4}</m>. The horizontal line through <m>z_0</m> can be parametrized by <m>\gamma(t) = (1 + t) + 1i</m> which passes through <m>z_0</m> at <m>t = 1</m>. The tangent vector at <m>t = 1</m> is <m>\gamma\d(0) = 1</m>. Now look at the image. Composing, we get
+        <p>By way of example, consider the function <m>f(z) = z^2</m> at the point <m>z_0 = 1 + 1i = \sqrt{2}e^{i\pi/4}</m>. The horizontal line through <m>z_0</m> can be parametrized by <m>\gamma(t) = (1 + t) + 1i</m> which passes through <m>z_0</m> at <m>t = 1</m>. The tangent vector at <m>t = 1</m> is <m>\gamma\dd(0) = 1</m>. Now look at the image. Composing, we get
             <me>
                 f(\gamma(t)) = (t + 1i)^2 = (t^2 - 1)  + 2ti.
             </me> 
         Then calculating the tangent vector to the image gives
             <me>
-                f\d(\gamma(t))|_{t = 1} = (2t + 2i)|_{t =1} = 2 + 2i.
+                f\dd(\gamma(t))|_{t = 1} = (2t + 2i)|_{t =1} = 2 + 2i.
             </me>
             That is, the tangent vector has increased in length by a factor of <m>2\sqrt{2}</m> and undergone a rotation of <m>\pi/4</m> radians. If we check the vertical line through <m>z_0</m>, which can be parametrized by <m>\gamma_2(t) = 1 + 1ti</m> where <m>\gamma_2(1) = z_0</m>, we find that the tangent vector <m>\gamma_2(1) = i</m> has image <m>f(\gamma_2(1)) = -2 + 2i</m>, which again represents an increase in magnitude of <m>2\sqrt{2}</m> and a rotation of <m>\pi/4</m> radians.
         </p>
@@ -156,26 +152,26 @@
         </theorem>
         <p>This is pretty straighforward to see via the chain rule. Let <m>\gamma(t)</m> be a (differentiable) path contained in <m>A</m> with <m>\gamma(0) = z_0</m>. Let <m>\sigma(t)</m> be the image of <m>\gamma</m> under <m>f</m> defined by <m>\sigma(t) = f(\gamma(t))</m>. Then the chain rule gives
         <me>
-            \sigma\d(t) = f\d(\gamma(t)) \cdot \gamma\d(t)
+            \sigma\dd(t) = f\dd(\gamma(t)) \cdot \gamma\dd(t)
         </me>
         which in turn gives
         <me>
-            \sigma\d(0) = f\d(z_0) \cdot \gamma\d(0).
+            \sigma\dd(0) = f\dd(z_0) \cdot \gamma\dd(0).
         </me>
-        That is, if <m>f\d(z_0) = r e^{i \theta}</m> the image of the derivative of any curve <m>\gamma</m> through <m>z_0</m> is rotated by <m>\theta</m> and stretched by <m>r</m>.
+        That is, if <m>f\dd(z_0) = r e^{i \theta}</m> the image of the derivative of any curve <m>\gamma</m> through <m>z_0</m> is rotated by <m>\theta</m> and stretched by <m>r</m>.
         </p>
 
-        <p>Note that the condition that <m>f\d(z_0) \neq 0</m> is necessary. For one, it obviously covers up the relationship between a curve and its image in the relation above. But the problem is deeper. Consider the function <m>f(z) = z^2</m>. Consider the lines that run along the <m>x-</m> and <m>y-</m>axis. These lines cross at a right angle at <m>z = 0</m>, but since both lines are mapped to the real axis under <m>f</m>, their images intersect at an angle of <m>\pi</m> radians. For this reason, points at which <m>f\d(z_0) = 0</m> are called <term>singular</term> and do not correspond to points of local conformality.</p>
+        <p>Note that the condition that <m>f\dd(z_0) \neq 0</m> is necessary. For one, it obviously covers up the relationship between a curve and its image in the relation above. But the problem is deeper. Consider the function <m>f(z) = z^2</m>. Consider the lines that run along the <m>x-</m> and <m>y-</m>axis. These lines cross at a right angle at <m>z = 0</m>, but since both lines are mapped to the real axis under <m>f</m>, their images intersect at an angle of <m>\pi</m> radians. For this reason, points at which <m>f\dd(z_0) = 0</m> are called <term>singular</term> and do not correspond to points of local conformality.</p>
 
         <p>Much of the behavior of analytic functions should be thought about in small neighborhoods around points. The next theorem is one that you learn in first year calculus and describes the relationship between the derivative of a function and the derivative of its inverse (when that inverse exists). Analytic functions away from singular points are <em>locally invertible</em>.</p>
 
         <theorem><title>Inverse function theorem</title>
-            <p>Let <m>f:A \to \C</m> be analytic and <m>f\d(z_0) \neq 0</m> for <m>z_0 \in A</m>. Then there exists a neighborhood <m>U</m> of <m>z_0</m> and a neighborhood <m>V</m> of <m>f(z_0)</m> so that
+            <p>Let <m>f:A \to \C</m> be analytic and <m>f\dd(z_0) \neq 0</m> for <m>z_0 \in A</m>. Then there exists a neighborhood <m>U</m> of <m>z_0</m> and a neighborhood <m>V</m> of <m>f(z_0)</m> so that
             <ol>
                 <li>the restriction <m>f:U \to V</m> is a bijection,</li>
                 <li><m>f\inv:V \to U</m> is analytic,</li>
                 <li>and 
-                    <me> \frac{d}{dw} f\inv(w) = \frac{1}{f\d(z)} </me>
+                    <me> \frac{d}{dw} f\inv(w) = \frac{1}{f\dd(z)} </me>
                     where <m>w = f(z)</m>.
                 </li>
             </ol>
@@ -188,8 +184,8 @@
             <p>If a map <m>f:A \to B</m> is conformal and bijective, then <m>f\inv:B \to A</m> is conformal and bijective.</p>
         </proposition>
         <proof>
-            <p>Because <m>f</m> is bijective, <m>f\inv</m> exists. Because <m>f</m> is conformal, for any <m>z \in A</m>, we must have <m>f\d(z) \neq 0</m>. Then the inverse function theorem gives that <m>f\inv</m> is analytic and
-            <me> \frac{d}{dw} f\inv(w) = \frac{1}{f\d(z)} \neq 0, </me>
+            <p>Because <m>f</m> is bijective, <m>f\inv</m> exists. Because <m>f</m> is conformal, for any <m>z \in A</m>, we must have <m>f\dd(z) \neq 0</m>. Then the inverse function theorem gives that <m>f\inv</m> is analytic and
+            <me> \frac{d}{dw} f\inv(w) = \frac{1}{f\dd(z)} \neq 0, </me>
             and so <m>f\inv</m> is also conformal.</p>
         </proof>
 
@@ -215,7 +211,7 @@
         </definition>
 
         <theorem>
-            <p>Let <m>A</m> be a simply connected domain that isn't all of <m>\C</m>. Then there exists a bijective conformal map <m>f: A \to \D</m>. Futher, for any fixed <m>z_0 \in A</m>, we can find <m>f</m> so that <m>f(z_0) = 0</m> and <m>f\d(z_0) > 0</m>. With these conditions, the map <m>f</m> is unique.</p>
+            <p>Let <m>A</m> be a simply connected domain that isn't all of <m>\C</m>. Then there exists a bijective conformal map <m>f: A \to \D</m>. Futher, for any fixed <m>z_0 \in A</m>, we can find <m>f</m> so that <m>f(z_0) = 0</m> and <m>f\dd(z_0) > 0</m>. With these conditions, the map <m>f</m> is unique.</p>
         </theorem>
 
         <p>There is a pretty easy but very striking corollary.</p>
@@ -237,7 +233,7 @@
 
         <theorem>
             <title>Riemann Mapping Theorem</title>
-            <p>Let <m>A</m> be a simply connected domain in <m>\C</m> with <m>A \neq \C</m>. Then there exists a bijective conformal map <m>f: A \to \D</m>, where <m>\D</m> is the complex unit disk. For any fixed <m>z_0 \in A</m>, we can find a unique such <m>f</m> so that <m>f(z_0) = 0</m> and <m>f\d(z_0) > 0</m>.</p>
+            <p>Let <m>A</m> be a simply connected domain in <m>\C</m> with <m>A \neq \C</m>. Then there exists a bijective conformal map <m>f: A \to \D</m>, where <m>\D</m> is the complex unit disk. For any fixed <m>z_0 \in A</m>, we can find a unique such <m>f</m> so that <m>f(z_0) = 0</m> and <m>f\dd(z_0) > 0</m>.</p>
         </theorem>
 
         <p>Because the maps in the theorem above are bijections, we get a striking immediate corollary.</p>
@@ -259,7 +255,7 @@
         <p>We now come to the question of when a conformal map between domains can be extended to the boundary. Note that this extension will be a <em>continuous</em> extension, not an analytic one, because we can't work on neighborhoods for points in the boundary. For nice sets, conformal maps do indeed extend to the boundary.</p>
 
         <theorem>
-            <p>Suppose that <m>A, B</m> are bounded, simply connected regions with boundaries <m>\partial A</m> and <m>\partial B</m> that are simple, continuous, closed curves. Then any conformal map of <m>A</m> that is one-to-one onto <m>B</m> can be extended to a continuous map of <m>A \cup \partial A</m> one-to-one onto <m>B \cup \partial B</m>.</p>
+            <p>Suppose that <m>A, B</m> are bounded, simply connected regions with boundaries <m>\partial A</m> and <m>\partial B</m> that are simple, continuous, closed curves (these are sometimes called Jordan curves). Then any conformal map of <m>A</m> that is one-to-one onto <m>B</m> can be extended to a continuous map of <m>A \cup \partial A</m> one-to-one onto <m>B \cup \partial B</m>.</p>
         </theorem>
 
         <question>
@@ -286,6 +282,50 @@
         </proof>
 
     </section>
+
+    <section>
+        <title>Interlude: Liouville's Theorem</title>
+        <p>In the calculus of real functions, it isn't at all unusual to deal with power series that converge everywhere in <m>\R</m> that represent bounded functions. (A whole class of these in the real world are signals that can be expressed as Fourier series). For example, <m>f(x) = \sin x</m> has a power series representation valid for all real <m>x</m> and it bounded in absolute value by 1. The extension theorem tells us that this same series should have infinite radius of convergence on <m>\C</m> as well, but we should note what happens to the size of the values of the function. Let <m> z = x + iy</m>. Then
+        <me>
+            f(z) = \sin z = \frac{1}{2i} (e^{iz} - e^{-iz}),
+        </me>
+        and
+        <me>
+            e^{iz} = e^{ix - y} = e^{ix} e^{-y}
+        </me>
+        which will be unbounded as we let <m>y \to -\infty</m>. So even though <m>\sin z</m> remains a function with a convergent power series representation on <m>\C</m> (a so-called <term>entire</term> function), it is an unbounded function. Liouville's theorem asserts that this is the general situation - an entire function that is bounded must necessarily be a constant function.</p>
+
+        <p>The proof of Liouville's theorem follows from a useful set of estimates about the behavior of derivatives of bounded analytic functions called the Cauchy inequalities. First, recall that Cauchy's integral theorem for derivatives gives
+            <me>
+                f^{n}(z_0) = \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz
+            </me>
+            where <m>C</m> is a simple closed curve about <m>z_0</m> inside the domain of <m>f</m>.</p>
+
+        <theorem>
+            <title>Cauchy inequalities</title>
+            <p>Let <m>f</m> be an analytic function on a domain <m>A</m> with bound <m>\abs{f(z)} \lt M</m> on <m>A</m>, and let <m>\gamma</m> be a circle of radius <m>R</m> centered at a point <m>z_0 \in A</m> with <m>\gamma \subset A</m>. Then
+            <me>
+                \abs{f^{n}(z_0)} \leq \frac{n!}{R^n} M.
+            </me></p>
+        </theorem>
+
+        <proof>
+            <p>Suppose that <m>\gamma(t) = z_0 + R e^{it}</m> parametrizes <m>\gamma</m>. By the integral theorem for derivatives,  we have
+            <md>
+                <mrow> \abs{f^{n}(z_0)} \amp= | \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz |</mrow> 
+                <mrow>\amp= \frac{n!}{2\pi} |\oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz|</mrow>
+                <mrow>\amp\leq \frac{n!}{2\pi} \frac{M}{R^{n+1}} 2 \pi R,</mrow>
+                <mrow>\amp= \frac{n!}{R^n}M</mrow>
+            </md>
+            where the inequality follows from the ML-inequality.</p>
+        </proof>
+
+        <theorem>
+            <title>Liouville's Theorem</title>
+            <p>A bounded entire function is necessarily constant.</p>
+        </theorem>
+    </section>
+
 
     <section>
         <title>Exercise set 1</title>
@@ -316,7 +356,7 @@
                 <p>Let <m>a, b \in \C</m> be constant. Show that <m>f: \C \to \C</m> defined by <m>f(z) = az + b</m> can be written as a rotation followed by a magnification followed by a translation.</p>
             </exercise>
             <exercise>
-                <p>The Riemann mapping theorem concerns sets that are not all of <m>\C</m>. Is there a conformal map from <m>\C</m> that is one-to-one onto the unit disk <m>\D</m>? Is there a conformal map of <m>\D</m> one-to-one onto <m>\C</m>?</p>
+                <p>The Riemann mapping theorem concerns simply connected sets that are not all of <m>\C</m>. Is there a conformal map from <m>\C</m> that is one-to-one onto the unit disk <m>\D</m>? Is there a conformal map of <m>\D</m> one-to-one onto <m>\C</m>?</p>
             </exercise>
 
         </exercises>
