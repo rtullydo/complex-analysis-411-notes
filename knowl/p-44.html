@@ -13,11 +13,11 @@
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
 <div class="para logical">
-<div class="para">Suppose that <span class="process-math">\(\gamma(t) = z_0 + R e^{it}\)</span> parametrizes <span class="process-math">\(\gamma\text{.}\)</span> By the integral theorem for derivatives,  we have</div>
+<div class="para">Suppose that <span class="process-math">\(\gamma(t) = z_0 + R e^{it}\)</span> parametrizes <span class="process-math">\(\gamma\text{.}\)</span> Note that restricted to <span class="process-math">\(\gamma\text{,}\)</span> we have <span class="process-math">\(z - z_0 = R\text{.}\)</span>  By the integral theorem for derivatives,  we have</div>
 <div class="displaymath process-math">
 \begin{align*}
-\abs{f^{n}(z_0)} \amp= | \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz |\\
-\amp= \frac{n!}{2\pi} |\oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz|\\
+\abs{f^{n}(z_0)} \amp= | \frac{n!}{2\pi i} \oint_\gamma \frac{f(z)}{(z - z_0)^{n+1}} \, dz |\\
+\amp= \frac{n!}{2\pi} |\oint_\gamma \frac{f(z)}{(z - z_0)^{n+1}} \, dz|\\
 \amp\leq \frac{n!}{2\pi} \frac{M}{R^{n+1}} 2 \pi R,\\
 \amp= \frac{n!}{R^n}M
 \end{align*}

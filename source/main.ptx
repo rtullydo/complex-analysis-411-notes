@@ -310,20 +310,36 @@
         </theorem>
 
         <proof>
-            <p>Suppose that <m>\gamma(t) = z_0 + R e^{it}</m> parametrizes <m>\gamma</m>. By the integral theorem for derivatives,  we have
+            <p>Suppose that <m>\gamma(t) = z_0 + R e^{it}</m> parametrizes <m>\gamma</m>. Note that restricted to <m>\gamma</m>, we have <m>z - z_0 = R</m>.  By the integral theorem for derivatives,  we have
             <md>
-                <mrow> \abs{f^{n}(z_0)} \amp= | \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz |</mrow> 
-                <mrow>\amp= \frac{n!}{2\pi} |\oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz|</mrow>
+                <mrow> \abs{f^{n}(z_0)} \amp= | \frac{n!}{2\pi i} \oint_\gamma \frac{f(z)}{(z - z_0)^{n+1}} \, dz |</mrow> 
+                <mrow>\amp= \frac{n!}{2\pi} |\oint_\gamma \frac{f(z)}{(z - z_0)^{n+1}} \, dz|</mrow>
                 <mrow>\amp\leq \frac{n!}{2\pi} \frac{M}{R^{n+1}} 2 \pi R,</mrow>
                 <mrow>\amp= \frac{n!}{R^n}M</mrow>
             </md>
             where the inequality follows from the ML-inequality.</p>
         </proof>
 
+        <p>We're now ready for the main result of this section</p>
+
         <theorem>
             <title>Liouville's Theorem</title>
             <p>A bounded entire function is necessarily constant.</p>
         </theorem>
+
+        <proof>
+            <p>Let <m>z_0</m> be a complex number and let <m>\gamma</m> be a circle of radius <m>R</m> centered at <m>z_0</m>. Suppose that <m>f</m> is bounded in modulus on <m>\C</m> by a constant <m>M</m>. Now apply the Cauchy inequality with <m>n = 1</m> to <m>f</m> at <m>z_0</m>. This gives
+            <me>
+                |f\dd(z_0)| \leq \frac{M}{R}.
+            </me>
+            This inequality holds for all radii <m>R</m>, because every circle centered at <m>z_0</m> is contained in the domain of <m>f</m>. In particular, this means that as we let <m>R \to \infty</m>, we have
+            <me>
+                |f\dd(z_0)| = 0,
+            </me>
+            which means that <m>f\dd(z_0) = 0</m>. Since this holds for every <m>z_0 \in \C</m>, we have <m>f\dd(z) = 0</m> and so <m>f(z) = c</m> for some constant <m>c \in \C</m>.</p>
+        </proof>
+
+
     </section>
 
 

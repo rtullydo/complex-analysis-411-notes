@@ -347,21 +347,37 @@ f^{n}(z_0) = \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz
 \end{equation*}
 </div>
 </div></article><article class="hiddenproof" id="proof-4"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><div class="para logical" id="p-44">
-<div class="para">Suppose that <span class="process-math">\(\gamma(t) = z_0 + R e^{it}\)</span> parametrizes <span class="process-math">\(\gamma\text{.}\)</span> By the integral theorem for derivatives,  we have</div>
+<div class="para">Suppose that <span class="process-math">\(\gamma(t) = z_0 + R e^{it}\)</span> parametrizes <span class="process-math">\(\gamma\text{.}\)</span> Note that restricted to <span class="process-math">\(\gamma\text{,}\)</span> we have <span class="process-math">\(z - z_0 = R\text{.}\)</span>  By the integral theorem for derivatives,  we have</div>
 <div class="displaymath process-math" id="md-1">
 \begin{align*}
-\abs{f^{n}(z_0)} \amp= | \frac{n!}{2\pi i} \oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz |\\
-\amp= \frac{n!}{2\pi} |\oint_C \frac{f(z)}{(z - z_0)^{n+1}} \, dz|\\
+\abs{f^{n}(z_0)} \amp= | \frac{n!}{2\pi i} \oint_\gamma \frac{f(z)}{(z - z_0)^{n+1}} \, dz |\\
+\amp= \frac{n!}{2\pi} |\oint_\gamma \frac{f(z)}{(z - z_0)^{n+1}} \, dz|\\
 \amp\leq \frac{n!}{2\pi} \frac{M}{R^{n+1}} 2 \pi R,\\
 \amp= \frac{n!}{R^n}M
 \end{align*}
 </div>
 <div class="para">where the inequality follows from the ML-inequality.</div>
 </div></article></div>
+<div class="para" id="p-45">We're now ready for the main result of this section</div>
 <article class="theorem theorem-like" id="theorem-9"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Liouville's Theorem.</span>
 </h3>
-<div class="para" id="p-45">A bounded entire function is necessarily constant.</div></article></section></div>
+<div class="para" id="p-46">A bounded entire function is necessarily constant.</div></article><article class="hiddenproof" id="proof-5"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-5"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-5"><article class="hiddenproof"><div class="para logical" id="p-47">
+<div class="para">Let <span class="process-math">\(z_0\)</span> be a complex number and let <span class="process-math">\(\gamma\)</span> be a circle of radius <span class="process-math">\(R\)</span> centered at <span class="process-math">\(z_0\text{.}\)</span> Suppose that <span class="process-math">\(f\)</span> is bounded in modulus on <span class="process-math">\(\C\)</span> by a constant <span class="process-math">\(M\text{.}\)</span> Now apply the Cauchy inequality with <span class="process-math">\(n = 1\)</span> to <span class="process-math">\(f\)</span> at <span class="process-math">\(z_0\text{.}\)</span> This gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|f\dd(z_0)| \leq \frac{M}{R}.
+\end{equation*}
+</div>
+<div class="para">This inequality holds for all radii <span class="process-math">\(R\text{,}\)</span> because every circle centered at <span class="process-math">\(z_0\)</span> is contained in the domain of <span class="process-math">\(f\text{.}\)</span> In particular, this means that as we let <span class="process-math">\(R \to \infty\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+|f\dd(z_0)| = 0,
+\end{equation*}
+</div>
+<div class="para">which means that <span class="process-math">\(f\dd(z_0) = 0\text{.}\)</span> Since this holds for every <span class="process-math">\(z_0 \in \C\text{,}\)</span> we have <span class="process-math">\(f\dd(z) = 0\)</span> and so <span class="process-math">\(f(z) = c\)</span> for some constant <span class="process-math">\(c \in \C\text{.}\)</span>
+</div>
+</div></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-5.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

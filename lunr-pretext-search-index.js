@@ -259,7 +259,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.4",
   "title": "Interlude: Liouville's Theorem",
-  "body": " Interlude: Liouville's Theorem  In the calculus of real functions, it isn't at all unusual to deal with power series that converge everywhere in that represent bounded functions. (A whole class of these in the real world are signals that can be expressed as Fourier series). For example, has a power series representation valid for all real and it bounded in absolute value by 1. The extension theorem tells us that this same series should have infinite radius of convergence on as well, but we should note what happens to the size of the values of the function. Let . Then and which will be unbounded as we let . So even though remains a function with a convergent power series representation on (a so-called entire function), it is an unbounded function. Liouville's theorem asserts that this is the general situation - an entire function that is bounded must necessarily be a constant function.  The proof of Liouville's theorem follows from a useful set of estimates about the behavior of derivatives of bounded analytic functions called the Cauchy inequalities. First, recall that Cauchy's integral theorem for derivatives gives where is a simple closed curve about inside the domain of .   Cauchy inequalities  Let be an analytic function on a domain with bound on , and let be a circle of radius centered at a point with . Then    Suppose that parametrizes . By the integral theorem for derivatives, we have where the inequality follows from the ML-inequality.    Liouville's Theorem  A bounded entire function is necessarily constant.   "
+  "body": " Interlude: Liouville's Theorem  In the calculus of real functions, it isn't at all unusual to deal with power series that converge everywhere in that represent bounded functions. (A whole class of these in the real world are signals that can be expressed as Fourier series). For example, has a power series representation valid for all real and it bounded in absolute value by 1. The extension theorem tells us that this same series should have infinite radius of convergence on as well, but we should note what happens to the size of the values of the function. Let . Then and which will be unbounded as we let . So even though remains a function with a convergent power series representation on (a so-called entire function), it is an unbounded function. Liouville's theorem asserts that this is the general situation - an entire function that is bounded must necessarily be a constant function.  The proof of Liouville's theorem follows from a useful set of estimates about the behavior of derivatives of bounded analytic functions called the Cauchy inequalities. First, recall that Cauchy's integral theorem for derivatives gives where is a simple closed curve about inside the domain of .   Cauchy inequalities  Let be an analytic function on a domain with bound on , and let be a circle of radius centered at a point with . Then    Suppose that parametrizes . Note that restricted to , we have . By the integral theorem for derivatives, we have where the inequality follows from the ML-inequality.   We're now ready for the main result of this section   Liouville's Theorem  A bounded entire function is necessarily constant.    Let be a complex number and let be a circle of radius centered at . Suppose that is bounded in modulus on by a constant . Now apply the Cauchy inequality with to at . This gives This inequality holds for all radii , because every circle centered at is contained in the domain of . In particular, this means that as we let , we have which means that . Since this holds for every , we have and so for some constant .   "
 },
 {
   "id": "p-41",
@@ -286,7 +286,7 @@ var ptx_lunr_docs = [
   "type": "Proof",
   "number": "1.4.1",
   "title": "",
-  "body": " Suppose that parametrizes . By the integral theorem for derivatives, we have where the inequality follows from the ML-inequality.  "
+  "body": " Suppose that parametrizes . Note that restricted to , we have . By the integral theorem for derivatives, we have where the inequality follows from the ML-inequality.  "
 },
 {
   "id": "theorem-9",
@@ -296,6 +296,15 @@ var ptx_lunr_docs = [
   "number": "1.4.2",
   "title": "Liouville's Theorem.",
   "body": " Liouville's Theorem  A bounded entire function is necessarily constant.  "
+},
+{
+  "id": "proof-5",
+  "level": "2",
+  "url": "section-4.html#proof-5",
+  "type": "Proof",
+  "number": "1.4.2",
+  "title": "",
+  "body": " Let be a complex number and let be a circle of radius centered at . Suppose that is bounded in modulus on by a constant . Now apply the Cauchy inequality with to at . This gives This inequality holds for all radii , because every circle centered at is contained in the domain of . In particular, this means that as we let , we have which means that . Since this holds for every , we have and so for some constant .  "
 },
 {
   "id": "section-5",
