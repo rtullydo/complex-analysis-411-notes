@@ -396,6 +396,65 @@
 
         <p>We will use the shorthand LFT to stand for linear fractional transformation. From what we learned last term, it should be immediately obvious that an LFT has one pole of order 1 where <m>cz + d = 0</m>.</p>
 
+         <p>LFTs are the basic building blocks of conformal maps.</p>
+
+         <proposition xml:id="prop-lft">
+            <p>Let 
+                <me>
+                    T(z) = \frac{az + b}{cz + d}.
+                </me>
+            Then <m>T</m> is bijective and conformal from <m>A = \{z: cz + d \neq 0\}</m> to <m>B = \{w: cw + d \neq 0\}</m>.</p>
+            <p>The inverse function <m>T\inv:B \to A</m> is also a linear fractional tranformation with formula
+                <me>
+                    T\inv(w) = \frac{-dw + b}{cw - a}.
+                </me></p>
+        </proposition>
+
+        <proof>
+            <p>Let <m>S = \frac{-dw + b}{cw - a}</m>. The domain <m>A</m> excludes the simple pole of <m>T</m>, and likewise for <m>B</m> and <m>S</m>, which means that <m>T, S</m> are analytic on <m>A, B</m> respectively. So the argument comes down to showing that these functions are inverses, which can be done by direct computation. We will need the fact that <m>cw - a \neq 0</m> on <m>B</m> and that <m>bc - ad \neq 0</m> by definition. We leave to the reader the computation that
+            <me>
+                T(S(w)) = w
+            </me>
+            and
+            <me>
+                S(T(z)) = z
+            </me>.
+            Finally,
+            <me>
+                1 = \frac{d}{dz}(z) = \frac{d}{dz} (S(T(z))) = S\dd(T(z)) \cdot T\dd(z),
+            </me>
+            which implies that <m>T\dd(z) \neq 0.</m></p>
+        </proof>
+
+        <p>We leave a little hook for the future here - we can <q>complete</q> the function by assigning the value <m>T(-d/c) = \infty</m>, which will turn out, which a little caution, to give us a conformal bijection of the Riemann sphere to itself. We'll arrive at the Riemann sphere in the next section.</p>
+
+        <p>What sort of functions are in the class of LFTs? If <m>a = 1, c = 0, d=0</m>, we get the translation function <m>T(z) = z + b</m>. If <m>b = c = 0</m> and <m>d = 1</m>, then we get <m>T(z) = az</m>, which should be viewed as <m>T(z) = re^{i\theta}z</m> which is a rotation by <m>\theta</m> and a magnification by <m>r</m>. Finally, if <m>b=c=1</m> and <m>a=d=0</m>, we get the inversion function <m>T(z) = \frac{1}{z}</m>.</p>
+
+        <p>We noted that the conformal automorphisms of the unit disk form a group - let us characterize these functions.</p>
+
+        <proposition>
+            <p>A conformal automorphism of the unit disk <m>\D</m> is a linear fractional transformation of the form
+            <men xml:id="eq-diskLFT">
+                T(z) = e^{i\theta} \frac{z - \alpha}{1 - \cc\alpha z}
+            </men>
+            for a fixed angle <m>\theta \in [0, 2\pi)</m> and a fixed <m>\alpha \in \D</m>. Moreover, any <m>T</m> of this form is a conformal automorphism of <m>\D</m>.</p>
+        </proposition>
+
+        <proof>
+            <p>We'll start by showing that maps of the form of <m>T</m> map the unit circle into itself. First, assume that <m>\abs{z} = 1</m>. Then
+            <me>
+                \abs{T(z)} = \abs{\frac{z - \alpha}{1 - \cc\alpha z}} = \frac{1}{\abs{z}} \abs{\frac{z - \alpha}{z\inv - \cc\alpha}}.
+            </me>
+            Because <m>\abs{z} = 1</m>, we also have that <m>z\inv = \cc z</m>, which gives
+            <me>
+                \abs{T(z)} = \frac{\abs{z - \alpha}}{\abs{\cc z - \cc \alpha}} = 1.
+            </me>
+            Hence, <m>T(\T) \subset \T</m>. Now, note that <m>T</m> has only a singularity at <m>z = \frac{1}{\cc\alpha}</m>, which is outside the unit circle, so <m>T</m> is analytic in a neighborhood of <m>\D</m>. Then by the maximium modulus principle, for any <m>z\in \D</m>, we must have <m>\abs{T(z)} \lt 1</m>, which implies that <m>T:\D \to \D</m>. Also, by <xref ref="prop-lft"/>, <m>T\inv</m> has the same form, and so also defines a conformal map from <m>\D \to \D</m>. Thus any such <m>T</m> is a conformal automorphism from <m>\D \to \D</m>.</p>
+
+            <p>Now, let's show that any conformal automorphism from <m>\D \to \D</m> must be of this form. We'll be using uniqueness of conformal maps. Assume that <m>R:\D \to \D</m> is a conformal automorphism. Let <m>\alpha = R\inv(0)</m>, and let <m>\theta = \operatorname{arg} R\dd(z_0)</m>. A map <m>T</m> of the form <xref ref="eq-diskLFT"/> also has <m>T(\alpha) = 0</m>.  </p>
+        </proof>
+
+
     </section>
 
 
