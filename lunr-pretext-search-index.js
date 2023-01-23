@@ -385,7 +385,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.6",
   "title": "Linear fractional tranformations",
-  "body": " Linear fractional tranformations  A couple of you have asked me how to actually find the conformal maps that are guaranteed to exist by the Riemann Mapping Theorem. For a large class of domains, we can readily (for some value of readily) find these!   A linear fractional transformation is a degree one complex rational function of the form for fixed constants , and where we assume that .    What happens to if ?   We will use the shorthand LFT to stand for linear fractional transformation. From what we learned last term, it should be immediately obvious that an LFT has one pole of order 1 where .  "
+  "body": " Linear fractional tranformations  A couple of you have asked me how to actually find the conformal maps that are guaranteed to exist by the Riemann Mapping Theorem. For a large class of domains, we can readily (for some value of readily) find these!   A linear fractional transformation is a degree one complex rational function of the form for fixed constants , and where we assume that .    What happens to if ?   We will use the shorthand LFT to stand for linear fractional transformation. From what we learned last term, it should be immediately obvious that an LFT has one pole of order 1 where .  LFTs are the basic building blocks of conformal maps.   Let Then is bijective and conformal from to .  The inverse function is also a linear fractional tranformation with formula    Let . The domain excludes the simple pole of , and likewise for and , which means that are analytic on respectively. So the argument comes down to showing that these functions are inverses, which can be done by direct computation. We will need the fact that on and that by definition. We leave to the reader the computation that and . Finally, which implies that   We leave a little hook for the future here - we can complete the function by assigning the value , which will turn out, which a little caution, to give us a conformal bijection of the Riemann sphere to itself. We'll arrive at the Riemann sphere in the next section.  What sort of functions are in the class of LFTs? If , we get the translation function . If and , then we get , which should be viewed as which is a rotation by and a magnification by . Finally, if and , we get the inversion function .  We noted that the conformal automorphisms of the unit disk form a group - let us characterize these functions.   A conformal automorphism of the unit disk is a linear fractional transformation of the form for a fixed angle and a fixed . Moreover, any of this form is a conformal automorphism of .    We'll start by showing that maps of the form of map the unit circle into itself. First, assume that . Then Because , we also have that , which gives Hence, . Now, note that has only a singularity at , which is outside the unit circle, so is analytic in a neighborhood of . Then by the maximium modulus principle, for any , we must have , which implies that . Also, by , has the same form, and so also defines a conformal map from . Thus any such is a conformal automorphism from .  Now, let's show that any conformal automorphism from must be of this form. We'll be using uniqueness of conformal maps. Assume that is a conformal automorphism. Let , and let . A map of the form also has . Further, if we compute the derivative of at , we'll get , which has argument . Thus, and agree in value and argument at , and so by uniquess of conformal maps, . (note: the argument version of uniqueness follows from the positive derivative version. add this to a future draft or add as exercise.)   Let denote the extended complex plane. If we think of lines as passing through the unique point at in either direction, then lines are essentially circles in . Equivalently, lines map to great circles passing through the north pole in the Riemann sphere model. Linear fractional transforms on send circles to circles with this identification for lines.   Let be a linear fractional transformation. If is a line and is a circle, then is a line or a circle, and is a line or a circle.   Some authors use the amusingly awful word clircle to include both cases. We'll be more dignified and just say circle when we're referring to these shapes in the extended plane or sphere.  Now suppose that we are given three points in . If these are collinear, the three points determine a unique line. If they are not collinear, they determine a unique circle. Because LFTs take circles\/lines to circles lines, we might suspect that the implication of the geometric fact above is that there is a unique linear fractional map carrying any set to the set , and this is indeed the case.   Given two sets of distinct points and , there is a unique LFT with for . Moreover, if then   "
 },
 {
   "id": "definition-3",
@@ -404,6 +404,123 @@ var ptx_lunr_docs = [
   "number": "1.6.2",
   "title": "",
   "body": " What happens to if ?  "
+},
+{
+  "id": "prop-lft",
+  "level": "2",
+  "url": "section-6.html#prop-lft",
+  "type": "Proposition",
+  "number": "1.6.3",
+  "title": "",
+  "body": " Let Then is bijective and conformal from to .  The inverse function is also a linear fractional tranformation with formula  "
+},
+{
+  "id": "proof-6",
+  "level": "2",
+  "url": "section-6.html#proof-6",
+  "type": "Proof",
+  "number": "1.6.1",
+  "title": "",
+  "body": " Let . The domain excludes the simple pole of , and likewise for and , which means that are analytic on respectively. So the argument comes down to showing that these functions are inverses, which can be done by direct computation. We will need the fact that on and that by definition. We leave to the reader the computation that and . Finally, which implies that  "
+},
+{
+  "id": "proposition-5",
+  "level": "2",
+  "url": "section-6.html#proposition-5",
+  "type": "Proposition",
+  "number": "1.6.4",
+  "title": "",
+  "body": " A conformal automorphism of the unit disk is a linear fractional transformation of the form for a fixed angle and a fixed . Moreover, any of this form is a conformal automorphism of .  "
+},
+{
+  "id": "proof-7",
+  "level": "2",
+  "url": "section-6.html#proof-7",
+  "type": "Proof",
+  "number": "1.6.2",
+  "title": "",
+  "body": " We'll start by showing that maps of the form of map the unit circle into itself. First, assume that . Then Because , we also have that , which gives Hence, . Now, note that has only a singularity at , which is outside the unit circle, so is analytic in a neighborhood of . Then by the maximium modulus principle, for any , we must have , which implies that . Also, by , has the same form, and so also defines a conformal map from . Thus any such is a conformal automorphism from .  Now, let's show that any conformal automorphism from must be of this form. We'll be using uniqueness of conformal maps. Assume that is a conformal automorphism. Let , and let . A map of the form also has . Further, if we compute the derivative of at , we'll get , which has argument . Thus, and agree in value and argument at , and so by uniquess of conformal maps, . (note: the argument version of uniqueness follows from the positive derivative version. add this to a future draft or add as exercise.)  "
+},
+{
+  "id": "proposition-6",
+  "level": "2",
+  "url": "section-6.html#proposition-6",
+  "type": "Proposition",
+  "number": "1.6.5",
+  "title": "",
+  "body": " Let be a linear fractional transformation. If is a line and is a circle, then is a line or a circle, and is a line or a circle.  "
+},
+{
+  "id": "proposition-7",
+  "level": "2",
+  "url": "section-6.html#proposition-7",
+  "type": "Proposition",
+  "number": "1.6.6",
+  "title": "",
+  "body": " Given two sets of distinct points and , there is a unique LFT with for . Moreover, if then  "
+},
+{
+  "id": "section-7",
+  "level": "1",
+  "url": "section-7.html",
+  "type": "Section",
+  "number": "1.7",
+  "title": "The Riemann sphere and the Mobius group",
+  "body": " The Riemann sphere and the Mobius group  "
+},
+{
+  "id": "section-8",
+  "level": "1",
+  "url": "section-8.html",
+  "type": "Section",
+  "number": "1.8",
+  "title": "Exercises 2",
+  "body": " Exercises 2   Let . Find the image under of the following sets:  the real line;  the imaginary axis  the unit circle;  the circle centered a 0 with radius 2;   Is the image of a triangle under a conformal map a triangle? Why not? Can it be?  Let . Find the image under of the following sets:  the real line;  the imaginary axis  the unit circle;  the circle centered a 0 with radius 2;  the triangle with vertices .   Find a linear fractional transform that takes the unit disk to the right half plane with .  Find a linear fractional transform that takes the unit disk to itself and maps to .   "
+},
+{
+  "id": "exercise-8",
+  "level": "2",
+  "url": "section-8.html#exercise-8",
+  "type": "Exercise",
+  "number": "1.8.1",
+  "title": "",
+  "body": "Let . Find the image under of the following sets:  the real line;  the imaginary axis  the unit circle;  the circle centered a 0 with radius 2;  "
+},
+{
+  "id": "exercise-9",
+  "level": "2",
+  "url": "section-8.html#exercise-9",
+  "type": "Exercise",
+  "number": "1.8.2",
+  "title": "",
+  "body": "Is the image of a triangle under a conformal map a triangle? Why not? Can it be? "
+},
+{
+  "id": "exercise-10",
+  "level": "2",
+  "url": "section-8.html#exercise-10",
+  "type": "Exercise",
+  "number": "1.8.3",
+  "title": "",
+  "body": "Let . Find the image under of the following sets:  the real line;  the imaginary axis  the unit circle;  the circle centered a 0 with radius 2;  the triangle with vertices .  "
+},
+{
+  "id": "exercise-11",
+  "level": "2",
+  "url": "section-8.html#exercise-11",
+  "type": "Exercise",
+  "number": "1.8.4",
+  "title": "",
+  "body": "Find a linear fractional transform that takes the unit disk to the right half plane with . "
+},
+{
+  "id": "exercise-12",
+  "level": "2",
+  "url": "section-8.html#exercise-12",
+  "type": "Exercise",
+  "number": "1.8.5",
+  "title": "",
+  "body": "Find a linear fractional transform that takes the unit disk to itself and maps to . "
 }
 ]
 

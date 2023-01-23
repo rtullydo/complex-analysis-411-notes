@@ -402,7 +402,7 @@
                 <me>
                     T(z) = \frac{az + b}{cz + d}.
                 </me>
-            Then <m>T</m> is bijective and conformal from <m>A = \{z: cz + d \neq 0\}</m> to <m>B = \{w: cw + d \neq 0\}</m>.</p>
+            Then <m>T</m> is bijective and conformal from <m>A = \{z: cz + d \neq 0\}</m> to <m>B = \{w: cw - a\neq 0\}</m>.</p>
             <p>The inverse function <m>T\inv:B \to A</m> is also a linear fractional tranformation with formula
                 <me>
                     T\inv(w) = \frac{-dw + b}{cw - a}.
@@ -491,6 +491,11 @@
                     <li>the circle centered a 0 with radius 2;</li>
                 </ol></p>
             </exercise>
+
+            <exercise>
+                <p>Is the image of a triangle under a conformal map a triangle? Why not? Can it be?</p>
+            </exercise>
+
             <exercise>
                 <p>Let <m>f(z) = (z- i)/(z+i)</m>. Find the image under <m>f</m> of the following sets:
                 <ol>
@@ -498,6 +503,7 @@
                     <li>the imaginary axis</li>
                     <li>the unit circle;</li>
                     <li>the circle centered a 0 with radius 2;</li>
+                    <li>the triangle with vertices <m>0, i, 1+i \in \C</m>.</li>
                 </ol></p>
             </exercise>
             <exercise>
