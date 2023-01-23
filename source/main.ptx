@@ -27,7 +27,6 @@
           \newcommand{\A}{\mathcal{A}}
           \newcommand\h{\mathcal{H}}
           \newcommand{\J}{\mathcal{J}}
-          \newcommand{\M}{\mathcal{M}}
           \newcommand{\F}{\mathbb{F}}
           \newcommand{\K}{\mathcal{K}}
           \newcommand{\N}{\mathcal{N}}
