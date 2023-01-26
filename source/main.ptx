@@ -482,6 +482,11 @@
             </me>
             where <m>\alpha \in \D</m>. (Notice that this map sends <m>\alpha \to 0</m> and <m>1/\cc\alpha \to \infty</m>.)</p>
         </theorem>
+        <figure>
+            <caption>Useful conformal maps</caption>
+            <image source="conmaps.jpg" />
+        </figure>
+
 
     </section>
 
@@ -499,7 +504,7 @@
             </exercise>
 
             <exercise>
-                <p>Is the image of a triangle under a conformal map a triangle? Why not? Can it be?</p>
+                <p>Is the image of a triangle under a conformal map a triangle? Why or why not? How about on the sphere? (What is a <q>triangle</q> on a sphere?)</p>
             </exercise>
 
             <exercise>
@@ -522,7 +527,7 @@
                 <p>Determine the image of the unit disk under the map <m>f(z) = \frac{z+1}{3z + 1}</m>. Where is the image of the real axis? What about the imaginary axis?</p>
             </exercise>
             <exercise>
-                <p>Find a conformal map taking the quarter of unit circle in the first quadrant to the entire unit disk. Hint: <m>f(z) = z^4</m> isn't good enough. Why?</p> 
+                <p>Find a conformal map taking the quarter of unit disk in the first quadrant to the entire unit disk. Hint: <m>f(z) = z^4</m> isn't good enough. Why? Can you do it with a bijective conformal map?</p> 
             </exercise>
             <exercise>
                 <p>Show that a composition of two linear fractional maps is a linear fractional map.</p>
