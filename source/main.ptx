@@ -474,9 +474,15 @@
             </me></p>
         </proposition>
 
-    </section>
-    <section>
-        <title>The Riemann sphere and the Mobius group</title>
+        <p>Remember that a conformal automorphism of the unit disk is a bijective analytic function on <m>\D</m> with non-zero derivative. It turns out that they have a very strict form.</p>
+        <theorem>
+            <p>Conformal automorphisms of the unit disk must be of the form
+            <me>
+                T(z) = e^{i\theta} \frac{z - \alpha}{1 - \cc\alpha z},
+            </me>
+            where <m>\alpha \in \D</m>. (Notice that this map sends <m>\alpha \to 0</m> and <m>1/\cc\alpha \to \infty</m>.)</p>
+        </theorem>
+
     </section>
 
     <section>
@@ -511,6 +517,15 @@
             </exercise>
             <exercise>
                 <p>Find a linear fractional transform that takes the unit disk to itself and maps <m>1/2</m> to <m>1/3</m>.</p>
+            </exercise>
+            <exercise>
+                <p>Determine the image of the unit disk under the map <m>f(z) = \frac{z+1}{3z + 1}</m>. Where is the image of the real axis? What about the imaginary axis?</p>
+            </exercise>
+            <exercise>
+                <p>Find a conformal map taking the quarter of unit circle in the first quadrant to the entire unit disk. Hint: <m>f(z) = z^4</m> isn't good enough. Why?</p> 
+            </exercise>
+            <exercise>
+                <p>Show that a composition of two linear fractional maps is a linear fractional map.</p>
             </exercise>
         </exercises>
     </section>
