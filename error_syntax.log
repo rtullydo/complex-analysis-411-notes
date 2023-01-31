@@ -1,3 +1,7 @@
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:452:372:FATAL:PARSER:ERR_NAME_REQUIRED: error parsing attribute name
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:452:372:FATAL:PARSER:ERR_SPACE_REQUIRED: attributes construct error
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:452:372:FATAL:PARSER:ERR_GT_REQUIRED: Couldn't find end of Start Tag xref line 452
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:568:61:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: li line 568 and statement
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:569:23:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: ol line 567 and proposition
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:570:15:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: statement line 567 and section
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:573:15:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: proposition line 565 and chapter
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:579:8:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: section line 530 and book
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:581:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: chapter line 128 and pretext
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:582:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag book line 114

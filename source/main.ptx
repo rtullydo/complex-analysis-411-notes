@@ -474,14 +474,6 @@
             </me></p>
         </proposition>
 
-        <p>Remember that a conformal automorphism of the unit disk is a bijective analytic function on <m>\D</m> with non-zero derivative. It turns out that they have a very strict form.</p>
-        <theorem>
-            <p>Conformal automorphisms of the unit disk must be of the form
-            <me>
-                T(z) = e^{i\theta} \frac{z - \alpha}{1 - \cc\alpha z},
-            </me>
-            where <m>\alpha \in \D</m>. (Notice that this map sends <m>\alpha \to 0</m> and <m>1/\cc\alpha \to \infty</m>.)</p>
-        </theorem>
         <figure>
             <caption>Useful conformal maps</caption>
             <image source="conmaps.jpg" />
@@ -533,6 +525,53 @@
                 <p>Show that a composition of two linear fractional maps is a linear fractional map.</p>
             </exercise>
         </exercises>
+    </section>
+
+    <section>
+        <title>Reflection across a circle</title>
+        <p>Recall that for the unit circle <m>\T</m>, we have the nice reflection map <m>z \mapsto 1/\cc{z}</m>, which maps an element <m>z\in \D</m> to its <term>reflection across the circle</term> <m>\tilde{z}</m>, which lies on the same ray - that is, the map <m>z \mapsto \tilde{z}</m> sends <me>r e^{i\theta} \mapsto \frac{1}{r} e^{i\theta}.</me> Notice then that the map <m>z \mapsto \tilde{z}</m> takes the disk <m>\D</m> to what we might call the outer disk <m>\tilde{\D}</m>. </p>
+
+        <p>We're going to extend this idea to general circles (including lines, which should be thought of as circles of infinite radius in this context).</p>
+
+        <proposition xml:id="proposition-existence-of-a-reflection-point">
+            <title>Existence of a reflection point</title>
+            <statement> Let <m>C</m> be a circle (or line), and let <m>z \notin C</m> be a point. Then the familiy of all circles passing through <m>z</m> that intersect <m>C</m> at right angles also intersect at a single point <m>\tilde{z}</m>.</statement>
+        </proposition>
+
+        <proof>
+            <p>In the case where <m>C</m> is a line, the argument follows from basic geometry, and <m>\tilde{z}</m> is the point on the line perpendicular to <m>C</m> passing through <m>z</m> and equidistant to <m>C</m> with <m>z</m>.</p>
+
+            <p>If <m>C</m> is a circle, then the interior of <m>C</m> is a disk, and we can conformally map this disk with a LFT <m>T</m> to the upper half plane, with the circle mapping to the real line (why?). Now the family of circles passing through <m>z</m> and orthogonal to <m>C</m> continue to pass through the point <m>w = T(z)</m> and remain orthogonal to the image of <m>C</m>. By the line case, these circles must also pass through the reflection <m>\tilde{w}</m>. Finally, we conclude that <m>T\inv(\tilde{w}) = \tilde{z}</m> is the reflection of <m>z</m>.</p>
+        </proof>
+
+        <proposition xml:id="proposition-">
+             <title>LFTs preserve reflection</title>
+             <statement>If <m>T</m> is a linear fractional tranform and <m>C</m> is a circle (or line), then <m>T(\tilde{z}) = \tilde{T}(z)</m>.</statement>
+         </proposition>
+
+         <p>The next proposition gives a formula for computing <m>\tilde{z}</m> in the case that <m>C</m> is a general circle, generalizing the map that sends <m>z \to 1/\cc{z}</m> for the unit circle. In the case that <m>C</m> is a line, we can just set <m>\tilde{z}</m> to be the perpendicular reflection across the line.</p>
+
+         <proposition xml:id="proposition-reflection-formula">
+             <title>Reflection formula</title>
+             <statement>If <m>C</m> is a circle with center <m>z_0</m> and radius <m>R</m>, then the map <m>z \mapsto \tilde{z}</m> is a composition of LFTs and complex conjugation. A formula for the reflection is
+             <me>
+                \tilde{z} = \cc{\frac{\cc{z_0}z + R^2 - \abs{z_0}^2}{z - z_0}}
+                </me>
+             </statement>
+         </proposition>
+
+        <p>We conclude with the following proposition concerning the properties of the reflection map.</p>
+
+        <proposition xml:id="proposition-properties-of-reflection">
+            <title>Properties of reflection</title>
+            <statement>
+                <ol>
+                <li><m>\tilde{\tilde{z}} = z</m></li>
+                <li><m>z \mapsto \tilde{z}</m> preserves the magnitude of angles, but reverses orientation (just as conjugation does).</li>
+                <li><m>z \mapsto \tilde{z}</m> maps circles to circles.</li>
+                </ol>
+            </statement>
+        </proposition>
     </section>
 
 
