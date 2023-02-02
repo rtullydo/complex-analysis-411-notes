@@ -385,7 +385,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.6",
   "title": "Linear fractional tranformations",
-  "body": " Linear fractional tranformations  A couple of you have asked me how to actually find the conformal maps that are guaranteed to exist by the Riemann Mapping Theorem. For a large class of domains, we can readily (for some value of readily) find these!   A linear fractional transformation is a degree one complex rational function of the form for fixed constants , and where we assume that .    What happens to if ?   We will use the shorthand LFT to stand for linear fractional transformation. From what we learned last term, it should be immediately obvious that an LFT has one pole of order 1 where .  LFTs are the basic building blocks of conformal maps.   Let Then is bijective and conformal from to .  The inverse function is also a linear fractional tranformation with formula    Let . The domain excludes the simple pole of , and likewise for and , which means that are analytic on respectively. So the argument comes down to showing that these functions are inverses, which can be done by direct computation. We will need the fact that on and that by definition. We leave to the reader the computation that and . Finally, which implies that   We leave a little hook for the future here - we can complete the function by assigning the value , which will turn out, which a little caution, to give us a conformal bijection of the Riemann sphere to itself. We'll arrive at the Riemann sphere in the next section.  What sort of functions are in the class of LFTs? If , we get the translation function . If and , then we get , which should be viewed as which is a rotation by and a magnification by . Finally, if and , we get the inversion function .  We noted that the conformal automorphisms of the unit disk form a group - let us characterize these functions.   A conformal automorphism of the unit disk is a linear fractional transformation of the form for a fixed angle and a fixed . Moreover, any of this form is a conformal automorphism of .    We'll start by showing that maps of the form of map the unit circle into itself. First, assume that . Then Because , we also have that , which gives Hence, . Now, note that has only a singularity at , which is outside the unit circle, so is analytic in a neighborhood of . Then by the maximium modulus principle, for any , we must have , which implies that . Also, by , has the same form, and so also defines a conformal map from . Thus any such is a conformal automorphism from .  Now, let's show that any conformal automorphism from must be of this form. We'll be using uniqueness of conformal maps. Assume that is a conformal automorphism. Let , and let . A map of the form also has . Further, if we compute the derivative of at , we'll get , which has argument . Thus, and agree in value and argument at , and so by uniquess of conformal maps, . (note: the argument version of uniqueness follows from the positive derivative version. add this to a future draft or add as exercise.)   Let denote the extended complex plane. If we think of lines as passing through the unique point at in either direction, then lines are essentially circles in . Equivalently, lines map to great circles passing through the north pole in the Riemann sphere model. Linear fractional transforms on send circles to circles with this identification for lines.   Let be a linear fractional transformation. If is a line and is a circle, then is a line or a circle, and is a line or a circle.   Some authors use the amusingly awful word clircle to include both cases. We'll be more dignified and just say circle when we're referring to these shapes in the extended plane or sphere.  Now suppose that we are given three points in . If these are collinear, the three points determine a unique line. If they are not collinear, they determine a unique circle. Because LFTs take circles\/lines to circles lines, we might suspect that the implication of the geometric fact above is that there is a unique linear fractional map carrying any set to the set , and this is indeed the case.   Given two sets of distinct points and , there is a unique LFT with for . Moreover, if then   Remember that a conformal automorphism of the unit disk is a bijective analytic function on with non-zero derivative. It turns out that they have a very strict form.   Conformal automorphisms of the unit disk must be of the form where . (Notice that this map sends and .)    Useful conformal maps    "
+  "body": " Linear fractional tranformations  A couple of you have asked me how to actually find the conformal maps that are guaranteed to exist by the Riemann Mapping Theorem. For a large class of domains, we can readily (for some value of readily) find these!   A linear fractional transformation is a degree one complex rational function of the form for fixed constants , and where we assume that .    What happens to if ?   We will use the shorthand LFT to stand for linear fractional transformation. From what we learned last term, it should be immediately obvious that an LFT has one pole of order 1 where .  LFTs are the basic building blocks of conformal maps.   Let Then is bijective and conformal from to .  The inverse function is also a linear fractional tranformation with formula    Let . The domain excludes the simple pole of , and likewise for and , which means that are analytic on respectively. So the argument comes down to showing that these functions are inverses, which can be done by direct computation. We will need the fact that on and that by definition. We leave to the reader the computation that and . Finally, which implies that   We leave a little hook for the future here - we can complete the function by assigning the value , which will turn out, which a little caution, to give us a conformal bijection of the Riemann sphere to itself. We'll arrive at the Riemann sphere in the next section.  What sort of functions are in the class of LFTs? If , we get the translation function . If and , then we get , which should be viewed as which is a rotation by and a magnification by . Finally, if and , we get the inversion function .  We noted that the conformal automorphisms of the unit disk form a group - let us characterize these functions.   A conformal automorphism of the unit disk is a linear fractional transformation of the form for a fixed angle and a fixed . Moreover, any of this form is a conformal automorphism of .    We'll start by showing that maps of the form of map the unit circle into itself. First, assume that . Then Because , we also have that , which gives Hence, . Now, note that has only a singularity at , which is outside the unit circle, so is analytic in a neighborhood of . Then by the maximium modulus principle, for any , we must have , which implies that . Also, by , has the same form, and so also defines a conformal map from . Thus any such is a conformal automorphism from .  Now, let's show that any conformal automorphism from must be of this form. We'll be using uniqueness of conformal maps. Assume that is a conformal automorphism. Let , and let . A map of the form also has . Further, if we compute the derivative of at , we'll get , which has argument . Thus, and agree in value and argument at , and so by uniquess of conformal maps, . (note: the argument version of uniqueness follows from the positive derivative version. add this to a future draft or add as exercise.)   Let denote the extended complex plane. If we think of lines as passing through the unique point at in either direction, then lines are essentially circles in . Equivalently, lines map to great circles passing through the north pole in the Riemann sphere model. Linear fractional transforms on send circles to circles with this identification for lines.   Let be a linear fractional transformation. If is a line and is a circle, then is a line or a circle, and is a line or a circle.   Some authors use the amusingly awful word clircle to include both cases. We'll be more dignified and just say circle when we're referring to these shapes in the extended plane or sphere.  Now suppose that we are given three points in . If these are collinear, the three points determine a unique line. If they are not collinear, they determine a unique circle. Because LFTs take circles\/lines to circles lines, we might suspect that the implication of the geometric fact above is that there is a unique linear fractional map carrying any set to the set , and this is indeed the case.   Given two sets of distinct points and , there is a unique LFT with for . Moreover, if then    Useful conformal maps    "
 },
 {
   "id": "definition-3",
@@ -460,20 +460,11 @@ var ptx_lunr_docs = [
   "body": " Given two sets of distinct points and , there is a unique LFT with for . Moreover, if then  "
 },
 {
-  "id": "theorem-10",
-  "level": "2",
-  "url": "section-6.html#theorem-10",
-  "type": "Theorem",
-  "number": "1.6.7",
-  "title": "",
-  "body": " Conformal automorphisms of the unit disk must be of the form where . (Notice that this map sends and .)  "
-},
-{
   "id": "figure-1",
   "level": "2",
   "url": "section-6.html#figure-1",
   "type": "Figure",
-  "number": "1.6.8",
+  "number": "1.6.7",
   "title": "",
   "body": " Useful conformal maps   "
 },
@@ -557,6 +548,105 @@ var ptx_lunr_docs = [
   "number": "1.7.8",
   "title": "",
   "body": "Show that a composition of two linear fractional maps is a linear fractional map. "
+},
+{
+  "id": "section-8",
+  "level": "1",
+  "url": "section-8.html",
+  "type": "Section",
+  "number": "1.8",
+  "title": "Reflection across a circle",
+  "body": " Reflection across a circle  Recall that for the unit circle , we have the nice reflection map , which maps an element to its reflection across the circle  , which lies on the same ray - that is, the map sends Notice then that the map takes the disk to what we might call the outer disk .  We're going to extend this idea to general circles (including lines, which should be thought of as circles of infinite radius in this context).   Existence of a reflection point  Let be a circle (or line), and let be a point. Then the familiy of all circles passing through that intersect at right angles also intersect at a single point .    In the case where is a line, the argument follows from basic geometry, and is the point on the line perpendicular to passing through and equidistant to with .  If is a circle, then the interior of is a disk, and we can conformally map this disk with a LFT to the upper half plane, with the circle mapping to the real line (why?). Now the family of circles passing through and orthogonal to continue to pass through the point and remain orthogonal to the image of . By the line case, these circles must also pass through the reflection . Finally, we conclude that is the reflection of .    LFTs preserve reflection  If is a linear fractional tranform and is a circle (or line), then .   The next proposition gives a formula for computing in the case that is a general circle, generalizing the map that sends for the unit circle. In the case that is a line, we can just set to be the perpendicular reflection across the line.   Reflection formula  If is a circle with center and radius , then the map is a composition of LFTs and complex conjugation. A formula for the reflection is    We conclude with the following proposition concerning the properties of the reflection map.   Properties of reflection     preserves the magnitude of angles, but reverses orientation (just as conjugation does).  maps circles to circles.     "
+},
+{
+  "id": "p-82",
+  "level": "2",
+  "url": "section-8.html#p-82",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "reflection across the circle "
+},
+{
+  "id": "proposition-existence-of-a-reflection-point",
+  "level": "2",
+  "url": "section-8.html#proposition-existence-of-a-reflection-point",
+  "type": "Proposition",
+  "number": "1.8.1",
+  "title": "Existence of a reflection point.",
+  "body": " Existence of a reflection point  Let be a circle (or line), and let be a point. Then the familiy of all circles passing through that intersect at right angles also intersect at a single point .  "
+},
+{
+  "id": "proof-8",
+  "level": "2",
+  "url": "section-8.html#proof-8",
+  "type": "Proof",
+  "number": "1.8.1",
+  "title": "",
+  "body": " In the case where is a line, the argument follows from basic geometry, and is the point on the line perpendicular to passing through and equidistant to with .  If is a circle, then the interior of is a disk, and we can conformally map this disk with a LFT to the upper half plane, with the circle mapping to the real line (why?). Now the family of circles passing through and orthogonal to continue to pass through the point and remain orthogonal to the image of . By the line case, these circles must also pass through the reflection . Finally, we conclude that is the reflection of .  "
+},
+{
+  "id": "proposition-",
+  "level": "2",
+  "url": "section-8.html#proposition-",
+  "type": "Proposition",
+  "number": "1.8.2",
+  "title": "LFTs preserve reflection.",
+  "body": " LFTs preserve reflection  If is a linear fractional tranform and is a circle (or line), then .  "
+},
+{
+  "id": "proposition-reflection-formula",
+  "level": "2",
+  "url": "section-8.html#proposition-reflection-formula",
+  "type": "Proposition",
+  "number": "1.8.3",
+  "title": "Reflection formula.",
+  "body": " Reflection formula  If is a circle with center and radius , then the map is a composition of LFTs and complex conjugation. A formula for the reflection is   "
+},
+{
+  "id": "proposition-properties-of-reflection",
+  "level": "2",
+  "url": "section-8.html#proposition-properties-of-reflection",
+  "type": "Proposition",
+  "number": "1.8.4",
+  "title": "Properties of reflection.",
+  "body": " Properties of reflection     preserves the magnitude of angles, but reverses orientation (just as conjugation does).  maps circles to circles.    "
+},
+{
+  "id": "section-9",
+  "level": "1",
+  "url": "section-9.html",
+  "type": "Section",
+  "number": "1.9",
+  "title": "Conformal maps and harmonic equations",
+  "body": " Conformal maps and harmonic equations  We now consider the problem of finding a harmonic function on a domain that agrees with some sort of given boundary conditions. Our essential approach will be to construct a standard solution that describes some physical situation and then conformally map it to more interesting regions, which will also transform the solution.  We'll recall some definitions. Let be a domain in (which we will identify with when in the analytic setting). A scalar field on is a function - in this context, we'll think of such a function as assigning a value to each point in .  A vector field on is a function that assigns to each point in a vector . If happens to be continuously differentiable, then a natural vector field associated with is given by the gradient field  . Continuous gradient fields have the property that line integrals in the field are path independent (which should remind you of the Cauchy-Goursat theorem). A function with continuous gradient field is called a .  There is useful geometry connecting potentials and their gradient fields. Recall that a level curve for is the set of points with for constants . Given that the gradient vectors measure the direction of greatest change in a scalar field, it shouldn't be surprising that the gradient vector at a point in is orthogonal to the level curve through the point. If the vector field varies continuously, we might expect that we can trace flow lines through . A flow line (say parametrized by ) should have the property that at every point , .  Typically, the problem of computing flows lines explicitly is hard. However, for certain functions , this problem turns out to be much easier. Let's remember  "
+},
+{
+  "id": "p-89",
+  "level": "2",
+  "url": "section-9.html#p-89",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "scalar field "
+},
+{
+  "id": "p-90",
+  "level": "2",
+  "url": "section-9.html#p-90",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "vector field gradient field "
+},
+{
+  "id": "p-91",
+  "level": "2",
+  "url": "section-9.html#p-91",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "level curve flow lines "
 }
 ]
 

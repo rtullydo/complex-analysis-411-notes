@@ -574,6 +574,19 @@
         </proposition>
     </section>
 
+    <section>
+        <title>Conformal maps and harmonic equations</title>
+        <p>We now consider the problem of finding a harmonic function on a domain that agrees with some sort of given boundary conditions. Our essential approach will be to construct a standard solution that describes some physical situation and then conformally map it to more interesting regions, which will also transform the solution.</p>
+
+        <p>We'll recall some definitions. Let <m>A</m> be a domain in <m>\R^2</m> (which we will identify with <m>\C</m> when in the analytic setting). A <term>scalar field</term> on <m>A</m> is a function <m>u(x, y): A \to \R</m> - in this context, we'll think of such a function as assigning a value to each point in <m>A</m>.</p>
+
+        <p>A <term>vector field</term> on <m>A</m> is a function <m>V:A \to \R^2</m> that assigns to each point in <m>A</m> a vector <m>V(x,y) = (v_1(x,y), v_2(x,y))</m>. If <m>u</m> happens to be continuously differentiable, then a natural vector field associated with <m>u</m> is given by the <term>gradient field</term> <m>\nabla u = \operatorname{grad} u = \ip{u_x}{u_y}</m>. Continuous gradient fields have the property that line integrals in the field are path independent (which should remind you of the Cauchy-Goursat theorem). A function <m>u</m> with continuous gradient field <m>\nabla u</m> is called a <m>potential function</m>.</p>
+
+        <p>There is useful geometry connecting potentials and their gradient fields. Recall that a <term>level curve</term> for <m>u</m> is the set of points <m>(x,y) \in A</m> with <m>u(x,y) = C</m> for constants <m>C \in \R</m>. Given that the gradient vectors measure the direction of greatest change in a scalar field, it shouldn't be surprising that the gradient vector at a point in <m>A</m> is orthogonal to the level curve through the point. If the vector field varies continuously, we might expect that we can trace <term>flow lines</term> through <m>A</m>. A flow line (say parametrized by <m>\gamma</m>) should have the property that at every point <m>(x,y) \in A</m>, <m>\gamma\dd(t) = \nabla u(x,y)</m>. </p>
+
+        <p>Typically, the problem of computing flows lines explicitly is hard. However, for certain functions <m>u</m>, this problem turns out to be much easier. Let's remember</p>
+    </section>
+
 
     </chapter>
 
