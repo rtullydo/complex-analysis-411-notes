@@ -732,6 +732,9 @@
                 <p>Show that the map <me>z \mapsto z + \frac{1}{z}</me> takes the unit circle to the segment <m>[-2, 2] \subset \R</m>. Where is this map conformal?</p>
             </exercise>
             <exercise>
+                <p>Compute the real and imaginary parts of the composition of a uniform flow on the upper half plane with the map <m>z \mapsto z + 1/z</m>. Use your favorite visualizer to confirm that the level curves for these functions are orthogonal. You might also consider adding an image of the unit circle to your plot. (I used desmos for this).</p>
+            </exercise>
+            <exercise>
                 <p>Prove that the map given by <m>u(x, y) = \frac{1}{\pi} \theta</m> is harmonic on the upper half plane, where <m>\theta = \arg (x + iy)</m>. Show that this function has boundary values of <m>u(x, 0) = 1</m> for <m>x \lt 0</m> and <m>u(x,0) = 0</m> for <m>x > 0</m>.</p>
             </exercise>
             <exercise>
