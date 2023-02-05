@@ -605,6 +605,9 @@
             <exercise>
                 <p>Use the solution above to find a harmonic solution <m>u</m> to the Dirichlet problem on the disk where <m>u = 0</m> on the upper half of the unit circle, and <m>u = 1</m> on the lower half of the unit circle. Hint: consider the conformal map <me>T = -i \frac{1+ z}{1-z}.</me></p>
             </exercise>
+            <exercise>
+                <p>Find the image of the upper half of the unit disk under the map <me>z \mapsto \operatorname{Log} z.</me> (That is, it isn't enough to know what the answer is, you need to show it!) Is this map conformal? What is the inverse map?</p>
+            </exercise>
         </exercises>
     </section>
 
