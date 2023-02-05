@@ -685,11 +685,18 @@
                 V(x,y) = (\alpha, 0).
             </me>
             <figure>
-                <image source="uniform.jpg"/>
+                <image source="unifstream.jpg"/>
                 <caption>Uniform flow, velocity <m>\alpha</m></caption>
             </figure></p>
             
             <p>The vector field <m>V</m> is the gradient of the potential function <m>\phi = \alpha x</m>, which in turn is the real part of the complex function <m>f(z) = \alpha z</m>. Since <m>\phi</m> is the real part of an analytic function, it is harmonic. Further, as the flow is parallel to the boundary, the Neumann condition <m>\partial \phi/\partial n = 0 </m> is met.</p>
+
+            <p>A map that first arose in the early study of airfoils is the <url href="https://en.wikipedia.org/wiki/Joukowsky_transform">Joukowsy transform</url>, defined by <me>T(z) = z + \frac{1}{z}</me>. </p>
+
+            <figure>
+                <image source="uniftocyl.jpg"/>
+                <caption>Stream lines under the map <m>z \to z + 1/z</m></caption>
+            </figure>
         </subsection>
     </section>
 
