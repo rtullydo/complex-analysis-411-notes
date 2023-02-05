@@ -691,10 +691,29 @@
             
             <p>The vector field <m>V</m> is the gradient of the potential function <m>\phi = \alpha x</m>, which in turn is the real part of the complex function <m>f(z) = \alpha z</m>. Since <m>\phi</m> is the real part of an analytic function, it is harmonic. Further, as the flow is parallel to the boundary, the Neumann condition <m>\partial \phi/\partial n = 0 </m> is met.</p>
 
-            <p>A map that first arose in the early study of airfoils is the <url href="https://en.wikipedia.org/wiki/Joukowsky_transform">Joukowsy transform</url>, defined by <me>T(z) = z + \frac{1}{z}</me>. </p>
+            <p>A map that first arose in the early study of airfoils is the <url href="https://en.wikipedia.org/wiki/Joukowsky_transform">Joukowsy transform</url>, defined by <me>T(z) = z + \frac{1}{z}</me>. An exercise will ask you to look at this map more closely. For the purposes of our example, this map transforms the upper half plane with half of a unit disk removed conformally to the upper half plane.</p>
 
             <figure>
-                <image source="uniftocyl.jpg"/>
+                <sidebyside>
+                    <image source="cylplane.jpg"/>
+                    <image source="halfplane.jpg"/>
+                </sidebyside>
+                <caption>Image of <m>z \mapsto z + 1/z</m></caption>
+            </figure>
+
+            <p>We'll need the following highly useful interaction between conformal maps and harmonic functions.</p>
+
+            <proposition xml:id="proposition-harmonic-functions-">
+                <statement>If <m>u</m> is a harmonic function on a domain <m>A</m> and <m>T</m> is a conformal map from a domain <m>B</m> to <m>A</m>, then <m>u \circ T</m> is harmonic on <m>B</m>.</statement>
+            </proposition>
+
+            <p>How can we blend all of these ingredients together? We've already seen that <m>\phi(x,y) = \alpha x</m> is a solution to Laplace's equation on the upper half plane satisfying the condition that <m>\partial \phi/\partial n = 0</m> on the real axis. Lifting to the complex potential <m>\Phi(z) = \alpha z</m>, we compose with the map <m>T(z) = z + 1/z</m> to get a new function <me>F(z) = \phi \circ T = \alpha(z + \frac{1}{z})</me> that is analytic on the upper half plane with the unit disk removed. The real and imaginary parts of <m>F</m> give harmonic functions that describe the equipotentials and the flow lines for the transformation of uniform flow under <m>T</m> (the geometry is preserved by conformality). The image below shows the effect on the flow lines of the transformation.</p>
+
+            <figure>
+                <sidebyside>
+                    <image source="unifstream.jpg"/>
+                    <image source="uniftocyl.jpg"/>
+                </sidebyside>
                 <caption>Stream lines under the map <m>z \to z + 1/z</m></caption>
             </figure>
         </subsection>

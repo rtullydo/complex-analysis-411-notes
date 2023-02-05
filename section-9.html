@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2023-02-05T10:15:13-08:00       *-->
+<!--*       on 2023-02-05T10:43:18-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -294,8 +294,26 @@ V(x,y) = (\alpha, 0).
 T(z) = z + \frac{1}{z}\text{.}
 \end{equation*}
 </div>
-<figure class="figure figure-like" id="figure-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/uniftocyl.jpg" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.9.6<span class="period">.</span></span><span class="space"> </span>Stream lines under the map <span class="process-math">\(z \to z + 1/z\)</span></figcaption></figure></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Joukowsky_transform</code></div></div>
+<p class="continuation">An exercise will ask you to look at this map more closely. For the purposes of our example, this map transforms the upper half plane with half of a unit disk removed conformally to the upper half plane.</p>
+<figure class="figure figure-like" id="figure-3"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="external/cylplane.jpg" class="contained"></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/halfplane.jpg" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.9.6<span class="period">.</span></span><span class="space"> </span>Image of <span class="process-math">\(z \mapsto z + 1/z\)</span></figcaption></figure><p id="p-108">We'll need the following highly useful interaction between conformal maps and harmonic functions.</p>
+<article class="proposition theorem-like" id="proposition-harmonic-functions-"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.9.7</span><span class="period">.</span>
+</h4>If <span class="process-math">\(u\)</span> is a harmonic function on a domain <span class="process-math">\(A\)</span> and <span class="process-math">\(T\)</span> is a conformal map from a domain <span class="process-math">\(B\)</span> to <span class="process-math">\(A\text{,}\)</span> then <span class="process-math">\(u \circ T\)</span> is harmonic on <span class="process-math">\(B\text{.}\)</span></article><p id="p-109">How can we blend all of these ingredients together? We've already seen that <span class="process-math">\(\phi(x,y) = \alpha x\)</span> is a solution to Laplace's equation on the upper half plane satisfying the condition that <span class="process-math">\(\partial \phi/\partial n = 0\)</span> on the real axis. Lifting to the complex potential <span class="process-math">\(\Phi(z) = \alpha z\text{,}\)</span> we compose with the map <span class="process-math">\(T(z) = z + 1/z\)</span> to get a new function</p>
+<div class="displaymath process-math">
+\begin{equation*}
+F(z) = \phi \circ T = \alpha(z + \frac{1}{z})
+\end{equation*}
+</div>
+<p class="continuation">that is analytic on the upper half plane with the unit disk removed. The real and imaginary parts of <span class="process-math">\(F\)</span> give harmonic functions that describe the equipotentials and the flow lines for the transformation of uniform flow under <span class="process-math">\(T\)</span> (the geometry is preserved by conformality). The image below shows the effect on the flow lines of the transformation.</p>
+<figure class="figure figure-like" id="figure-4"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="external/unifstream.jpg" class="contained"></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/uniftocyl.jpg" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.9.8<span class="period">.</span></span><span class="space"> </span>Stream lines under the map <span class="process-math">\(z \to z + 1/z\)</span></figcaption></figure></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Joukowsky_transform</code></div></div>
 </div></main>
 </div>
 </body>
