@@ -17,6 +17,7 @@
           \DeclareMathOperator{\row}{row}
           \DeclareMathOperator{\proj}{proj}
           \DeclareMathOperator{\ball}{ball}
+          \DeclareMathOperator{\gd}{grad}
           \DeclareMathOperator\re{\mathrm {Re~}}
           \DeclareMathOperator\im{\mathrm {Im~}}
           %\newcommand\half{\tfrac 12}
@@ -576,15 +577,120 @@
 
     <section>
         <title>Conformal maps and harmonic equations</title>
-        <p>We now consider the problem of finding a harmonic function on a domain that agrees with some sort of given boundary conditions. Our essential approach will be to construct a standard solution that describes some physical situation and then conformally map it to more interesting regions, which will also transform the solution.</p>
+        <subsection>
+            <title>Vector fields and harmonic functions</title>
 
-        <p>We'll recall some definitions. Let <m>A</m> be a domain in <m>\R^2</m> (which we will identify with <m>\C</m> when in the analytic setting). A <term>scalar field</term> on <m>A</m> is a function <m>u(x, y): A \to \R</m> - in this context, we'll think of such a function as assigning a value to each point in <m>A</m>.</p>
 
-        <p>A <term>vector field</term> on <m>A</m> is a function <m>V:A \to \R^2</m> that assigns to each point in <m>A</m> a vector <m>V(x,y) = (v_1(x,y), v_2(x,y))</m>. If <m>u</m> happens to be continuously differentiable, then a natural vector field associated with <m>u</m> is given by the <term>gradient field</term> <m>\nabla u = \operatorname{grad} u = \ip{u_x}{u_y}</m>. Continuous gradient fields have the property that line integrals in the field are path independent (which should remind you of the Cauchy-Goursat theorem). A function <m>u</m> with continuous gradient field <m>\nabla u</m> is called a <m>potential function</m>.</p>
+            <p>We'll recall some definitions. Let <m>A</m> be a domain in <m>\R^2</m> (which we will identify with <m>\C</m> when in the analytic setting). A <term>scalar field</term> on <m>A</m> is a function <m>u(x, y): A \to \R</m> - in this context, we'll think of such a function as assigning a value to each point in <m>A</m>.</p>
 
-        <p>There is useful geometry connecting potentials and their gradient fields. Recall that a <term>level curve</term> for <m>u</m> is the set of points <m>(x,y) \in A</m> with <m>u(x,y) = C</m> for constants <m>C \in \R</m>. Given that the gradient vectors measure the direction of greatest change in a scalar field, it shouldn't be surprising that the gradient vector at a point in <m>A</m> is orthogonal to the level curve through the point. If the vector field varies continuously, we might expect that we can trace <term>flow lines</term> through <m>A</m>. A flow line (say parametrized by <m>\gamma</m>) should have the property that at every point <m>(x,y) \in A</m>, <m>\gamma\dd(t) = \nabla u(x,y)</m>. </p>
+            <p>A <term>vector field</term> on <m>A</m> is a function <m>V:A \to \R^2</m> that assigns to each point in <m>A</m> a vector <m>V(x,y) = (v_1(x,y), v_2(x,y))</m>. If <m>u</m> happens to be continuously differentiable, then a natural vector field associated with <m>u</m> is given by the <term>gradient field</term> <m>\nabla u = \operatorname{grad} u = \ip{u_x}{u_y}</m>. Continuous gradient fields have the property that line integrals in the field are path independent (which should remind you of the Cauchy-Goursat theorem). A function <m>u</m> with continuous gradient field <m>\nabla u</m> is called a <term>potential function</term>.</p>
 
-        <p>Typically, the problem of computing flows lines explicitly is hard. However, for certain functions <m>u</m>, this problem turns out to be much easier. Let's remember</p>
+            <p>There is useful geometry connecting potentials and their gradient fields. Recall that a <term>level curve</term> for <m>u</m> is the set of points <m>(x,y) \in A</m> with <m>u(x,y) = C</m> for constants <m>C \in \R</m>. Given that the gradient vectors measure the direction of greatest change in a scalar field, it shouldn't be surprising that the gradient vector at a point in <m>A</m> is orthogonal to the level curve through the point. If the vector field varies continuously, we might expect that we can trace <term>flow lines</term> through <m>A</m>. A flow line (say parametrized by <m>\gamma</m>) should have the property that at every point <m>(x,y) \in A</m>, <m>\gamma\dd(t) = \nabla u(x,y)</m>. Typically, the problem of computing flows lines explicitly is hard. However, for certain functions <m>u</m>, this problem turns out to be much easier.</p>
+
+            <p>In particular, if <m>u</m> is harmonic, the associated gradient field has some very nice features. First, since <m>u</m> is <m>C^2</m>, it isn't hard to calculate that the curl of <m>\operatorname{grad} u</m> is zero. (One can do this by extending <m>\gd u</m> to a function in <m>\R^3</m> by putting 0 in the <m>z</m> coordinate, computing <m>\nabla \times \nabla u</m>, and applying Clairaut's theorem.)</p>
+
+            <p>Second, computing the divergence of <m>u</m>, we get
+            <me>
+                \operatorname{div} \gd u = \nabla \cdot \nabla u = 0,
+            </me>
+            and so <m>u</m> is also divergence free.</p>
+
+            <p>Because the gradient field arising from a harmonic is function is so nice, we get a magical solution to the flow line problem.</p>
+
+            <theorem xml:id="theorem-flow-lines-for-harmonic-functions">
+                <title>Flow lines for harmonic functions</title>
+                <statement>Suppose that <m>u</m> is harmonic on a domain <m>A</m>. If <m>u = C</m> are lines of constant value for <m>u</m> (so-called level curves), then the level curves of the harmonic conjugate <m>u\ad</m> are the flow lines of <m>u</m>.</statement>
+            </theorem>
+
+            <p>Since a harmonic function <m>u</m> and its harmonic conjugate <m>u\ad</m> form the real and imaginary parts of analytic functions, we see immediately the connection to ideas from complex analysis. Indeed, the function
+            <me>
+                f(z) = u(x,y) + i u\ad(x,y)
+            </me>
+            is called a <term>complex potential</term> function.</p>
+
+            <p>We now consider the problem of finding a harmonic function on a domain that agrees with some sort of given boundary conditions. Recall that a <term>harmonic</term> function <m>u</m> on a domain <m>A \subset \R^2</m> is a <m>C^2</m> function that satisfies <term>Laplace's equation</term>; that is, <m>u</m> is harmonic on <m>A</m> if
+            <me>
+                \nabla^2 u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0.
+            </me></p>
+
+            <p> Boundary value problems associated with harmonic functions come with two varieties of standard conditions. 
+                <ol>
+                    <li>Dirichlet problem: we specify the <em>values</em> of <m>u</m> at the boundary of <m>A</m>.</li>
+                    <li>Neumann problem: we specify the derviative of <m>u</m> at the boundary of <m>A</m>, in the sense that we specify 
+                    <me>
+                        \frac{\partial u}{\partial n} = \operatorname{grad} u \cdot n.
+                    </me></li>
+                </ol>
+            </p>
+        </subsection>
+        <subsection>
+                <title>The Dirichlet problem on the disk</title>
+            <p>It turns out that there is a very nice solution to the Dirichlet problem in the case that the domain <m>A</m> is a disk. A famous result called the Poisson integral theorem gives us the desried solution. Harmonic functions have a mean value property much like Gauss's mean value theorem for analytic functions. We'll restrict our attention to the case of the unit disk (which implies the result for any other disk).</p>
+
+            <theorem xml:id="theorem-mean-value">
+                <title>Harmonic mean value property</title>
+                <statement>Suppose that <m>u</m> is harmonic in a neighborhood of the unit disk. Then
+                <me>
+                    u(0) = \frac{1}{2pi} \int_0^{2\pi} u(e^{i\theta}) \, d\theta.
+                </me></statement>
+            </theorem>
+
+            <p>Poisson's formula extends the mean value property to give the value of <m>u</m> at <em>every</em> point in the disk in terms of the values of <m>u</m> on the boundary.</p>
+
+            <theorem xml:id="theorem-poisson-integral-formula">
+                <title>
+                    Poisson integral formula
+                </title>
+                <statement>Assume that <m>u</m> is harmonic on a neighborhood of the unit disk. Then for any <m>z \in \D</m>, 
+                <me>
+                    u(z) = \frac{1}{2\pi} \int_0^{2 \pi} u(e^{i\theta}) \frac{1- \abs{z}^2}{\abs{e^{i\theta} - z}^2}\,d\theta.
+                </me></statement>
+            </theorem>
+
+            <p>The proof of the theorem above goes essentially by applying the conformal automorphism of <m>\D</m> that takes <m>z \to 0</m>. Then, we apply the harmonic mean value property and chase through the effect on the integral of the conformal map.</p>
+
+            <p>The solution to the Dirichlet problem is basically a converse to Poisson's formula - it asserts that given a function <m>u_0</m> continuous on the unit circle <m>T</m>, we can construct a unique harmonic function <m>u</m> on <m>\D</m> that agrees with <m>u_0</m> on the boundary. </p>
+
+            <theorem xml:id="theorem-solution-to-dirichlet-problem-on-the-disk">
+                <title>Solution to Dirichlet problem on the disk</title>
+                <statement>Let <m>u_0</m> be a continuous function  on <m>\T</m>. Then there exists a unique harmonic function <m>u</m> on <m>\D</m> that extends continuously to <m>u_0</m> on <m>\T</m>. The formula for <m>u</m> with <m>z \in \D</m> is
+                <me>
+                    u(z) = \frac{1}{2\pi} \int_0^{2\pi} u_0(e^{i\theta}) \frac{1 - \abs{z}^2}{\abs{e^{i\theta} - z}^2} \, d\theta.
+                </me></statement>
+            </theorem>
+
+        </subsection>
+
+        <subsection>
+            <title>Neumann conditions</title>
+            <p>Note that while we have a standard solution to the Dirichlet problem on the disk for any continuous function <m>u</m> on the circle bounding the disk, we have much stricter requirements for our choice of <m>u</m> in the Neumann case.</p>
+
+            <p>Suppose that we have a harmonic function <m>u</m> on <m>A</m> that extends to a differentiable function at the boundary <m>\partial A</m> (we may as well assume that the boundary is a simple closed and piecewise continuous, parametrized by the curve <m>\gamma</m>). Let <m>\phi</m> denote the derivative <m>\phi = \frac{\partial u}{\partial n}</m> where <m>n</m> is the normal vector to the boundary. Then by the divergence formulation of Green's theorem, we get
+            <md>
+                <mrow>\int_\gamma \frac{\partial u}{\partial n} \, ds \amp= \int_\gamma (\gd u)\cdot n \, ds</mrow>
+                <mrow>\amp= \int_A \operatorname{div}\gd u\, dxdy</mrow>
+                <mrow>\amp= \int_A \nabla^2 u \, dx dy</mrow>
+                <mrow>\amp= 0.</mrow>
+            </md></p>
+
+            <p>Thus we consider boundary functions <m>\phi</m> with <m>\int_\gamma \phi = 0.</m> In the context of these notes, we actually will restrict ourselves to the simplest case, <m>\partial u/\partial n = 0</m>, which corresponds to zero-flux across the boundary, a condition known as an <term>insulated</term> boundary. This means that flows will be parallel the the boundary in this case (which corresponds to the simple case of uniform fluid flow, e.g.).</p>
+
+        </subsection>
+        <subsection>
+            <title>Standard solutions and conformal maps</title>
+            <p>Our essential approach will be to construct a standard solution that describes some physical situation and then conformally map it to more interesting regions, which will also transform the solution.</p>
+
+            <p>As a first standard solution, consider the case of a fluid that is incompressible and nonviscous. If we also assume that the flow is given by an integrable vector field <m>V</m> so that <m>\gd V = u</m> for a potential function <m>\phi</m>, then we have that <m>\phi</m> is harmonic. The conjugate <m>\psi</m> of <m>\phi</m> is called a stream function. Consider the vector field <m>V</m> given by
+            <me>
+                V(x,y) = (\alpha, 0).
+            </me>
+            <figure>
+                <image source="uniform.jpg"/>
+                <caption>Uniform flow, velocity <m>\alpha</m></caption>
+            </figure></p>
+            
+            <p>The vector field <m>V</m> is the gradient of the potential function <m>\phi = \alpha x</m>, which in turn is the real part of the complex function <m>f(z) = \alpha z</m>. Since <m>\phi</m> is the real part of an analytic function, it is harmonic. Further, as the flow is parallel to the boundary, the Neumann condition <m>\partial \phi/\partial n = 0 </m> is met.</p>
+        </subsection>
     </section>
 
     <section>
