@@ -716,6 +716,8 @@
                 </sidebyside>
                 <caption>Stream lines under the map <m>z \to z + 1/z</m></caption>
             </figure>
+
+            <p>An exercise will ask you to evaluate this more carefully.</p>
         </subsection>
     </section>
 
