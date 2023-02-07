@@ -745,6 +745,10 @@
             <exercise>
                 <p>Find the image of the upper half of the unit disk under the map <me>z \mapsto \operatorname{Log} z.</me> (That is, it isn't enough to know what the answer is, you need to show it!) Is this map conformal? What is the inverse map?</p>
             </exercise>
+            <exercise>
+                <p>Determine the image of the map <m>z \mapsto \sin z</m> on the half-strip with boundary <m>0 \leq x \leq \pi/2, y = 0, y = \pi/2</m> (you should get a quarter-plane: make sure to track where the boundary pieces map). Use this conformal map to find a harmonic function giving the temperature on the first quadrant, with boundary conditions <m>T = 1</m> on the positive imaginary axis, <m>T</m> is insulated on the interval <m>0 \leq x \leq 1</m>, and <m>T = 0</m> on the rest of the real axis. (Bonus, use a visualizer to draw the flow lines by finding the level curves of the harmonic conjugate of <m>T</m>.)</p>
+            </exercise>
+
         </exercises>
     </section>
 

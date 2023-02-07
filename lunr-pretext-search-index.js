@@ -619,7 +619,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.9",
   "title": "Conformal maps and harmonic equations",
-  "body": " Conformal maps and harmonic equations  We now consider the problem of finding a harmonic function on a domain that agrees with some sort of given boundary conditions. Our essential approach will be to construct a standard solution that describes some physical situation and then conformally map it to more interesting regions, which will also transform the solution.  We'll recall some definitions. Let be a domain in (which we will identify with when in the analytic setting). A scalar field on is a function - in this context, we'll think of such a function as assigning a value to each point in .  A vector field on is a function that assigns to each point in a vector . If happens to be continuously differentiable, then a natural vector field associated with is given by the gradient field  . Continuous gradient fields have the property that line integrals in the field are path independent (which should remind you of the Cauchy-Goursat theorem). A function with continuous gradient field is called a .  There is useful geometry connecting potentials and their gradient fields. Recall that a level curve for is the set of points with for constants . Given that the gradient vectors measure the direction of greatest change in a scalar field, it shouldn't be surprising that the gradient vector at a point in is orthogonal to the level curve through the point. If the vector field varies continuously, we might expect that we can trace flow lines through . A flow line (say parametrized by ) should have the property that at every point , .  Typically, the problem of computing flows lines explicitly is hard. However, for certain functions , this problem turns out to be much easier. Let's remember  "
+  "body": " Conformal maps and harmonic equations   Vector fields and harmonic functions  We'll recall some definitions. Let be a domain in (which we will identify with when in the analytic setting). A scalar field on is a function - in this context, we'll think of such a function as assigning a value to each point in .  A vector field on is a function that assigns to each point in a vector . If happens to be continuously differentiable, then a natural vector field associated with is given by the gradient field  . Continuous gradient fields have the property that line integrals in the field are path independent (which should remind you of the Cauchy-Goursat theorem). A function with continuous gradient field is called a potential function .  There is useful geometry connecting potentials and their gradient fields. Recall that a level curve for is the set of points with for constants . Given that the gradient vectors measure the direction of greatest change in a scalar field, it shouldn't be surprising that the gradient vector at a point in is orthogonal to the level curve through the point. If the vector field varies continuously, we might expect that we can trace flow lines through . A flow line (say parametrized by ) should have the property that at every point , . Typically, the problem of computing flows lines explicitly is hard. However, for certain functions , this problem turns out to be much easier.  In particular, if is harmonic, the associated gradient field has some very nice features. First, since is , it isn't hard to calculate that the curl of is zero. (One can do this by extending to a function in by putting 0 in the coordinate, computing , and applying Clairaut's theorem.)  Second, computing the divergence of , we get and so is also divergence free.  Because the gradient field arising from a harmonic is function is so nice, we get a magical solution to the flow line problem.   Flow lines for harmonic functions  Suppose that is harmonic on a domain . If are lines of constant value for (so-called level curves), then the level curves of the harmonic conjugate are the flow lines of .   Since a harmonic function and its harmonic conjugate form the real and imaginary parts of analytic functions, we see immediately the connection to ideas from complex analysis. Indeed, the function is called a complex potential function.  We now consider the problem of finding a harmonic function on a domain that agrees with some sort of given boundary conditions. Recall that a harmonic function on a domain is a function that satisfies Laplace's equation ; that is, is harmonic on if  Boundary value problems associated with harmonic functions come with two varieties of standard conditions.  Dirichlet problem: we specify the values of at the boundary of .  Neumann problem: we specify the derviative of at the boundary of , in the sense that we specify      The Dirichlet problem on the disk  It turns out that there is a very nice solution to the Dirichlet problem in the case that the domain is a disk. A famous result called the Poisson integral theorem gives us the desried solution. Harmonic functions have a mean value property much like Gauss's mean value theorem for analytic functions. We'll restrict our attention to the case of the unit disk (which implies the result for any other disk).   Harmonic mean value property  Suppose that is harmonic in a neighborhood of the unit disk. Then   Poisson's formula extends the mean value property to give the value of at every point in the disk in terms of the values of on the boundary.   Poisson integral formula  Assume that is harmonic on a neighborhood of the unit disk. Then for any ,   The proof of the theorem above goes essentially by applying the conformal automorphism of that takes . Then, we apply the harmonic mean value property and chase through the effect on the integral of the conformal map.  The solution to the Dirichlet problem is basically a converse to Poisson's formula - it asserts that given a function continuous on the unit circle , we can construct a unique harmonic function on that agrees with on the boundary.   Solution to Dirichlet problem on the disk  Let be a continuous function on . Then there exists a unique harmonic function on that extends continuously to on . The formula for with is     Neumann conditions  Note that while we have a standard solution to the Dirichlet problem on the disk for any continuous function on the circle bounding the disk, we have much stricter requirements for our choice of in the Neumann case.  Suppose that we have a harmonic function on that extends to a differentiable function at the boundary (we may as well assume that the boundary is a simple closed and piecewise continuous, parametrized by the curve ). Let denote the derivative where is the normal vector to the boundary. Then by the divergence formulation of Green's theorem, we get  Thus we consider boundary functions with In the context of these notes, we actually will restrict ourselves to the simplest case, , which corresponds to zero-flux across the boundary, a condition known as an insulated boundary. This means that flows will be parallel the the boundary in this case (which corresponds to the simple case of uniform fluid flow, e.g.).    Standard solutions and conformal maps  Our essential approach will be to construct a standard solution that describes some physical situation and then conformally map it to more interesting regions, which will also transform the solution.  As a first standard solution, consider the case of a fluid that is incompressible and nonviscous. If we also assume that the flow is given by an integrable vector field so that for a potential function , then we have that is harmonic. The conjugate of is called a stream function. Consider the vector field given by    Uniform flow, velocity   The vector field is the gradient of the potential function , which in turn is the real part of the complex function . Since is the real part of an analytic function, it is harmonic. Further, as the flow is parallel to the boundary, the Neumann condition is met.  A map that first arose in the early study of airfoils is the Joukowsky transform , defined by . An exercise will ask you to look at this map more closely. For the purposes of our example, this map transforms the upper half plane with half of a unit disk removed conformally to the upper half plane.       Image of   We'll need the following highly useful interaction between conformal maps and harmonic functions.   If is a harmonic function on a domain and is a conformal map from a domain to , then is harmonic on .   How can we blend all of these ingredients together? We've already seen that is a solution to Laplace's equation on the upper half plane satisfying the condition that on the real axis. Lifting to the complex potential , we compose with the map to get a new function that is analytic on the upper half plane with the unit disk removed. The real and imaginary parts of give harmonic functions that describe the equipotentials and the flow lines for the transformation of uniform flow under (the geometry is preserved by conformality). The image below shows the effect on the flow lines of the transformation.       Stream lines under the map   An exercise will ask you to evaluate this more carefully.   "
+},
+{
+  "id": "p-88",
+  "level": "2",
+  "url": "section-9.html#p-88",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "scalar field "
 },
 {
   "id": "p-89",
@@ -628,7 +637,7 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "scalar field "
+  "body": "vector field gradient field potential function "
 },
 {
   "id": "p-90",
@@ -637,16 +646,187 @@ var ptx_lunr_docs = [
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "vector field gradient field "
+  "body": "level curve flow lines "
 },
 {
-  "id": "p-91",
+  "id": "theorem-flow-lines-for-harmonic-functions",
   "level": "2",
-  "url": "section-9.html#p-91",
+  "url": "section-9.html#theorem-flow-lines-for-harmonic-functions",
+  "type": "Theorem",
+  "number": "1.9.1",
+  "title": "Flow lines for harmonic functions.",
+  "body": " Flow lines for harmonic functions  Suppose that is harmonic on a domain . If are lines of constant value for (so-called level curves), then the level curves of the harmonic conjugate are the flow lines of .  "
+},
+{
+  "id": "p-94",
+  "level": "2",
+  "url": "section-9.html#p-94",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "level curve flow lines "
+  "body": "complex potential "
+},
+{
+  "id": "p-95",
+  "level": "2",
+  "url": "section-9.html#p-95",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "harmonic Laplace's equation "
+},
+{
+  "id": "theorem-mean-value",
+  "level": "2",
+  "url": "section-9.html#theorem-mean-value",
+  "type": "Theorem",
+  "number": "1.9.2",
+  "title": "Harmonic mean value property.",
+  "body": " Harmonic mean value property  Suppose that is harmonic in a neighborhood of the unit disk. Then  "
+},
+{
+  "id": "theorem-poisson-integral-formula",
+  "level": "2",
+  "url": "section-9.html#theorem-poisson-integral-formula",
+  "type": "Theorem",
+  "number": "1.9.3",
+  "title": "Poisson integral formula.",
+  "body": " Poisson integral formula  Assume that is harmonic on a neighborhood of the unit disk. Then for any ,  "
+},
+{
+  "id": "theorem-solution-to-dirichlet-problem-on-the-disk",
+  "level": "2",
+  "url": "section-9.html#theorem-solution-to-dirichlet-problem-on-the-disk",
+  "type": "Theorem",
+  "number": "1.9.4",
+  "title": "Solution to Dirichlet problem on the disk.",
+  "body": " Solution to Dirichlet problem on the disk  Let be a continuous function on . Then there exists a unique harmonic function on that extends continuously to on . The formula for with is  "
+},
+{
+  "id": "p-103",
+  "level": "2",
+  "url": "section-9.html#p-103",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "insulated "
+},
+{
+  "id": "figure-2",
+  "level": "2",
+  "url": "section-9.html#figure-2",
+  "type": "Figure",
+  "number": "1.9.5",
+  "title": "",
+  "body": "  Uniform flow, velocity  "
+},
+{
+  "id": "figure-3",
+  "level": "2",
+  "url": "section-9.html#figure-3",
+  "type": "Figure",
+  "number": "1.9.6",
+  "title": "",
+  "body": "     Image of  "
+},
+{
+  "id": "proposition-harmonic-functions-",
+  "level": "2",
+  "url": "section-9.html#proposition-harmonic-functions-",
+  "type": "Proposition",
+  "number": "1.9.7",
+  "title": "",
+  "body": " If is a harmonic function on a domain and is a conformal map from a domain to , then is harmonic on .  "
+},
+{
+  "id": "figure-4",
+  "level": "2",
+  "url": "section-9.html#figure-4",
+  "type": "Figure",
+  "number": "1.9.8",
+  "title": "",
+  "body": "     Stream lines under the map  "
+},
+{
+  "id": "section-10",
+  "level": "1",
+  "url": "section-10.html",
+  "type": "Section",
+  "number": "1.10",
+  "title": "Exercises 3",
+  "body": " Exercises 3   Compute the image of the triangle with corners under inversion across the unit circle. Where does the interior go? Are the angles between the sides preserved in the image?  Show that a linear fractional transform can have at most two points so that . Write an example that shows that a linear fractional transform can have no such points. Write an example of a LFT with . Can a linear fractional transform have just one such point?  Show that the map takes the unit circle to the segment . Where is this map conformal?  Compute the real and imaginary parts of the composition of a uniform flow on the upper half plane with the map . Use your favorite visualizer to confirm that the level curves for these functions are orthogonal. You might also consider adding an image of the unit circle to your plot. (I used desmos for this).  Prove that the map given by is harmonic on the upper half plane, where . Show that this function has boundary values of for and for .  Use the solution above to find a harmonic solution to the Dirichlet problem on the disk where on the upper half of the unit circle, and on the lower half of the unit circle. Hint: consider the conformal map  Find the image of the upper half of the unit disk under the map (That is, it isn't enough to know what the answer is, you need to show it!) Is this map conformal? What is the inverse map?  Determine the image of the map on the half-strip with boundary (you should get a quarter-plane: make sure to track where the boundary pieces map). Use this conformal map to find a harmonic function giving the temperature on the first quadrant, with boundary conditions on the positive imaginary axis, is insulated on the interval , and on the rest of the real axis. (Bonus, use a visualizer to draw the flow lines by finding the level curves of the harmonic conjugate of .)   "
+},
+{
+  "id": "exercise-16",
+  "level": "2",
+  "url": "section-10.html#exercise-16",
+  "type": "Exercise",
+  "number": "1.10.1",
+  "title": "",
+  "body": "Compute the image of the triangle with corners under inversion across the unit circle. Where does the interior go? Are the angles between the sides preserved in the image? "
+},
+{
+  "id": "exercise-17",
+  "level": "2",
+  "url": "section-10.html#exercise-17",
+  "type": "Exercise",
+  "number": "1.10.2",
+  "title": "",
+  "body": "Show that a linear fractional transform can have at most two points so that . Write an example that shows that a linear fractional transform can have no such points. Write an example of a LFT with . Can a linear fractional transform have just one such point? "
+},
+{
+  "id": "exercise-18",
+  "level": "2",
+  "url": "section-10.html#exercise-18",
+  "type": "Exercise",
+  "number": "1.10.3",
+  "title": "",
+  "body": "Show that the map takes the unit circle to the segment . Where is this map conformal? "
+},
+{
+  "id": "exercise-19",
+  "level": "2",
+  "url": "section-10.html#exercise-19",
+  "type": "Exercise",
+  "number": "1.10.4",
+  "title": "",
+  "body": "Compute the real and imaginary parts of the composition of a uniform flow on the upper half plane with the map . Use your favorite visualizer to confirm that the level curves for these functions are orthogonal. You might also consider adding an image of the unit circle to your plot. (I used desmos for this). "
+},
+{
+  "id": "exercise-20",
+  "level": "2",
+  "url": "section-10.html#exercise-20",
+  "type": "Exercise",
+  "number": "1.10.5",
+  "title": "",
+  "body": "Prove that the map given by is harmonic on the upper half plane, where . Show that this function has boundary values of for and for . "
+},
+{
+  "id": "exercise-21",
+  "level": "2",
+  "url": "section-10.html#exercise-21",
+  "type": "Exercise",
+  "number": "1.10.6",
+  "title": "",
+  "body": "Use the solution above to find a harmonic solution to the Dirichlet problem on the disk where on the upper half of the unit circle, and on the lower half of the unit circle. Hint: consider the conformal map "
+},
+{
+  "id": "exercise-22",
+  "level": "2",
+  "url": "section-10.html#exercise-22",
+  "type": "Exercise",
+  "number": "1.10.7",
+  "title": "",
+  "body": "Find the image of the upper half of the unit disk under the map (That is, it isn't enough to know what the answer is, you need to show it!) Is this map conformal? What is the inverse map? "
+},
+{
+  "id": "exercise-23",
+  "level": "2",
+  "url": "section-10.html#exercise-23",
+  "type": "Exercise",
+  "number": "1.10.8",
+  "title": "",
+  "body": "Determine the image of the map on the half-strip with boundary (you should get a quarter-plane: make sure to track where the boundary pieces map). Use this conformal map to find a harmonic function giving the temperature on the first quadrant, with boundary conditions on the positive imaginary axis, is insulated on the interval , and on the rest of the real axis. (Bonus, use a visualizer to draw the flow lines by finding the level curves of the harmonic conjugate of .) "
 }
 ]
 
