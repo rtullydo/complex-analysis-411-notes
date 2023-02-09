@@ -2,6 +2,9 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-02-08T17:49:24-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -12,29 +15,25 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<div class="para logical">
-<div class="para">We'll start by showing that maps of the form of <span class="process-math">\(T\)</span> map the unit circle into itself. First, assume that <span class="process-math">\(\abs{z} = 1\text{.}\)</span> Then</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-lft.html">
+<p>We'll start by showing that maps of the form of <span class="process-math">\(T\)</span> map the unit circle into itself. First, assume that <span class="process-math">\(\abs{z} = 1\text{.}\)</span> Then</p>
+<div class="displaymath process-math">
 \begin{equation*}
 \abs{T(z)} = \abs{\frac{z - \alpha}{1 - \cc\alpha z}} = \frac{1}{\abs{z}} \abs{\frac{z - \alpha}{z\inv - \cc\alpha}}.
 \end{equation*}
 </div>
-<div class="para">Because <span class="process-math">\(\abs{z} = 1\text{,}\)</span> we also have that <span class="process-math">\(z\inv = \cc z\text{,}\)</span> which gives</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-lft.html">
+<p class="continuation">Because <span class="process-math">\(\abs{z} = 1\text{,}\)</span> we also have that <span class="process-math">\(z\inv = \cc z\text{,}\)</span> which gives</p>
+<div class="displaymath process-math">
 \begin{equation*}
 \abs{T(z)} = \frac{\abs{z - \alpha}}{\abs{\cc z - \cc \alpha}} = 1.
 \end{equation*}
 </div>
-<div class="para">Hence, <span class="process-math">\(T(\T) \subset \T\text{.}\)</span> Now, note that <span class="process-math">\(T\)</span> has only a singularity at <span class="process-math">\(z = \frac{1}{\cc\alpha}\text{,}\)</span> which is outside the unit circle, so <span class="process-math">\(T\)</span> is analytic in a neighborhood of <span class="process-math">\(\D\text{.}\)</span> Then by the maximium modulus principle, for any <span class="process-math">\(z\in \D\text{,}\)</span> we must have <span class="process-math">\(\abs{T(z)} \lt 1\text{,}\)</span> which implies that <span class="process-math">\(T:\D \to \D\text{.}\)</span> Also, by <a href="" class="xref" data-knowl="./knowl/prop-lft.html" title="Proposition 1.6.3">Proposition 1.6.3</a>, <span class="process-math">\(T\inv\)</span> has the same form, and so also defines a conformal map from <span class="process-math">\(\D \to \D\text{.}\)</span> Thus any such <span class="process-math">\(T\)</span> is a conformal automorphism from <span class="process-math">\(\D \to \D\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Now, let's show that any conformal automorphism from <span class="process-math">\(\D \to \D\)</span> must be of this form. We'll be using uniqueness of conformal maps. Assume that <span class="process-math">\(R:\D \to \D\)</span> is a conformal automorphism. Let <span class="process-math">\(\alpha = R\inv(0)\text{,}\)</span> and let <span class="process-math">\(\theta = \operatorname{arg} R\dd(z_0)\text{.}\)</span> A map <span class="process-math">\(T\)</span> of the form <a href="" class="xref" data-knowl="./knowl/eq-diskLFT.html" title="Equation 1.6.1">(1.6.1)</a> also has <span class="process-math">\(T(\alpha) = 0\text{.}\)</span> Further, if we compute the derivative of <span class="process-math">\(T\)</span> at <span class="process-math">\(\alpha\text{,}\)</span> we'll get</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq-diskLFT.html">
+<p class="continuation">Hence, <span class="process-math">\(T(\T) \subset \T\text{.}\)</span> Now, note that <span class="process-math">\(T\)</span> has only a singularity at <span class="process-math">\(z = \frac{1}{\cc\alpha}\text{,}\)</span> which is outside the unit circle, so <span class="process-math">\(T\)</span> is analytic in a neighborhood of <span class="process-math">\(\D\text{.}\)</span> Then by the maximium modulus principle, for any <span class="process-math">\(z\in \D\text{,}\)</span> we must have <span class="process-math">\(\abs{T(z)} \lt 1\text{,}\)</span> which implies that <span class="process-math">\(T:\D \to \D\text{.}\)</span> Also, by <a href="" class="xref" data-knowl="./knowl/prop-lft.html" title="Proposition 1.6.3">Proposition 1.6.3</a>, <span class="process-math">\(T\inv\)</span> has the same form, and so also defines a conformal map from <span class="process-math">\(\D \to \D\text{.}\)</span> Thus any such <span class="process-math">\(T\)</span> is a conformal automorphism from <span class="process-math">\(\D \to \D\text{.}\)</span></p>
+<p>Now, let's show that any conformal automorphism from <span class="process-math">\(\D \to \D\)</span> must be of this form. We'll be using uniqueness of conformal maps. Assume that <span class="process-math">\(R:\D \to \D\)</span> is a conformal automorphism. Let <span class="process-math">\(\alpha = R\inv(0)\text{,}\)</span> and let <span class="process-math">\(\theta = \operatorname{arg} R\dd(z_0)\text{.}\)</span> A map <span class="process-math">\(T\)</span> of the form <a href="" class="xref" data-knowl="./knowl/eq-diskLFT.html" title="Equation 1.6.1">(1.6.1)</a> also has <span class="process-math">\(T(\alpha) = 0\text{.}\)</span> Further, if we compute the derivative of <span class="process-math">\(T\)</span> at <span class="process-math">\(\alpha\text{,}\)</span> we'll get</p>
+<div class="displaymath process-math">
 \begin{equation*}
 T\dd(\alpha) =e^{i\theta} \frac{1}{1 - \abs{\alpha}^2}\text{,}
 \end{equation*}
 </div>
-<div class="para">which has argument <span class="process-math">\(\operatorname{arg} T\dd(\alpha) = \theta\text{.}\)</span> Thus, <span class="process-math">\(R\)</span> and <span class="process-math">\(T\)</span> agree in value and argument at <span class="process-math">\(\alpha\text{,}\)</span> and so by uniquess of conformal maps, <span class="process-math">\(R = T\text{.}\)</span> (note: the argument version of uniqueness follows from the positive derivative version. add this to a future draft or add as exercise.)</div>
-</div></article><span class="incontext"><a href="section-6.html#proof-7" class="internal">in-context</a></span>
+<p class="continuation">which has argument <span class="process-math">\(\operatorname{arg} T\dd(\alpha) = \theta\text{.}\)</span> Thus, <span class="process-math">\(R\)</span> and <span class="process-math">\(T\)</span> agree in value and argument at <span class="process-math">\(\alpha\text{,}\)</span> and so by uniquess of conformal maps, <span class="process-math">\(R = T\text{.}\)</span> (note: the argument version of uniqueness follows from the positive derivative version. add this to a future draft or add as exercise.)</p></article><span class="incontext"><a href="section-6.html#proof-7">in-context</a></span>
 </body>
 </html>
