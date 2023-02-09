@@ -754,7 +754,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.10",
   "title": "Exercises 3",
-  "body": " Exercises 3   Compute the image of the triangle with corners under inversion across the unit circle. Where does the interior go? Are the angles between the sides preserved in the image?  Show that a linear fractional transform can have at most two points so that . Write an example that shows that a linear fractional transform can have no such points. Write an example of a LFT with . Can a linear fractional transform have just one such point?  Show that the map takes the unit circle to the segment . Where is this map conformal?  Compute the real and imaginary parts of the composition of a uniform flow on the upper half plane with the map . Use your favorite visualizer to confirm that the level curves for these functions are orthogonal. You might also consider adding an image of the unit circle to your plot. (I used desmos for this).  Prove that the map given by is harmonic on the upper half plane, where . Show that this function has boundary values of for and for .  Use the solution above to find a harmonic solution to the Dirichlet problem on the disk where on the upper half of the unit circle, and on the lower half of the unit circle. Hint: consider the conformal map  Find the image of the upper half of the unit disk under the map (That is, it isn't enough to know what the answer is, you need to show it!) Is this map conformal? What is the inverse map?  Determine the image of the map on the half-strip with boundary (you should get a quarter-plane: make sure to track where the boundary pieces map). Use this conformal map to find a harmonic function giving the temperature on the first quadrant, with boundary conditions on the positive imaginary axis, is insulated on the interval , and on the rest of the real axis. (Bonus, use a visualizer to draw the flow lines by finding the level curves of the harmonic conjugate of .)   "
+  "body": " Exercises 3   Compute the image of the triangle with corners under inversion across the unit circle. Where does the interior go? Are the angles between the sides preserved in the image?  Show that a linear fractional transform can have at most two points so that . Write an example of a LFT with .  Show that the map takes the unit circle to the segment . Where is this map conformal?  Compute the real and imaginary parts of the composition of a uniform flow on the upper half plane with the map . Use your favorite visualizer to confirm that the level curves for these functions are orthogonal. You might also consider adding an image of the unit circle to your plot. (I used desmos for this).  Prove that the map given by is harmonic on the upper half plane, where . Show that this function has boundary values of for and for .  Use the solution above to find a harmonic solution to the Dirichlet problem on the disk where on the upper half of the unit circle, and on the lower half of the unit circle. Hint: consider the conformal map  Find the image of the upper half of the unit disk under the map (That is, it isn't enough to know what the answer is, you need to show it!) Is this map conformal? What is the inverse map?  Determine the image of the map on the half-strip with boundary with and (your image should be a quarter-plane: make sure to track where the boundary pieces map). Use this conformal map to find a harmonic function giving the temperature on the first quadrant, with boundary conditions on the positive imaginary axis, is insulated on the interval , and on the rest of the real axis. (Bonus, use a visualizer to draw the flow lines by finding the level curves of the harmonic conjugate of .)   "
 },
 {
   "id": "exercise-16",
@@ -772,7 +772,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.10.2",
   "title": "",
-  "body": "Show that a linear fractional transform can have at most two points so that . Write an example that shows that a linear fractional transform can have no such points. Write an example of a LFT with . Can a linear fractional transform have just one such point? "
+  "body": "Show that a linear fractional transform can have at most two points so that . Write an example of a LFT with . "
 },
 {
   "id": "exercise-18",
@@ -826,7 +826,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.10.8",
   "title": "",
-  "body": "Determine the image of the map on the half-strip with boundary (you should get a quarter-plane: make sure to track where the boundary pieces map). Use this conformal map to find a harmonic function giving the temperature on the first quadrant, with boundary conditions on the positive imaginary axis, is insulated on the interval , and on the rest of the real axis. (Bonus, use a visualizer to draw the flow lines by finding the level curves of the harmonic conjugate of .) "
+  "body": "Determine the image of the map on the half-strip with boundary with and (your image should be a quarter-plane: make sure to track where the boundary pieces map). Use this conformal map to find a harmonic function giving the temperature on the first quadrant, with boundary conditions on the positive imaginary axis, is insulated on the interval , and on the rest of the real axis. (Bonus, use a visualizer to draw the flow lines by finding the level curves of the harmonic conjugate of .) "
 }
 ]
 

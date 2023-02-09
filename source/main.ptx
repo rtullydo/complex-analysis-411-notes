@@ -728,7 +728,7 @@
                 <p>Compute the image of the triangle with corners <m>z = 0, z = 1/2, z = 1/2 + 1/2 i</m> under inversion across the unit circle. Where does the interior go? Are the angles between the sides preserved in the image?</p> 
             </exercise>
             <exercise>
-                <p>Show that a linear fractional transform can have at most two points so that <m>T(z) = z</m>. Write an example that shows that a linear fractional transform can have no such points. Write an example of a LFT with <m>T(\infty) = \infty</m>. Can a linear fractional transform have just one such point?</p>
+                <p>Show that a linear fractional transform can have at most two points so that <m>T(z) = z</m>. Write an example of a LFT with <m>T(\infty) = \infty</m>.</p>
             </exercise>
             <exercise>
                 <p>Show that the map <me>z \mapsto z + \frac{1}{z}</me> takes the unit circle to the segment <m>[-2, 2] \subset \R</m>. Where is this map conformal?</p>
