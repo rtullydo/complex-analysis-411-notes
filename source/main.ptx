@@ -719,6 +719,34 @@
 
             <p>An exercise will ask you to evaluate this more carefully.</p>
         </subsection>
+        <subsection>
+            <title>Half plane solutions</title>
+
+            <p>In the Dirichlet setting, we already have the Poisson integral formula (which can be applied to any domain conformally equivalent to a disk). However, this is often way more than necessary, as frequently boundary conditions are specified as constant on a finite number of pieces of the boundary. In this sort of case, a standard solution is most easily defined on the upper half plane.</p>
+
+            <p>We want to find a harmonic function <m>u</m> on the upper half plane with the boundary condition that <m>u(x,0)=1</m> when <m>x \lt 0</m> and <m>u(x,0) = 0</m> when <m>x > 0</m>.</p>
+
+            <p>If <m>z = x + iy</m>, one such solution is the function <m>u = \frac{1}{\pi} \theta</m> where <m>\theta = \arg z = \arctan y/x</m>. Notice that
+            <me>
+                \frac{1}{\pi} \arg z = \RE(\frac{1}{i \pi} \log z),
+            </me>
+            and so <m>u</m> is harmonic.</p>
+
+            <figure>
+                <caption>Basic half plane standard solution</caption>
+                <image source="standhalf.jpg"/>
+            </figure>
+
+            <figure>
+                <caption>General half plane standard solution</caption>
+                <image source="morehalf.jpg"/>
+            </figure>
+
+            <figure>
+                <caption>Using a standard solution to solve a disk problem</caption>
+                <image source="diskhalf.jpg"/>
+            </figure>
+        </subsection>
     </section>
 
     <section>
@@ -740,7 +768,7 @@
                 <p>Prove that the map given by <m>u(x, y) = \frac{1}{\pi} \theta</m> is harmonic on the upper half plane, where <m>\theta = \arg (x + iy)</m>. Show that this function has boundary values of <m>u(x, 0) = 1</m> for <m>x \lt 0</m> and <m>u(x,0) = 0</m> for <m>x > 0</m>.</p>
             </exercise>
             <exercise>
-                <p>Use the solution above to find a harmonic solution <m>u</m> to the Dirichlet problem on the disk where <m>u = 0</m> on the upper half of the unit circle, and <m>u = 1</m> on the lower half of the unit circle. Hint: consider the conformal map <me>T = -i \frac{1+ z}{1-z}.</me></p>
+                <p>Use the solution above to find a harmonic solution <m>u</m> to the Dirichlet problem on the disk where <m>u = 0</m> on the upper half of the unit circle, and <m>u = 1</m> on the lower half of the unit circle. Hint: consider the conformal map <me>T = i \frac{1+ z}{1-z}.</me></p>
             </exercise>
             <exercise>
                 <p>Find the image of the upper half of the unit disk under the map <me>z \mapsto \operatorname{Log} z.</me> (That is, it isn't enough to know what the answer is, you need to show it!) Is this map conformal? What is the inverse map?</p>

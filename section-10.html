@@ -317,6 +317,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="section-9.html#subsection-2" class="internal"><span class="codenumber">1.9.2</span> <span class="title">The Dirichlet problem on the disk</span></a></div></li>
 <li><div class="toc-item"><a href="section-9.html#subsection-3" class="internal"><span class="codenumber">1.9.3</span> <span class="title">Neumann conditions</span></a></div></li>
 <li><div class="toc-item"><a href="section-9.html#subsection-4" class="internal"><span class="codenumber">1.9.4</span> <span class="title">Standard solutions and conformal maps</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-5" class="internal"><span class="codenumber">1.9.5</span> <span class="title">Half plane solutions</span></a></div></li>
 </ul>
 </li>
 <li class="active">
@@ -333,10 +334,10 @@ window.MathJax = {
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-16"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-111">Compute the image of the triangle with corners <span class="process-math">\(z = 0, z = 1/2, z = 1/2 + 1/2 i\)</span> under inversion across the unit circle. Where does the interior go? Are the angles between the sides preserved in the image?</div></article><article class="exercise exercise-like" id="exercise-17"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-112">Show that a linear fractional transform can have at most two points so that <span class="process-math">\(T(z) = z\text{.}\)</span> Write an example of a LFT with <span class="process-math">\(T(\infty) = \infty\text{.}\)</span>
+<div class="para" id="p-114">Compute the image of the triangle with corners <span class="process-math">\(z = 0, z = 1/2, z = 1/2 + 1/2 i\)</span> under inversion across the unit circle. Where does the interior go? Are the angles between the sides preserved in the image?</div></article><article class="exercise exercise-like" id="exercise-17"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-115">Show that a linear fractional transform can have at most two points so that <span class="process-math">\(T(z) = z\text{.}\)</span> Write an example of a LFT with <span class="process-math">\(T(\infty) = \infty\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-18"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para logical" id="p-113">
+<div class="para logical" id="p-116">
 <div class="para">Show that the map</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -345,18 +346,18 @@ z \mapsto z + \frac{1}{z}
 </div>
 <div class="para">takes the unit circle to the segment <span class="process-math">\([-2, 2] \subset \R\text{.}\)</span> Where is this map conformal?</div>
 </div></article><article class="exercise exercise-like" id="exercise-19"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-114">Compute the real and imaginary parts of the composition of a uniform flow on the upper half plane with the map <span class="process-math">\(z \mapsto z + 1/z\text{.}\)</span> Use your favorite visualizer to confirm that the level curves for these functions are orthogonal. You might also consider adding an image of the unit circle to your plot. (I used desmos for this).</div></article><article class="exercise exercise-like" id="exercise-20"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="p-115">Prove that the map given by <span class="process-math">\(u(x, y) = \frac{1}{\pi} \theta\)</span> is harmonic on the upper half plane, where <span class="process-math">\(\theta = \arg (x + iy)\text{.}\)</span> Show that this function has boundary values of <span class="process-math">\(u(x, 0) = 1\)</span> for <span class="process-math">\(x \lt 0\)</span> and <span class="process-math">\(u(x,0) = 0\)</span> for <span class="process-math">\(x &gt; 0\text{.}\)</span>
+<div class="para" id="p-117">Compute the real and imaginary parts of the composition of a uniform flow on the upper half plane with the map <span class="process-math">\(z \mapsto z + 1/z\text{.}\)</span> Use your favorite visualizer to confirm that the level curves for these functions are orthogonal. You might also consider adding an image of the unit circle to your plot. (I used desmos for this).</div></article><article class="exercise exercise-like" id="exercise-20"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-118">Prove that the map given by <span class="process-math">\(u(x, y) = \frac{1}{\pi} \theta\)</span> is harmonic on the upper half plane, where <span class="process-math">\(\theta = \arg (x + iy)\text{.}\)</span> Show that this function has boundary values of <span class="process-math">\(u(x, 0) = 1\)</span> for <span class="process-math">\(x \lt 0\)</span> and <span class="process-math">\(u(x,0) = 0\)</span> for <span class="process-math">\(x &gt; 0\text{.}\)</span>
 </div></article><article class="exercise exercise-like" id="exercise-21"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para logical" id="p-116">
+<div class="para logical" id="p-119">
 <div class="para">Use the solution above to find a harmonic solution <span class="process-math">\(u\)</span> to the Dirichlet problem on the disk where <span class="process-math">\(u = 0\)</span> on the upper half of the unit circle, and <span class="process-math">\(u = 1\)</span> on the lower half of the unit circle. Hint: consider the conformal map</div>
 <div class="displaymath process-math">
 \begin{equation*}
-T = -i \frac{1+ z}{1-z}.
+T = i \frac{1+ z}{1-z}.
 \end{equation*}
 </div>
 </div></article><article class="exercise exercise-like" id="exercise-22"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para logical" id="p-117">
+<div class="para logical" id="p-120">
 <div class="para">Find the image of the upper half of the unit disk under the map</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -365,7 +366,7 @@ z \mapsto \operatorname{Log} z.
 </div>
 <div class="para">(That is, it isn't enough to know what the answer is, you need to show it!) Is this map conformal? What is the inverse map?</div>
 </div></article><article class="exercise exercise-like" id="exercise-23"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-118">Determine the image of the map <span class="process-math">\(z \mapsto \sin z\)</span> on the half-strip with boundary <span class="process-math">\(y = 0, x = 0, x = \pi/2\)</span> with <span class="process-math">\(0 \leq x \leq \pi/2\)</span> and <span class="process-math">\(y &gt; 0\)</span> (your image should be a quarter-plane: make sure to track where the boundary pieces map). Use this conformal map to find a harmonic function giving the temperature on the first quadrant, with boundary conditions <span class="process-math">\(T = 1\)</span> on the positive imaginary axis, <span class="process-math">\(T\)</span> is insulated on the interval <span class="process-math">\(0 \leq x \leq 1\text{,}\)</span> and <span class="process-math">\(T = 0\)</span> on the rest of the real axis. (Bonus, use a visualizer to draw the flow lines by finding the level curves of the harmonic conjugate of <span class="process-math">\(T\text{.}\)</span>)</div></article></section></section></div>
+<div class="para" id="p-121">Determine the image of the map <span class="process-math">\(z \mapsto \sin z\)</span> on the half-strip with boundary <span class="process-math">\(y = 0, x = 0, x = \pi/2\)</span> with <span class="process-math">\(0 \leq x \leq \pi/2\)</span> and <span class="process-math">\(y &gt; 0\)</span> (your image should be a quarter-plane: make sure to track where the boundary pieces map). Use this conformal map to find a harmonic function giving the temperature on the first quadrant, with boundary conditions <span class="process-math">\(T = 1\)</span> on the positive imaginary axis, <span class="process-math">\(T\)</span> is insulated on the interval <span class="process-math">\(0 \leq x \leq 1\text{,}\)</span> and <span class="process-math">\(T = 0\)</span> on the rest of the real axis. (Bonus, use a visualizer to draw the flow lines by finding the level curves of the harmonic conjugate of <span class="process-math">\(T\text{.}\)</span>)</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-9.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span>
 </div></main>

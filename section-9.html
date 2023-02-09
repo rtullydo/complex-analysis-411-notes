@@ -317,6 +317,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="section-9.html#subsection-2" class="internal"><span class="codenumber">1.9.2</span> <span class="title">The Dirichlet problem on the disk</span></a></div></li>
 <li><div class="toc-item"><a href="section-9.html#subsection-3" class="internal"><span class="codenumber">1.9.3</span> <span class="title">Neumann conditions</span></a></div></li>
 <li><div class="toc-item"><a href="section-9.html#subsection-4" class="internal"><span class="codenumber">1.9.4</span> <span class="title">Standard solutions and conformal maps</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-5" class="internal"><span class="codenumber">1.9.5</span> <span class="title">Half plane solutions</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -463,7 +464,25 @@ F(z) = \phi \circ T = \alpha(z + \frac{1}{z})
 <div class="sbspanel top" style="width:50%;"><img src="external/unifstream.jpg" class="contained"></div>
 <div class="sbspanel top" style="width:50%;"><img src="external/uniftocyl.jpg" class="contained"></div>
 </div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.9.8<span class="period">.</span></span><span class="space"> </span>Stream lines under the map <span class="process-math">\(z \to z + 1/z\)</span></figcaption></figure><div class="para" id="p-110">An exercise will ask you to evaluate this more carefully.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">en.wikipedia.org/wiki/Joukowsky_transform</code></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.9.8<span class="period">.</span></span><span class="space"> </span>Stream lines under the map <span class="process-math">\(z \to z + 1/z\)</span></figcaption></figure><div class="para" id="p-110">An exercise will ask you to evaluate this more carefully.</div></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.9.5</span> <span class="title">Half plane solutions</span>
+</h3>
+<div class="para" id="p-111">In the Dirichlet setting, we already have the Poisson integral formula (which can be applied to any domain conformally equivalent to a disk). However, this is often way more than necessary, as frequently boundary conditions are specified as constant on a finite number of pieces of the boundary. In this sort of case, a standard solution is most easily defined on the upper half plane.</div>
+<div class="para" id="p-112">We want to find a harmonic function <span class="process-math">\(u\)</span> on the upper half plane with the boundary condition that <span class="process-math">\(u(x,0)=1\)</span> when <span class="process-math">\(x \lt 0\)</span> and <span class="process-math">\(u(x,0) = 0\)</span> when <span class="process-math">\(x &gt; 0\text{.}\)</span>
+</div>
+<div class="para logical" id="p-113">
+<div class="para">If <span class="process-math">\(z = x + iy\text{,}\)</span> one such solution is the function <span class="process-math">\(u = \frac{1}{\pi} \theta\)</span> where <span class="process-math">\(\theta = \arg z = \arctan y/x\text{.}\)</span> Notice that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{\pi} \arg z = \RE(\frac{1}{i \pi} \log z),
+\end{equation*}
+</div>
+<div class="para">and so <span class="process-math">\(u\)</span> is harmonic.</div>
+</div>
+<figure class="figure figure-like" id="figure-5"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/standhalf.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.9.9<span class="period">.</span></span><span class="space"> </span>Basic half plane standard solution</figcaption></figure><figure class="figure figure-like" id="figure-6"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/morehalf.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.9.10<span class="period">.</span></span><span class="space"> </span>General half plane standard solution</figcaption></figure><figure class="figure figure-like" id="figure-7"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/diskhalf.jpg" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.9.11<span class="period">.</span></span><span class="space"> </span>Using a standard solution to solve a disk problem</figcaption></figure></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">en.wikipedia.org/wiki/Joukowsky_transform</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-8.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-10.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
