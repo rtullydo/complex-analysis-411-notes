@@ -726,7 +726,7 @@
 
             <p>We want to find a harmonic function <m>u</m> on the upper half plane with the boundary condition that <m>u(x,0)=1</m> when <m>x \lt 0</m> and <m>u(x,0) = 0</m> when <m>x > 0</m>.</p>
 
-            <p>If <m>z = x + iy</m>, one such solution is the function <m>u = \frac{1}{\pi} \theta</m> where <m>\theta = \arg z = \arctan y/x</m>. Notice that
+            <p>If <m>z = x + iy</m>, one such solution is the function <me>u = \frac{1}{\pi} \theta</me> where <me>\theta = \arg z = \arctan y/x.</me> Notice that
             <me>
                 \frac{1}{\pi} \arg z = \RE(\frac{1}{i \pi} \log z),
             </me>
@@ -737,15 +737,53 @@
                 <image source="standhalf.jpg"/>
             </figure>
 
+            <p>With a bit of shifting, we can construct a superposition of solutions that describes the more general case of a finite number of intervals on the real axis, each assigned a constant initial value. For example, consider the boundary problem in the figure below. We have four regions, separated by the points <m>x = a, b, c</m>, and initial temperatures on the induced intervals given by <m>c_0, c_1, c_2, c_3</m>. Now take the angles from the points <m>a, b, c</m> to <m>z = x+iy</m>. Then the standard upper half plane solution in this case is 
+            <me>
+                u = c_3 + \frac{c_2 - c_3}{\pi} \theta_3 + \frac{c_1 - c_2}{\pi} \theta_2 + \frac{c_0 - c_1}{\pi}\theta_1.
+            </me> </p>
+
+            <p>A bit of translating will get you the complex potential
+                <me>
+                    f(z) = c_3 +  \frac{c_2 - c_3}{\pi i} \log(z - c) + \frac{c_1 - c_2}{\pi i} \log(z - b) + \frac{c_0 - c_1}{\pi i} \log(z - a),
+                </me>
+            for which <m>u = \RE f</m> (after an appropriate choice of branch). That the boundary conditions match is left to the reader. Note that this construction can be made to handle an arbitrary finite partition of the real axis into sections of constant value.</p>
+
             <figure>
                 <caption>General half plane standard solution</caption>
                 <image source="morehalf.jpg"/>
             </figure>
 
+            <p>Finally, we'll look an example application. In the study of heat, the harmonic function <m>T</m> on a domain represents temperature, and its level curves <m>Tx, y) = c</m> are called <term>isotherms</term>. The harmonic conjugate of <m>T</m>, which we can denote <m>T\ad</m> has level curves that represent the <term>flux lines</term> induced by the gradient field <m>\nabla T</m>. Our task is to find a harmonic function on the unit disk with the left half circle on the boundary held at temperature <m>T = 0</m> and the right circle held at <m>T = 1</m>.</p>
+
+            <p>First, we'll translate the boundary conditions to the upper half plane using the usual conformal map <me>z \mapsto w = C(z) = i \frac{1+z}{1-z}.</me> In the halfplane, we can find a function <m>\phi(w)</m> fitting the standand half plane solution by
+            <me>
+                \phi = 1 + \frac{0 - 1}{\pi } \theta_1 + \frac{1 - 0}{\pi} \theta_2
+            </me>
+            which has complex potential
+            <me>
+                \Phi = 1 + \frac{0 - 1}{\pi i} \log(w+1) + \frac{1 - 0}{\pi i} \log(w -1).
+            </me></p>
+
+            <p>One approach to constructing a solution on the disk is to precompose <m>\Phi</m> with the conformal map taking the disk to the upper half plane; that is, let <m>f</m> be the complex function on the unit disk given by
+            <me>
+                f = \Phi \circ C = 1 + \frac{ - 1}{\pi i} \log(i \frac{1+z}{1-z}+1) + \frac{1}{\pi i} \log(i \frac{1+z}{1-z} -1).
+            </me></p>
             <figure>
                 <caption>Using a standard solution to solve a disk problem</caption>
                 <image source="diskhalf.jpg"/>
             </figure>
+
+            <p>Now, we can look at the level curves of <m>\RE f</m> and <m>\IM f</m> to detect the isotherms and flux lines for our function on the disk. The flux lines in the plane and disk setting are visualized in the figure below.</p>
+
+            <figure>
+                <caption>Flux lines for standard half plane and disk solutions</caption>
+                <sidebyside>
+                    <image source="tempexampleplane.jpg"/>
+                    <image source="tempexampledisk.jpg"/>
+                </sidebyside>
+            </figure>
+
+
         </subsection>
     </section>
 
