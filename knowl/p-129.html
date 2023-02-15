@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">As an example, consider the problem of constructing a polynomial that interpolates the points <span class="process-math">\((z_1, w_1), (z_2, w_2), (z_3, w_3) \in \R^2\text{.}\)</span> If these points arent collinear, one approach to solving the problem is to use elbow grease - we can write a generic parabola <span class="process-math">\(f(z) = az^2 + bz + c\)</span> and solve the system of three equations that arise from plugging in each of the points. Another approach, based on noticing patterns, is called <em class="emphasis">Lagrange interpolation</em>. We notice that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f_1(z) = \frac{(z - z_2)(z-z_3)}{(z_1 - z_2)(z_1 - z_3)}
+\end{equation*}
+</div>
+<div class="para">is a function so that <span class="process-math">\(f_1(z_2) = f_1(z_3) = 0\)</span> and that <span class="process-math">\(f_1(z_1) = 1\text{.}\)</span> We can construct similar functions <span class="process-math">\(f_2\)</span> and <span class="process-math">\(f_3\text{.}\)</span> Then we can assemble these into a interpolating function by multiplying the correct piece by the desired output value -</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(z) = w_1 f_1(z) + w_2 f_2(z) + w_3 f_3(z).
+\end{equation*}
+</div>
+<div class="para">It turns out that the Lagrange interpolating function will be the unique polynomial of lowest degree that interpolates the data.</div>
+</div>
+<span class="incontext"><a href="section-11.html#p-129" class="internal">in-context</a></span>
+</body>
+</html>

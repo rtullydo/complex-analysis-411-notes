@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2023-02-09T21:08:23-08:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,43 +14,172 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Notes on complex analysis">
 <meta property="book:author" content="Ryan Tully-Doyle">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\RE}{Re}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="comp411.html"><span class="title">Notes on complex analysis</span></a></h1>
+<p class="byline">Ryan Tully-Doyle</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\RE}{Re}
   \DeclareMathOperator{\IM}{Im}
   \DeclareMathOperator{\ess}{ess}
   \DeclareMathOperator{\intr}{int}
@@ -161,65 +287,94 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="comp411.html"><span class="title">Notes on complex analysis</span></a></h1>
-<p class="byline">Ryan Tully-Doyle</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-3.html" title="Next">Next</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-3.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a></li>
-<li class="link">
-<a href="chapter-1.html" data-scroll="chapter-1" class="internal"><span class="codenumber">1</span> <span class="title">Conformal maps and linear fractional transformations</span></a><ul>
-<li><a href="section-1.html" data-scroll="section-1" class="internal">Conformal maps</a></li>
-<li><a href="section-2.html" data-scroll="section-2" class="active">Simply connected sets, boundaries, and the Riemann mapping theorem</a></li>
-<li><a href="section-3.html" data-scroll="section-3" class="internal">(optional) A proof of the Riemann Mapping Theorem</a></li>
-<li><a href="section-4.html" data-scroll="section-4" class="internal">Interlude: Liouville's Theorem</a></li>
-<li><a href="section-5.html" data-scroll="section-5" class="internal">Exercise set 1</a></li>
-<li><a href="section-6.html" data-scroll="section-6" class="internal">Linear fractional tranformations</a></li>
-<li><a href="section-7.html" data-scroll="section-7" class="internal">Exercises 2</a></li>
-<li><a href="section-8.html" data-scroll="section-8" class="internal">Reflection across a circle</a></li>
-<li><a href="section-9.html" data-scroll="section-9" class="internal">Conformal maps and harmonic equations</a></li>
-<li><a href="section-10.html" data-scroll="section-10" class="internal">Exercises 3</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="chapter-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Conformal maps and linear fractional transformations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Conformal maps</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Simply connected sets, boundaries, and the Riemann mapping theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">(optional) A proof of the Riemann Mapping Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Interlude: Liouville's Theorem</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercise set 1</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-5.html#exercises-1" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-6.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Linear fractional tranformations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-7.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Exercises 2</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-7.html#exercises-2" class="internal"><span class="codenumber">1.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-8.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Reflection across a circle</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-9.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Conformal maps and harmonic equations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-9.html#subsection-1" class="internal"><span class="codenumber">1.9.1</span> <span class="title">Vector fields and harmonic functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-2" class="internal"><span class="codenumber">1.9.2</span> <span class="title">The Dirichlet problem on the disk</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-3" class="internal"><span class="codenumber">1.9.3</span> <span class="title">Neumann conditions</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-4" class="internal"><span class="codenumber">1.9.4</span> <span class="title">Standard solutions and conformal maps</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-5" class="internal"><span class="codenumber">1.9.5</span> <span class="title">Half plane solutions</span></a></div></li>
 </ul>
 </li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-2"><h2 class="heading hide-type">
+<li>
+<div class="toc-item"><a href="section-10.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Exercises 3</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-10.html#exercises-3" class="internal"><span class="codenumber">1.10</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Special functions and analytic continuation</span></a></div>
+<ul class="structural"><li>
+<div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Gamma Function</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-11.html#subsection-6" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Interpolation</span></a></div></li>
+<li><div class="toc-item"><a href="section-11.html#subsection-7" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Gamma Function</span></a></div></li>
+<li><div class="toc-item"><a href="section-11.html#subsection-8" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Analytic continuation</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-2"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Simply connected sets, boundaries, and the Riemann mapping theorem</span>
 </h2>
-<p id="p-23">Before we go on, we're going to need to deal with the issue that analytic maps don't always act nicely on the boundaries of their domains. (Remember, analytic and holomorphic are local properties defined on open sets, and the “edge” of a set isn't open.) Let us recall that a set is called <dfn class="terminology">simply connected</dfn> if it “has no holes in it”. This intuitive idea of no holes corresponds to the rigorous notion a simply connected set is one in which every simple closed curve can be continuously deformed into a point without leaving the set. The act of continuously deforming a curve within a set is called <dfn class="terminology">homotopy</dfn>. Two curves are said to be <dfn class="terminology">homotopic</dfn> if we can find a homotopy from one curve to the other. More precisely, a homotopy in a domain <span class="process-math">\(A\)</span> from a curve <span class="process-math">\(\gamma_1\)</span> to a a curve <span class="process-math">\(\gamma_2\)</span> is a continuous function <span class="process-math">\(H(s, t)\)</span> where <span class="process-math">\(H(s, t) \subset A\)</span> for all <span class="process-math">\(s \in [0,1]\text{,}\)</span> and the endpoints have <span class="process-math">\(H(0,t) = \gamma_1(t)\text{,}\)</span> and <span class="process-math">\(H(1, t) = \gamma_2(t)\text{.}\)</span></p>
-<p id="p-24">Two domains <span class="process-math">\(A, B \subset \C\)</span> are said to be <dfn class="terminology">conformally equivalent</dfn> if there exists a bijective conformal map <span class="process-math">\(f: A \to B\text{.}\)</span> The next theorem characterizes which sets are conformally equivalent to simply connected sets.</p>
+<div class="para" id="p-23">Before we go on, we're going to need to deal with the issue that analytic maps don't always act nicely on the boundaries of their domains. (Remember, analytic and holomorphic are local properties defined on open sets, and the “edge” of a set isn't open.) Let us recall that a set is called <dfn class="terminology">simply connected</dfn> if it “has no holes in it”. This intuitive idea of no holes corresponds to the rigorous notion a simply connected set is one in which every simple closed curve can be continuously deformed into a point without leaving the set. The act of continuously deforming a curve within a set is called <dfn class="terminology">homotopy</dfn>. Two curves are said to be <dfn class="terminology">homotopic</dfn> if we can find a homotopy from one curve to the other. More precisely, a homotopy in a domain <span class="process-math">\(A\)</span> from a curve <span class="process-math">\(\gamma_1\)</span> to a a curve <span class="process-math">\(\gamma_2\)</span> is a continuous function <span class="process-math">\(H(s, t)\)</span> where <span class="process-math">\(H(s, t) \subset A\)</span> for all <span class="process-math">\(s \in [0,1]\text{,}\)</span> and the endpoints have <span class="process-math">\(H(0,t) = \gamma_1(t)\text{,}\)</span> and <span class="process-math">\(H(1, t) = \gamma_2(t)\text{.}\)</span>
+</div>
+<div class="para" id="p-24">Two domains <span class="process-math">\(A, B \subset \C\)</span> are said to be <dfn class="terminology">conformally equivalent</dfn> if there exists a bijective conformal map <span class="process-math">\(f: A \to B\text{.}\)</span> The next theorem characterizes which sets are conformally equivalent to simply connected sets.</div>
 <article class="theorem theorem-like" id="theorem-5"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann Mapping Theorem.</span>
 </h3>
-<p id="p-25">Let <span class="process-math">\(A\)</span> be a simply connected domain in <span class="process-math">\(\C\)</span> with <span class="process-math">\(A \neq \C\text{.}\)</span> Then there exists a bijective conformal map <span class="process-math">\(f: A \to \D\text{,}\)</span> where <span class="process-math">\(\D\)</span> is the complex unit disk. For any fixed <span class="process-math">\(z_0 \in A\text{,}\)</span> we can find a unique such <span class="process-math">\(f\)</span> so that <span class="process-math">\(f(z_0) = 0\)</span> and <span class="process-math">\(f\dd(z_0) &gt; 0\text{.}\)</span></p></article><p id="p-26">Because the maps in the theorem above are bijections, we get a striking immediate corollary.</p>
+<div class="para" id="p-25">Let <span class="process-math">\(A\)</span> be a simply connected domain in <span class="process-math">\(\C\)</span> with <span class="process-math">\(A \neq \C\text{.}\)</span> Then there exists a bijective conformal map <span class="process-math">\(f: A \to \D\text{,}\)</span> where <span class="process-math">\(\D\)</span> is the complex unit disk. For any fixed <span class="process-math">\(z_0 \in A\text{,}\)</span> we can find a unique such <span class="process-math">\(f\)</span> so that <span class="process-math">\(f(z_0) = 0\)</span> and <span class="process-math">\(f\dd(z_0) &gt; 0\text{.}\)</span>
+</div></article><div class="para" id="p-26">Because the maps in the theorem above are bijections, we get a striking immediate corollary.</div>
 <article class="corollary theorem-like" id="corollary-2"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
 </h3>
-<p id="p-27">Any two simply connected regions, neither one of which is all of <span class="process-math">\(\C\text{,}\)</span> are conformally equivalent.</p></article><p id="p-28">This is a powerful fact! Unfortunately, this theorem doesn't tell us how to fund the conformal maps that connect different sets. We'll take a deeper dive into that in the next couple of lectures.</p>
-<p id="p-29">Now, we'll turn to the question of what happens to the boundaries of domains under conformal maps. One way to think of the boundary of a domain <span class="process-math">\(A\)</span> in <span class="process-math">\(\C\)</span> is the set of points that can be reached as limits of sequences in <span class="process-math">\(A\text{.}\)</span> Another is to think of it as the set of points for which any neighborhood contains points in <span class="process-math">\(A\)</span> and points outside of <span class="process-math">\(A\text{.}\)</span> We use the notation <span class="process-math">\(\partial A\)</span> to indicated the boundary of <span class="process-math">\(A\text{.}\)</span> Because domains in <span class="process-math">\(\C\)</span> are open, a set and its boundary are disjoint. The <dfn class="terminology">closure</dfn> of a domain <span class="process-math">\(A\)</span> is <span class="process-math">\(A \cup \partial A\)</span> and will be denoted <span class="process-math">\(cl(A)\)</span> (we can also use <span class="process-math">\(\cc{A}\text{,}\)</span> but to avoid confusion with the complex conjugate, we'll avoid that in these notes).</p>
+<div class="para" id="p-27">Any two simply connected regions, neither one of which is all of <span class="process-math">\(\C\text{,}\)</span> are conformally equivalent.</div></article><div class="para" id="p-28">This is a powerful fact! Unfortunately, this theorem doesn't tell us how to fund the conformal maps that connect different sets. We'll take a deeper dive into that in the next couple of lectures.</div>
+<div class="para" id="p-29">Now, we'll turn to the question of what happens to the boundaries of domains under conformal maps. One way to think of the boundary of a domain <span class="process-math">\(A\)</span> in <span class="process-math">\(\C\)</span> is the set of points that can be reached as limits of sequences in <span class="process-math">\(A\text{.}\)</span> Another is to think of it as the set of points for which any neighborhood contains points in <span class="process-math">\(A\)</span> and points outside of <span class="process-math">\(A\text{.}\)</span> We use the notation <span class="process-math">\(\partial A\)</span> to indicated the boundary of <span class="process-math">\(A\text{.}\)</span> Because domains in <span class="process-math">\(\C\)</span> are open, a set and its boundary are disjoint. The <dfn class="terminology">closure</dfn> of a domain <span class="process-math">\(A\)</span> is <span class="process-math">\(A \cup \partial A\)</span> and will be denoted <span class="process-math">\(cl(A)\)</span> (we can also use <span class="process-math">\(\cc{A}\text{,}\)</span> but to avoid confusion with the complex conjugate, we'll avoid that in these notes).</div>
 <article class="proposition theorem-like" id="proposition-3"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
 </h3>
-<p id="p-30">Let <span class="process-math">\(A, B\)</span> be domains in <span class="process-math">\(\C\)</span> with boundaries <span class="process-math">\(\partial A, \partial B\text{.}\)</span> Suppose that <span class="process-math">\(f: A \to f(A)\)</span> is conformal (that is, <span class="process-math">\(f\)</span> is conformal from its domain to its range). If <span class="process-math">\(f(A)\)</span> has boundary <span class="process-math">\(\partial B\)</span> and additionally <span class="process-math">\(f(z_0) \in B\)</span> for some <span class="process-math">\(z_0 \in A\text{,}\)</span> then <span class="process-math">\(f(A) = f(B)\text{.}\)</span></p></article><p id="p-31">Essentially, the previous proposition implies that we can find the image of a conformal map by computing the image of the boundary and keeping track of where the interior of the domain was mapped via a single point.</p>
-<p id="p-32">We now come to the question of when a conformal map between domains can be extended to the boundary. Note that this extension will be a <em class="emphasis">continuous</em> extension, not an analytic one, because we can't work on neighborhoods for points in the boundary. For nice sets, conformal maps do indeed extend to the boundary.</p>
+<div class="para" id="p-30">Let <span class="process-math">\(A, B\)</span> be domains in <span class="process-math">\(\C\)</span> with boundaries <span class="process-math">\(\partial A, \partial B\text{.}\)</span> Suppose that <span class="process-math">\(f: A \to f(A)\)</span> is conformal (that is, <span class="process-math">\(f\)</span> is conformal from its domain to its range). If <span class="process-math">\(f(A)\)</span> has boundary <span class="process-math">\(\partial B\)</span> and additionally <span class="process-math">\(f(z_0) \in B\)</span> for some <span class="process-math">\(z_0 \in A\text{,}\)</span> then <span class="process-math">\(f(A) = f(B)\text{.}\)</span>
+</div></article><div class="para" id="p-31">Essentially, the previous proposition implies that we can find the image of a conformal map by computing the image of the boundary and keeping track of where the interior of the domain was mapped via a single point.</div>
+<div class="para" id="p-32">We now come to the question of when a conformal map between domains can be extended to the boundary. Note that this extension will be a <em class="emphasis">continuous</em> extension, not an analytic one, because we can't work on neighborhoods for points in the boundary. For nice sets, conformal maps do indeed extend to the boundary.</div>
 <article class="theorem theorem-like" id="theorem-6"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
 </h3>
-<p id="p-33">Suppose that <span class="process-math">\(A, B\)</span> are bounded, simply connected regions with boundaries <span class="process-math">\(\partial A\)</span> and <span class="process-math">\(\partial B\)</span> that are simple, continuous, closed curves (these are sometimes called Jordan curves). Then any conformal map of <span class="process-math">\(A\)</span> that is one-to-one onto <span class="process-math">\(B\)</span> can be extended to a continuous map of <span class="process-math">\(A \cup \partial A\)</span> one-to-one onto <span class="process-math">\(B \cup \partial B\text{.}\)</span></p></article><article class="question example-like" id="question-1"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-1"><h3 class="heading">
+<div class="para" id="p-33">Suppose that <span class="process-math">\(A, B\)</span> are bounded, simply connected regions with boundaries <span class="process-math">\(\partial A\)</span> and <span class="process-math">\(\partial B\)</span> that are simple, continuous, closed curves (these are sometimes called Jordan curves). Then any conformal map of <span class="process-math">\(A\)</span> that is one-to-one onto <span class="process-math">\(B\)</span> can be extended to a continuous map of <span class="process-math">\(A \cup \partial A\)</span> one-to-one onto <span class="process-math">\(B \cup \partial B\text{.}\)</span>
+</div></article><article class="question example-like" id="question-1"><a href="" data-knowl="" class="id-ref question-knowl original" data-refid="hk-question-1"><h3 class="heading">
 <span class="type">Question</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-1"><article class="question example-like"><p id="p-34">Find a bijective conformal map that takes a bounded region to an unbounded region. Show that there is no bijective conformal map from a simply connected domain to a non-simply connected domain.</p></article></div></section></div></main>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-question-1"><article class="question example-like"><div class="para" id="p-34">Find a bijective conformal map that takes a bounded region to an unbounded region. Show that there is no bijective conformal map from a simply connected domain to a non-simply connected domain.</div></article></div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>

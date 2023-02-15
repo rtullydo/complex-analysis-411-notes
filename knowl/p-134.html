@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Following Bernoulli (and Legendre), make the following definition involving our interesting integral.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Gamma(n) = \int_0^\infty t^{n-1} e^{it} \, dt.
+\end{equation*}
+</div>
+<div class="para">Using integration by parts, we can derive</div>
+<div class="displaymath process-math">
+\begin{align*}
+\Gamma(n) \amp= \int_0^\infty t^{n-1} e^{it} \, dt\\
+\amp= -t^{n-1}e^{it}\bigg\vert_0^\infty + \int_0^\infty(n-1)t^{n-2}e^{-t}\, dt\\
+\amp= (n-1) \int_0^\infty t^{n-2} e^{-t}\, dt\\
+\amp= (n-1)\Gamma(n-1).
+\end{align*}
+</div>
+<div class="para">Coupled with the observation that <span class="process-math">\(\Gamma(1) = 1\text{,}\)</span> we get that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Gamma(n+1) = n!.
+\end{equation*}
+</div>
+<div class="para">Now, the nice thing about the form of the integral in the definition of <span class="process-math">\(\Gamma\)</span> is that we can apply it to any <span class="process-math">\(x \gt 0\text{,}\)</span> and in turn <span class="process-math">\(\{z: \RE z \gt 0\}\)</span> and get a convergent integral. Thus, the form of the gamma function allows the <em class="emphasis">continuation</em> of the function off of the positive integers and onto the entire right half plane.</div>
+</div>
+<span class="incontext"><a href="section-11.html#p-134" class="internal">in-context</a></span>
+</body>
+</html>
