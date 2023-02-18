@@ -177,7 +177,7 @@ window.MathJax = {
 <span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
 </ol>
 </li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="chapter-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-2.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span></span><div class="searchbox"><div class="searchwidget">
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="chapter-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-2.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-12.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
 <input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
 </div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\RE}{Re}
   \DeclareMathOperator{\IM}{Im}
@@ -328,14 +328,16 @@ window.MathJax = {
 </li>
 <li>
 <div class="toc-item"><a href="chapter-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Special functions and analytic continuation</span></a></div>
-<ul class="structural"><li class="active">
+<ul class="structural">
+<li class="active">
 <div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Gamma Function</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-11.html#subsection-6" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Interpolation</span></a></div></li>
 <li><div class="toc-item"><a href="section-11.html#subsection-7" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Gamma Function</span></a></div></li>
-<li><div class="toc-item"><a href="section-11.html#subsection-8" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Analytic continuation</span></a></div></li>
 </ul>
-</li></ul>
+</li>
+<li><div class="toc-item"><a href="section-12.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Analytic continuation</span></a></div></li>
+</ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-11"><h2 class="heading hide-type">
@@ -413,12 +415,26 @@ f(z) = w_1 f_1(z) + w_2 f_2(z) + w_3 f_3(z).
 \Gamma(z+1) = z \Gamma(z)
 \end{equation*}
 </div>
-<div class="para">is an example of a <em class="emphasis">functional equation</em> (or an equation where the unknowns are functions), and it turns out that we can use this function to extend the domain of the gamma function beyond the right half plane.</div>
-</div></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.1.3</span> <span class="title">Analytic continuation</span>
-</h3></section></section></div>
+<div class="para">is an example of a <em class="emphasis">functional equation</em> (or an equation where the unknowns are functions), and it turns out that we can use this equation to extend the domain of the gamma function beyond the right half plane.</div>
+</div>
+<div class="para logical" id="p-136">
+<div class="para">Suppose that we are given a point <span class="process-math">\(z_0\)</span> with <span class="process-math">\(0 &gt; \RE z_0 &gt; -1\text{.}\)</span> The integral that defines <span class="process-math">\(\Gamma\)</span> on the right half plane isn't convergent on this value. It is reasonable to expect that if <span class="process-math">\(\Gamma(z_0)\)</span> is to be made meaningful, then the functional equation should hold. That is, we desire</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z_0 \Gamma(z_0) = \Gamma(z_0 + 1).
+\end{equation*}
+</div>
+<div class="para">Accordingly, we can <em class="emphasis">define</em> <span class="process-math">\(\Gamma\)</span> at <span class="process-math">\(z_0\)</span> via</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Gamma(z_0) := \frac{\Gamma(z_0 +1)}{z_0}.
+\end{equation*}
+</div>
+<div class="para">Notice that this definition works for any <span class="process-math">\(z\)</span> with <span class="process-math">\(\RE z &gt; -1\)</span> with the exception of the point <span class="process-math">\(z = 0\text{,}\)</span> which is a pole of our extension. Thus, we've extended the domain of <span class="process-math">\(\Gamma\)</span> to the strip <span class="process-math">\(-1 \lt \RE z \leq 0\)</span> with the exception of the pole at <span class="process-math">\(z = 0\text{.}\)</span> Proceeding inductively, we can continue to define further strips in terms of the previous using the functional equation. The resulting function is the unique meromorphic function defined this way on all of <span class="process-math">\(\C - \{0, -1, -2, -3, \ldots\}\text{.}\)</span>
+</div>
+</div></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="chapter-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span>
+<a class="previous-button button" href="chapter-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-12.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
 <div class="ptx-page-footer">

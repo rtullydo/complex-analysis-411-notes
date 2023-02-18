@@ -877,13 +877,23 @@
                     <me>
                         \Gamma(z+1) = z \Gamma(z)
                     </me>
-                is an example of a <em>functional equation</em> (or an equation where the unknowns are functions), and it turns out that we can use this function to extend the domain of the gamma function beyond the right half plane.</p>
+                is an example of a <em>functional equation</em> (or an equation where the unknowns are functions), and it turns out that we can use this equation to extend the domain of the gamma function beyond the right half plane.</p>
+
+                <p>Suppose that we are given a point <m>z_0</m> with <m>0 > \RE z_0 > -1</m>. The integral that defines <m>\Gamma</m> on the right half plane isn't convergent on this value. It is reasonable to expect that if <m>\Gamma(z_0)</m> is to be made meaningful, then the functional equation should hold. That is, we desire
+                <me>
+                    z_0 \Gamma(z_0) = \Gamma(z_0 + 1).
+                </me>
+                Accordingly, we can <em>define</em> <m>\Gamma</m> at <m>z_0</m> via
+                <me>
+                    \Gamma(z_0) := \frac{\Gamma(z_0 +1)}{z_0}.
+                </me>
+                Notice that this definition works for any <m>z</m> with <m>\RE z > -1</m> with the exception of the point <m>z = 0</m>, which is a pole of our extension. Thus, we've extended the domain of <m>\Gamma</m> to the strip <m>-1 \lt \RE z \leq 0</m> with the exception of the pole at <m>z = 0</m>. Proceeding inductively, we can continue to define further strips in terms of the previous using the functional equation. The resulting function is the unique meromorphic function defined this way on all of <m>\C - \{0, -1, -2, -3, \ldots\}</m>.</p>
 
             </subsection>
+        </section>
+        <section>
+            <title>Analytic continuation</title>
 
-            <subsection>
-                <title>Analytic continuation</title>
-            </subsection>
         </section>
     </chapter>
 
