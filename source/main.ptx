@@ -897,6 +897,79 @@
         </section>
     </chapter>
 
+    <chapter>
+        <title>The prime number theorem</title>
+        <section>
+            <title>Prerequisites</title>
+            <p>Let us begin with a very useful sort-of converse to the Cauchy-Goursat theorem</p>
+
+            <theorem xml:id="thm-cauchy-goursat">
+                <title>Cauchy-Goursat</title>
+                <p>Let <m>f</m> be analytic on a simply connected domain <m>D</m>. Then
+                <me>
+                    \oint_\gamma f \, dz = 0
+                </me>
+                for any simple closed curve <m>\gamma</m> contained in <m>D</m>.
+                </p>
+            </theorem>
+
+
+            <theorem xml:id="thm-morera"><title>Morera's theorem</title>
+                <p>Let <m>f</m> be a continuous function defined on an open domain <m>D</m>. If
+                <me>
+                    \oint_\gamma f \, dz = 0
+                </me>
+                for every simple closed path <m>\gamma</m> contained in <m>D</m>, then <m>f</m> is analytic on <m>D</m>.
+                </p>
+            </theorem>
+
+            <p>Morera's theorem is often used with weaker (equivalent) hypotheses - that is, we need only check that
+                <me>
+                    \int_{\partial T} f\, dz = 0
+                </me>
+                around the boundary of any closed triangle <m>T</m> contained in <m>D</m>.</p>
+
+            <p>Morera's theorem is the standard method used to prove that a constructed function is holomorphic. The theorem is used so often and so widely that it may sometimes be invoked without reference (though not in our case).</p>
+
+            <p>One nice immediate result that we get from Morera is parallel to the (fundamental) result from real analysis that uniform limits of continuous functions are continuous.</p>
+
+            <theorem xml:id="thm-unif-holo">
+                <p>The uniform limit of a sequence of analytic functions is analytic.</p>
+            </theorem>
+
+            <proof>
+                <p>Suppose that a sequence <m>f_n</m> of analytic functions converges uniformly to a continuous limit function <m>f</m> on an open disk. The Cauchy-Goursat theorem implies that, for all <m>n</m>, 
+                <me>
+                    \oint_C f_n \, dz = 0
+                </me>
+                for any simple closed curve <m>C</m> contained in the disk. Using uniform converge to push the limit through the integral, we get
+                <me> 
+                    \oint_C f \, dz = \oint_C \lim_n f_n \, dz = \lim_n \oint_C f_n \, dz = 0.
+                </me>
+                for every simple closed curve <m>C</m> in the disk, and so by Morera's theorem, <m>f</m> must be analytic on the disk.</p>
+
+                <p>This result extends to domains, as we can recreate this argument in a neighborhood of any <m>z_0</m> in <m>D</m>.</p>
+            </proof>
+
+        </section>
+
+        <section>
+            <title>Infinite products and the zeta function</title>
+
+            <definition xml:id="def-zeta"><title>Riemann zeta function</title>
+                <p>Let <m>s</m> be a real number. Define the <term>Riemann zeta function</term> by
+                <me>
+                    \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}.
+                </me></p>
+            </definition>
+
+            <p>This is essentially taking the <q><m>p</m>-series</q> from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real <m>s > 1</m> via the integral test (exercise).</p>
+
+            <p>In fact, <m>\zeta</m> is holomorphic for <m>\RE s > 1</m>. </p>
+        </section>
+
+    </chapter>
+
 
 
 
