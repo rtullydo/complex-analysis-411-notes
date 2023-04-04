@@ -917,11 +917,49 @@
             <theorem xml:id="thm-morera"><title>Morera's theorem</title>
                 <p>Let <m>f</m> be a continuous function defined on an open domain <m>D</m>. If
                 <me>
-                    \oint_\gamma f \, dz = 0
+                    \oint_\gamma f(\xi) \, d\xi = 0
                 </me>
                 for every simple closed path <m>\gamma</m> contained in <m>D</m>, then <m>f</m> is analytic on <m>D</m>.
                 </p>
             </theorem>
+
+            <proof>
+                <p>Assume without loss of generality that the domain <m>D</m> is connected (and so path-connected). Assume that <m>f</m> satisifies the hypotheses of the theorem. We will construct an anti-derivative for <m>f</m>, which will allow us to conclude that <m>f</m> is analytic.</p>
+
+                <p>Pick a basepoint <m>z_0</m> in <m>D</m>, and for any other <m>z</m> in <m>D</m>, let <m>\gamma</m> be a simple path from <m>z_0</m> to <m>z</m>. Let <m>F</m> be the function on <m>D</m> given by
+                <me>
+                    F(z) = \int_\gamma f(\xi) \, d\xi.
+                </me></p>
+
+                <p>Note that this definition does not depend on the choice of path. Assume that <m>\tau</m> is another path from <m>z_0</m> to <m>z</m>. Then, by hypothesis,
+                <md>
+                    <mrow> 0 \amp= \oint_{\tau\inv \gamma} f</mrow>
+                    <mrow>\amp = \oint_{\tau\inv} f + \oint_\gamma f</mrow>
+                    <mrow>\amp = -\oint_{\tau} f + \oint_\gamma f</mrow>
+                </md>
+                which implies that <m>\oint_\tau f = \oint_\gamma f</m>.</p>
+
+                <p>Note futher that a different choice of basepoint (say <m>z_1</m>) causes the resulting function to differ from <m>F</m> only by the constant <m>C = \oint_C f</m> where <m>C</m> is any simple path from <m>z_1</m> to <m>z_0</m>. Thus, choice of basepoint does not affect the derivative.</p>
+
+                <p>It remains to show that <m>\frac{d}{dz} F(z) = f(z)</m>. This boils down to a difference quotient argument. Consider <m>F(z + h)</m> for some small complex number <m>h</m>. Then
+                <me>
+                    F(z+h) - F(z) = \int_{z_0}^{z+h} f(\xi) \, d\xi - \int_{z_0}^z f(\xi) \, d\xi = \int_z^{z+h} f(\xi) \, d\xi.
+                </me>
+                (The notation is justified by the path independence of integrals of <m>f</m>.)  Now,
+                <md>
+                    <mrow>\frac{1}{h} (F(z + h) - F(z)) - f(z) \amp= \frac{1}{h} (F(z + h) - F(z)) - \frac{1}{h} hf(z) </mrow>
+                    <mrow> \amp = \frac{1}{h} (\int_z^{z + h} f(\xi) \, d\xi - h f(z))</mrow>
+                    <mrow> \amp = \frac{1}{h} (\int_z^{z + h} f(\xi) \, d\xi - \int_z^{z+h} f(z) \, d\xi)</mrow>
+                    <mrow>\amp= \frac{1}{h} \int_z^{z+h} f(\xi) - f(z) \, d\xi.</mrow>
+                </md> 
+                Since <m>f</m> has path independent line integrals, choose the line segment between <m>z</m> and <m>z + h</m>. Since <m>f</m> is continuous, 
+                <me>
+                    \abs{\frac{F(z + h) - F(z)}{h} - f(z)} \leq \frac{1}{h} \int_z^{z+h} \abs{f(\xi) - f(z)} \, d\xi \to 0 \text{ as } \abs{h} \to 0.
+                </me></p>
+
+                <p>We conclude that <m>F</m> is differentiable at <m>z</m> and thus analytic at <m>z</m> with derivative <m>f</m>, which implies that <m>f</m> is analytic. Since this holds for all <m>z\in D</m>, we conclude that <m>f</m> is analytic on <m>D</m>.</p>
+
+            </proof>
 
             <p>Morera's theorem is often used with weaker (equivalent) hypotheses - that is, we need only check that
                 <me>
@@ -965,7 +1003,15 @@
 
             <p>This is essentially taking the <q><m>p</m>-series</q> from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real <m>s > 1</m> via the integral test (exercise).</p>
 
-            <p>In fact, <m>\zeta</m> is holomorphic for <m>\RE s > 1</m>. </p>
+            <theorem>
+                <p><m>\zeta</m> is holomorphic for <m>\RE s > 1</m>.</p>
+            </theorem> 
+
+            <proof>
+                <p>We'll need the straightforward fact that 
+                    <me>\abs{n^{s}} = n^{\RE s}.</me> 
+                    Let <m>s</m> be a complex number with <m>\RE s > 1</m>. There are many ways to construct the next part of the argument. We'll use the <m>M</m>-test. Since <me>\abs{\frac{1}{n^s}} \leq \frac{1}{n^{\RE s}},</me> and the terms <m>\frac{1}{n^{\RE s}}</m> form a convergent <m>p</m>-series as <m>\RE s > 1</m>, the Weierstrass <m>M</m>-test says that the series converges uniformly to <m>\zeta</m> where <m>\RE s > 1</m>. Each function <m>f_n = \frac{1}{n^s}</m> is analytic on <m>\RE s > 1</m> (given a suitable choice of branch), and thus by <xref ref="thm-unif-holo"/>, the limit function <m>\zeta</m> must also be holomorphic for <m>\RE s > 1</m>.  </p>
+            </proof>
         </section>
 
     </chapter>

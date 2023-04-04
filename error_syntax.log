@@ -1,5 +1,5 @@
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:949:19:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 948 and section
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:951:15:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: section line 936 and chapter
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:957:8:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: chapter line 900 and book
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:959:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: book line 115 and pretext
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:960:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag pretext line 3
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1012:19:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: proof line 1010 and section
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1014:15:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: section line 994 and chapter
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1020:8:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: chapter line 900 and book
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1022:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: book line 115 and pretext
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1023:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag pretext line 3
