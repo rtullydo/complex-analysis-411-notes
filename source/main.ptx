@@ -1012,6 +1012,10 @@
                     <me>\abs{n^{s}} = n^{\RE s}.</me> 
                     Let <m>s</m> be a complex number with <m>\RE s > 1</m>. There are many ways to construct the next part of the argument. We'll use the <m>M</m>-test. Since <me>\abs{\frac{1}{n^s}} \leq \frac{1}{n^{\RE s}},</me> and the terms <m>\frac{1}{n^{\RE s}}</m> form a convergent <m>p</m>-series as <m>\RE s > 1</m>, the Weierstrass <m>M</m>-test says that the series converges uniformly to <m>\zeta</m> where <m>\RE s > 1</m>. Each function <m>f_n = \frac{1}{n^s}</m> is analytic on <m>\RE s > 1</m> (given a suitable choice of branch), and thus by <xref ref="thm-unif-holo"/>, the limit function <m>\zeta</m> must also be holomorphic for <m>\RE s > 1</m>.  </p>
             </proof>
+
+
+            <theorem>
+                <p>
         </section>
 
     </chapter>
