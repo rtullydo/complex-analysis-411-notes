@@ -343,16 +343,25 @@ window.MathJax = {
 <div class="toc-item"><a href="chapter-3.html" class="internal"><span class="codenumber">3</span> <span class="title">The prime number theorem</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="section-13.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Prerequisites</span></a></div></li>
-<li class="active"><div class="toc-item"><a href="section-14.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Infinite products and the zeta function</span></a></div></li>
+<li class="active">
+<div class="toc-item"><a href="section-14.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Infinite products and the zeta function</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-14.html#subsection-8" class="internal"><span class="codenumber">3.2.1</span> <span class="title">The zeta function</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#subsection-9" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Infinite products</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-14"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Infinite products and the zeta function</span>
 </h2>
-<article class="definition definition-like" id="def-zeta"><h3 class="heading">
+<section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">The zeta function</span>
+</h3>
+<article class="definition definition-like" id="def-zeta"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann zeta function.</span>
-</h3> <div class="para logical" id="p-154">
+</h4> <div class="para logical" id="p-154">
 <div class="para">Let <span class="process-math">\(s\)</span> be a real number. Define the <dfn class="terminology">Riemann zeta function</dfn> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -360,12 +369,12 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div></article><div class="para" id="p-155">This is essentially taking the “<span class="process-math">\(p\)</span>-series” from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real <span class="process-math">\(s &gt; 1\)</span> via the integral test (exercise).</div>
-<article class="theorem theorem-like" id="thm-zeta-holo"><h3 class="heading">
+<article class="theorem theorem-like" id="thm-zeta-holo"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
-</h3>
+</h4>
 <div class="para" id="p-156">
 <span class="process-math">\(\zeta\)</span> is holomorphic for <span class="process-math">\(\RE s &gt; 1\text{.}\)</span>
-</div></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><div class="para logical" id="p-157">
+</div></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><div class="para logical" id="p-157">
 <div class="para">First, note that for a positive real number <span class="process-math">\(n\)</span> and a complex power <span class="process-math">\(s = a + ib\text{,}\)</span> note that</div>
 <div class="displaymath process-math" id="md-6">
 \begin{align*}
@@ -407,9 +416,9 @@ F_k = \sum_{n=1}^k \frac{1}{n^s}
 </div>
 </div></article></div>
 <div class="para" id="p-160">In fact, we can say slightly more almost immediately. First, let's codify the result that we used in the proof of the theorem above.</div>
-<article class="theorem theorem-like" id="theorem-19"><h3 class="heading">
+<article class="theorem theorem-like" id="theorem-19"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Weierstrass theorem for series.</span>
-</h3>
+</h4>
 <div class="para logical" id="p-161">
 <div class="para">Let <span class="process-math">\(f_n\)</span> be a sequence of holomorphic functions on a domain <span class="process-math">\(D\text{,}\)</span> and assume that <span class="process-math">\(\sum_n f_n\)</span> converges uniformly on every closed and bounded subset of <span class="process-math">\(D\text{.}\)</span>  Then</div>
 <ol class="decimal">
@@ -418,9 +427,9 @@ F_k = \sum_{n=1}^k \frac{1}{n^s}
 </div></li>
 <li id="li-26"><div class="para" id="p-derived-li-26">For any <span class="process-math">\(k \geq 1\text{,}\)</span> the series of <span class="process-math">\(k\)</span>th derivatives <span class="process-math">\(\sum_n f_n^{(k)}\)</span> converges on <span class="process-math">\(D\)</span> and converges uniformly and absolutely on every closed and bounded subset of <span class="process-math">\(D\)</span> to the function <span class="process-math">\(f^{(k)}\text{.}\)</span> That is, the derivative of the limit is the limit of the derivatives.</div></li>
 </ol>
-</div></article><article class="corollary theorem-like" id="corollary-3"><h3 class="heading">
+</div></article><article class="corollary theorem-like" id="corollary-3"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Corollary to Theorem 3.2.2.</span>
-</h3>
+</h4>
 <div class="para logical" id="p-162">
 <div class="para">For <span class="process-math">\(\RE s &gt; 1\text{,}\)</span>
 </div>
@@ -431,9 +440,9 @@ F_k = \sum_{n=1}^k \frac{1}{n^s}
 </div>
 <div class="para">and <span class="process-math">\(\zeta\dd(s)\)</span> is holomorphic.</div>
 </div></article><div class="para" id="p-163">The first thing we might like to do is ask if we know the value of <span class="process-math">\(\zeta\)</span> for any input points at all. The famous problem identified with the case where <span class="process-math">\(s=2\)</span> is called the <dfn class="terminology">Basel problem</dfn>. Its solution will showcase some of the issues we face when dealing with the task of extending the zeta function off the natural domain.</div>
-<article class="theorem theorem-like" id="theorem-20"><h3 class="heading">
+<article class="theorem theorem-like" id="theorem-20"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Basel problem.</span>
-</h3>
+</h4>
 <div class="para logical" id="p-164"><div class="displaymath process-math">
 \begin{equation*}
 \zeta(2) = \frac{\pi^2}{6}.
@@ -503,7 +512,46 @@ F_k = \sum_{n=1}^k \frac{1}{n^s}
 <li id="li-29"><div class="para" id="p-derived-li-29">What does it mean to converge as an infinite product?</div></li>
 </ul>
 <div class="para">The answers to these questions will be answered in the subsequent discussion.</div>
-</div></section></div>
+</div></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">Infinite products</span>
+</h3>
+<div class="para logical" id="p-167">
+<div class="para">Euler's solution to the Basel problem points out that we need to know something about convergence of infinite products. We'll start with real numbers and work up to the complex case. Given a sequence <span class="process-math">\(a_n\)</span> of real numbers, we can consider the sequence of partial products <span class="process-math">\(p_k = a_1 a_2 \ldots a_k\text{.}\)</span> Letting the sequence tend to infinity gives an <dfn class="terminology">infinite product</dfn> (in the same way that an infinite sum is just a representation of a sequence of partial sums). The standard symbol used to denote an infinite product on the sequence <span class="process-math">\(a_n\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_1 a_2 \ldots = \prod_{n=1}^\infty a_n\text{.}
+\end{equation*}
+</div>
+<div class="para">We can likewise denote the <span class="process-math">\(k\)</span>th partial product by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p_k = a_1 a_2 \ldots a_k = \prod_{n=1}^k a_n.
+\end{equation*}
+</div>
+</div>
+<article class="definition definition-like" id="definition-5"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span>
+</h4>
+<div class="para" id="p-168">An infinite product with no zero factors is convergent if and only if there exists some real number <span class="process-math">\(p\neq 0\)</span> so that <span class="process-math">\(p_k \to p\)</span> as <span class="process-math">\(k \to \infty\text{.}\)</span> In this case, <span class="process-math">\(p\)</span> is the <dfn class="terminology">value</dfn> of the product. If such <span class="process-math">\(p_k \to 0\text{,}\)</span> then <span class="process-math">\(p_k\)</span> diverges to 0. If there are infinitely many zero factors <span class="process-math">\(a_n\text{,}\)</span> then <span class="process-math">\(p_k\)</span> diverges to 0. If there are finitely many zero factors <span class="process-math">\(a_n\text{,}\)</span> then <span class="process-math">\(p_k \to 0\text{.}\)</span>
+</div></article><div class="para" id="p-169">We can construct a theory of convergence entirely in terms of products, but it is more elegant for our needs to convert questions of convergence into equivalent questions about series via the logarithm (assuming positive terms or absolute value).</div>
+<article class="theorem theorem-like" id="theorem-21"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="p-170">
+<div class="para">Let <span class="process-math">\(a_n\)</span> be a sequence of positive real numbers. Then the infinite product</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\prod_{n=1}^\infty (1 + a_n)
+\end{equation*}
+</div>
+<div class="para">converges if and only if the series</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=1}^\infty a_n
+\end{equation*}
+</div>
+<div class="para">converges.</div>
+</div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-13.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span>
 </div></main>

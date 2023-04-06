@@ -970,7 +970,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Infinite products and the zeta function",
-  "body": " Infinite products and the zeta function  Riemann zeta function  Let be a real number. Define the Riemann zeta function by   This is essentially taking the -series from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real via the integral test (exercise).   is holomorphic for .    First, note that for a positive real number and a complex power , note that  For , let be a complex number with . Consider the sequence of functions We have      By the Weierstrass -test , the series converges uniformly and absolutely to where .  Now note that each is analytic, and so each partial sum is analytic. So is a sequence of analytic functions converging uniformly to on . Then by , we conclude that is analytic on . Because was arbitrary, the results extend to all points in the halfplane .   In fact, we can say slightly more almost immediately. First, let's codify the result that we used in the proof of the theorem above.  Weierstrass theorem for series  Let be a sequence of holomorphic functions on a domain , and assume that converges uniformly on every closed and bounded subset of . Then  is holomorphic on .  For any , the series of th derivatives converges on and converges uniformly and absolutely on every closed and bounded subset of to the function . That is, the derivative of the limit is the limit of the derivatives.    Corollary to  For , and is holomorphic.   The first thing we might like to do is ask if we know the value of for any input points at all. The famous problem identified with the case where is called the Basel problem . Its solution will showcase some of the issues we face when dealing with the task of extending the zeta function off the natural domain.  Basel problem      First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper. To begin, Euler knew that and so He wants to factor this polynomial using the fundamental theorem of algebra as but he can't, as this has no hope of converging in the infinite product. Instead, he defines terms of the form - after all, these terms vanish at the same set of zeros. Making the rather large leap that the function is determined by its zeros and a single value (as in the case of a polynomial), Euler writes which at least has a shot of converging. He then notices that a pattern emerges as you start formally multiplying out this product. and He makes the leap that Now, still with the underlying assumption that all of this converges and makes sense, he compares the coefficients of in his two power series to get which is just  This argument raises serious questions. Among them  Is an analytic function determined uniquely by its zeros?  Does the fundamental theorem of algebra actually apply to infinite polynomials ?  What does it mean to converge as an infinite product?  The answers to these questions will be answered in the subsequent discussion.  "
+  "body": " Infinite products and the zeta function  The zeta function  Riemann zeta function  Let be a real number. Define the Riemann zeta function by   This is essentially taking the -series from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real via the integral test (exercise).   is holomorphic for .    First, note that for a positive real number and a complex power , note that  For , let be a complex number with . Consider the sequence of functions We have      By the Weierstrass -test , the series converges uniformly and absolutely to where .  Now note that each is analytic, and so each partial sum is analytic. So is a sequence of analytic functions converging uniformly to on . Then by , we conclude that is analytic on . Because was arbitrary, the results extend to all points in the halfplane .   In fact, we can say slightly more almost immediately. First, let's codify the result that we used in the proof of the theorem above.  Weierstrass theorem for series  Let be a sequence of holomorphic functions on a domain , and assume that converges uniformly on every closed and bounded subset of . Then  is holomorphic on .  For any , the series of th derivatives converges on and converges uniformly and absolutely on every closed and bounded subset of to the function . That is, the derivative of the limit is the limit of the derivatives.    Corollary to  For , and is holomorphic.   The first thing we might like to do is ask if we know the value of for any input points at all. The famous problem identified with the case where is called the Basel problem . Its solution will showcase some of the issues we face when dealing with the task of extending the zeta function off the natural domain.  Basel problem      First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper. To begin, Euler knew that and so He wants to factor this polynomial using the fundamental theorem of algebra as but he can't, as this has no hope of converging in the infinite product. Instead, he defines terms of the form - after all, these terms vanish at the same set of zeros. Making the rather large leap that the function is determined by its zeros and a single value (as in the case of a polynomial), Euler writes which at least has a shot of converging. He then notices that a pattern emerges as you start formally multiplying out this product. and He makes the leap that Now, still with the underlying assumption that all of this converges and makes sense, he compares the coefficients of in his two power series to get which is just  This argument raises serious questions. Among them  Is an analytic function determined uniquely by its zeros?  Does the fundamental theorem of algebra actually apply to infinite polynomials ?  What does it mean to converge as an infinite product?  The answers to these questions will be answered in the subsequent discussion.   Infinite products  Euler's solution to the Basel problem points out that we need to know something about convergence of infinite products. We'll start with real numbers and work up to the complex case. Given a sequence of real numbers, we can consider the sequence of partial products . Letting the sequence tend to infinity gives an infinite product (in the same way that an infinite sum is just a representation of a sequence of partial sums). The standard symbol used to denote an infinite product on the sequence is .We can likewise denote the th partial product by   An infinite product with no zero factors is convergent if and only if there exists some real number so that as . In this case, is the value of the product. If such , then diverges to 0. If there are infinitely many zero factors , then diverges to 0. If there are finitely many zero factors , then .   We can construct a theory of convergence entirely in terms of products, but it is more elegant for our needs to convert questions of convergence into equivalent questions about series via the logarithm (assuming positive terms or absolute value).   Let be a sequence of positive real numbers. Then the infinite product converges if and only if the series converges.    "
 },
 {
   "id": "def-zeta",
@@ -995,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-14.html#proof-11",
   "type": "Proof",
-  "number": "3.2.1",
+  "number": "3.2.1.1",
   "title": "",
   "body": " First, note that for a positive real number and a complex power , note that  For , let be a complex number with . Consider the sequence of functions We have      By the Weierstrass -test , the series converges uniformly and absolutely to where .  Now note that each is analytic, and so each partial sum is analytic. So is a sequence of analytic functions converging uniformly to on . Then by , we conclude that is analytic on . Because was arbitrary, the results extend to all points in the halfplane .  "
 },
@@ -1034,6 +1034,33 @@ var ptx_lunr_docs = [
   "number": "3.2.5",
   "title": "Basel problem.",
   "body": "Basel problem     "
+},
+{
+  "id": "p-167",
+  "level": "2",
+  "url": "section-14.html#p-167",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "infinite product "
+},
+{
+  "id": "definition-5",
+  "level": "2",
+  "url": "section-14.html#definition-5",
+  "type": "Definition",
+  "number": "3.2.6",
+  "title": "",
+  "body": " An infinite product with no zero factors is convergent if and only if there exists some real number so that as . In this case, is the value of the product. If such , then diverges to 0. If there are infinitely many zero factors , then diverges to 0. If there are finitely many zero factors , then .  "
+},
+{
+  "id": "theorem-21",
+  "level": "2",
+  "url": "section-14.html#theorem-21",
+  "type": "Theorem",
+  "number": "3.2.7",
+  "title": "",
+  "body": " Let be a sequence of positive real numbers. Then the infinite product converges if and only if the series converges.  "
 }
 ]
 
