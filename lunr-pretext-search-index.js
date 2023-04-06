@@ -899,6 +899,141 @@ var ptx_lunr_docs = [
   "number": "2.2",
   "title": "Analytic continuation",
   "body": " Analytic continuation  "
+},
+{
+  "id": "section-13",
+  "level": "1",
+  "url": "section-13.html",
+  "type": "Section",
+  "number": "3.1",
+  "title": "Prerequisites",
+  "body": " Prerequisites  Let us begin with a very useful sort-of converse to the Cauchy-Goursat theorem   Cauchy-Goursat  Let be analytic on a simply connected domain . Then for any simple closed curve contained in .   Morera's theorem  Let be a continuous function defined on an open domain . If for every simple closed path contained in , then is analytic on .    Assume without loss of generality that the domain is connected (and so path-connected). Assume that satisifies the hypotheses of the theorem. We will construct an anti-derivative for , which will allow us to conclude that is analytic.  Pick a basepoint in , and for any other in , let be a simple path from to . Let be the function on given by  Note that this definition does not depend on the choice of path. Assume that is another path from to . Then, by hypothesis, which implies that .  Note futher that a different choice of basepoint (say ) causes the resulting function to differ from only by the constant where is any simple path from to . Thus, choice of basepoint does not affect the derivative.  It remains to show that . This boils down to a difference quotient argument. Consider for some small complex number . Then (The notation is justified by the path independence of integrals of .) Now, Since has path independent line integrals, choose the line segment between and . Since is continuous,  We conclude that is differentiable at and thus analytic at with derivative , which implies that is analytic. Since this holds for all , we conclude that is analytic on .   Morera's theorem is often used with weaker (equivalent) hypotheses - that is, we need only check that around the boundary of any closed triangle contained in .  Morera's theorem is the standard method used to prove that a constructed function is holomorphic. The theorem is used so often and so widely that it may sometimes be invoked without reference (though not in our case).  One nice immediate result that we get from Morera is parallel to the (fundamental) result from real analysis that uniform limits of continuous functions are continuous.   The uniform limit of a sequence of analytic functions is analytic.    Suppose that a sequence of analytic functions converges uniformly to a continuous limit function on an open disk. The Cauchy-Goursat theorem implies that, for all , for any simple closed curve contained in the disk. Using uniform converge to push the limit through the integral, we get for every simple closed curve in the disk, and so by Morera's theorem, must be analytic on the disk.  This result extends to domains, as we can recreate this argument in a neighborhood of any in .   Since we'll be considering functions defined as series, it will be useful to combine the results above with a test for uniform convergence called the Weierstrass M-test.  M-test  Supposet that is a sequence of functions on a common domain and that there exists a sequence of non-negative numbers satisfying  for all ;   .  Then converges absolutely and uniformly on .   "
+},
+{
+  "id": "thm-cauchy-goursat",
+  "level": "2",
+  "url": "section-13.html#thm-cauchy-goursat",
+  "type": "Theorem",
+  "number": "3.1.1",
+  "title": "Cauchy-Goursat.",
+  "body": " Cauchy-Goursat  Let be analytic on a simply connected domain . Then for any simple closed curve contained in .  "
+},
+{
+  "id": "thm-morera",
+  "level": "2",
+  "url": "section-13.html#thm-morera",
+  "type": "Theorem",
+  "number": "3.1.2",
+  "title": "Morera's theorem.",
+  "body": "Morera's theorem  Let be a continuous function defined on an open domain . If for every simple closed path contained in , then is analytic on .  "
+},
+{
+  "id": "proof-9",
+  "level": "2",
+  "url": "section-13.html#proof-9",
+  "type": "Proof",
+  "number": "3.1.1",
+  "title": "",
+  "body": " Assume without loss of generality that the domain is connected (and so path-connected). Assume that satisifies the hypotheses of the theorem. We will construct an anti-derivative for , which will allow us to conclude that is analytic.  Pick a basepoint in , and for any other in , let be a simple path from to . Let be the function on given by  Note that this definition does not depend on the choice of path. Assume that is another path from to . Then, by hypothesis, which implies that .  Note futher that a different choice of basepoint (say ) causes the resulting function to differ from only by the constant where is any simple path from to . Thus, choice of basepoint does not affect the derivative.  It remains to show that . This boils down to a difference quotient argument. Consider for some small complex number . Then (The notation is justified by the path independence of integrals of .) Now, Since has path independent line integrals, choose the line segment between and . Since is continuous,  We conclude that is differentiable at and thus analytic at with derivative , which implies that is analytic. Since this holds for all , we conclude that is analytic on .  "
+},
+{
+  "id": "thm-unif-holo",
+  "level": "2",
+  "url": "section-13.html#thm-unif-holo",
+  "type": "Theorem",
+  "number": "3.1.3",
+  "title": "",
+  "body": " The uniform limit of a sequence of analytic functions is analytic.  "
+},
+{
+  "id": "proof-10",
+  "level": "2",
+  "url": "section-13.html#proof-10",
+  "type": "Proof",
+  "number": "3.1.2",
+  "title": "",
+  "body": " Suppose that a sequence of analytic functions converges uniformly to a continuous limit function on an open disk. The Cauchy-Goursat theorem implies that, for all , for any simple closed curve contained in the disk. Using uniform converge to push the limit through the integral, we get for every simple closed curve in the disk, and so by Morera's theorem, must be analytic on the disk.  This result extends to domains, as we can recreate this argument in a neighborhood of any in .  "
+},
+{
+  "id": "thm-M-test",
+  "level": "2",
+  "url": "section-13.html#thm-M-test",
+  "type": "Theorem",
+  "number": "3.1.4",
+  "title": "M-test.",
+  "body": "M-test  Supposet that is a sequence of functions on a common domain and that there exists a sequence of non-negative numbers satisfying  for all ;   .  Then converges absolutely and uniformly on .  "
+},
+{
+  "id": "section-14",
+  "level": "1",
+  "url": "section-14.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Infinite products and the zeta function",
+  "body": " Infinite products and the zeta function  Riemann zeta function  Let be a real number. Define the Riemann zeta function by   This is essentially taking the -series from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real via the integral test (exercise).   is holomorphic for .    First, note that for a positive real number and a complex power , note that  For , let be a complex number with . Consider the sequence of functions We have      By the Weierstrass -test , the series converges uniformly and absolutely to where .  Now note that each is analytic, and so each partial sum is analytic. So is a sequence of analytic functions converging uniformly to on . Then by , we conclude that is analytic on . Because was arbitrary, the results extend to all points in the halfplane .   In fact, we can say slightly more almost immediately. First, let's codify the result that we used in the proof of the theorem above.  Weierstrass theorem for series  Let be a sequence of holomorphic functions on a domain , and assume that converges uniformly on every closed and bounded subset of . Then  is holomorphic on .  For any , the series of th derivatives converges on and converges uniformly and absolutely on every closed and bounded subset of to the function . That is, the derivative of the limit is the limit of the derivatives.    Corollary to  For , and is holomorphic.   The first thing we might like to do is ask if we know the value of for any input points at all. The famous problem identified with the case where is called the Basel problem . Its solution will showcase some of the issues we face when dealing with the task of extending the zeta function off the natural domain.  Basel problem      First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper.  "
+},
+{
+  "id": "def-zeta",
+  "level": "2",
+  "url": "section-14.html#def-zeta",
+  "type": "Definition",
+  "number": "3.2.1",
+  "title": "Riemann zeta function.",
+  "body": "Riemann zeta function  Let be a real number. Define the Riemann zeta function by  "
+},
+{
+  "id": "thm-zeta-holo",
+  "level": "2",
+  "url": "section-14.html#thm-zeta-holo",
+  "type": "Theorem",
+  "number": "3.2.2",
+  "title": "",
+  "body": " is holomorphic for .  "
+},
+{
+  "id": "proof-11",
+  "level": "2",
+  "url": "section-14.html#proof-11",
+  "type": "Proof",
+  "number": "3.2.1",
+  "title": "",
+  "body": " First, note that for a positive real number and a complex power , note that  For , let be a complex number with . Consider the sequence of functions We have      By the Weierstrass -test , the series converges uniformly and absolutely to where .  Now note that each is analytic, and so each partial sum is analytic. So is a sequence of analytic functions converging uniformly to on . Then by , we conclude that is analytic on . Because was arbitrary, the results extend to all points in the halfplane .  "
+},
+{
+  "id": "theorem-19",
+  "level": "2",
+  "url": "section-14.html#theorem-19",
+  "type": "Theorem",
+  "number": "3.2.3",
+  "title": "Weierstrass theorem for series.",
+  "body": "Weierstrass theorem for series  Let be a sequence of holomorphic functions on a domain , and assume that converges uniformly on every closed and bounded subset of . Then  is holomorphic on .  For any , the series of th derivatives converges on and converges uniformly and absolutely on every closed and bounded subset of to the function . That is, the derivative of the limit is the limit of the derivatives.   "
+},
+{
+  "id": "corollary-3",
+  "level": "2",
+  "url": "section-14.html#corollary-3",
+  "type": "Corollary",
+  "number": "3.2.4",
+  "title": "Corollary to Theorem 3.2.2.",
+  "body": "Corollary to  For , and is holomorphic.  "
+},
+{
+  "id": "p-163",
+  "level": "2",
+  "url": "section-14.html#p-163",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Basel problem "
+},
+{
+  "id": "theorem-20",
+  "level": "2",
+  "url": "section-14.html#theorem-20",
+  "type": "Theorem",
+  "number": "3.2.5",
+  "title": "Basel problem.",
+  "body": "Basel problem     "
 }
 ]
 

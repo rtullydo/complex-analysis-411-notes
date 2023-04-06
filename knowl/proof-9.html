@@ -2,9 +2,6 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2023-04-03T22:17:27-07:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -15,14 +12,15 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
-<p>Assume without loss of generality that the domain <span class="process-math">\(D\)</span> is connected (and so path-connected). Assume that <span class="process-math">\(f\)</span> satisifies the hypotheses of the theorem. We will construct an anti-derivative for <span class="process-math">\(f\text{,}\)</span> which will allow us to conclude that <span class="process-math">\(f\)</span> is analytic.</p>
-<p>Pick a basepoint <span class="process-math">\(z_0\)</span> in <span class="process-math">\(D\text{,}\)</span> and for any other <span class="process-math">\(z\)</span> in <span class="process-math">\(D\text{,}\)</span> let <span class="process-math">\(\gamma\)</span> be a simple path from <span class="process-math">\(z_0\)</span> to <span class="process-math">\(z\text{.}\)</span> Let <span class="process-math">\(F\)</span> be the function on <span class="process-math">\(D\)</span> given by</p>
+<div class="para">Assume without loss of generality that the domain <span class="process-math">\(D\)</span> is connected (and so path-connected). Assume that <span class="process-math">\(f\)</span> satisifies the hypotheses of the theorem. We will construct an anti-derivative for <span class="process-math">\(f\text{,}\)</span> which will allow us to conclude that <span class="process-math">\(f\)</span> is analytic.</div> <div class="para logical">
+<div class="para">Pick a basepoint <span class="process-math">\(z_0\)</span> in <span class="process-math">\(D\text{,}\)</span> and for any other <span class="process-math">\(z\)</span> in <span class="process-math">\(D\text{,}\)</span> let <span class="process-math">\(\gamma\)</span> be a simple path from <span class="process-math">\(z_0\)</span> to <span class="process-math">\(z\text{.}\)</span> Let <span class="process-math">\(F\)</span> be the function on <span class="process-math">\(D\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 F(z) = \int_\gamma f(\xi) \, d\xi.
 \end{equation*}
 </div>
-<p>Note that this definition does not depend on the choice of path. Assume that <span class="process-math">\(\tau\)</span> is another path from <span class="process-math">\(z_0\)</span> to <span class="process-math">\(z\text{.}\)</span> Then, by hypothesis,</p>
+</div> <div class="para logical">
+<div class="para">Note that this definition does not depend on the choice of path. Assume that <span class="process-math">\(\tau\)</span> is another path from <span class="process-math">\(z_0\)</span> to <span class="process-math">\(z\text{.}\)</span> Then, by hypothesis,</div>
 <div class="displaymath process-math">
 \begin{align*}
 0 \amp= \oint_{\tau\inv \gamma} f\\
@@ -30,15 +28,16 @@ F(z) = \int_\gamma f(\xi) \, d\xi.
 \amp = -\oint_{\tau} f + \oint_\gamma f
 \end{align*}
 </div>
-<p class="continuation">which implies that <span class="process-math">\(\oint_\tau f = \oint_\gamma f\text{.}\)</span></p>
-<p>Note futher that a different choice of basepoint (say <span class="process-math">\(z_1\)</span>) causes the resulting function to differ from <span class="process-math">\(F\)</span> only by the constant <span class="process-math">\(C = \oint_C f\)</span> where <span class="process-math">\(C\)</span> is any simple path from <span class="process-math">\(z_1\)</span> to <span class="process-math">\(z_0\text{.}\)</span> Thus, choice of basepoint does not affect the derivative.</p>
-<p>It remains to show that <span class="process-math">\(\frac{d}{dz} F(z) = f(z)\text{.}\)</span> This boils down to a difference quotient argument. Consider <span class="process-math">\(F(z + h)\)</span> for some small complex number <span class="process-math">\(h\text{.}\)</span> Then</p>
+<div class="para">which implies that <span class="process-math">\(\oint_\tau f = \oint_\gamma f\text{.}\)</span>
+</div>
+</div> <div class="para">Note futher that a different choice of basepoint (say <span class="process-math">\(z_1\)</span>) causes the resulting function to differ from <span class="process-math">\(F\)</span> only by the constant <span class="process-math">\(C = \oint_C f\)</span> where <span class="process-math">\(C\)</span> is any simple path from <span class="process-math">\(z_1\)</span> to <span class="process-math">\(z_0\text{.}\)</span> Thus, choice of basepoint does not affect the derivative.</div> <div class="para logical">
+<div class="para">It remains to show that <span class="process-math">\(\frac{d}{dz} F(z) = f(z)\text{.}\)</span> This boils down to a difference quotient argument. Consider <span class="process-math">\(F(z + h)\)</span> for some small complex number <span class="process-math">\(h\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 F(z+h) - F(z) = \int_{z_0}^{z+h} f(\xi) \, d\xi - \int_{z_0}^z f(\xi) \, d\xi = \int_z^{z+h} f(\xi) \, d\xi.
 \end{equation*}
 </div>
-<p class="continuation">(The notation is justified by the path independence of integrals of <span class="process-math">\(f\text{.}\)</span>)  Now,</p>
+<div class="para">(The notation is justified by the path independence of integrals of <span class="process-math">\(f\text{.}\)</span>)  Now,</div>
 <div class="displaymath process-math">
 \begin{align*}
 \frac{1}{h} (F(z + h) - F(z)) - f(z) \amp= \frac{1}{h} (F(z + h) - F(z)) - \frac{1}{h} hf(z) \\
@@ -47,12 +46,13 @@ F(z+h) - F(z) = \int_{z_0}^{z+h} f(\xi) \, d\xi - \int_{z_0}^z f(\xi) \, d\xi = 
 \amp= \frac{1}{h} \int_z^{z+h} f(\xi) - f(z) \, d\xi.
 \end{align*}
 </div>
-<p class="continuation">Since <span class="process-math">\(f\)</span> has path independent line integrals, choose the line segment between <span class="process-math">\(z\)</span> and <span class="process-math">\(z + h\text{.}\)</span> Since <span class="process-math">\(f\)</span> is continuous,</p>
+<div class="para">Since <span class="process-math">\(f\)</span> has path independent line integrals, choose the line segment between <span class="process-math">\(z\)</span> and <span class="process-math">\(z + h\text{.}\)</span> Since <span class="process-math">\(f\)</span> is continuous,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \abs{\frac{F(z + h) - F(z)}{h} - f(z)} \leq \frac{1}{h} \int_z^{z+h} \abs{f(\xi) - f(z)} \, d\xi \to 0 \text{ as } \abs{h} \to 0.
 \end{equation*}
 </div>
-<p>We conclude that <span class="process-math">\(F\)</span> is differentiable at <span class="process-math">\(z\)</span> and thus analytic at <span class="process-math">\(z\)</span> with derivative <span class="process-math">\(f\text{,}\)</span> which implies that <span class="process-math">\(f\)</span> is analytic. Since this holds for all <span class="process-math">\(z\in D\text{,}\)</span> we conclude that <span class="process-math">\(f\)</span> is analytic on <span class="process-math">\(D\text{.}\)</span></p></article><span class="incontext"><a href="section-13.html#proof-9">in-context</a></span>
+</div> <div class="para">We conclude that <span class="process-math">\(F\)</span> is differentiable at <span class="process-math">\(z\)</span> and thus analytic at <span class="process-math">\(z\)</span> with derivative <span class="process-math">\(f\text{,}\)</span> which implies that <span class="process-math">\(f\)</span> is analytic. Since this holds for all <span class="process-math">\(z\in D\text{,}\)</span> we conclude that <span class="process-math">\(f\)</span> is analytic on <span class="process-math">\(D\text{.}\)</span>
+</div></article><span class="incontext"><a href="section-13.html#proof-9" class="internal">in-context</a></span>
 </body>
 </html>

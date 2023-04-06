@@ -52,7 +52,7 @@
           \newcommand{\EssD}{\mathcal{D}}
           \newcommand{\Lop}{\mathcal{L}}
           \newcommand{\cc}[1]{\overline{#1}}
-          \newcommand{\abs}[1]{\left\vert#1\right\vert}
+          \newcommand{\abs}[1]{\vert#1\vert}
           \newcommand{\set}[1]{\left\{#1\right\}}
           \newcommand{\seq}[1]{\left\lt#1\right>}
           \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
@@ -989,6 +989,17 @@
                 <p>This result extends to domains, as we can recreate this argument in a neighborhood of any <m>z_0</m> in <m>D</m>.</p>
             </proof>
 
+            <p>Since we'll be considering functions defined as series, it will be useful to combine the results above with a test for uniform convergence called the Weierstrass M-test.</p>
+
+            <theorem xml:id="thm-M-test"><title>M-test</title>
+            <p>Supposet that <m>\{f_n\}</m> is a sequence of functions on a common domain <m>D</m> and that there exists a sequence of non-negative numbers <m>\{M_n\}</m> satisfying
+            <ol>
+                <li><m>\abs{f_n(z)} \lt M_n</m> for all <m>n \in \N</m>;</li>
+                <li> <m>\displaystyle \sum_{n=1}^\infty M_n \lt \infty</m>.</li>
+            </ol>
+            Then <m>\sum_{n=1}^\infty f_n</m> converges absolutely and uniformly on <m>D</m>.</p>
+            </theorem>
+
         </section>
 
         <section>
@@ -1003,19 +1014,71 @@
 
             <p>This is essentially taking the <q><m>p</m>-series</q> from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real <m>s > 1</m> via the integral test (exercise).</p>
 
-            <theorem>
+            <theorem xml:id="thm-zeta-holo">
                 <p><m>\zeta</m> is holomorphic for <m>\RE s > 1</m>.</p>
             </theorem> 
 
             <proof>
-                <p>We'll need the straightforward fact that 
-                    <me>\abs{n^{s}} = n^{\RE s}.</me> 
-                    Let <m>s</m> be a complex number with <m>\RE s > 1</m>. There are many ways to construct the next part of the argument. We'll use the <m>M</m>-test. Since <me>\abs{\frac{1}{n^s}} \leq \frac{1}{n^{\RE s}},</me> and the terms <m>\frac{1}{n^{\RE s}}</m> form a convergent <m>p</m>-series as <m>\RE s > 1</m>, the Weierstrass <m>M</m>-test says that the series converges uniformly to <m>\zeta</m> where <m>\RE s > 1</m>. Each function <m>f_n = \frac{1}{n^s}</m> is analytic on <m>\RE s > 1</m> (given a suitable choice of branch), and thus by <xref ref="thm-unif-holo"/>, the limit function <m>\zeta</m> must also be holomorphic for <m>\RE s > 1</m>.  </p>
+                <p>First, note that for a positive real number <m>n</m> and a complex power <m>s = a + ib</m>, note that
+                <md>
+                    <mrow> \abs{n^{s}} \amp= \abs{n^{a+ib}}</mrow>
+                    <mrow> \amp= n^a \abs{n^{ib}}</mrow>
+                    <mrow> \amp = n^{\RE s}</mrow>
+                </md></p>
+
+                <p>For <m>\eps \gt 0</m>, let <m>s</m> be a complex number with <m>\RE s > 1+\ep</m>. Consider the sequence of functions
+                <me>
+                    f_n = \frac{1}{n^s}.
+                </me>
+                We have
+                <ol>
+                    <li>
+                        <me>
+                            \abs{f_n(s)} = \abs{\frac{1}{n^s}} = \frac{1}{n^{\RE s}} \leq \frac{1}{n^{1 + \eps}} =: M_n.
+                        </me></li>
+                    <li>
+                        <me>
+                            \sum_{n=1}^\infty M_n = \sum_{n=1}^\infty \frac{1}{n^{1+\eps}} \lt \infty.
+                        </me></li>
+                </ol>
+                By the Weierstrass <m>M</m>-test <xref ref="thm-M-test"/>, the series converges  uniformly and absolutely to <m>\zeta</m> where <m>\RE s > 1 + \eps</m>.</p>
+
+                <p>Now note that each <m>f_n = \frac{1}{n^s}</m> is analytic, and so each partial sum
+                <me>
+                    F_k = \sum_{n=1}^k \frac{1}{n^s}
+                </me>
+                is analytic. So <m>F_k</m> is a sequence of analytic functions converging uniformly to <m>\zeta</m> on <m>\RE s > 1 + \ep</m>. Then by <xref ref="thm-unif-holo"/>, we conclude that <m>\zeta</m> is analytic on <m>\RE s > 1+\ep</m>. Because <m>\ep</m> was arbitrary, the results extend to all points in the halfplane <m>\RE s > 1</m>.</p>
             </proof>
 
+            <p>In fact, we can say slightly more almost immediately. First, let's codify the result that we used in the proof of the theorem above.</p>
 
-            <theorem>
+            <theorem><title>Weierstrass theorem for series</title>
+                <p>Let <m>f_n</m> be a sequence of holomorphic functions on a domain <m>D</m>, and assume that <m>\sum_n f_n</m> converges uniformly on every closed and bounded subset of <m>D</m>.  Then
+                <ol>
+                    <li><m>f = \sum_n f_n</m> is holomorphic on <m>D</m>.</li>
+                    <li>For any <m>k \geq 1</m>, the series of <m>k</m>th derivatives <m>\sum_n f_n^{(k)}</m> converges on <m>D</m> and converges uniformly and absolutely on every closed and bounded subset of <m>D</m> to the function <m>f^{(k)}</m>. That is, the derivative of the limit is the limit of the derivatives.</li>
+                </ol></p>
+            </theorem>
+
+            <corollary><title>Corollary to <xref ref="thm-zeta-holo"/></title>
+                <p>For <m>\RE s > 1</m>, 
+                    <me>
+                        \frac{d}{dz} \zeta(s) = -\sum_{n=1}^\infty \frac{\log n}{n^s}
+                    </me>
+                and <m>\zeta\dd(s)</m> is holomorphic.</p>
+            </corollary>
+
+            <p>The first thing we might like to do is ask if we know the value of <m>\zeta</m> for any input points at all. The famous problem identified with the case where <m>s=2</m> is called the <term>Basel problem</term>. Its solution will showcase some of the issues we face when dealing with the task of extending the zeta function off the natural domain.</p>
+
+            <theorem><title>Basel problem</title>
                 <p>
+                    <me>
+                    \zeta(2) = \frac{\pi^2}{6}.
+                    </me>
+                </p>
+            </theorem>
+
+            <p>First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper.</p>
         </section>
 
     </chapter>
