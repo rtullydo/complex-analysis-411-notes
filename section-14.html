@@ -193,6 +193,8 @@ window.MathJax = {
   \DeclareMathOperator{\proj}{proj}
   \DeclareMathOperator{\ball}{ball}
   \DeclareMathOperator{\gd}{grad}
+  \DeclareMathOperator{\Log}{Log}
+  \DeclareMathOperator{\Arg}{Arg}
   \DeclareMathOperator\re{\mathrm {Re~}}
   \DeclareMathOperator\im{\mathrm {Im~}}
   
@@ -348,6 +350,7 @@ window.MathJax = {
 <ul class="structural">
 <li><div class="toc-item"><a href="section-14.html#subsection-8" class="internal"><span class="codenumber">3.2.1</span> <span class="title">The zeta function</span></a></div></li>
 <li><div class="toc-item"><a href="section-14.html#subsection-9" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Infinite products</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#subsection-10" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Product formula for the zeta function</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -551,6 +554,70 @@ p_k = a_1 a_2 \ldots a_k = \prod_{n=1}^k a_n.
 \end{equation*}
 </div>
 <div class="para">converges.</div>
+</div></article><article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><div class="para logical" id="p-171">
+<div class="para">Apply the logarithm to the product.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ln \prod (1 + a_n) = \sum \ln (1 + a_n).
+\end{equation*}
+</div>
+<div class="para">The series will converge if and only if the product does. Now note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\ln(1 + x)}{x} \to 1 \text{ as } x \to 0,
+\end{equation*}
+</div>
+<div class="para">(by L'Hospital or observation of the power series for <span class="process-math">\(\ln (1 + x)\)</span>). If <span class="process-math">\(a_n\)</span> does not tend to zero, the sum, and thus the product, will diverge by the test for divergence. So assume <span class="process-math">\(a_n \to 0\text{.}\)</span> Then, as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{n \to \infty} \frac{\ln(1+a_n)}{a_n} \to 1,
+\end{equation*}
+</div>
+<div class="para">the limit comparison test gives that <span class="process-math">\(\sum \ln(1 + a_n)\)</span> converges if and only if <span class="process-math">\(\sum a_n\)</span> converges, which establishes the claim.</div>
+</div></article></div>
+<div class="para" id="p-172">This result establishes, for example, the convergence of the <span class="process-math">\(p\)</span>-series-like products <span class="process-math">\(\prod (1 + \frac{1}{n^p})\)</span> where <span class="process-math">\(p &gt; 1\text{.}\)</span> That is, <em class="emphasis">infinite products converge when their factors tend quickly to 1</em>.</div>
+<div class="para" id="p-173">How do we take this and lift it to infinite products of complex numbers? We'll follow Tao here.</div>
+<article class="lemma theorem-like" id="lemma-1"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Absolutely convergent products.</span>
+</h4>
+<div class="para" id="p-174">Let <span class="process-math">\(a_n\)</span> be a sequence of complex numbers so that <span class="process-math">\(\sum \abs{a_n - 1} \lt \infty\text{.}\)</span> Then <span class="process-math">\(\prod a_n\)</span> converges (absolutely). Furthermore, this product is zero if and only if one of the factors <span class="process-math">\(a_n\)</span> is zero.</div></article><article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><div class="para logical" id="p-175">
+<div class="para">Because <span class="process-math">\(\sum \abs{a_n - 1}\)</span> converges, the test for divergence gives <span class="process-math">\(a_n \to 1\text{.}\)</span> Then there exists an <span class="process-math">\(N\)</span> so that the tail of the sequence is contained in the disk <span class="process-math">\(D(1, 1/2)\)</span> for <span class="process-math">\(n &gt; N\text{.}\)</span> Factor the product into</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\prod_{n=1}^\infty a_n = \prod_{n=1}^N a_n \times \prod_{n = N+1}^\infty a_n.
+\end{equation*}
+</div>
+<div class="para">Convergence of the whole product will then be equivalent to convergence of <span class="process-math">\(\prod_{n = N+1}^\infty a_n\text{.}\)</span> Because the tail is away from the origin, we can apply the standard branch of the complex logarithm, <span class="process-math">\(\Log z = \ln\abs{z} + i \Arg z\text{,}\)</span> on <span class="process-math">\(D(1, 1/2)\)</span> and write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_n = e^{\Log a_n}.
+\end{equation*}
+</div>
+<div class="para">Now,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Log \prod_{n=N+1}^\infty a_n = \sum_{n=N+1}^\infty \Log e^{\Log a_n} = \sum_{n=N+1}^\infty \Log a_n).
+\end{equation*}
+</div>
+</div></article></div>
+<div class="para" id="p-176">We also have the following product form of the Weierstrass <span class="process-math">\(M\)</span>-test to measure uniform convergence of products of functions.</div>
+<article class="theorem theorem-like" id="theorem-22"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(M\)</span>-test, product form.</span>
+</h4>
+<div class="para" id="p-177">Let <span class="process-math">\(D\)</span> be a domain, and for all <span class="process-math">\(n\)</span> let <span class="process-math">\(f_n: D \to \C\)</span> be a bounded function.</div></article></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.3</span> <span class="title">Product formula for the zeta function</span>
+</h3>
+<dfn class="terminology">Euler product formula</dfn><article class="theorem theorem-like" id="theorem-23"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental theorem of arithmetic.</span>
+</h4>
+<div class="para logical" id="p-178">
+<div class="para">Every natural number <span class="process-math">\(n \in \mathbb N\)</span> has a unique representation as a product</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n = \prod_{p} p^{a_p},
+\end{equation*}
+</div>
+<div class="para">where the product is over the primes <span class="process-math">\(p\)</span> and the exponents <span class="process-math">\(a_p \in \mathbb N\text{,}\)</span> only finitely many of which are non-zero.</div>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="section-13.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span>

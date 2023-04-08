@@ -18,6 +18,8 @@
           \DeclareMathOperator{\proj}{proj}
           \DeclareMathOperator{\ball}{ball}
           \DeclareMathOperator{\gd}{grad}
+          \DeclareMathOperator{\Log}{Log}
+          \DeclareMathOperator{\Arg}{Arg}
           \DeclareMathOperator\re{\mathrm {Re~}}
           \DeclareMathOperator\im{\mathrm {Im~}}
           %\newcommand\half{\tfrac 12}
@@ -1141,7 +1143,7 @@
                 </p>
             </definition>
 
-            <p>We can construct a theory of convergence entirely in terms of products, but it is more elegant for our needs to convert questions of convergence into equivalent questions about series via the logarithm (assuming positive terms or absolute value). </p>
+            <p>We can construct a theory of convergence entirely in terms of products, but it is more elegant for our needs to convert questions of convergence into equivalent questions about series via the logarithm (assuming positive terms or absolute value).</p>
 
             <theorem> 
                 <p>Let <m>a_n</m> be a sequence of positive real numbers. Then the infinite product 
@@ -1151,6 +1153,67 @@
                     \sum_{n=1}^\infty a_n
                 </me>
                 converges. </p>
+            </theorem>
+
+            <proof>
+                    <p>Apply the logarithm to the product. 
+                        <me>
+                            \ln \prod (1 + a_n) = \sum \ln (1 + a_n).
+                        </me> 
+                    The series will converge if and only if the product does. Now note that
+                    <me>
+                        \frac{\ln(1 + x)}{x} \to 1 \text{ as } x \to 0,
+                    </me>
+                    (by L'Hospital or observation of the power series for <m>\ln (1 + x)</m>). If <m>a_n</m> does not tend to zero, the sum, and thus the product, will diverge by the test for divergence. So assume <m>a_n \to 0</m>. Then, as
+                    <me>
+                        \lim_{n \to \infty} \frac{\ln(1+a_n)}{a_n} \to 1,
+                    </me>
+                    the limit comparison test gives that <m>\sum \ln(1 + a_n)</m> converges if and only if <m>\sum a_n</m> converges, which establishes the claim.</p>
+            </proof>
+
+            <p>This result establishes, for example, the convergence of the <m>p</m>-series-like products <m>\prod (1 + \frac{1}{n^p})</m> where <m>p > 1</m>. That is, <em>infinite products converge when their factors tend quickly to 1</em>. </p>
+
+            <p>How do we take this and lift it to infinite products of complex numbers? We'll follow Tao here.</p>
+
+            <lemma><title>Absolutely convergent products</title>
+            <p>Let <m>a_n</m> be a sequence of complex numbers so that <m>\sum \abs{a_n - 1} \lt \infty</m>. Then <m>\prod a_n</m> converges (absolutely). Furthermore, this product is zero if and only if one of the factors <m>a_n</m> is zero.</p>
+            </lemma>
+
+            <proof>
+                <p>Because <m>\sum \abs{a_n - 1}</m> converges, the test for divergence gives <m>a_n \to 1</m>. Then there exists an <m>N</m> so that the tail of the sequence is contained in the disk <m>D(1, 1/2)</m> for <m>n > N</m>. Factor the product into 
+                <me>
+                    \prod_{n=1}^\infty a_n = \prod_{n=1}^N a_n \times \prod_{n = N+1}^\infty a_n.
+                </me>
+                Convergence of the whole product will then be equivalent to convergence of <m>\prod_{n = N+1}^\infty a_n</m>. Because the tail is away from the origin, we can apply the standard branch of the complex logarithm, <m>\Log z = \ln\abs{z} + i \Arg z</m>, on <m>D(1, 1/2)</m> and write
+                <me>
+                    a_n = e^{\Log a_n}.
+                </me>
+                Now,
+                <me>
+                    \Log \prod_{n=N+1}^\infty a_n = \sum_{n=N+1}^\infty \Log e^{\Log a_n} = \sum_{n=N+1}^\infty \Log a_n.
+                </me></p>
+            </proof>
+
+
+
+            <p>We also have the following product form of the Weierstrass <m>M</m>-test to measure uniform convergence of products of functions.</p>
+
+            <theorem><title><m>M</m>-test, product form</title>
+                <p>Let <m>D</m> be a domain, and for all <m>n</m> let <m>f_n: D \to \C</m> be a bounded function. </p>
+            </theorem>
+        </subsection>
+
+        <subsection><title>Product formula for the zeta function</title>
+            We're now in position to connect the zeta function to the primes by way of the <term>Euler product formula</term>. First, let's recall the fundamental theorem of arithmetic.
+
+            <theorem><title>Fundamental theorem of arithmetic</title>
+            <p>
+                Every natural number <m>n \in \mathbb N</m> has a unique representation as a product
+                <me>
+                    n = \prod_{p} p^{a_p},
+                </me>
+                where the product is over the primes <m>p</m> and the exponents <m>a_p \in \mathbb N</m>, only finitely many of which are non-zero.
+            </p>
             </theorem>
         </subsection>
         </section>

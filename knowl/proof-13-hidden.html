@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Because <span class="process-math">\(\sum \abs{a_n - 1}\)</span> converges, the test for divergence gives <span class="process-math">\(a_n \to 1\text{.}\)</span> Then there exists an <span class="process-math">\(N\)</span> so that the tail of the sequence is contained in the disk <span class="process-math">\(D(1, 1/2)\)</span> for <span class="process-math">\(n &gt; N\text{.}\)</span> Factor the product into</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\prod_{n=1}^\infty a_n = \prod_{n=1}^N a_n \times \prod_{n = N+1}^\infty a_n.
+\end{equation*}
+</div>
+<div class="para">Convergence of the whole product will then be equivalent to convergence of <span class="process-math">\(\prod_{n = N+1}^\infty a_n\text{.}\)</span> Because the tail is away from the origin, we can apply the standard branch of the complex logarithm, <span class="process-math">\(\Log z = \ln\abs{z} + i \Arg z\text{,}\)</span> on <span class="process-math">\(D(1, 1/2)\)</span> and write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_n = e^{\Log a_n}.
+\end{equation*}
+</div>
+<div class="para">Now,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Log \prod_{n=N+1}^\infty a_n = \sum_{n=N+1}^\infty \Log e^{\Log a_n} = \sum_{n=N+1}^\infty \Log a_n).
+\end{equation*}
+</div>
+</div></article></body>
+</html>
