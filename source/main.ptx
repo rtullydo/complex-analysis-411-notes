@@ -1244,6 +1244,28 @@
                     n = \prod_{p\leq x} p^{a_p}
                 </me>
                 and <m>a_p \leq m</m>. The first observation to make is that as <m>x, m \to \infty</m>, <m>S_{x, m} \to \mathbb N</m>.</p>
+
+                <p>The next step is a combinatorial observation. To illustrate, suppose that <m>x = 2</m> and <m>m = 2</m>. Then
+                <me>
+                    \sum_{n \in S_{2,2}} \frac{1}{n^s} = 1 + \frac{1}{2^s} + \frac{1}{2^{2s}}.
+                </me>
+                Now let <m>x = 3</m>, so that we're picking up numbers with <m>3</m> in the prime factorization. Here's where we see the pattern we're interested in show up.
+                <md>
+                    <mrow>\sum_{n \in S_{3, 2}} \frac{1}{n^s} \amp= 1 + \frac{1}{2^s} + \frac{1}{2^{2s}} + \frac{1}{3^s} + \frac{1}{3^{2s}} + \frac{1}{2^s 3^s} + \frac{1}{2^{2s}3^s} + \frac{1}{2^s 3^{2s}} + \frac{1}{2^{2s}3^{2s}}</mrow>
+                    <mrow>\amp= (1 + \frac{1}{2^s} + \frac{1}{2^{2s}})(1 + \frac{1}{3^s} + \frac{1}{3^{2s}})</mrow>
+                    <mrow>\amp= \prod_{p\leq 3} \sum_{j = 0}^2 \frac{1}{p^{js}}.</mrow>
+                </md>
+                If you see what's happening here, it shouldn't be hard to believe that
+                <me>
+                    \sum_{n \in S_{x, m}} \frac{1}{n^s} = \prod_{p \leq x} \sum_{j=0}^m \frac{1}{p^{js}}
+                </me>
+                for all <m>x \geq 1, m \geq 0</m>. </p>
+
+                <p>Now, we'll take a look at what happens to this sum as <m>x, m \to \infty</m>. As <m>m\to \infty</m>, the first observation to make is that the sums 
+                <me>
+                    \sum_{j=0}^m \frac{1}{p^{js}} \to \sum_{j=0}^\infty \frac{1}{p^{js}} = \frac{1}{1 - \frac{1}{p^s}} = (1 - \frac{1}{p^s})\inv
+                </me>
+                by the geometric series formula.</p>
             </proof>
         </subsection>
         </section>
