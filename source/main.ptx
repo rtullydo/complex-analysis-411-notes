@@ -1191,20 +1191,25 @@
                 Now,
                 <me>
                     \Log \prod_{n=N+1}^\infty a_n = \sum_{n=N+1}^\infty \Log e^{\Log a_n} = \sum_{n=N+1}^\infty \Log a_n.
-                </me></p>
+                </me>
+                Similarly to the argument in the previous proof, note that the power series for <m>Log a_n</m> is <m>O(\abs{a_n-1})</m>, and so by the limit comparison test, <m>\sum_{n=N+1}^\infty \Log a_n</m> is absolutely convergent. On application of the complex exponential, we conclude that <m>\prod_{n=N+1}^\infty a_n</m> converges to <m>e^{\sum \Log a_n}</m>.</p>
             </proof>
 
 
 
             <p>We also have the following product form of the Weierstrass <m>M</m>-test to measure uniform convergence of products of functions.</p>
 
-            <theorem><title><m>M</m>-test, product form</title>
-                <p>Let <m>D</m> be a domain, and for all <m>n</m> let <m>f_n: D \to \C</m> be a bounded function. </p>
+            <theorem xml:id="thm-prod-M"><title><m>M</m>-test, product form</title>
+                <p>Let <m>X</m> be a set, and for all <m>n</m> let <m>f_n: X \to \C</m> be a bounded function. If for some finite <m>M</m> we have
+                <me>
+                    \sum_{n=1}^\infty \sup_{x \in X} \abs{f_n(x) -1} \leq M
+                </me>
+                then the partial products <m>\prod_{n-1}^N f_n</m> converge uniformly to <m>\prod_{n=1}^\infty f_n</m> on <m>X</m>.  </p>
             </theorem>
         </subsection>
 
         <subsection><title>Product formula for the zeta function</title>
-            We're now in position to connect the zeta function to the primes by way of the <term>Euler product formula</term>. First, let's recall the fundamental theorem of arithmetic.
+            <p>We're now in position to connect the zeta function to the primes by way of the <term>Euler product formula</term>. First, let's recall the fundamental theorem of arithmetic.</p>
 
             <theorem><title>Fundamental theorem of arithmetic</title>
             <p>
@@ -1215,6 +1220,31 @@
                 where the product is over the primes <m>p</m> and the exponents <m>a_p \in \mathbb N</m>, only finitely many of which are non-zero.
             </p>
             </theorem>
+
+            <theorem><title>Product formula for <m>\zeta</m>.</title>
+                <p>For <m>s \in \C</m> with <m>\RE s > 1</m>, we have
+                <me>
+                    \zeta(s) = \prod_{p} (1 - \frac{1}{p^s})\inv,
+                </me>
+                where the product is taken over the primes <m>p</m>. This representation is absolutely convergent.</p>
+            </theorem>
+            <proof>
+                <p>For each <m>n \in \mathbb N</m>, we have
+                <me>
+                     n = \prod_{p} p^{a_p},
+                 </me>
+                 which we can formally rearrange as 
+                 <me>
+                    \frac{1}{n^s} = \prod_p \frac{1}{p^{a_p s}}.
+                </me></p>
+
+                <p>Now, we're going to build from the bottom. Given <m>x \geq 1, m \geq 0</m>, let <m>S_{x,m}</m> be the set of natural numbers with prime factorization containing primes no larger than <m>x</m> and exponents no greater than <m>m</m>. That is, <m>n \in S_{x,m}</m>
+                has a representation
+                <me>
+                    n = \prod_{p\leq x} p^{a_p}
+                </me>
+                and <m>a_p \leq m</m>. The first observation to make is that as <m>x, m \to \infty</m>, <m>S_{x, m} \to \mathbb N</m>.</p>
+            </proof>
         </subsection>
         </section>
 

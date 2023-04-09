@@ -2,6 +2,9 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-04-08T17:44:53-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -12,63 +15,61 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper. To begin, Euler knew that</div>
+<p>First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper. To begin, Euler knew that</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots,
 \end{equation*}
 </div>
-<div class="para">and so</div>
+<p class="continuation">and so</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{\sin x}{x} = 1 - \frac{x^2}{3!} + \frac{x^4}{5!} - \ldots.
 \end{equation*}
 </div>
-<div class="para">He wants to factor this “polynomial” using the fundamental theorem of algebra as</div>
+<p class="continuation">He wants to factor this “polynomial” using the fundamental theorem of algebra as</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{\sin x}{x} = (x - \pi)(x+\pi)(x - 2\pi)(x + 2\pi)\ldots,
 \end{equation*}
 </div>
-<div class="para">but he can't, as this has no hope of converging in the infinite product. Instead, he defines terms of the form <span class="process-math">\((1 \pm \frac{x}{k\pi})\)</span> - after all, these terms vanish at the same set of zeros. Making the rather large leap that the function is determined by its zeros and a single value (as in the case of a polynomial), Euler writes</div>
+<p class="continuation">but he can't, as this has no hope of converging in the infinite product. Instead, he defines terms of the form <span class="process-math">\((1 \pm \frac{x}{k\pi})\)</span> - after all, these terms vanish at the same set of zeros. Making the rather large leap that the function is determined by its zeros and a single value (as in the case of a polynomial), Euler writes</p>
 <div class="displaymath process-math">
 \begin{align*}
 \frac{\sin x}{x} \amp= (1 - \frac{x}{\pi})(1 + \frac{x}{\pi})(1 - \frac{x}{2\pi})(1 + \frac{x}{2\pi})\ldots\\
 \amp= (1 - \frac{x^2}{\pi^2})(1 - \frac{x^2}{4\pi^2})(1 - \frac{x^2}{9\pi^2})\ldots
 \end{align*}
 </div>
-<div class="para">which at least has a shot of converging. He then notices that a pattern emerges as you start formally multiplying out this product.</div>
+<p class="continuation">which at least has a shot of converging. He then notices that a pattern emerges as you start formally multiplying out this product.</p>
 <div class="displaymath process-math">
 \begin{equation*}
 (1 - \frac{x^2}{\pi^2})(1 - \frac{x^2}{4\pi^2}) = 1 - (\frac{1}{\pi^2} + \frac{1}{2^2 \pi^2}) x^2 + O(x^4),
 \end{equation*}
 </div>
-<div class="para">and</div>
+<p class="continuation">and</p>
 <div class="displaymath process-math">
 \begin{equation*}
 (1 - \frac{x^2}{\pi^2})(1 - \frac{x^2}{4\pi^2})(1 - \frac{x^2}{9\pi^2}) =1 - (\frac{1}{\pi^2} + \frac{1}{2^2 \pi^2} + \frac{1}{3^2 \pi^2}) x^2 + O(x^4).
 \end{equation*}
 </div>
-<div class="para">He makes the leap that</div>
+<p class="continuation">He makes the leap that</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \prod_{n=1}^\infty (1 - \frac{x^2}{k^2 \pi^2}) = 1 - (\sum_{k=1}^\infty \frac{1}{k^2 \pi^2})x^2 + O(x^4).
 \end{equation*}
 </div>
-<div class="para">Now, still with the underlying assumption that all of this converges and makes sense, he compares the coefficients of <span class="process-math">\(x^2\)</span> in his two power series to get</div>
+<p class="continuation">Now, still with the underlying assumption that all of this converges and makes sense, he compares the coefficients of <span class="process-math">\(x^2\)</span> in his two power series to get</p>
 <div class="displaymath process-math">
 \begin{equation*}
 - (\sum_{k=1}^\infty \frac{1}{k^2 \pi^2}) = \frac{-1}{3!},
 \end{equation*}
 </div>
-<div class="para">which is just</div>
+<p class="continuation">which is just</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \zeta(2) = \sum_{k=1}^\infty \frac{1}{k^2} = \frac{\pi^2}{6}.
 \end{equation*}
 </div>
-</div>
-<span class="incontext"><a href="section-14.html#p-165" class="internal">in-context</a></span>
+<span class="incontext"><a href="section-14.html#p-165">in-context</a></span>
 </body>
 </html>
