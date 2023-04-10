@@ -907,7 +907,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Prerequisites",
-  "body": " Prerequisites  Let us begin with a very useful sort-of converse to the Cauchy-Goursat theorem   Cauchy-Goursat  Let be analytic on a simply connected domain . Then for any simple closed curve contained in .   Morera's theorem  Let be a continuous function defined on an open domain . If for every simple closed path contained in , then is analytic on .    Assume without loss of generality that the domain is connected (and so path-connected). Assume that satisifies the hypotheses of the theorem. We will construct an anti-derivative for , which will allow us to conclude that is analytic.  Pick a basepoint in , and for any other in , let be a simple path from to . Let be the function on given by  Note that this definition does not depend on the choice of path. Assume that is another path from to . Then, by hypothesis, which implies that .  Note futher that a different choice of basepoint (say ) causes the resulting function to differ from only by the constant where is any simple path from to . Thus, choice of basepoint does not affect the derivative.  It remains to show that . This boils down to a difference quotient argument. Consider for some small complex number . Then (The notation is justified by the path independence of integrals of .) Now, Since has path independent line integrals, choose the line segment between and . Since is continuous,  We conclude that is differentiable at and thus analytic at with derivative , which implies that is analytic. Since this holds for all , we conclude that is analytic on .   Morera's theorem is often used with weaker (equivalent) hypotheses - that is, we need only check that around the boundary of any closed triangle contained in .  Morera's theorem is the standard method used to prove that a constructed function is holomorphic. The theorem is used so often and so widely that it may sometimes be invoked without reference (though not in our case).  One nice immediate result that we get from Morera is parallel to the (fundamental) result from real analysis that uniform limits of continuous functions are continuous.   The uniform limit of a sequence of analytic functions is analytic.    Suppose that a sequence of analytic functions converges uniformly to a continuous limit function on an open disk. The Cauchy-Goursat theorem implies that, for all , for any simple closed curve contained in the disk. Using uniform converge to push the limit through the integral, we get for every simple closed curve in the disk, and so by Morera's theorem, must be analytic on the disk.  This result extends to domains, as we can recreate this argument in a neighborhood of any in .   Since we'll be considering functions defined as series, it will be useful to combine the results above with a test for uniform convergence called the Weierstrass M-test.  M-test  Supposet that is a sequence of functions on a common domain and that there exists a sequence of non-negative numbers satisfying  for all ;   .  Then converges absolutely and uniformly on .   "
+  "body": " Prerequisites  Complex analysis  Let us begin with a very useful sort-of converse to the Cauchy-Goursat theorem   Cauchy-Goursat  Let be analytic on a simply connected domain . Then for any simple closed curve contained in .   Morera's theorem  Let be a continuous function defined on an open domain . If for every simple closed path contained in , then is analytic on .    Assume without loss of generality that the domain is connected (and so path-connected). Assume that satisifies the hypotheses of the theorem. We will construct an anti-derivative for , which will allow us to conclude that is analytic.  Pick a basepoint in , and for any other in , let be a simple path from to . Let be the function on given by  Note that this definition does not depend on the choice of path. Assume that is another path from to . Then, by hypothesis, which implies that .  Note futher that a different choice of basepoint (say ) causes the resulting function to differ from only by the constant where is any simple path from to . Thus, choice of basepoint does not affect the derivative.  It remains to show that . This boils down to a difference quotient argument. Consider for some small complex number . Then (The notation is justified by the path independence of integrals of .) Now, Since has path independent line integrals, choose the line segment between and . Since is continuous,  We conclude that is differentiable at and thus analytic at with derivative , which implies that is analytic. Since this holds for all , we conclude that is analytic on .   Morera's theorem is often used with weaker (equivalent) hypotheses - that is, we need only check that around the boundary of any closed triangle contained in .  Morera's theorem is the standard method used to prove that a constructed function is holomorphic. The theorem is used so often and so widely that it may sometimes be invoked without reference (though not in our case).  One nice immediate result that we get from Morera is parallel to the (fundamental) result from real analysis that uniform limits of continuous functions are continuous.   The uniform limit of a sequence of analytic functions is analytic.    Suppose that a sequence of analytic functions converges uniformly to a continuous limit function on an open disk. The Cauchy-Goursat theorem implies that, for all , for any simple closed curve contained in the disk. Using uniform converge to push the limit through the integral, we get for every simple closed curve in the disk, and so by Morera's theorem, must be analytic on the disk.  This result extends to domains, as we can recreate this argument in a neighborhood of any in .   Since we'll be considering functions defined as series, it will be useful to combine the results above with a test for uniform convergence called the Weierstrass M-test.  M-test  Supposet that is a sequence of functions on a common domain and that there exists a sequence of non-negative numbers satisfying  for all ;   .  Then converges absolutely and uniformly on .  out  Measure theory  To be rigorous about convergence, we're going to need some extremely useful tools from analysis. The discussion here will mostly bracket out proofs, which are typically done in a graduate course in real analysis.  A measure is a function that assigns a numerical value to a set. The idea comes from an effort to generalize the notion of the length of an interval. A brief overview of the setup follows. We have a set (for example, ), and we want to define a function (note the inclusion of ). It turns out that we can't measure every subset of (that darn axiom of choice). So we equip with a sort of topology called a -algebra consisting of so called measurable sets.   Given a set , a -algebra on is a non-empty collection of subsets of that is closed under complements, countable unions, and countable intersections.    Let be a set and a -algebra on . A set function is a measure if  For all , .  .  For all countable collections of pairwise disjoint sets,    One important example of a measure is Lebesgue measure , which directly generalizes the length of intervals. Lebesgue measure is usually defined on the Borel sets, which is the -algebra constructed by starting with the open intervals in and combining them in all ways to ensure that the conditions for a -algebra are met. Measures can be far stranger than Lebesgue measure. We're going to be using a set function that assigns the value 1 to each natural number, for example. This will let us use high powered theorems about convergence in integrals to the context of series. (A series really is nothing more than a discrete integral in this setting!)   "
 },
 {
   "id": "thm-cauchy-goursat",
@@ -932,7 +932,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-13.html#proof-9",
   "type": "Proof",
-  "number": "3.1.1",
+  "number": "3.1.1.1",
   "title": "",
   "body": " Assume without loss of generality that the domain is connected (and so path-connected). Assume that satisifies the hypotheses of the theorem. We will construct an anti-derivative for , which will allow us to conclude that is analytic.  Pick a basepoint in , and for any other in , let be a simple path from to . Let be the function on given by  Note that this definition does not depend on the choice of path. Assume that is another path from to . Then, by hypothesis, which implies that .  Note futher that a different choice of basepoint (say ) causes the resulting function to differ from only by the constant where is any simple path from to . Thus, choice of basepoint does not affect the derivative.  It remains to show that . This boils down to a difference quotient argument. Consider for some small complex number . Then (The notation is justified by the path independence of integrals of .) Now, Since has path independent line integrals, choose the line segment between and . Since is continuous,  We conclude that is differentiable at and thus analytic at with derivative , which implies that is analytic. Since this holds for all , we conclude that is analytic on .  "
 },
@@ -950,7 +950,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-13.html#proof-10",
   "type": "Proof",
-  "number": "3.1.2",
+  "number": "3.1.1.2",
   "title": "",
   "body": " Suppose that a sequence of analytic functions converges uniformly to a continuous limit function on an open disk. The Cauchy-Goursat theorem implies that, for all , for any simple closed curve contained in the disk. Using uniform converge to push the limit through the integral, we get for every simple closed curve in the disk, and so by Morera's theorem, must be analytic on the disk.  This result extends to domains, as we can recreate this argument in a neighborhood of any in .  "
 },
@@ -964,13 +964,49 @@ var ptx_lunr_docs = [
   "body": "M-test  Supposet that is a sequence of functions on a common domain and that there exists a sequence of non-negative numbers satisfying  for all ;   .  Then converges absolutely and uniformly on .  "
 },
 {
+  "id": "p-155",
+  "level": "2",
+  "url": "section-13.html#p-155",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "measure "
+},
+{
+  "id": "definition-4",
+  "level": "2",
+  "url": "section-13.html#definition-4",
+  "type": "Definition",
+  "number": "3.1.5",
+  "title": "",
+  "body": " Given a set , a -algebra on is a non-empty collection of subsets of that is closed under complements, countable unions, and countable intersections.  "
+},
+{
+  "id": "definition-5",
+  "level": "2",
+  "url": "section-13.html#definition-5",
+  "type": "Definition",
+  "number": "3.1.6",
+  "title": "",
+  "body": " Let be a set and a -algebra on . A set function is a measure if  For all , .  .  For all countable collections of pairwise disjoint sets,   "
+},
+{
+  "id": "p-158",
+  "level": "2",
+  "url": "section-13.html#p-158",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Lebesgue measure "
+},
+{
   "id": "section-14",
   "level": "1",
   "url": "section-14.html",
   "type": "Section",
   "number": "3.2",
   "title": "Infinite products and the zeta function",
-  "body": " Infinite products and the zeta function  The zeta function  Riemann zeta function  Let be a real number. Define the Riemann zeta function by   This is essentially taking the -series from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real via the integral test (exercise).   is holomorphic for .    First, note that for a positive real number and a complex power , note that  For , let be a complex number with . Consider the sequence of functions We have      By the Weierstrass -test , the series converges uniformly and absolutely to where .  Now note that each is analytic, and so each partial sum is analytic. So is a sequence of analytic functions converging uniformly to on . Then by , we conclude that is analytic on . Because was arbitrary, the results extend to all points in the halfplane .   In fact, we can say slightly more almost immediately. First, let's codify the result that we used in the proof of the theorem above.  Weierstrass theorem for series  Let be a sequence of holomorphic functions on a domain , and assume that converges uniformly on every closed and bounded subset of . Then  is holomorphic on .  For any , the series of th derivatives converges on and converges uniformly and absolutely on every closed and bounded subset of to the function . That is, the derivative of the limit is the limit of the derivatives.    Corollary to  For , and is holomorphic.   The first thing we might like to do is ask if we know the value of for any input points at all. The famous problem identified with the case where is called the Basel problem . Its solution will showcase some of the issues we face when dealing with the task of extending the zeta function off the natural domain.  Basel problem      First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper. To begin, Euler knew that and so He wants to factor this polynomial using the fundamental theorem of algebra as but he can't, as this has no hope of converging in the infinite product. Instead, he defines terms of the form - after all, these terms vanish at the same set of zeros. Making the rather large leap that the function is determined by its zeros and a single value (as in the case of a polynomial), Euler writes which at least has a shot of converging. He then notices that a pattern emerges as you start formally multiplying out this product. and He makes the leap that Now, still with the underlying assumption that all of this converges and makes sense, he compares the coefficients of in his two power series to get which is just  This argument raises serious questions. Among them  Is an analytic function determined uniquely by its zeros?  Does the fundamental theorem of algebra actually apply to infinite polynomials ?  What does it mean to converge as an infinite product?  The answers to these questions will be answered in the subsequent discussion.   Infinite products  Euler's solution to the Basel problem points out that we need to know something about convergence of infinite products. We'll start with real numbers and work up to the complex case. Given a sequence of real numbers, we can consider the sequence of partial products . Letting the sequence tend to infinity gives an infinite product (in the same way that an infinite sum is just a representation of a sequence of partial sums). The standard symbol used to denote an infinite product on the sequence is .We can likewise denote the th partial product by   An infinite product with no zero factors is convergent if and only if there exists some real number so that as . In this case, is the value of the product. If such , then diverges to 0. If there are infinitely many zero factors , then diverges to 0. If there are finitely many zero factors , then .   We can construct a theory of convergence entirely in terms of products, but it is more elegant for our needs to convert questions of convergence into equivalent questions about series via the logarithm (assuming positive terms or absolute value).   Let be a sequence of positive real numbers. Then the infinite product converges if and only if the series converges.    Apply the logarithm to the product. The series will converge if and only if the product does. Now note that (by L'Hospital or observation of the power series for ). If does not tend to zero, the sum, and thus the product, will diverge by the test for divergence. So assume . Then, as the limit comparison test gives that converges if and only if converges, which establishes the claim.   This result establishes, for example, the convergence of the -series-like products where . That is, infinite products converge when their factors tend quickly to 1 .  How do we take this and lift it to infinite products of complex numbers? We'll follow Tao here.  Absolutely convergent products  Let be a sequence of complex numbers so that . Then converges (absolutely). Furthermore, this product is zero if and only if one of the factors is zero.    Because converges, the test for divergence gives . Then there exists an so that the tail of the sequence is contained in the disk for . Factor the product into Convergence of the whole product will then be equivalent to convergence of . Because the tail is away from the origin, we can apply the standard branch of the complex logarithm, , on and write Now,   We also have the following product form of the Weierstrass -test to measure uniform convergence of products of functions.  -test, product form  Let be a domain, and for all let be a bounded function.    Product formula for the zeta function We're now in position to connect the zeta function to the primes by way of the Euler product formula . First, let's recall the fundamental theorem of arithmetic. Fundamental theorem of arithmetic  Every natural number has a unique representation as a product where the product is over the primes and the exponents , only finitely many of which are non-zero.    "
+  "body": " Infinite products and the zeta function  The zeta function  Riemann zeta function  Let be a real number. Define the Riemann zeta function by   This is essentially taking the -series from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real via the integral test (exercise).   is holomorphic for .    First, note that for a positive real number and a complex power , note that  For , let be a complex number with . Consider the sequence of functions We have      By the Weierstrass -test , the series converges uniformly and absolutely to where .  Now note that each is analytic, and so each partial sum is analytic. So is a sequence of analytic functions converging uniformly to on . Then by , we conclude that is analytic on . Because was arbitrary, the results extend to all points in the halfplane .   In fact, we can say slightly more almost immediately. First, let's codify the result that we used in the proof of the theorem above.  Weierstrass theorem for series  Let be a sequence of holomorphic functions on a domain , and assume that converges uniformly on every closed and bounded subset of . Then  is holomorphic on .  For any , the series of th derivatives converges on and converges uniformly and absolutely on every closed and bounded subset of to the function . That is, the derivative of the limit is the limit of the derivatives.    Corollary to  For , and is holomorphic.   The first thing we might like to do is ask if we know the value of for any input points at all. The famous problem identified with the case where is called the Basel problem . Its solution will showcase some of the issues we face when dealing with the task of extending the zeta function off the natural domain.  Basel problem      First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper. To begin, Euler knew that and so He wants to factor this polynomial using the fundamental theorem of algebra as but he can't, as this has no hope of converging in the infinite product. Instead, he defines terms of the form - after all, these terms vanish at the same set of zeros. Making the rather large leap that the function is determined by its zeros and a single value (as in the case of a polynomial), Euler writes which at least has a shot of converging. He then notices that a pattern emerges as you start formally multiplying out this product. and He makes the leap that Now, still with the underlying assumption that all of this converges and makes sense, he compares the coefficients of in his two power series to get which is just  This argument raises serious questions. Among them  Is an analytic function determined uniquely by its zeros?  Does the fundamental theorem of algebra actually apply to infinite polynomials ?  What does it mean to converge as an infinite product?  The answers to these questions will be answered in the subsequent discussion.   Infinite products  Euler's solution to the Basel problem points out that we need to know something about convergence of infinite products. We'll start with real numbers and work up to the complex case. Given a sequence of real numbers, we can consider the sequence of partial products . Letting the sequence tend to infinity gives an infinite product (in the same way that an infinite sum is just a representation of a sequence of partial sums). The standard symbol used to denote an infinite product on the sequence is .We can likewise denote the th partial product by   An infinite product with no zero factors is convergent if and only if there exists some real number so that as . In this case, is the value of the product. If such , then diverges to 0. If there are infinitely many zero factors , then diverges to 0. If there are finitely many zero factors , then .   We can construct a theory of convergence entirely in terms of products, but it is more elegant for our needs to convert questions of convergence into equivalent questions about series via the logarithm (assuming positive terms or absolute value).   Let be a sequence of positive real numbers. Then the infinite product converges if and only if the series converges.    Apply the logarithm to the product. The series will converge if and only if the product does. Now note that (by L'Hospital or observation of the power series for ). If does not tend to zero, the sum, and thus the product, will diverge by the test for divergence. So assume . Then, as the limit comparison test gives that converges if and only if converges, which establishes the claim.   This result establishes, for example, the convergence of the -series-like products where . That is, infinite products converge when their factors tend quickly to 1 .  How do we take this and lift it to infinite products of complex numbers? We'll follow Tao here.  Absolutely convergent products  Let be a sequence of complex numbers so that . Then converges (absolutely). Furthermore, this product is zero if and only if one of the factors is zero.    Because converges, the test for divergence gives . Then there exists an so that the tail of the sequence is contained in the disk for . Factor the product into Convergence of the whole product will then be equivalent to convergence of . Because the tail is away from the origin, we can apply the standard branch of the complex logarithm, , on and write Now, Similarly to the argument in the previous proof, note that the power series for is , and so by the limit comparison test, is absolutely convergent. On application of the complex exponential, we conclude that converges to .   We also have the following product form of the Weierstrass -test to measure uniform convergence of products of functions.  -test, product form  Let be a set, and for all let be a bounded function. If for some finite we have then the partial products converge uniformly to on .    Product formula for the zeta function  We're now in position to connect the zeta function to the primes by way of the Euler product formula . First, let's recall the fundamental theorem of arithmetic.  Fundamental theorem of arithmetic  Every natural number has a unique representation as a product where the product is over the primes and the exponents , only finitely many of which are non-zero.   Product formula for .  For with , we have where the product is taken over the primes . This representation is absolutely convergent.    For each , we have which we can formally rearrange as  Now, we're going to build from the bottom. Given , let be the set of natural numbers with prime factorization containing primes no larger than and exponents no greater than . That is, has a representation and . The first observation to make is that as , .  The next step is a combinatorial observation. To illustrate, suppose that and . Then Now let , so that we're picking up numbers with in the prime factorization. Here's where we see the pattern we're interested in show up. If you see what's happening here, it shouldn't be hard to believe that for all .  Now, we'll take a look at what happens to this sum as . As , the first observation to make is that the sums by the geometric series formula.    "
 },
 {
   "id": "def-zeta",
@@ -1018,9 +1054,9 @@ var ptx_lunr_docs = [
   "body": "Corollary to  For , and is holomorphic.  "
 },
 {
-  "id": "p-163",
+  "id": "p-168",
   "level": "2",
-  "url": "section-14.html#p-163",
+  "url": "section-14.html#p-168",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1036,18 +1072,18 @@ var ptx_lunr_docs = [
   "body": "Basel problem     "
 },
 {
-  "id": "p-167",
+  "id": "p-172",
   "level": "2",
-  "url": "section-14.html#p-167",
+  "url": "section-14.html#p-172",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "infinite product "
 },
 {
-  "id": "definition-5",
+  "id": "definition-7",
   "level": "2",
-  "url": "section-14.html#definition-5",
+  "url": "section-14.html#definition-7",
   "type": "Definition",
   "number": "3.2.6",
   "title": "",
@@ -1087,16 +1123,25 @@ var ptx_lunr_docs = [
   "type": "Proof",
   "number": "3.2.2.2",
   "title": "",
-  "body": " Because converges, the test for divergence gives . Then there exists an so that the tail of the sequence is contained in the disk for . Factor the product into Convergence of the whole product will then be equivalent to convergence of . Because the tail is away from the origin, we can apply the standard branch of the complex logarithm, , on and write Now,  "
+  "body": " Because converges, the test for divergence gives . Then there exists an so that the tail of the sequence is contained in the disk for . Factor the product into Convergence of the whole product will then be equivalent to convergence of . Because the tail is away from the origin, we can apply the standard branch of the complex logarithm, , on and write Now, Similarly to the argument in the previous proof, note that the power series for is , and so by the limit comparison test, is absolutely convergent. On application of the complex exponential, we conclude that converges to .  "
 },
 {
-  "id": "theorem-22",
+  "id": "thm-prod-M",
   "level": "2",
-  "url": "section-14.html#theorem-22",
+  "url": "section-14.html#thm-prod-M",
   "type": "Theorem",
   "number": "3.2.9",
   "title": "<span class=\"process-math\">\\(M\\)<\/span>-test, product form.",
-  "body": "-test, product form  Let be a domain, and for all let be a bounded function.  "
+  "body": "-test, product form  Let be a set, and for all let be a bounded function. If for some finite we have then the partial products converge uniformly to on .  "
+},
+{
+  "id": "p-183",
+  "level": "2",
+  "url": "section-14.html#p-183",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Euler product formula "
 },
 {
   "id": "theorem-23",
@@ -1106,6 +1151,24 @@ var ptx_lunr_docs = [
   "number": "3.2.10",
   "title": "Fundamental theorem of arithmetic.",
   "body": "Fundamental theorem of arithmetic  Every natural number has a unique representation as a product where the product is over the primes and the exponents , only finitely many of which are non-zero.  "
+},
+{
+  "id": "theorem-24",
+  "level": "2",
+  "url": "section-14.html#theorem-24",
+  "type": "Theorem",
+  "number": "3.2.11",
+  "title": "Product formula for <span class=\"process-math\">\\(\\zeta\\text{.}\\)<\/span>.",
+  "body": "Product formula for .  For with , we have where the product is taken over the primes . This representation is absolutely convergent.  "
+},
+{
+  "id": "proof-14",
+  "level": "2",
+  "url": "section-14.html#proof-14",
+  "type": "Proof",
+  "number": "3.2.3.1",
+  "title": "",
+  "body": " For each , we have which we can formally rearrange as  Now, we're going to build from the bottom. Given , let be the set of natural numbers with prime factorization containing primes no larger than and exponents no greater than . That is, has a representation and . The first observation to make is that as , .  The next step is a combinatorial observation. To illustrate, suppose that and . Then Now let , so that we're picking up numbers with in the prime factorization. Here's where we see the pattern we're interested in show up. If you see what's happening here, it shouldn't be hard to believe that for all .  Now, we'll take a look at what happens to this sum as . As , the first observation to make is that the sums by the geometric series formula.  "
 }
 ]
 

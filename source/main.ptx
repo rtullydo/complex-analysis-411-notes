@@ -903,6 +903,7 @@
         <title>The prime number theorem</title>
         <section>
             <title>Prerequisites</title>
+            <subsection><title>Complex analysis</title>
             <p>Let us begin with a very useful sort-of converse to the Cauchy-Goursat theorem</p>
 
             <theorem xml:id="thm-cauchy-goursat">
@@ -1000,7 +1001,29 @@
                 <li> <m>\displaystyle \sum_{n=1}^\infty M_n \lt \infty</m>.</li>
             </ol>
             Then <m>\sum_{n=1}^\infty f_n</m> converges absolutely and uniformly on <m>D</m>.</p>
-            </theorem>
+            </theorem>out 
+        </subsection>
+        <subsection><title>Measure theory</title>
+            <p>To be rigorous about convergence, we're going to need some extremely useful tools from analysis. The discussion here will mostly bracket out proofs, which are typically done in a graduate course in real analysis.</p>
+
+            <p>A <term>measure</term> is a function that assigns a numerical value to a set. The idea comes from an effort to generalize the notion of the length of an interval. A brief overview of the setup follows. We have a set <m>X</m> (for example, <m>X=\R</m>), and we want to define a function <m>\mu: A \subset X \to [0,\infty]</m> (note the inclusion of <m>\infty</m>). It turns out that we can't measure every subset of <m>X</m> (that darn axiom of choice). So we equip <m>X</m> with a sort of topology called a <m>\sigma</m>-algebra consisting of so called measurable sets. </p>
+
+            <definition>
+                <p>Given a set <m>X</m>, a <m>\sigma</m>-algebra on <m>X</m> is a non-empty collection <m>\Sigma</m> of subsets of <m>X</m> that is closed under complements, countable unions, and countable intersections.</p>
+            </definition>
+
+            <definition> 
+                <p>Let <m>X</m> be a set and <m>\Sigma</m> a <m>\sigma</m>-algebra on <m>X</m>. A set function <m>\mu:\Sigma \to [0,\infty]</m> is a measure if
+                <ul>
+                    <li>For all <m>E \in \Sigma</m>, <m>\mu(E) \geq 0</m>.</li>
+                    <li><m>\mu(\emptyset) = 0</m>.</li>
+                    <li>For all countable collections <m>\{E_j\} \subset \Sigma</m> of pairwise disjoint sets, <me>\mu(\bigcup_j E_j) = \sum_j \mu(E_j).</me></li>
+                </ul></p>
+            </definition>
+
+            <p>One important example of a measure is <term>Lebesgue measure</term>, which directly generalizes the length of intervals. Lebesgue measure is usually defined on the Borel sets, which is the <m>\sigma</m>-algebra constructed by starting with the open intervals in <m>\R</m> and combining them in all ways to ensure that the conditions for a <m>\sigma</m>-algebra are met. Measures can be far stranger than Lebesgue measure. We're going to be using a set function that assigns the value 1 to each natural number, for example. This will let us use high powered theorems about convergence in integrals to the context of series. (A series really is nothing more than a discrete integral in this setting!)</p>
+
+        </subsection>
 
         </section>
 
