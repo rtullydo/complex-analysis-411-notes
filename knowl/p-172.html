@@ -2,6 +2,9 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-04-11T22:19:20-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -12,20 +15,26 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para logical">
-<div class="para">Euler's solution to the Basel problem points out that we need to know something about convergence of infinite products. We'll start with real numbers and work up to the complex case. Given a sequence <span class="process-math">\(a_n\)</span> of real numbers, we can consider the sequence of partial products <span class="process-math">\(p_k = a_1 a_2 \ldots a_k\text{.}\)</span> Letting the sequence tend to infinity gives an <dfn class="terminology">infinite product</dfn> (in the same way that an infinite sum is just a representation of a sequence of partial sums). The standard symbol used to denote an infinite product on the sequence <span class="process-math">\(a_n\)</span> is</div>
+<p>For <span class="process-math">\(\eps \gt 0\text{,}\)</span> let <span class="process-math">\(s\)</span> be a complex number with <span class="process-math">\(\RE s &gt; 1+\ep\text{.}\)</span> Consider the sequence of functions</p>
 <div class="displaymath process-math">
 \begin{equation*}
-a_1 a_2 \ldots = \prod_{n=1}^\infty a_n\text{.}
+f_n = \frac{1}{n^s}.
 \end{equation*}
 </div>
-<div class="para">We can likewise denote the <span class="process-math">\(k\)</span>th partial product by</div>
-<div class="displaymath process-math">
+<p class="continuation">We have</p>
+<ol class="decimal">
+<li><p><div class="displaymath process-math">
 \begin{equation*}
-p_k = a_1 a_2 \ldots a_k = \prod_{n=1}^k a_n.
+\abs{f_n(s)} = \abs{\frac{1}{n^s}} = \frac{1}{n^{\RE s}} \leq \frac{1}{n^{1 + \eps}} =: M_n.
 \end{equation*}
-</div>
-</div>
-<span class="incontext"><a href="section-14.html#p-172" class="internal">in-context</a></span>
+</div></p></li>
+<li><p><div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=1}^\infty M_n = \sum_{n=1}^\infty \frac{1}{n^{1+\eps}} \lt \infty.
+\end{equation*}
+</div></p></li>
+</ol>
+<p class="continuation">By the Weierstrass <span class="process-math">\(M\)</span>-test <a href="" class="xref" data-knowl="./knowl/thm-M-test.html" title="Theorem 3.1.4: M-test">Theorem 3.1.4</a>, the series converges  uniformly and absolutely to <span class="process-math">\(\zeta\)</span> where <span class="process-math">\(\RE s &gt; 1 + \eps\text{.}\)</span></p>
+<span class="incontext"><a href="section-14.html#p-172">in-context</a></span>
 </body>
 </html>

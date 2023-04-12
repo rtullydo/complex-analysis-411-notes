@@ -1021,7 +1021,58 @@
                 </ul></p>
             </definition>
 
-            <p>One important example of a measure is <term>Lebesgue measure</term>, which directly generalizes the length of intervals. Lebesgue measure is usually defined on the Borel sets, which is the <m>\sigma</m>-algebra constructed by starting with the open intervals in <m>\R</m> and combining them in all ways to ensure that the conditions for a <m>\sigma</m>-algebra are met. Measures can be far stranger than Lebesgue measure. We're going to be using a set function that assigns the value 1 to each natural number, for example. This will let us use high powered theorems about convergence in integrals to the context of series. (A series really is nothing more than a discrete integral in this setting!)</p>
+            <p>One important example of a measure is <term>Lebesgue measure</term>, which directly generalizes the length of intervals. Lebesgue measure is usually defined on the Borel sets <m>\mathcal B</m>, which is the <m>\sigma</m>-algebra constructed by starting with the open intervals in <m>\R</m> and combining them in all ways to ensure that the conditions for a <m>\sigma</m>-algebra are met. Measures can be far stranger than Lebesgue measure. The Dirac measure at <m>x_0</m>, also called a point mass, is a measure that assigns a value of 1 to any set <m>E</m> containing <m>x_0</m> and <m>0</m> otherwise. </p>
+
+            <p>To work with measures, we'll also need a family of compatible functions.</p>
+
+            <definition>
+                <p>Suppose that <m>X</m> is a set and <m>\Sigma</m> is a <m>\sigma</m>-algebra on <m>X</m>. A function <m>f: X \to \R</m> is measurable if 
+                <me>
+                    f\inv(B) \in \Sigma
+                </me>
+                for every Borel set <m>B \in \mathcal B</m>.</p>
+            </definition>
+
+            <p>Measures allow a powerful generalization of integrals, replacing the familiar <q><m>dx</m></q>, which can be thought of as the length of a small interval, with <m>d\mu</m>. The essential approach is to approximate a function from below by step functions, which is called <term>Lebesgue integration</term>. That is, given a set <m>X</m>, a <m>\sigma</m>-algebra <m>\Sigma</m>, a measure <m>\mu</m> (together called a <term>measure space</term> (X, <m>\Sigma, \mu)</m>) and a function <m>f:X \to [0,\infty]</m>, any partition of <m>X</m> by subsets <m>A_i</m> of <m>\Sigma</m> leads to the integral-ish sum
+            <me>
+                \sum_{i=1}^m \mu(A_i) \inf_{A_i} f.
+            </me>
+            You can view this as in the spirit of a Riemann sum - we're cutting <m>X</m> up into pieces (but that need not be intervals) and under-estimating <m>f</m> on those pieces. While this isn't strictly the area of a rectangle as in the Riemann case (as the <m>A_i</m> can be very non-interval), the idea is similar.</p>
+
+            <definition>
+            <p>When such a sum has a supremum over all <m>\Sigma</m>-partitions of <m>X</m>, we can define the <term>integral of f with respect to <m>\mu</m></term> by
+            <me>
+                \int f \, d\mu = \sup \{\sum_{i=1}^m \mu(A_i) \inf_{A_j} f: A_1, \ldots A_m \text{ is a } \Sigma-\text{partition of } X\}.
+            </me></p>
+            </definition>
+
+            <p>Lebesgue measure gives rise to integrals that directly generalize the Riemann integral - that is, if a function is Riemann integrable, then it is Lebesgue integrable and the integrals agree. (Note: unlike some authors, I do not admit improper Riemann integrals into the class of Riemann integrable functions.)</p>
+
+            <p>A more interesting example is to consider the Dirac measure <m>\delta_a</m> where <m>a \in X</m>. That is, <m>\delta_a(E) = 1</m> if <m>a \in E</m> and <m>0</m> otherwise. Notice that for any partition of <m>X</m>, <m>a \in A_i</m> for exactly one <m>k</m>. So 
+            <me>
+                 \sum_{i=1}^m \delta_a(A_i) \inf_{A_i} f = 1 \inf_{A_k} f
+             </me>
+             and that the sup of these sums will be <m>f(a)</m>!.
+             That is,
+             <me>
+                \int_X f \, d\delta_a = f(a).
+            </me>
+            </p>
+
+            <p>All this new machinery isn't much good if we don't get beefy new tools to work with. One of the big problems that Lebesgue integration is meant to solve is the failure in Riemann integration of being able to push limits inside integrals. In the Lebesgue setting, we have very powerful theorems describing when this can be done.</p>
+
+            <p>A sequence of functions <m>f_k:X \to [0,\infty]</m> is called <term>increasing</term> if for each <m>x \in X</m>, we have <m>f_1(x) \leq f_2(x) \leq \ldots</m>.</p>
+
+            <theorem xml:id="thm-mct"><title>Monotone convergence theorem</title>
+            <p>Suppose that <m>(X, \Sigma, \mu)</m> is a measure space and that <m>0 \leq f_1 \leq f_2 \leq \ldots</m> is an increasing sequence of measurable functions. Define <m>f: X \to [0,\infty]</m> by 
+            <me>
+                f(x) = \lim_{k \to \infty} f_k(x).
+            </me>
+            Then
+            <me>
+                \lim_{k \to \infty} \int f_k \, d\mu = \int f \, d\mu.
+            </me></p>
+            </theorem>
 
         </subsection>
 

@@ -1,7 +1,6 @@
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1256:21:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 1248 and proof
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1257:22:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: proof line 1231 and subsection
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1258:19:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: subsection line 1211 and section
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1260:15:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: section line 1007 and chapter
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1266:8:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: chapter line 902 and book
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1268:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: book line 117 and pretext
-/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1269:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag pretext line 3
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1077:22:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 1064 and subsection
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1079:19:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: subsection line 1006 and section
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1347:15:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: section line 904 and chapter
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1353:8:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: chapter line 902 and book
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1355:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: book line 117 and pretext
+/mnt/f/math/complex-analysis-411-notes/source/main.ptx:1356:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag pretext line 3
