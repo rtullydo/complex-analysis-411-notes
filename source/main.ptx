@@ -1074,6 +1074,25 @@
             </me></p>
             </theorem>
 
+            <p>An even beefier theorem states that we can push limits into integrals when the sequence of functions is dominated by a function with bounded integral. Note: I'm not covering the leap to complex measures here, but one can imagine that a real-valued measure is a sum of two positive measures, and that a complex measure is a sum of real measures in the obvious way.</p>
+
+            <theorem><title>Dominated convergence theorem</title>
+            <p>Suppose that <m>(X, \Sigma, \mu)</m> is a measure space and that <m>f_n</m> is a sequence of complex-valued measurable functions. Suppose that <m>f_n</m> converges pointwise to <m>f</m> and that there exists a measurable function <m>g</m> such that 
+            <me>
+                \abs{f_n(x)} \leq g(x)
+            </me>
+            for all <m>x\in X</m> and all <m>n</m> and
+            <me>
+                \int g \, d\mu \lt \infty.
+            </me> 
+            Then <m>f</m> is integrable and
+            <me>
+                \lim_{n\to \infty} \int f_n \, d\mu = \int f \, d\mu.
+            </me>
+                </p>
+            </theorem>
+
+
         </subsection>
 
         </section>
@@ -1339,8 +1358,52 @@
                 <me>
                     \sum_{j=0}^m \frac{1}{p^{js}} \to \sum_{j=0}^\infty \frac{1}{p^{js}} = \frac{1}{1 - \frac{1}{p^s}} = (1 - \frac{1}{p^s})\inv
                 </me>
-                by the geometric series formula.</p>
+                by the geometric series formula. An application of the dominated convergence theorem (when <m>\RE s > 1</m>) to push the limit into the product (remember that products are essentially sums under the log and that sums are integrals!) gets us
+                <me>
+                    \sum_{n \in \mathbb{N}} \frac{1}{n^s} = \lim_{x, m \to \infty} \sum_{n \in S_{x, m}} \frac{1}{n^s} = \prod_{p } (1 - \frac{1}{p^s})\inv.
+                </me>
+
+                    </p>
             </proof>
+        </subsection>
+        <subsection><title>Properties of the zeta function</title>
+            <p>We'll now begin looking at some properties of the zeta function. We'll collect some of our results from the earlier discussion here as well.</p>
+            <theorem><title>Properties of <m>\zeta</m></title>
+                <p><ol>
+                    <li>(analytic) <m>\zeta(s) = \sum_{n} \frac{1}{n^s}</m> is an analytic function on <m>\RE s \gt 1</m>.</li>
+                    <li>(product formula) <me>\zeta(s) = \prod_{p} (1 - p^{-s})\inv</me>.</li>
+                    <li>(zero-free region) <m>\zeta</m> has no zeros in <m>\{s: \RE s > 1\}</m>.</li>
+                    <li>(meromorphic continuation) <m>\zeta</m> has a unique meromorphic continuation to <m>\C</m> with a simple pole at <m>s=1</m> and no other poles. Moreover, after removing the pole, <m>(s-1)\zeta(s)</m> is an entire function of order 1.</li>
+                    <li>(functional equation)  <me>\zeta(s) = 2^s \pi^{s-1} \sin \frac{\pi s}{2} \Gamma(1-s) \zeta(1-s).</me></li>
+                </ol></p>
+            </theorem>
+
+            <p>Facts 1 and 2 were proved in the earlier discussion. Fact 3 follows from the product formula for <m>\zeta</m>, as the product is absolutely convergent and has no zero terms . Facts 4 and 5 are more difficult - we'll first look at their implications, and then try to figure out where the functional equation came from.</p>
+
+            <p>Let's calculate <m>\zeta(-1)</m> using the functional equation.
+            <me>
+                \zeta(-1) = 2^{-1} \pi^{-2} \sin \frac{-\pi }{2} \Gamma(2) \zeta(2) =\frac{-1}{2\pi^2} \frac{\pi^2}{6} = \frac{-1}{12}. 
+            </me>
+            If you want to dive into the chaos that this calculation unleashed a couple of years ago, you can look at <url href="https://terrytao.wordpress.com/2010/04/10/the-euler-maclaurin-formula-bernoulli-numbers-the-zeta-function-and-real-variable-analytic-continuation/"> this post</url> by Terry Tao or <url href="https://www.youtube.com/watch?v=YuIIjLr6vUA">this Mathologer video</url> in response to <url href="https://www.youtube.com/watch?v=w-I6XTVZXww">this Numberphile video</url> on the subject. </p>
+
+            <p>Our first discussion is about where the zeros of <m>\zeta</m> are. (Note that we're abusing notation and using <m>\zeta</m> to represent the continuation of <m>\zeta</m> to <m>\C</m>.) We can probe this using the functional equation. Remember that <m>\Gamma</m> is a non-zero function with simple poles at <m>0</m> and the negative integers. <m>\sin \frac{\pi s}{2}</m> has simple zeros at all even integers, and we know that <m>\zeta</m> has only one pole, at <m>s=1</m>. So consider the product
+            <me>
+                \sin \frac{\pi s}{2} \Gamma(1-s) \zeta(1-s).
+            </me>
+            The poles of <m>\Gamma(1-s)</m>, which happen when <m>1 - s = 0, -1, -2, \ldots</m> or <m>s = 1, 2, 3, 4, \ldots</m> are being canceled into removable singularities by corresponding zeros in the product, with the exception of <m>s = 1</m>. The poles at the even values of <m>s</m> are being eaten by the simple zeros of <m>\sin \frac{\pi s}{2}</m>, which leaves poles at <m>s = 3, 5, 7, \ldots</m> that must be canceled by <m>\zeta(1-s)</m>. But this forces <m>\zeta(1-s)</m> to have simple zeros at <m>s = 3, 5, 7, \ldots</m>, which corresponds to <m>\zeta(s)</m> possessing simple zeros at <m>s = -2, -4, -6, \ldots</m>. These are called the <term>trivial zeros</term> of <m>\zeta</m>.</p>
+
+            <p>The final subset of <m>\C</m> to consider the set <m>\{s: 0 \leq \RE s \leq 1\}</m>, which is called the <term>critical strip</term>. Here too we analyze the implications of the functional equation. It isn't hard to see that if <m>\zeta(s) = 0</m> in the critical strip, then so too must <m>\zeta(1-s) = 0</m> - that is, the zeros in the critical strip are reflected across the line <m>\RE s=1/2</m>.</p>
+
+            <p>It might not be obvious, but the non-trivial zeros of <m>\zeta</m> have deep connections to other areas of mathematics. In fact, the main object of inquiry in our seminar, the prime number theorem, is essentially equivalent to a statement about the zeros of <m>\zeta</m>. <em>The prime number theorem is a consequence of the fact that <m>\zeta</m> has no zeros on the line <m>\RE s =1</m>.</em> We will prove this on our way to the prime number theorem itself.</p>
+
+            <p>This leads us to what is broadly considered the most important unsolved problem in mathematics. Every known zero of <m>\zeta</m> in the critical strip is actually on the line <m>\RE s = 1/2</m>.</p>
+
+            <conjecture><title>Riemann hypothesis</title>
+                <p>All nontrivial zeros of <m>\zeta</m> are in the line <m>\RE s = 1/2</m>.</p>
+            </conjecture>
+
+            <p>Given the connection between the zeros of <m>\zeta</m> and the prime number theorem, one might expect quite a number of results that would follow from the resolution of the Riemann hypothesis. An outstanding discussion of some consequences can be found in this <url href="https://mathoverflow.net/questions/17209/consequences-of-the-riemann-hypothesis">mathoverflow post</url>.</p>
+
         </subsection>
         </section>
 

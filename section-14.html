@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2023-04-11T22:19:19-07:00       *-->
+<!--*       on 2023-05-06T16:20:04-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -209,7 +209,8 @@
 </li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-14"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="section-14"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Infinite products and the zeta function</span>
 </h2>
 <section class="subsection" id="subsection-10"><h3 class="heading hide-type">
@@ -218,16 +219,16 @@
 <article class="definition definition-like" id="def-zeta"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann zeta function.</span>
 </h4>
-<p id="p-168">Let <span class="process-math">\(s\)</span> be a real number. Define the <dfn class="terminology">Riemann zeta function</dfn> by</p>
+<p id="p-170">Let <span class="process-math">\(s\)</span> be a real number. Define the <dfn class="terminology">Riemann zeta function</dfn> by</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}.
 \end{equation*}
-</div></article><p id="p-169">This is essentially taking the “<span class="process-math">\(p\)</span>-series” from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real <span class="process-math">\(s &gt; 1\)</span> via the integral test (exercise).</p>
+</div></article><p id="p-171">This is essentially taking the “<span class="process-math">\(p\)</span>-series” from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real <span class="process-math">\(s &gt; 1\)</span> via the integral test (exercise).</p>
 <article class="theorem theorem-like" id="thm-zeta-holo"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
 </h4>
-<p id="p-170"><span class="process-math">\(\zeta\)</span> is holomorphic for <span class="process-math">\(\RE s &gt; 1\text{.}\)</span></p></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><p id="p-171">First, note that for a positive real number <span class="process-math">\(n\)</span> and a complex power <span class="process-math">\(s = a + ib\text{,}\)</span> note that</p>
+<p id="p-172"><span class="process-math">\(\zeta\)</span> is holomorphic for <span class="process-math">\(\RE s &gt; 1\text{.}\)</span></p></article><article class="hiddenproof" id="proof-11"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><p id="p-173">First, note that for a positive real number <span class="process-math">\(n\)</span> and a complex power <span class="process-math">\(s = a + ib\text{,}\)</span> note that</p>
 <div class="displaymath process-math">
 \begin{align*}
 \abs{n^{s}} \amp= \abs{n^{a+ib}}\\
@@ -235,7 +236,7 @@
 \amp = n^{\RE s}
 \end{align*}
 </div>
-<p id="p-172">For <span class="process-math">\(\eps \gt 0\text{,}\)</span> let <span class="process-math">\(s\)</span> be a complex number with <span class="process-math">\(\RE s &gt; 1+\ep\text{.}\)</span> Consider the sequence of functions</p>
+<p id="p-174">For <span class="process-math">\(\eps \gt 0\text{,}\)</span> let <span class="process-math">\(s\)</span> be a complex number with <span class="process-math">\(\RE s &gt; 1+\ep\text{.}\)</span> Consider the sequence of functions</p>
 <div class="displaymath process-math">
 \begin{equation*}
 f_n = \frac{1}{n^s}.
@@ -255,39 +256,39 @@ f_n = \frac{1}{n^s}.
 </div></p></li>
 </ol>
 <p class="continuation">By the Weierstrass <span class="process-math">\(M\)</span>-test <a href="" class="xref" data-knowl="./knowl/thm-M-test.html" title="Theorem 3.1.4: M-test">Theorem 3.1.4</a>, the series converges  uniformly and absolutely to <span class="process-math">\(\zeta\)</span> where <span class="process-math">\(\RE s &gt; 1 + \eps\text{.}\)</span></p>
-<p id="p-173">Now note that each <span class="process-math">\(f_n = \frac{1}{n^s}\)</span> is analytic, and so each partial sum</p>
+<p id="p-175">Now note that each <span class="process-math">\(f_n = \frac{1}{n^s}\)</span> is analytic, and so each partial sum</p>
 <div class="displaymath process-math">
 \begin{equation*}
 F_k = \sum_{n=1}^k \frac{1}{n^s}
 \end{equation*}
 </div>
 <p class="continuation">is analytic. So <span class="process-math">\(F_k\)</span> is a sequence of analytic functions converging uniformly to <span class="process-math">\(\zeta\)</span> on <span class="process-math">\(\RE s &gt; 1 + \ep\text{.}\)</span> Then by <a href="" class="xref" data-knowl="./knowl/thm-unif-holo.html" title="Theorem 3.1.3">Theorem 3.1.3</a>, we conclude that <span class="process-math">\(\zeta\)</span> is analytic on <span class="process-math">\(\RE s &gt; 1+\ep\text{.}\)</span> Because <span class="process-math">\(\ep\)</span> was arbitrary, the results extend to all points in the halfplane <span class="process-math">\(\RE s &gt; 1\text{.}\)</span></p></article></div>
-<p id="p-174">In fact, we can say slightly more almost immediately. First, let's codify the result that we used in the proof of the theorem above.</p>
-<article class="theorem theorem-like" id="theorem-20"><h4 class="heading">
+<p id="p-176">In fact, we can say slightly more almost immediately. First, let's codify the result that we used in the proof of the theorem above.</p>
+<article class="theorem theorem-like" id="theorem-21"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Weierstrass theorem for series.</span>
 </h4>
-<p id="p-175">Let <span class="process-math">\(f_n\)</span> be a sequence of holomorphic functions on a domain <span class="process-math">\(D\text{,}\)</span> and assume that <span class="process-math">\(\sum_n f_n\)</span> converges uniformly on every closed and bounded subset of <span class="process-math">\(D\text{.}\)</span>  Then</p>
+<p id="p-177">Let <span class="process-math">\(f_n\)</span> be a sequence of holomorphic functions on a domain <span class="process-math">\(D\text{,}\)</span> and assume that <span class="process-math">\(\sum_n f_n\)</span> converges uniformly on every closed and bounded subset of <span class="process-math">\(D\text{.}\)</span>  Then</p>
 <ol class="decimal">
 <li id="li-28"><p id="p-derived-li-28"><span class="process-math">\(f = \sum_n f_n\)</span> is holomorphic on <span class="process-math">\(D\text{.}\)</span></p></li>
 <li id="li-29"><p id="p-derived-li-29">For any <span class="process-math">\(k \geq 1\text{,}\)</span> the series of <span class="process-math">\(k\)</span>th derivatives <span class="process-math">\(\sum_n f_n^{(k)}\)</span> converges on <span class="process-math">\(D\)</span> and converges uniformly and absolutely on every closed and bounded subset of <span class="process-math">\(D\)</span> to the function <span class="process-math">\(f^{(k)}\text{.}\)</span> That is, the derivative of the limit is the limit of the derivatives.</p></li>
 </ol></article><article class="corollary theorem-like" id="corollary-3"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Corollary to Theorem 3.2.2.</span>
 </h4>
-<p id="p-176">For <span class="process-math">\(\RE s &gt; 1\text{,}\)</span></p>
+<p id="p-178">For <span class="process-math">\(\RE s &gt; 1\text{,}\)</span></p>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{d}{dz} \zeta(s) = -\sum_{n=1}^\infty \frac{\log n}{n^s}
 \end{equation*}
 </div>
-<p class="continuation">and <span class="process-math">\(\zeta\dd(s)\)</span> is holomorphic.</p></article><p id="p-177">The first thing we might like to do is ask if we know the value of <span class="process-math">\(\zeta\)</span> for any input points at all. The famous problem identified with the case where <span class="process-math">\(s=2\)</span> is called the <dfn class="terminology">Basel problem</dfn>. Its solution will showcase some of the issues we face when dealing with the task of extending the zeta function off the natural domain.</p>
-<article class="theorem theorem-like" id="theorem-21"><h4 class="heading">
+<p class="continuation">and <span class="process-math">\(\zeta\dd(s)\)</span> is holomorphic.</p></article><p id="p-179">The first thing we might like to do is ask if we know the value of <span class="process-math">\(\zeta\)</span> for any input points at all. The famous problem identified with the case where <span class="process-math">\(s=2\)</span> is called the <dfn class="terminology">Basel problem</dfn>. Its solution will showcase some of the issues we face when dealing with the task of extending the zeta function off the natural domain.</p>
+<article class="theorem theorem-like" id="theorem-22"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Basel problem.</span>
 </h4>
-<div class="displaymath process-math" id="p-178">
+<div class="displaymath process-math" id="p-180">
 \begin{equation*}
 \zeta(2) = \frac{\pi^2}{6}.
 \end{equation*}
-</div></article><p id="p-179">First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper. To begin, Euler knew that</p>
+</div></article><p id="p-181">First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper. To begin, Euler knew that</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots,
@@ -342,7 +343,7 @@ F_k = \sum_{n=1}^k \frac{1}{n^s}
 \zeta(2) = \sum_{k=1}^\infty \frac{1}{k^2} = \frac{\pi^2}{6}.
 \end{equation*}
 </div>
-<p id="p-180">This argument raises serious questions. Among them</p>
+<p id="p-182">This argument raises serious questions. Among them</p>
 <ul class="disc">
 <li id="li-30"><p id="p-derived-li-30">Is an analytic function determined uniquely by its zeros?</p></li>
 <li id="li-31"><p id="p-derived-li-31">Does the fundamental theorem of algebra actually apply to infinite “polynomials”?</p></li>
@@ -351,7 +352,7 @@ F_k = \sum_{n=1}^k \frac{1}{n^s}
 <p class="continuation">The answers to these questions will be answered in the subsequent discussion.</p></section><section class="subsection" id="subsection-11"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">Infinite products</span>
 </h3>
-<p id="p-181">Euler's solution to the Basel problem points out that we need to know something about convergence of infinite products. We'll start with real numbers and work up to the complex case. Given a sequence <span class="process-math">\(a_n\)</span> of real numbers, we can consider the sequence of partial products <span class="process-math">\(p_k = a_1 a_2 \ldots a_k\text{.}\)</span> Letting the sequence tend to infinity gives an <dfn class="terminology">infinite product</dfn> (in the same way that an infinite sum is just a representation of a sequence of partial sums). The standard symbol used to denote an infinite product on the sequence <span class="process-math">\(a_n\)</span> is</p>
+<p id="p-183">Euler's solution to the Basel problem points out that we need to know something about convergence of infinite products. We'll start with real numbers and work up to the complex case. Given a sequence <span class="process-math">\(a_n\)</span> of real numbers, we can consider the sequence of partial products <span class="process-math">\(p_k = a_1 a_2 \ldots a_k\text{.}\)</span> Letting the sequence tend to infinity gives an <dfn class="terminology">infinite product</dfn> (in the same way that an infinite sum is just a representation of a sequence of partial sums). The standard symbol used to denote an infinite product on the sequence <span class="process-math">\(a_n\)</span> is</p>
 <div class="displaymath process-math">
 \begin{equation*}
 a_1 a_2 \ldots = \prod_{n=1}^\infty a_n\text{.}
@@ -366,11 +367,11 @@ p_k = a_1 a_2 \ldots a_k = \prod_{n=1}^k a_n.
 <article class="definition definition-like" id="definition-9"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span>
 </h4>
-<p id="p-182">An infinite product with no zero factors is convergent if and only if there exists some real number <span class="process-math">\(p\neq 0\)</span> so that <span class="process-math">\(p_k \to p\)</span> as <span class="process-math">\(k \to \infty\text{.}\)</span> In this case, <span class="process-math">\(p\)</span> is the <dfn class="terminology">value</dfn> of the product. If such <span class="process-math">\(p_k \to 0\text{,}\)</span> then <span class="process-math">\(p_k\)</span> diverges to 0. If there are infinitely many zero factors <span class="process-math">\(a_n\text{,}\)</span> then <span class="process-math">\(p_k\)</span> diverges to 0. If there are finitely many zero factors <span class="process-math">\(a_n\text{,}\)</span> then <span class="process-math">\(p_k \to 0\text{.}\)</span></p></article><p id="p-183">We can construct a theory of convergence entirely in terms of products, but it is more elegant for our needs to convert questions of convergence into equivalent questions about series via the logarithm (assuming positive terms or absolute value).</p>
-<article class="theorem theorem-like" id="theorem-22"><h4 class="heading">
+<p id="p-184">An infinite product with no zero factors is convergent if and only if there exists some real number <span class="process-math">\(p\neq 0\)</span> so that <span class="process-math">\(p_k \to p\)</span> as <span class="process-math">\(k \to \infty\text{.}\)</span> In this case, <span class="process-math">\(p\)</span> is the <dfn class="terminology">value</dfn> of the product. If such <span class="process-math">\(p_k \to 0\text{,}\)</span> then <span class="process-math">\(p_k\)</span> diverges to 0. If there are infinitely many zero factors <span class="process-math">\(a_n\text{,}\)</span> then <span class="process-math">\(p_k\)</span> diverges to 0. If there are finitely many zero factors <span class="process-math">\(a_n\text{,}\)</span> then <span class="process-math">\(p_k \to 0\text{.}\)</span></p></article><p id="p-185">We can construct a theory of convergence entirely in terms of products, but it is more elegant for our needs to convert questions of convergence into equivalent questions about series via the logarithm (assuming positive terms or absolute value).</p>
+<article class="theorem theorem-like" id="theorem-23"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span>
 </h4>
-<p id="p-184">Let <span class="process-math">\(a_n\)</span> be a sequence of positive real numbers. Then the infinite product</p>
+<p id="p-186">Let <span class="process-math">\(a_n\)</span> be a sequence of positive real numbers. Then the infinite product</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \prod_{n=1}^\infty (1 + a_n)
@@ -382,7 +383,7 @@ p_k = a_1 a_2 \ldots a_k = \prod_{n=1}^k a_n.
 \sum_{n=1}^\infty a_n
 \end{equation*}
 </div>
-<p class="continuation">converges.</p></article><article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><p id="p-185">Apply the logarithm to the product.</p>
+<p class="continuation">converges.</p></article><article class="hiddenproof" id="proof-12"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-12"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-12"><article class="hiddenproof"><p id="p-187">Apply the logarithm to the product.</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \ln \prod (1 + a_n) = \sum \ln (1 + a_n).
@@ -401,12 +402,12 @@ p_k = a_1 a_2 \ldots a_k = \prod_{n=1}^k a_n.
 \end{equation*}
 </div>
 <p class="continuation">the limit comparison test gives that <span class="process-math">\(\sum \ln(1 + a_n)\)</span> converges if and only if <span class="process-math">\(\sum a_n\)</span> converges, which establishes the claim.</p></article></div>
-<p id="p-186">This result establishes, for example, the convergence of the <span class="process-math">\(p\)</span>-series-like products <span class="process-math">\(\prod (1 + \frac{1}{n^p})\)</span> where <span class="process-math">\(p &gt; 1\text{.}\)</span> That is, <em class="emphasis">infinite products converge when their factors tend quickly to 1</em>.</p>
-<p id="p-187">How do we take this and lift it to infinite products of complex numbers? We'll follow Tao here.</p>
+<p id="p-188">This result establishes, for example, the convergence of the <span class="process-math">\(p\)</span>-series-like products <span class="process-math">\(\prod (1 + \frac{1}{n^p})\)</span> where <span class="process-math">\(p &gt; 1\text{.}\)</span> That is, <em class="emphasis">infinite products converge when their factors tend quickly to 1</em>.</p>
+<p id="p-189">How do we take this and lift it to infinite products of complex numbers? We'll follow Tao here.</p>
 <article class="lemma theorem-like" id="lemma-1"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Absolutely convergent products.</span>
 </h4>
-<p id="p-188">Let <span class="process-math">\(a_n\)</span> be a sequence of complex numbers so that <span class="process-math">\(\sum \abs{a_n - 1} \lt \infty\text{.}\)</span> Then <span class="process-math">\(\prod a_n\)</span> converges (absolutely). Furthermore, this product is zero if and only if one of the factors <span class="process-math">\(a_n\)</span> is zero.</p></article><article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><p id="p-189">Because <span class="process-math">\(\sum \abs{a_n - 1}\)</span> converges, the test for divergence gives <span class="process-math">\(a_n \to 1\text{.}\)</span> Then there exists an <span class="process-math">\(N\)</span> so that the tail of the sequence is contained in the disk <span class="process-math">\(D(1, 1/2)\)</span> for <span class="process-math">\(n &gt; N\text{.}\)</span> Factor the product into</p>
+<p id="p-190">Let <span class="process-math">\(a_n\)</span> be a sequence of complex numbers so that <span class="process-math">\(\sum \abs{a_n - 1} \lt \infty\text{.}\)</span> Then <span class="process-math">\(\prod a_n\)</span> converges (absolutely). Furthermore, this product is zero if and only if one of the factors <span class="process-math">\(a_n\)</span> is zero.</p></article><article class="hiddenproof" id="proof-13"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-13"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-13"><article class="hiddenproof"><p id="p-191">Because <span class="process-math">\(\sum \abs{a_n - 1}\)</span> converges, the test for divergence gives <span class="process-math">\(a_n \to 1\text{.}\)</span> Then there exists an <span class="process-math">\(N\)</span> so that the tail of the sequence is contained in the disk <span class="process-math">\(D(1, 1/2)\)</span> for <span class="process-math">\(n &gt; N\text{.}\)</span> Factor the product into</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \prod_{n=1}^\infty a_n = \prod_{n=1}^N a_n \times \prod_{n = N+1}^\infty a_n.
@@ -425,11 +426,11 @@ a_n = e^{\Log a_n}.
 \end{equation*}
 </div>
 <p class="continuation">Similarly to the argument in the previous proof, note that the power series for <span class="process-math">\(Log a_n\)</span> is <span class="process-math">\(O(\abs{a_n-1})\text{,}\)</span> and so by the limit comparison test, <span class="process-math">\(\sum_{n=N+1}^\infty \Log a_n\)</span> is absolutely convergent. On application of the complex exponential, we conclude that <span class="process-math">\(\prod_{n=N+1}^\infty a_n\)</span> converges to <span class="process-math">\(e^{\sum \Log a_n}\text{.}\)</span></p></article></div>
-<p id="p-190">We also have the following product form of the Weierstrass <span class="process-math">\(M\)</span>-test to measure uniform convergence of products of functions.</p>
+<p id="p-192">We also have the following product form of the Weierstrass <span class="process-math">\(M\)</span>-test to measure uniform convergence of products of functions.</p>
 <article class="theorem theorem-like" id="thm-prod-M"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(M\)</span>-test, product form.</span>
 </h4>
-<p id="p-191">Let <span class="process-math">\(X\)</span> be a set, and for all <span class="process-math">\(n\)</span> let <span class="process-math">\(f_n: X \to \C\)</span> be a bounded function. If for some finite <span class="process-math">\(M\)</span> we have</p>
+<p id="p-193">Let <span class="process-math">\(X\)</span> be a set, and for all <span class="process-math">\(n\)</span> let <span class="process-math">\(f_n: X \to \C\)</span> be a bounded function. If for some finite <span class="process-math">\(M\)</span> we have</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_{n=1}^\infty \sup_{x \in X} \abs{f_n(x) -1} \leq M
@@ -438,26 +439,26 @@ a_n = e^{\Log a_n}.
 <p class="continuation">then the partial products <span class="process-math">\(\prod_{n-1}^N f_n\)</span> converge uniformly to <span class="process-math">\(\prod_{n=1}^\infty f_n\)</span> on <span class="process-math">\(X\text{.}\)</span></p></article></section><section class="subsection" id="subsection-12"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.2.3</span> <span class="title">Product formula for the zeta function</span>
 </h3>
-<p id="p-192">We're now in position to connect the zeta function to the primes by way of the <dfn class="terminology">Euler product formula</dfn>. First, let's recall the fundamental theorem of arithmetic.</p>
-<article class="theorem theorem-like" id="theorem-24"><h4 class="heading">
+<p id="p-194">We're now in position to connect the zeta function to the primes by way of the <dfn class="terminology">Euler product formula</dfn>. First, let's recall the fundamental theorem of arithmetic.</p>
+<article class="theorem theorem-like" id="theorem-25"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental theorem of arithmetic.</span>
 </h4>
-<p id="p-193">Every natural number <span class="process-math">\(n \in \mathbb N\)</span> has a unique representation as a product</p>
+<p id="p-195">Every natural number <span class="process-math">\(n \in \mathbb N\)</span> has a unique representation as a product</p>
 <div class="displaymath process-math">
 \begin{equation*}
 n = \prod_{p} p^{a_p},
 \end{equation*}
 </div>
-<p class="continuation">where the product is over the primes <span class="process-math">\(p\)</span> and the exponents <span class="process-math">\(a_p \in \mathbb N\text{,}\)</span> only finitely many of which are non-zero.</p></article><article class="theorem theorem-like" id="theorem-25"><h4 class="heading">
+<p class="continuation">where the product is over the primes <span class="process-math">\(p\)</span> and the exponents <span class="process-math">\(a_p \in \mathbb N\text{,}\)</span> only finitely many of which are non-zero.</p></article><article class="theorem theorem-like" id="theorem-26"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">Product formula for <span class="process-math">\(\zeta\text{.}\)</span>.</span>
 </h4>
-<p id="p-194">For <span class="process-math">\(s \in \C\)</span> with <span class="process-math">\(\RE s &gt; 1\text{,}\)</span> we have</p>
+<p id="p-196">For <span class="process-math">\(s \in \C\)</span> with <span class="process-math">\(\RE s &gt; 1\text{,}\)</span> we have</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \zeta(s) = \prod_{p} (1 - \frac{1}{p^s})\inv,
 \end{equation*}
 </div>
-<p class="continuation">where the product is taken over the primes <span class="process-math">\(p\text{.}\)</span> This representation is absolutely convergent.</p></article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><p id="p-195">For each <span class="process-math">\(n \in \mathbb N\text{,}\)</span> we have</p>
+<p class="continuation">where the product is taken over the primes <span class="process-math">\(p\text{.}\)</span> This representation is absolutely convergent.</p></article><article class="hiddenproof" id="proof-14"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-14"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-14"><article class="hiddenproof"><p id="p-197">For each <span class="process-math">\(n \in \mathbb N\text{,}\)</span> we have</p>
 <div class="displaymath process-math">
 \begin{equation*}
 n = \prod_{p} p^{a_p},
@@ -469,14 +470,14 @@ n = \prod_{p} p^{a_p},
 \frac{1}{n^s} = \prod_p \frac{1}{p^{a_p s}}.
 \end{equation*}
 </div>
-<p id="p-196">Now, we're going to build from the bottom. Given <span class="process-math">\(x \geq 1, m \geq 0\text{,}\)</span> let <span class="process-math">\(S_{x,m}\)</span> be the set of natural numbers with prime factorization containing primes no larger than <span class="process-math">\(x\)</span> and exponents no greater than <span class="process-math">\(m\text{.}\)</span> That is, <span class="process-math">\(n \in S_{x,m}\)</span> has a representation</p>
+<p id="p-198">Now, we're going to build from the bottom. Given <span class="process-math">\(x \geq 1, m \geq 0\text{,}\)</span> let <span class="process-math">\(S_{x,m}\)</span> be the set of natural numbers with prime factorization containing primes no larger than <span class="process-math">\(x\)</span> and exponents no greater than <span class="process-math">\(m\text{.}\)</span> That is, <span class="process-math">\(n \in S_{x,m}\)</span> has a representation</p>
 <div class="displaymath process-math">
 \begin{equation*}
 n = \prod_{p\leq x} p^{a_p}
 \end{equation*}
 </div>
 <p class="continuation">and <span class="process-math">\(a_p \leq m\text{.}\)</span> The first observation to make is that as <span class="process-math">\(x, m \to \infty\text{,}\)</span> <span class="process-math">\(S_{x, m} \to \mathbb N\text{.}\)</span></p>
-<p id="p-197">The next step is a combinatorial observation. To illustrate, suppose that <span class="process-math">\(x = 2\)</span> and <span class="process-math">\(m = 2\text{.}\)</span> Then</p>
+<p id="p-199">The next step is a combinatorial observation. To illustrate, suppose that <span class="process-math">\(x = 2\)</span> and <span class="process-math">\(m = 2\text{.}\)</span> Then</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_{n \in S_{2,2}} \frac{1}{n^s} = 1 + \frac{1}{2^s} + \frac{1}{2^{2s}}.
@@ -497,13 +498,64 @@ n = \prod_{p\leq x} p^{a_p}
 \end{equation*}
 </div>
 <p class="continuation">for all <span class="process-math">\(x \geq 1, m \geq 0\text{.}\)</span></p>
-<p id="p-198">Now, we'll take a look at what happens to this sum as <span class="process-math">\(x, m \to \infty\text{.}\)</span> As <span class="process-math">\(m\to \infty\text{,}\)</span> the first observation to make is that the sums</p>
+<p id="p-200">Now, we'll take a look at what happens to this sum as <span class="process-math">\(x, m \to \infty\text{.}\)</span> As <span class="process-math">\(m\to \infty\text{,}\)</span> the first observation to make is that the sums</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_{j=0}^m \frac{1}{p^{js}} \to \sum_{j=0}^\infty \frac{1}{p^{js}} = \frac{1}{1 - \frac{1}{p^s}} = (1 - \frac{1}{p^s})\inv
 \end{equation*}
 </div>
-<p class="continuation">by the geometric series formula.</p></article></div></section></section></div></main>
+<p class="continuation">by the geometric series formula. An application of the dominated convergence theorem (when <span class="process-math">\(\RE s &gt; 1\)</span>) to push the limit into the product (remember that products are essentially sums under the log and that sums are integrals!) gets us</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n \in \mathbb{N}} \frac{1}{n^s} = \lim_{x, m \to \infty} \sum_{n \in S_{x, m}} \frac{1}{n^s} = \prod_{p } (1 - \frac{1}{p^s})\inv.
+\end{equation*}
+</div></article></div></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.4</span> <span class="title">Properties of the zeta function</span>
+</h3>
+<p id="p-201">We'll now begin looking at some properties of the zeta function. We'll collect some of our results from the earlier discussion here as well.</p>
+<article class="theorem theorem-like" id="theorem-27"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of <span class="process-math">\(\zeta\)</span>.</span>
+</h4>
+<ol id="p-202" class="decimal">
+<li id="li-33"><p id="p-derived-li-33">(analytic) <span class="process-math">\(\zeta(s) = \sum_{n} \frac{1}{n^s}\)</span> is an analytic function on <span class="process-math">\(\RE s \gt 1\text{.}\)</span></p></li>
+<li id="li-34"><p id="p-derived-li-34">(product formula)<div class="displaymath process-math">
+\begin{equation*}
+\zeta(s) = \prod_{p} (1 - p^{-s})\inv\text{.}
+\end{equation*}
+</div></p></li>
+<li id="li-35"><p id="p-derived-li-35">(zero-free region) <span class="process-math">\(\zeta\)</span> has no zeros in <span class="process-math">\(\{s: \RE s &gt; 1\}\text{.}\)</span></p></li>
+<li id="li-36"><p id="p-derived-li-36">(meromorphic continuation) <span class="process-math">\(\zeta\)</span> has a unique meromorphic continuation to <span class="process-math">\(\C\)</span> with a simple pole at <span class="process-math">\(s=1\)</span> and no other poles. Moreover, after removing the pole, <span class="process-math">\((s-1)\zeta(s)\)</span> is an entire function of order 1.</p></li>
+<li id="li-37"><p id="p-derived-li-37">(functional equation)<div class="displaymath process-math">
+\begin{equation*}
+\zeta(s) = 2^s \pi^{s-1} \sin \frac{\pi s}{2} \Gamma(1-s) \zeta(1-s).
+\end{equation*}
+</div></p></li>
+</ol></article><p id="p-203">Facts 1 and 2 were proved in the earlier discussion. Fact 3 follows from the product formula for <span class="process-math">\(\zeta\text{,}\)</span> as the product is absolutely convergent and has no zero terms . Facts 4 and 5 are more difficult - we'll first look at their implications, and then try to figure out where the functional equation came from.</p>
+<p id="p-204">Let's calculate <span class="process-math">\(\zeta(-1)\)</span> using the functional equation.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\zeta(-1) = 2^{-1} \pi^{-2} \sin \frac{-\pi }{2} \Gamma(2) \zeta(2) =\frac{-1}{2\pi^2} \frac{\pi^2}{6} = \frac{-1}{12}. 
+\end{equation*}
+</div>
+<p class="continuation">If you want to dive into the chaos that this calculation unleashed a couple of years ago, you can look at <a class="external" href="https://terrytao.wordpress.com/2010/04/10/the-euler-maclaurin-formula-bernoulli-numbers-the-zeta-function-and-real-variable-analytic-continuation/" target="_blank">this post</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 1 </sup></a> by Terry Tao or <a class="external" href="https://www.youtube.com/watch?v=YuIIjLr6vUA" target="_blank">this Mathologer video</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 2 </sup></a> in response to <a class="external" href="https://www.youtube.com/watch?v=w-I6XTVZXww" target="_blank">this Numberphile video</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 3 </sup></a> on the subject.</p>
+<p id="p-205">Our first discussion is about where the zeros of <span class="process-math">\(\zeta\)</span> are. (Note that we're abusing notation and using <span class="process-math">\(\zeta\)</span> to represent the continuation of <span class="process-math">\(\zeta\)</span> to <span class="process-math">\(\C\text{.}\)</span>) We can probe this using the functional equation. Remember that <span class="process-math">\(\Gamma\)</span> is a non-zero function with simple poles at <span class="process-math">\(0\)</span> and the negative integers. <span class="process-math">\(\sin \frac{\pi s}{2}\)</span> has simple zeros at all even integers, and we know that <span class="process-math">\(\zeta\)</span> has only one pole, at <span class="process-math">\(s=1\text{.}\)</span> So consider the product</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\sin \frac{\pi s}{2} \Gamma(1-s) \zeta(1-s).
+\end{equation*}
+</div>
+<p class="continuation">The poles of <span class="process-math">\(\Gamma(1-s)\text{,}\)</span> which happen when <span class="process-math">\(1 - s = 0, -1, -2, \ldots\)</span> or <span class="process-math">\(s = 1, 2, 3, 4, \ldots\)</span> are being canceled into removable singularities by corresponding zeros in the product, with the exception of <span class="process-math">\(s = 1\text{.}\)</span> The poles at the even values of <span class="process-math">\(s\)</span> are being eaten by the simple zeros of <span class="process-math">\(\sin \frac{\pi s}{2}\text{,}\)</span> which leaves poles at <span class="process-math">\(s = 3, 5, 7, \ldots\)</span> that must be canceled by <span class="process-math">\(\zeta(1-s)\text{.}\)</span> But this forces <span class="process-math">\(\zeta(1-s)\)</span> to have simple zeros at <span class="process-math">\(s = 3, 5, 7, \ldots\text{,}\)</span> which corresponds to <span class="process-math">\(\zeta(s)\)</span> possessing simple zeros at <span class="process-math">\(s = -2, -4, -6, \ldots\text{.}\)</span> These are called the <dfn class="terminology">trivial zeros</dfn> of <span class="process-math">\(\zeta\text{.}\)</span></p>
+<p id="p-206">The final subset of <span class="process-math">\(\C\)</span> to consider the set <span class="process-math">\(\{s: 0 \leq \RE s \leq 1\}\text{,}\)</span> which is called the <dfn class="terminology">critical strip</dfn>. Here too we analyze the implications of the functional equation. It isn't hard to see that if <span class="process-math">\(\zeta(s) = 0\)</span> in the critical strip, then so too must <span class="process-math">\(\zeta(1-s) = 0\)</span> - that is, the zeros in the critical strip are reflected across the line <span class="process-math">\(\RE s=1/2\text{.}\)</span></p>
+<p id="p-207">It might not be obvious, but the non-trivial zeros of <span class="process-math">\(\zeta\)</span> have deep connections to other areas of mathematics. In fact, the main object of inquiry in our seminar, the prime number theorem, is essentially equivalent to a statement about the zeros of <span class="process-math">\(\zeta\text{.}\)</span> <em class="emphasis">The prime number theorem is a consequence of the fact that <span class="process-math">\(\zeta\)</span> has no zeros on the line <span class="process-math">\(\RE s =1\text{.}\)</span></em> We will prove this on our way to the prime number theorem itself.</p>
+<p id="p-208">This leads us to what is broadly considered the most important unsolved problem in mathematics. Every known zero of <span class="process-math">\(\zeta\)</span> in the critical strip is actually on the line <span class="process-math">\(\RE s = 1/2\text{.}\)</span></p>
+<article class="conjecture theorem-like" id="conjecture-1"><h4 class="heading">
+<span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">3.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Riemann hypothesis.</span>
+</h4>
+<p id="p-209">All nontrivial zeros of <span class="process-math">\(\zeta\)</span> are in the line <span class="process-math">\(\RE s = 1/2\text{.}\)</span></p></article><p id="p-210">Given the connection between the zeros of <span class="process-math">\(\zeta\)</span> and the prime number theorem, one might expect quite a number of results that would follow from the resolution of the Riemann hypothesis. An outstanding discussion of some consequences can be found in this <a class="external" href="https://mathoverflow.net/questions/17209/consequences-of-the-riemann-hypothesis" target="_blank">mathoverflow post</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 4 </sup></a>.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">https://terrytao.wordpress.com/2010/04/10/the-euler-maclaurin-formula-bernoulli-numbers-the-zeta-function-and-real-variable-analytic-continuation/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.youtube.com/watch?v=YuIIjLr6vUA</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.youtube.com/watch?v=w-I6XTVZXww</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore">https://mathoverflow.net/questions/17209/consequences-of-the-riemann-hypothesis</code></div></div>
+</div></main>
 </div>
 </body>
 </html>
