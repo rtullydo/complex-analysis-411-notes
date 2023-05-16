@@ -1549,7 +1549,7 @@
                         <me>
                             \th(x) - \th(\frac{x}{2^{r+1}}) \leq (1 + \frac{1}{2} + \ldots + \frac{1}{2^{r}})Cx \leq 2Cx,
                         </me>
-                        and so, noting that <m>\th(\frac{x}{2^{r+1}}) \leq \th{x_0}</m>, we get
+                        and so, noting that <m>\th(\frac{x}{2^{r+1}}) \leq \th(x_0)</m>, we get
                         <me>
                             \th(x) \leq 2Cx + \th(x_0),
                         </me>
