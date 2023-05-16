@@ -1507,7 +1507,7 @@
                     </me>
                     Then, invoking the ML inequality,
                     <md>
-                        <mrow>\abs{ \int_n^{n+1} (\frac{1}{n^s} - \frac{1}{x^s})\, dx} \amp= \abs{s \int_n^{n+1} \int_n^x \frac{1}{u^{s+1}}\, du}</mrow>
+                        <mrow>\abs{ \int_n^{n+1} (\frac{1}{n^s} - \frac{1}{x^s})\, dx} \amp= \abs{s \int_n^{n+1} \int_n^x \frac{1}{u^{s+1}}\, du dx}</mrow>
                         <mrow>\amp\leq \max_{n \leq u \leq n+1} \abs{\frac{s}{u^{s+1}}}</mrow>
                         <mrow>\amp= \frac{\abs{s}}{n^{\RE s + 1}}.</mrow>
                     </md>
