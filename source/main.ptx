@@ -1536,7 +1536,7 @@
                         </me>
                         for any <m>C > \log 2</m> for all <m>x > x_0</m> for some <m>x_0</m> whose choice depends on <m>C</m>. Now, given some large value of <m>x</m>, consider the sequence 
                         <me>
-                            x, \frac{x}{2}, \frac{x}{4}, \ldots, \frac{x}{x^r} \geq x_0 \geq \frac{x}{2^{r+1}}.
+                            x, \frac{x}{2}, \frac{x}{4}, \ldots, \frac{x}{2^r} \geq x_0 \geq \frac{x}{2^{r+1}}.
                         </me>.
                         The corresponding inequalities are
                         <md>
