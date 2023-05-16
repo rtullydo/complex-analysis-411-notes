@@ -1511,7 +1511,7 @@
                         <mrow>\amp\leq \max_{n \leq u \leq n+1} \abs{\frac{s}{u^{s+1}}}</mrow>
                         <mrow>\amp= \frac{\abs{s}}{n^{\RE s + 1}}.</mrow>
                     </md>
-                   Thus, while we defined the series for <m>\RE s > 1</m>, the terms of the series will converge absolutely for <m>\RE s > 0</m>, (for example by successive application of the <m>M</m>-test on the strips <m>1/M \leq \RE s \leq M</m>) which gives the desired continuation.</p>
+                   Thus, while we defined the series for <m>\RE s > 1</m>, the terms of the series will converge absolutely for <m>\RE s > 0</m>, (for example by successive application of the <m>M</m>-test on the strips <m>1/N \leq \RE s \leq N</m>) which gives the desired continuation.</p>
                 </proof>
 
                 <theorem><title>Step III: Order of <m>\th</m></title>
