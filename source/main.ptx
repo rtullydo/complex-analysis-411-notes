@@ -1410,7 +1410,7 @@
 
         <section><title>The prime number theorem</title>
             <subsection><title>Preliminaries</title>
-            <p>Our first proof of the prime number theorem will run through a complex analytic argument pdue to Newman. The particular paper I'm referencing here is "Newman's short proof of the prime number theorem", by D. Zagler, which appeared in the American Mathematical Monthly. Tao's notes follow a similar line, but works through a different set of functions. We aim to prove the following description of the asymptotic density of the primes in the integers. Let <m>\pi(x)</m> denote the number of primes less than or equal to <m>x</m>. We will use the notation <m>f \sim g</m> (that is, <m>f</m> and <m>g</m> are asymptotically equal) to mean <m>\lim_{x \to \infty} f(x)/g(x) = 1</m>. We will also use the order notation <m>g = \mathrm{O}(f)</m> as <m>x \to \infty</m> to mean that there exists some <m>C>0</m> so that <m>\abs{g(x)} \leq Cf(x)</m> for all sufficiently large <m>x</m>. (Every order argument we make in this section will be at infinity, so we may sometimes just write <m>g = \mathrm{O}(x)</m>.)  </p>
+            <p>Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I'm referencing here is "Newman's short proof of the prime number theorem", by D. Zagler, which appeared in the American Mathematical Monthly. Tao's notes follow a similar line, but works through a different set of functions. We aim to prove the following description of the asymptotic density of the primes in the integers. Let <m>\pi(x)</m> denote the number of primes less than or equal to <m>x</m>. We will use the notation <m>f \sim g</m> (that is, <m>f</m> and <m>g</m> are asymptotically equal) to mean <m>\lim_{x \to \infty} f(x)/g(x) = 1</m>. We will also use the order notation <m>g = \mathrm{O}(f)</m> as <m>x \to \infty</m> to mean that there exists some <m>C>0</m> so that <m>\abs{g(x)} \leq Cf(x)</m> for all sufficiently large <m>x</m>. (Every order argument we make in this section will be at infinity, so we may sometimes just write <m>g = \mathrm{O}(x)</m>.)  </p>
 
             <theorem><title>Prime number theorem</title>
             <p>
@@ -1459,7 +1459,7 @@
                     <li><title>Integral estimate</title>
                         Show that 
                         <me>
-                            \int_1^\infty \frac{\th - x}{x^2} \, dx \text{ converges.}
+                            \int_1^\infty \frac{\th(x) - x}{x^2} \, dx \text{ converges.}
                         </me></li>
                     <li> <title>Exact asymptotic for <m>\th</m></title> Show that 
                         <me>
@@ -1529,7 +1529,33 @@
                         <mrow> \amp\geq \prod_{n \leq p \leq 2n} p</mrow>
                         <mrow> \amp= \exp(\th(2n) - \th(n)).</mrow>
                     </md></p>
-                </proof>
+
+                    <p>This implies that
+                        <me>
+                            \th(x) - \th(\frac{x}{2}) \leq C x
+                        </me>
+                        for any <m>C > \log 2</m> for all <m>x > x_0</m> for some <m>x_0</m> whose choice depends on <m>C</m>. Now, given some large value of <m>x</m>, consider the sequence 
+                        <me>
+                            x, \frac{x}{2}, \frac{x}{4}, \ldots, \frac{x}{x^r} \geq x_0 \geq \frac{x}{2^{r+1}}.
+                        </me>.
+                        The corresponding inequalities are
+                        <md>
+                            <mrow>\th(x) - \th(\frac{x}{2}) \amp\leq Cx</mrow>
+                            <mrow>\th(\frac{x}{2}) - \th(\frac{x}{4}) \amp\leq C\frac{x}{2}</mrow>
+                            <mrow>\vdots</mrow>
+                            <mrow>\th(\frac{x}{2^{r}})- \th(\frac{x}{2^r+1}) \amp\leq C\frac{x}{2^{r}}</mrow>.
+                        </md>
+                        Adding these results in the inequality
+                        <me>
+                            \th(x) - \th(\frac{x}{2^{r+1}}) \leq (1 + \frac{1}{2} + \ldots + \frac{1}{2^{r}})Cx \leq 2Cx,
+                        </me>
+                        and so, noting that <m>\th(\frac{x}{2^{r+1}}) \leq \th{x_0}</m>, we get
+                        <me>
+                            \th(x) \leq 2Cx + \th(x_0),
+                        </me>
+                        or in order notation 
+                        <me>\th(x) = \mathrm{O}(x) \text{ as } x\to \infty</me> as <m>\th(x_0) = \mathrm{O}(1)</m>.</p>
+                    </proof>
             </subsection>
 
         </section>
