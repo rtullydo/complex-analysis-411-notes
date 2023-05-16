@@ -74,6 +74,7 @@
           \newcommand\Htau{\mathbb{H}(\tau)}
           \newcommand{\vp}{\varphi}
           \newcommand{\ph}{\varphi}
+            \newcommand{\th}{\vartheta}
           \newcommand\al{\alpha}
           \newcommand\ga{\gamma}
           \newcommand\de{\delta}
@@ -1160,7 +1161,7 @@
             <corollary><title>Corollary to <xref ref="thm-zeta-holo"/></title>
                 <p>For <m>\RE s > 1</m>, 
                     <me>
-                        \frac{d}{dz} \zeta(s) = -\sum_{n=1}^\infty \frac{\log n}{n^s}
+                        \frac{d}{ds} \zeta(s) = -\sum_{n=1}^\infty \frac{\log n}{n^s}
                     </me>
                 and <m>\zeta\dd(s)</m> is holomorphic.</p>
             </corollary>
@@ -1405,6 +1406,132 @@
             <p>Given the connection between the zeros of <m>\zeta</m> and the prime number theorem, one might expect quite a number of results that would follow from the resolution of the Riemann hypothesis. An outstanding discussion of some consequences can be found in this <url href="https://mathoverflow.net/questions/17209/consequences-of-the-riemann-hypothesis">mathoverflow post</url>.</p>
 
         </subsection>
+        </section>
+
+        <section><title>The prime number theorem</title>
+            <subsection><title>Preliminaries</title>
+            <p>Our first proof of the prime number theorem will run through a complex analytic argument pdue to Newman. The particular paper I'm referencing here is "Newman's short proof of the prime number theorem", by D. Zagler, which appeared in the American Mathematical Monthly. Tao's notes follow a similar line, but works through a different set of functions. We aim to prove the following description of the asymptotic density of the primes in the integers. Let <m>\pi(x)</m> denote the number of primes less than or equal to <m>x</m>. We will use the notation <m>f \sim g</m> (that is, <m>f</m> and <m>g</m> are asymptotically equal) to mean <m>\lim_{x \to \infty} f(x)/g(x) = 1</m>. We will also use the order notation <m>g = \mathrm{O}(f)</m> as <m>x \to \infty</m> to mean that there exists some <m>C>0</m> so that <m>\abs{g(x)} \leq Cf(x)</m> for all sufficiently large <m>x</m>. (Every order argument we make in this section will be at infinity, so we may sometimes just write <m>g = \mathrm{O}(x)</m>.)  </p>
+
+            <theorem><title>Prime number theorem</title>
+            <p>
+                <me>
+                    \pi(x) \sim \frac{\log x}{x}.
+                </me>
+            </p></theorem>
+
+            <p>Let us introduce our dramatis personae. Our primary character is, of course, the zeta function
+                <me>
+                    \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}.
+                </me>
+            From the logarithmic derivative (<m>f\dd/f</m>) of <m>\zeta</m>, we'll consider the function
+                <me>
+                    \Phi(s) = \sum_p \frac{\log p}{p^s}.
+                </me>
+            Finally, our asymptotic prime checking will be done by the function
+                <me>
+                    \th(s) = \sum_{p \leq x} \log p.
+                </me></p>
+
+            <p>Essentially, the argument goes by showing that there can be no zeros of <m>\zeta</m> on the line <m>\RE(s) = 1</m>, and then using that fact to force an asymptotic estimate on <m>\th</m>. The steps to the proof are as follows:
+                <ol>
+                    <li><title>Product formula</title> Prove the product formula for <m>\zeta</m> for <m>\RE s > 1</m>. That is,
+                    <me>
+                        \zeta(s) = \prod_{p} (1 - p^{-s})\inv.
+                    </me></li>
+                    <li> <title>Continuation across the critical strip</title> Show that the function
+                        <me>
+                            \zeta(s) - \frac{1}{s -1}
+                        </me>
+                        has an analytic continuation to <m>\RE s > 0</m>.</li>
+                    <li> <title>Order asymptotic for <m>\th</m></title> Show that 
+                        <me>
+                            \th(x) = \mathrm{O}(x).
+                        </me>
+                    </li>
+                    <li><title>No zeros on <m>\RE s = 1</m></title> Show that 
+                    <me>
+                        \zeta(s) \neq 0 \text{ on } \RE s \geq 1
+                    </me>
+                    and that
+                    <me>
+                        \Phi(s) - \frac{1}{s-1} \text{ is holomorphic on } \RE s \geq 1.
+                    </me></li>
+                    <li><title>Integral estimate</title>
+                        Show that 
+                        <me>
+                            \int_1^\infty \frac{\th - x}{x^2} \, dx \text{ converges.}
+                        </me></li>
+                    <li> <title>Exact asymptotic for <m>\th</m></title> Show that 
+                        <me>
+                            \th(x) \sim x.
+                        </me>
+                    </li>
+                    <li><title>Prime number theorem</title> Conclude that <me>\pi(x) \sim \frac{x}{\log x}.</me>
+                    </li>
+                </ol></p>
+
+                <p>We will prove these as a series of theorems</p>
+
+                <theorem><title>Step 1: product formula</title>
+                <p>For <m>\RE s > 1</m>, 
+                    <me>
+                        \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s} = \prod_{p} (1 - p^{-s})\inv.</me>
+                    </p>
+                </theorem>
+                <p>This theorem was proved in the earlier section.</p>
+
+                <theorem><title>Step II: continuation across the critical strip</title>
+                <p>The function
+                    <me>
+                        \zeta(s) - \frac{1}{s-1}
+                    </me>
+                    analytically continues to the set <m>\RE s > 0</m>.</p>
+                </theorem>
+                <proof>
+                    <p>
+                        The idea is to write the function as a power series and show that it converges absolutely by comparison. Both functions are analytic on <m>\RE s > 1</m>, so we'll use that as a basis for our series. In order to leverage bounding in integral, note that we can write <m>1/(s-1)</m> in a sort of continuous <m>p</m>-series form via
+                        <me>
+                            \frac{1}{s-1} = \int_1^\infty \frac{1}{x^s}\, dx.
+                        </me> 
+
+                        Then,
+                        <md>
+                            <mrow>\zeta(s) - \frac{1}{s-1} \amp= \sum_{n=1}^\infty \frac{1}{n^s} - \int_1^\infty \frac{1}{x^s}\, dx</mrow>
+                            <mrow>\amp= \sum_{n=1}^\infty \int_n^{n+1} (\frac{1}{n^s} - \frac{1}{x^s})\, dx.</mrow>
+                        </md>
+                    </p>
+
+                    <p>The terms <m>1/n^s - 1/x^s</m> themselves look like the output of a definite integral - indeed,
+                    <me>
+                        \int_n^x \frac{s}{u^{s+1}}\, dx = \frac{1}{n^s} - \frac{1}{x^s}.
+                    </me>
+                    Then, invoking the ML inequality,
+                    <md>
+                        <mrow>\abs{ \int_n^{n+1} (\frac{1}{n^s} - \frac{1}{x^s})\, dx} \amp= \abs{s \int_n^{n+1} \int_n^x \frac{1}{u^{s+1}}\, du}</mrow>
+                        <mrow>\amp\leq \max_{n \leq u \leq n+1} \abs{\frac{s}{u^{s+1}}}</mrow>
+                        <mrow>\amp= \frac{\abs{s}}{n^{\RE s + 1}}.</mrow>
+                    </md>
+                   Thus, while we defined the series for <m>\RE s > 1</m>, the terms of the series will converge absolutely for <m>\RE s > 0</m>, (for example by successive application of the <m>M</m>-test on the strips <m>1/M \leq \RE s \leq M</m>) which gives the desired continuation.</p>
+                </proof>
+
+                <theorem><title>Step III: Order of <m>\th</m></title>
+                    <p> For <m>x \to \infty</m>,
+                        <me>
+                            \th(x) = \sum_{p \leq x} \log p = \mathrm{O}(x).
+                        </me>
+                    </p>
+                </theorem>
+                <proof>
+                   <p> The argument is combinatorial-esque. For <m>n \in \mathbb{N}</m>, we have
+                    <md>
+                        <mrow>2^{2n} = (1+1)^{2n} \amp= \binom{2n}{0} + \ldots \binom{2n}{2n} </mrow>
+                        <mrow>\amp\geq \binom{2n}{n}</mrow>
+                        <mrow> \amp\geq \prod_{n \leq p \leq 2n} p</mrow>
+                        <mrow> \amp= \exp(\th(2n) - \th(n)).</mrow>
+                    </md></p>
+                </proof>
+            </subsection>
+
         </section>
 
     </chapter>
