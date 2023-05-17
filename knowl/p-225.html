@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">This implies that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\th(x) - \th(\frac{x}{2}) \leq C x
+\end{equation*}
+</div>
+<div class="para">for any <span class="process-math">\(C &gt; \log 2\)</span> for all <span class="process-math">\(x &gt; x_0\)</span> for some <span class="process-math">\(x_0\)</span> whose choice depends on <span class="process-math">\(C\text{.}\)</span> Now, given some large value of <span class="process-math">\(x\text{,}\)</span> consider the sequence</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x, \frac{x}{2}, \frac{x}{4}, \ldots, \frac{x}{2^r} \geq x_0 \geq \frac{x}{2^{r+1}}.\text{.}
+\end{equation*}
+</div>
+<div class="para">The corresponding inequalities are</div>
+<div class="displaymath process-math">
+\begin{align*}
+\th(x) - \th(\frac{x}{2}) \amp\leq Cx\\
+\th(\frac{x}{2}) - \th(\frac{x}{4}) \amp\leq C\frac{x}{2}\\
+\vdots\\
+\th(\frac{x}{2^{r}})- \th(\frac{x}{2^r+1}) \amp\leq C\frac{x}{2^{r}}
+\end{align*}
+</div>
+<div class="para">Adding these results in the inequality</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\th(x) - \th(\frac{x}{2^{r+1}}) \leq (1 + \frac{1}{2} + \ldots + \frac{1}{2^{r}})Cx \leq 2Cx,
+\end{equation*}
+</div>
+<div class="para">and so, noting that <span class="process-math">\(\th(\frac{x}{2^{r+1}}) \leq \th(x_0)\text{,}\)</span> we get</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\th(x) \leq 2Cx + \th(x_0),
+\end{equation*}
+</div>
+<div class="para">or in order notation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\th(x) = \mathrm{O}(x) \text{ as } x\to \infty
+\end{equation*}
+</div>
+<div class="para">as <span class="process-math">\(\th(x_0) = \mathrm{O}(1)\text{.}\)</span>
+</div>
+</div>
+<span class="incontext"><a href="section-15.html#p-225" class="internal">in-context</a></span>
+</body>
+</html>

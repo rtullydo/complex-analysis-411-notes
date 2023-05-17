@@ -2,9 +2,6 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2023-05-15T21:45:23-07:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -15,15 +12,23 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>The argument is combinatorial-esque. For <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> we have</p>
+<div class="para logical">
+<div class="para">The terms <span class="process-math">\(1/n^s - 1/x^s\)</span> themselves look like the output of a definite integral - indeed,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_n^x \frac{s}{u^{s+1}}\, dx = \frac{1}{n^s} - \frac{1}{x^s}.
+\end{equation*}
+</div>
+<div class="para">Then, invoking the ML inequality,</div>
 <div class="displaymath process-math">
 \begin{align*}
-2^{2n} = (1+1)^{2n} \amp= \binom{2n}{0} + \ldots \binom{2n}{2n} \\
-\amp\geq \binom{2n}{n}\\
-\amp\geq \prod_{n \leq p \leq 2n} p\\
-\amp= \exp(\th(2n) - \th(n)).
+\abs{ \int_n^{n+1} (\frac{1}{n^s} - \frac{1}{x^s})\, dx} \amp= \abs{s \int_n^{n+1} \int_n^x \frac{1}{u^{s+1}}\, du dx}\\
+\amp\leq \max_{n \leq u \leq n+1} \abs{\frac{s}{u^{s+1}}}\\
+\amp= \frac{\abs{s}}{n^{\RE s + 1}}.
 \end{align*}
 </div>
-<span class="incontext"><a href="section-15.html#p-222">in-context</a></span>
+<div class="para">Thus, while we defined the series for <span class="process-math">\(\RE s &gt; 1\text{,}\)</span> the terms of the series will converge absolutely for <span class="process-math">\(\RE s &gt; 0\text{,}\)</span> (for example by successive application of the <span class="process-math">\(M\)</span>-test on an appropriate family of half-disks).</div>
+</div>
+<span class="incontext"><a href="section-15.html#p-222" class="internal">in-context</a></span>
 </body>
 </html>

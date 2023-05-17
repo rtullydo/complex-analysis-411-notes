@@ -907,7 +907,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Prerequisites",
-  "body": " Prerequisites  Complex analysis  Let us begin with a very useful sort-of converse to the Cauchy-Goursat theorem   Cauchy-Goursat  Let be analytic on a simply connected domain . Then for any simple closed curve contained in .   Morera's theorem  Let be a continuous function defined on an open domain . If for every simple closed path contained in , then is analytic on .    Assume without loss of generality that the domain is connected (and so path-connected). Assume that satisifies the hypotheses of the theorem. We will construct an anti-derivative for , which will allow us to conclude that is analytic.  Pick a basepoint in , and for any other in , let be a simple path from to . Let be the function on given by  Note that this definition does not depend on the choice of path. Assume that is another path from to . Then, by hypothesis, which implies that .  Note futher that a different choice of basepoint (say ) causes the resulting function to differ from only by the constant where is any simple path from to . Thus, choice of basepoint does not affect the derivative.  It remains to show that . This boils down to a difference quotient argument. Consider for some small complex number . Then (The notation is justified by the path independence of integrals of .) Now, Since has path independent line integrals, choose the line segment between and . Since is continuous,  We conclude that is differentiable at and thus analytic at with derivative , which implies that is analytic. Since this holds for all , we conclude that is analytic on .   Morera's theorem is often used with weaker (equivalent) hypotheses - that is, we need only check that around the boundary of any closed triangle contained in .  Morera's theorem is the standard method used to prove that a constructed function is holomorphic. The theorem is used so often and so widely that it may sometimes be invoked without reference (though not in our case).  One nice immediate result that we get from Morera is parallel to the (fundamental) result from real analysis that uniform limits of continuous functions are continuous.   The uniform limit of a sequence of analytic functions is analytic.    Suppose that a sequence of analytic functions converges uniformly to a continuous limit function on an open disk. The Cauchy-Goursat theorem implies that, for all , for any simple closed curve contained in the disk. Using uniform converge to push the limit through the integral, we get for every simple closed curve in the disk, and so by Morera's theorem, must be analytic on the disk.  This result extends to domains, as we can recreate this argument in a neighborhood of any in .   Since we'll be considering functions defined as series, it will be useful to combine the results above with a test for uniform convergence called the Weierstrass M-test.  M-test  Supposet that is a sequence of functions on a common domain and that there exists a sequence of non-negative numbers satisfying  for all ;   .  Then converges absolutely and uniformly on .  out  Measure theory  To be rigorous about convergence, we're going to need some extremely useful tools from analysis. The discussion here will mostly bracket out proofs, which are typically done in a graduate course in real analysis.  A measure is a function that assigns a numerical value to a set. The idea comes from an effort to generalize the notion of the length of an interval. A brief overview of the setup follows. We have a set (for example, ), and we want to define a function (note the inclusion of ). It turns out that we can't measure every subset of (that darn axiom of choice). So we equip with a sort of topology called a -algebra consisting of so called measurable sets.   Given a set , a -algebra on is a non-empty collection of subsets of that is closed under complements, countable unions, and countable intersections.    Let be a set and a -algebra on . A set function is a measure if  For all , .  .  For all countable collections of pairwise disjoint sets,    One important example of a measure is Lebesgue measure , which directly generalizes the length of intervals. Lebesgue measure is usually defined on the Borel sets, which is the -algebra constructed by starting with the open intervals in and combining them in all ways to ensure that the conditions for a -algebra are met. Measures can be far stranger than Lebesgue measure. We're going to be using a set function that assigns the value 1 to each natural number, for example. This will let us use high powered theorems about convergence in integrals to the context of series. (A series really is nothing more than a discrete integral in this setting!)   "
+  "body": " Prerequisites  Complex analysis  Let us begin with a very useful sort-of converse to the Cauchy-Goursat theorem   Cauchy-Goursat  Let be analytic on a simply connected domain . Then for any simple closed curve contained in .   Morera's theorem  Let be a continuous function defined on an open domain . If for every simple closed path contained in , then is analytic on .    Assume without loss of generality that the domain is connected (and so path-connected). Assume that satisifies the hypotheses of the theorem. We will construct an anti-derivative for , which will allow us to conclude that is analytic.  Pick a basepoint in , and for any other in , let be a simple path from to . Let be the function on given by  Note that this definition does not depend on the choice of path. Assume that is another path from to . Then, by hypothesis, which implies that .  Note futher that a different choice of basepoint (say ) causes the resulting function to differ from only by the constant where is any simple path from to . Thus, choice of basepoint does not affect the derivative.  It remains to show that . This boils down to a difference quotient argument. Consider for some small complex number . Then (The notation is justified by the path independence of integrals of .) Now, Since has path independent line integrals, choose the line segment between and . Since is continuous,  We conclude that is differentiable at and thus analytic at with derivative , which implies that is analytic. Since this holds for all , we conclude that is analytic on .   Morera's theorem is often used with weaker (equivalent) hypotheses - that is, we need only check that around the boundary of any closed triangle contained in .  Morera's theorem is the standard method used to prove that a constructed function is holomorphic. The theorem is used so often and so widely that it may sometimes be invoked without reference (though not in our case).  One nice immediate result that we get from Morera is parallel to the (fundamental) result from real analysis that uniform limits of continuous functions are continuous.   The uniform limit of a sequence of analytic functions is analytic.    Suppose that a sequence of analytic functions converges uniformly to a continuous limit function on an open disk. The Cauchy-Goursat theorem implies that, for all , for any simple closed curve contained in the disk. Using uniform converge to push the limit through the integral, we get for every simple closed curve in the disk, and so by Morera's theorem, must be analytic on the disk.  This result extends to domains, as we can recreate this argument in a neighborhood of any in .   Since we'll be considering functions defined as series, it will be useful to combine the results above with a test for uniform convergence called the Weierstrass M-test.  M-test  Supposet that is a sequence of functions on a common domain and that there exists a sequence of non-negative numbers satisfying  for all ;   .  Then converges absolutely and uniformly on .  out  Measure theory  To be rigorous about convergence, we're going to need some extremely useful tools from analysis. The discussion here will mostly bracket out proofs, which are typically done in a graduate course in real analysis.  A measure is a function that assigns a numerical value to a set. The idea comes from an effort to generalize the notion of the length of an interval. A brief overview of the setup follows. We have a set (for example, ), and we want to define a function (note the inclusion of ). It turns out that we can't measure every subset of (that darn axiom of choice). So we equip with a sort of topology called a -algebra consisting of so called measurable sets.   Given a set , a -algebra on is a non-empty collection of subsets of that is closed under complements, countable unions, and countable intersections.    Let be a set and a -algebra on . A set function is a measure if  For all , .  .  For all countable collections of pairwise disjoint sets,    One important example of a measure is Lebesgue measure , which directly generalizes the length of intervals. Lebesgue measure is usually defined on the Borel sets , which is the -algebra constructed by starting with the open intervals in and combining them in all ways to ensure that the conditions for a -algebra are met. Measures can be far stranger than Lebesgue measure. The Dirac measure at , also called a point mass, is a measure that assigns a value of 1 to any set containing and otherwise.  To work with measures, we'll also need a family of compatible functions.   Suppose that is a set and is a -algebra on . A function is measurable if for every Borel set .   Measures allow a powerful generalization of integrals, replacing the familiar , which can be thought of as the length of a small interval, with . The essential approach is to approximate a function from below by step functions, which is called Lebesgue integration . That is, given a set , a -algebra , a measure (together called a measure space (X, ) and a function , any partition of by subsets of leads to the integral-ish sum You can view this as in the spirit of a Riemann sum - we're cutting up into pieces (but that need not be intervals) and under-estimating on those pieces. While this isn't strictly the area of a rectangle as in the Riemann case (as the can be very non-interval), the idea is similar.   When such a sum has a supremum over all -partitions of , we can define the integral of f with respect to by   Lebesgue measure gives rise to integrals that directly generalize the Riemann integral - that is, if a function is Riemann integrable, then it is Lebesgue integrable and the integrals agree. (Note: unlike some authors, I do not admit improper Riemann integrals into the class of Riemann integrable functions.)  A more interesting example is to consider the Dirac measure where . That is, if and otherwise. Notice that for any partition of , for exactly one . So and that the sup of these sums will be !. That is,   All this new machinery isn't much good if we don't get beefy new tools to work with. One of the big problems that Lebesgue integration is meant to solve is the failure in Riemann integration of being able to push limits inside integrals. In the Lebesgue setting, we have very powerful theorems describing when this can be done.  A sequence of functions is called increasing if for each , we have .  Monotone convergence theorem  Suppose that is a measure space and that is an increasing sequence of measurable functions. Define by Then   An even beefier theorem states that we can push limits into integrals when the sequence of functions is dominated by a function with bounded integral. Note: I'm not covering the leap to complex measures here, but one can imagine that a real-valued measure is a sum of two positive measures, and that a complex measure is a sum of real measures in the obvious way.  Dominated convergence theorem  Suppose that is a measure space and that is a sequence of complex-valued measurable functions. Suppose that converges pointwise to and that there exists a measurable function such that for all and all and Then is integrable and     "
 },
 {
   "id": "thm-cauchy-goursat",
@@ -1000,13 +1000,67 @@ var ptx_lunr_docs = [
   "body": "Lebesgue measure "
 },
 {
+  "id": "definition-6",
+  "level": "2",
+  "url": "section-13.html#definition-6",
+  "type": "Definition",
+  "number": "3.1.7",
+  "title": "",
+  "body": " Suppose that is a set and is a -algebra on . A function is measurable if for every Borel set .  "
+},
+{
+  "id": "p-161",
+  "level": "2",
+  "url": "section-13.html#p-161",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Lebesgue integration measure space "
+},
+{
+  "id": "definition-7",
+  "level": "2",
+  "url": "section-13.html#definition-7",
+  "type": "Definition",
+  "number": "3.1.8",
+  "title": "",
+  "body": " When such a sum has a supremum over all -partitions of , we can define the integral of f with respect to by  "
+},
+{
+  "id": "p-166",
+  "level": "2",
+  "url": "section-13.html#p-166",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "increasing "
+},
+{
+  "id": "thm-mct",
+  "level": "2",
+  "url": "section-13.html#thm-mct",
+  "type": "Theorem",
+  "number": "3.1.9",
+  "title": "Monotone convergence theorem.",
+  "body": "Monotone convergence theorem  Suppose that is a measure space and that is an increasing sequence of measurable functions. Define by Then  "
+},
+{
+  "id": "theorem-19",
+  "level": "2",
+  "url": "section-13.html#theorem-19",
+  "type": "Theorem",
+  "number": "3.1.10",
+  "title": "Dominated convergence theorem.",
+  "body": "Dominated convergence theorem  Suppose that is a measure space and that is a sequence of complex-valued measurable functions. Suppose that converges pointwise to and that there exists a measurable function such that for all and all and Then is integrable and   "
+},
+{
   "id": "section-14",
   "level": "1",
   "url": "section-14.html",
   "type": "Section",
   "number": "3.2",
   "title": "Infinite products and the zeta function",
-  "body": " Infinite products and the zeta function  The zeta function  Riemann zeta function  Let be a real number. Define the Riemann zeta function by   This is essentially taking the -series from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real via the integral test (exercise).   is holomorphic for .    First, note that for a positive real number and a complex power , note that  For , let be a complex number with . Consider the sequence of functions We have      By the Weierstrass -test , the series converges uniformly and absolutely to where .  Now note that each is analytic, and so each partial sum is analytic. So is a sequence of analytic functions converging uniformly to on . Then by , we conclude that is analytic on . Because was arbitrary, the results extend to all points in the halfplane .   In fact, we can say slightly more almost immediately. First, let's codify the result that we used in the proof of the theorem above.  Weierstrass theorem for series  Let be a sequence of holomorphic functions on a domain , and assume that converges uniformly on every closed and bounded subset of . Then  is holomorphic on .  For any , the series of th derivatives converges on and converges uniformly and absolutely on every closed and bounded subset of to the function . That is, the derivative of the limit is the limit of the derivatives.    Corollary to  For , and is holomorphic.   The first thing we might like to do is ask if we know the value of for any input points at all. The famous problem identified with the case where is called the Basel problem . Its solution will showcase some of the issues we face when dealing with the task of extending the zeta function off the natural domain.  Basel problem      First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper. To begin, Euler knew that and so He wants to factor this polynomial using the fundamental theorem of algebra as but he can't, as this has no hope of converging in the infinite product. Instead, he defines terms of the form - after all, these terms vanish at the same set of zeros. Making the rather large leap that the function is determined by its zeros and a single value (as in the case of a polynomial), Euler writes which at least has a shot of converging. He then notices that a pattern emerges as you start formally multiplying out this product. and He makes the leap that Now, still with the underlying assumption that all of this converges and makes sense, he compares the coefficients of in his two power series to get which is just  This argument raises serious questions. Among them  Is an analytic function determined uniquely by its zeros?  Does the fundamental theorem of algebra actually apply to infinite polynomials ?  What does it mean to converge as an infinite product?  The answers to these questions will be answered in the subsequent discussion.   Infinite products  Euler's solution to the Basel problem points out that we need to know something about convergence of infinite products. We'll start with real numbers and work up to the complex case. Given a sequence of real numbers, we can consider the sequence of partial products . Letting the sequence tend to infinity gives an infinite product (in the same way that an infinite sum is just a representation of a sequence of partial sums). The standard symbol used to denote an infinite product on the sequence is .We can likewise denote the th partial product by   An infinite product with no zero factors is convergent if and only if there exists some real number so that as . In this case, is the value of the product. If such , then diverges to 0. If there are infinitely many zero factors , then diverges to 0. If there are finitely many zero factors , then .   We can construct a theory of convergence entirely in terms of products, but it is more elegant for our needs to convert questions of convergence into equivalent questions about series via the logarithm (assuming positive terms or absolute value).   Let be a sequence of positive real numbers. Then the infinite product converges if and only if the series converges.    Apply the logarithm to the product. The series will converge if and only if the product does. Now note that (by L'Hospital or observation of the power series for ). If does not tend to zero, the sum, and thus the product, will diverge by the test for divergence. So assume . Then, as the limit comparison test gives that converges if and only if converges, which establishes the claim.   This result establishes, for example, the convergence of the -series-like products where . That is, infinite products converge when their factors tend quickly to 1 .  How do we take this and lift it to infinite products of complex numbers? We'll follow Tao here.  Absolutely convergent products  Let be a sequence of complex numbers so that . Then converges (absolutely). Furthermore, this product is zero if and only if one of the factors is zero.    Because converges, the test for divergence gives . Then there exists an so that the tail of the sequence is contained in the disk for . Factor the product into Convergence of the whole product will then be equivalent to convergence of . Because the tail is away from the origin, we can apply the standard branch of the complex logarithm, , on and write Now, Similarly to the argument in the previous proof, note that the power series for is , and so by the limit comparison test, is absolutely convergent. On application of the complex exponential, we conclude that converges to .   We also have the following product form of the Weierstrass -test to measure uniform convergence of products of functions.  -test, product form  Let be a set, and for all let be a bounded function. If for some finite we have then the partial products converge uniformly to on .    Product formula for the zeta function  We're now in position to connect the zeta function to the primes by way of the Euler product formula . First, let's recall the fundamental theorem of arithmetic.  Fundamental theorem of arithmetic  Every natural number has a unique representation as a product where the product is over the primes and the exponents , only finitely many of which are non-zero.   Product formula for .  For with , we have where the product is taken over the primes . This representation is absolutely convergent.    For each , we have which we can formally rearrange as  Now, we're going to build from the bottom. Given , let be the set of natural numbers with prime factorization containing primes no larger than and exponents no greater than . That is, has a representation and . The first observation to make is that as , .  The next step is a combinatorial observation. To illustrate, suppose that and . Then Now let , so that we're picking up numbers with in the prime factorization. Here's where we see the pattern we're interested in show up. If you see what's happening here, it shouldn't be hard to believe that for all .  Now, we'll take a look at what happens to this sum as . As , the first observation to make is that the sums by the geometric series formula.    "
+  "body": " Infinite products and the zeta function  The zeta function  Riemann zeta function  Let be a real number. Define the Riemann zeta function by   This is essentially taking the -series from calculus and turning it into a function using the power as a parameter. It isn't hard to see that this function will converge for real via the integral test (exercise).   is holomorphic for .    First, note that for a positive real number and a complex power , note that  For , let be a complex number with . Consider the sequence of functions We have      By the Weierstrass -test , the series converges uniformly and absolutely to where .  Now note that each is analytic, and so each partial sum is analytic. So is a sequence of analytic functions converging uniformly to on . Then by , we conclude that is analytic on . Because was arbitrary, the results extend to all points in the halfplane .   In fact, we can say slightly more almost immediately. First, let's codify the result that we used in the proof of the theorem above.  Weierstrass theorem for series  Let be a sequence of holomorphic functions on a domain , and assume that converges uniformly on every closed and bounded subset of . Then  is holomorphic on .  For any , the series of th derivatives converges on and converges uniformly and absolutely on every closed and bounded subset of to the function . That is, the derivative of the limit is the limit of the derivatives.    Corollary to  For , and is holomorphic.   The first thing we might like to do is ask if we know the value of for any input points at all. The famous problem identified with the case where is called the Basel problem . Its solution will showcase some of the issues we face when dealing with the task of extending the zeta function off the natural domain.  Basel problem      First, we'll show Euler's (ingenious but rather iffy) argument to highlight points where we need to drive deeper. To begin, Euler knew that and so He wants to factor this polynomial using the fundamental theorem of algebra as but he can't, as this has no hope of converging in the infinite product. Instead, he defines terms of the form - after all, these terms vanish at the same set of zeros. Making the rather large leap that the function is determined by its zeros and a single value (as in the case of a polynomial), Euler writes which at least has a shot of converging. He then notices that a pattern emerges as you start formally multiplying out this product. and He makes the leap that Now, still with the underlying assumption that all of this converges and makes sense, he compares the coefficients of in his two power series to get which is just  This argument raises serious questions. Among them  Is an analytic function determined uniquely by its zeros?  Does the fundamental theorem of algebra actually apply to infinite polynomials ?  What does it mean to converge as an infinite product?  The answers to these questions will be answered in the subsequent discussion.   Infinite products  Euler's solution to the Basel problem points out that we need to know something about convergence of infinite products. We'll start with real numbers and work up to the complex case. Given a sequence of real numbers, we can consider the sequence of partial products . Letting the sequence tend to infinity gives an infinite product (in the same way that an infinite sum is just a representation of a sequence of partial sums). The standard symbol used to denote an infinite product on the sequence is .We can likewise denote the th partial product by   An infinite product with no zero factors is convergent if and only if there exists some real number so that as . In this case, is the value of the product. If such , then diverges to 0. If there are infinitely many zero factors , then diverges to 0. If there are finitely many zero factors , then .   We can construct a theory of convergence entirely in terms of products, but it is more elegant for our needs to convert questions of convergence into equivalent questions about series via the logarithm (assuming positive terms or absolute value).   Let be a sequence of positive real numbers. Then the infinite product converges if and only if the series converges.    Apply the logarithm to the product. The series will converge if and only if the product does. Now note that (by L'Hospital or observation of the power series for ). If does not tend to zero, the sum, and thus the product, will diverge by the test for divergence. So assume . Then, as the limit comparison test gives that converges if and only if converges, which establishes the claim.   This result establishes, for example, the convergence of the -series-like products where . That is, infinite products converge when their factors tend quickly to 1 .  How do we take this and lift it to infinite products of complex numbers? We'll follow Tao here.  Absolutely convergent products  Let be a sequence of complex numbers so that . Then converges (absolutely). Furthermore, this product is zero if and only if one of the factors is zero.    Because converges, the test for divergence gives . Then there exists an so that the tail of the sequence is contained in the disk for . Factor the product into Convergence of the whole product will then be equivalent to convergence of . Because the tail is away from the origin, we can apply the standard branch of the complex logarithm, , on and write Now, Similarly to the argument in the previous proof, note that the power series for is , and so by the limit comparison test, is absolutely convergent. On application of the complex exponential, we conclude that converges to .   We also have the following product form of the Weierstrass -test to measure uniform convergence of products of functions.  -test, product form  Let be a set, and for all let be a bounded function. If for some finite we have then the partial products converge uniformly to on .    Product formula for the zeta function  We're now in position to connect the zeta function to the primes by way of the Euler product formula . First, let's recall the fundamental theorem of arithmetic.  Fundamental theorem of arithmetic  Every natural number has a unique representation as a product where the product is over the primes and the exponents , only finitely many of which are non-zero.   Product formula for .  For with , we have where the product is taken over the primes . This representation is absolutely convergent.    For each , we have which we can formally rearrange as  Now, we're going to build from the bottom. Given , let be the set of natural numbers with prime factorization containing primes no larger than and exponents no greater than . That is, has a representation and . The first observation to make is that as , .  The next step is a combinatorial observation. To illustrate, suppose that and . Then Now let , so that we're picking up numbers with in the prime factorization. Here's where we see the pattern we're interested in show up. If you see what's happening here, it shouldn't be hard to believe that for all .  Now, we'll take a look at what happens to this sum as . As , the first observation to make is that the sums by the geometric series formula. An application of the dominated convergence theorem (when ) to push the limit into the product (remember that products are essentially sums under the log and that sums are integrals!) gets us     Properties of the zeta function  We'll now begin looking at some properties of the zeta function. We'll collect some of our results from the earlier discussion here as well.  Properties of   (analytic) is an analytic function on .  (product formula) .  (zero-free region) has no zeros in .  (meromorphic continuation) has a unique meromorphic continuation to with a simple pole at and no other poles. Moreover, after removing the pole, is an entire function of order 1.  (functional equation)    Facts 1 and 2 were proved in the earlier discussion. Fact 3 follows from the product formula for , as the product is absolutely convergent and has no zero terms . Facts 4 and 5 are more difficult - we'll first look at their implications, and then try to figure out where the functional equation came from.  Let's calculate using the functional equation. If you want to dive into the chaos that this calculation unleashed a couple of years ago, you can look at this post by Terry Tao or this Mathologer video in response to this Numberphile video on the subject.  Our first discussion is about where the zeros of are. (Note that we're abusing notation and using to represent the continuation of to .) We can probe this using the functional equation. Remember that is a non-zero function with simple poles at and the negative integers. has simple zeros at all even integers, and we know that has only one pole, at . So consider the product The poles of , which happen when or are being canceled into removable singularities by corresponding zeros in the product, with the exception of . The poles at the even values of are being eaten by the simple zeros of , which leaves poles at that must be canceled by . But this forces to have simple zeros at , which corresponds to possessing simple zeros at . These are called the trivial zeros of .  The final subset of to consider the set , which is called the critical strip . Here too we analyze the implications of the functional equation. It isn't hard to see that if in the critical strip, then so too must - that is, the zeros in the critical strip are reflected across the line .  It might not be obvious, but the non-trivial zeros of have deep connections to other areas of mathematics. In fact, the main object of inquiry in our seminar, the prime number theorem, is essentially equivalent to a statement about the zeros of . The prime number theorem is a consequence of the fact that has no zeros on the line . We will prove this on our way to the prime number theorem itself.  This leads us to what is broadly considered the most important unsolved problem in mathematics. Every known zero of in the critical strip is actually on the line .  Riemann hypothesis  All nontrivial zeros of are in the line .   Given the connection between the zeros of and the prime number theorem, one might expect quite a number of results that would follow from the resolution of the Riemann hypothesis. An outstanding discussion of some consequences can be found in this mathoverflow post .   "
 },
 {
   "id": "def-zeta",
@@ -1036,9 +1090,9 @@ var ptx_lunr_docs = [
   "body": " First, note that for a positive real number and a complex power , note that  For , let be a complex number with . Consider the sequence of functions We have      By the Weierstrass -test , the series converges uniformly and absolutely to where .  Now note that each is analytic, and so each partial sum is analytic. So is a sequence of analytic functions converging uniformly to on . Then by , we conclude that is analytic on . Because was arbitrary, the results extend to all points in the halfplane .  "
 },
 {
-  "id": "theorem-19",
+  "id": "theorem-21",
   "level": "2",
-  "url": "section-14.html#theorem-19",
+  "url": "section-14.html#theorem-21",
   "type": "Theorem",
   "number": "3.2.3",
   "title": "Weierstrass theorem for series.",
@@ -1054,45 +1108,45 @@ var ptx_lunr_docs = [
   "body": "Corollary to  For , and is holomorphic.  "
 },
 {
-  "id": "p-168",
+  "id": "p-179",
   "level": "2",
-  "url": "section-14.html#p-168",
+  "url": "section-14.html#p-179",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Basel problem "
 },
 {
-  "id": "theorem-20",
+  "id": "theorem-22",
   "level": "2",
-  "url": "section-14.html#theorem-20",
+  "url": "section-14.html#theorem-22",
   "type": "Theorem",
   "number": "3.2.5",
   "title": "Basel problem.",
   "body": "Basel problem     "
 },
 {
-  "id": "p-172",
+  "id": "p-183",
   "level": "2",
-  "url": "section-14.html#p-172",
+  "url": "section-14.html#p-183",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "infinite product "
 },
 {
-  "id": "definition-7",
+  "id": "definition-9",
   "level": "2",
-  "url": "section-14.html#definition-7",
+  "url": "section-14.html#definition-9",
   "type": "Definition",
   "number": "3.2.6",
   "title": "",
   "body": " An infinite product with no zero factors is convergent if and only if there exists some real number so that as . In this case, is the value of the product. If such , then diverges to 0. If there are infinitely many zero factors , then diverges to 0. If there are finitely many zero factors , then .  "
 },
 {
-  "id": "theorem-21",
+  "id": "theorem-23",
   "level": "2",
-  "url": "section-14.html#theorem-21",
+  "url": "section-14.html#theorem-23",
   "type": "Theorem",
   "number": "3.2.7",
   "title": "",
@@ -1135,27 +1189,27 @@ var ptx_lunr_docs = [
   "body": "-test, product form  Let be a set, and for all let be a bounded function. If for some finite we have then the partial products converge uniformly to on .  "
 },
 {
-  "id": "p-183",
+  "id": "p-194",
   "level": "2",
-  "url": "section-14.html#p-183",
+  "url": "section-14.html#p-194",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Euler product formula "
 },
 {
-  "id": "theorem-23",
+  "id": "theorem-25",
   "level": "2",
-  "url": "section-14.html#theorem-23",
+  "url": "section-14.html#theorem-25",
   "type": "Theorem",
   "number": "3.2.10",
   "title": "Fundamental theorem of arithmetic.",
   "body": "Fundamental theorem of arithmetic  Every natural number has a unique representation as a product where the product is over the primes and the exponents , only finitely many of which are non-zero.  "
 },
 {
-  "id": "theorem-24",
+  "id": "theorem-26",
   "level": "2",
-  "url": "section-14.html#theorem-24",
+  "url": "section-14.html#theorem-26",
   "type": "Theorem",
   "number": "3.2.11",
   "title": "Product formula for <span class=\"process-math\">\\(\\zeta\\text{.}\\)<\/span>.",
@@ -1168,7 +1222,124 @@ var ptx_lunr_docs = [
   "type": "Proof",
   "number": "3.2.3.1",
   "title": "",
-  "body": " For each , we have which we can formally rearrange as  Now, we're going to build from the bottom. Given , let be the set of natural numbers with prime factorization containing primes no larger than and exponents no greater than . That is, has a representation and . The first observation to make is that as , .  The next step is a combinatorial observation. To illustrate, suppose that and . Then Now let , so that we're picking up numbers with in the prime factorization. Here's where we see the pattern we're interested in show up. If you see what's happening here, it shouldn't be hard to believe that for all .  Now, we'll take a look at what happens to this sum as . As , the first observation to make is that the sums by the geometric series formula.  "
+  "body": " For each , we have which we can formally rearrange as  Now, we're going to build from the bottom. Given , let be the set of natural numbers with prime factorization containing primes no larger than and exponents no greater than . That is, has a representation and . The first observation to make is that as , .  The next step is a combinatorial observation. To illustrate, suppose that and . Then Now let , so that we're picking up numbers with in the prime factorization. Here's where we see the pattern we're interested in show up. If you see what's happening here, it shouldn't be hard to believe that for all .  Now, we'll take a look at what happens to this sum as . As , the first observation to make is that the sums by the geometric series formula. An application of the dominated convergence theorem (when ) to push the limit into the product (remember that products are essentially sums under the log and that sums are integrals!) gets us   "
+},
+{
+  "id": "theorem-27",
+  "level": "2",
+  "url": "section-14.html#theorem-27",
+  "type": "Theorem",
+  "number": "3.2.12",
+  "title": "Properties of <span class=\"process-math\">\\(\\zeta\\)<\/span>.",
+  "body": "Properties of   (analytic) is an analytic function on .  (product formula) .  (zero-free region) has no zeros in .  (meromorphic continuation) has a unique meromorphic continuation to with a simple pole at and no other poles. Moreover, after removing the pole, is an entire function of order 1.  (functional equation)   "
+},
+{
+  "id": "p-205",
+  "level": "2",
+  "url": "section-14.html#p-205",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "trivial zeros "
+},
+{
+  "id": "p-206",
+  "level": "2",
+  "url": "section-14.html#p-206",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "critical strip "
+},
+{
+  "id": "conjecture-1",
+  "level": "2",
+  "url": "section-14.html#conjecture-1",
+  "type": "Conjecture",
+  "number": "3.2.13",
+  "title": "Riemann hypothesis.",
+  "body": "Riemann hypothesis  All nontrivial zeros of are in the line .  "
+},
+{
+  "id": "section-15",
+  "level": "1",
+  "url": "section-15.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "The prime number theorem",
+  "body": "The prime number theorem  Preliminaries  Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I'm referencing here is a very nice exposition of Newman's paper by D. Zagier. Tao's notes follow a similar line, but works through a different set of functions.   See: D.J Newman, Simple Analytic Proof of the Prime Number Theorem. Amer. Math. Monthly 87 (1980) D. Zagier. Newman's Short Proof of the Prime Number Theorem. Amer. Math. Monthly 104 (1997)  We aim to prove the following description of the asymptotic density of the primes in the integers. Let denote the number of primes less than or equal to . We will use the notation (that is, and are asymptotically equal) to mean . We will also use the order notation as to mean that there exists some so that for all sufficiently large . (Every order argument we make in this section will be at infinity, so we may sometimes just write .)  Prime number theorem     Let us introduce our dramatis personae. Our primary character is, of course, the zeta function From the logarithmic derivative ( ) of , we'll consider the function Finally, our asymptotic prime checking will be done by the function  Essentially, the argument goes by showing that there can be no zeros of on the line , and then using that fact to force an asymptotic estimate on . The steps to the proof are as follows:  Product formula Prove the product formula for for . That is,   Continuation across the critical strip Show that the function has an analytic continuation to .   Order asymptotic for Show that   No zeros on Show that and that  Integral estimate Show that   Exact asymptotic for Show that   Prime number theorem Conclude that    We will prove these as a series of theorems  Step 1: product formula  For ,    This theorem was proved in the earlier section.  Step II: continuation across the critical strip  The function analytically continues to the set .    The idea is to write the function as a power series and show that it converges absolutely by comparison. Both functions are analytic on , so we'll use that as a basis for our series. In order to leverage bounding in integral, note that we can write in a sort of continuous -series form via Then,   The terms themselves look like the output of a definite integral - indeed, Then, invoking the ML inequality, Thus, while we defined the series for , the terms of the series will converge absolutely for , (for example by successive application of the -test on an appropriate family of half-disks).   Step III: Order of  For ,     The argument is combinatorial-esque. For , we have  This implies that for any for all for some whose choice depends on . Now, given some large value of , consider the sequence . The corresponding inequalities are Adding these results in the inequality and so, noting that , we get or in order notation as .   We now arrive at the crucial step, which the assertion that has no zeros on the line .  Step IV: zeros of  on . Also, is holomorphic on .    Start with the assumption that . Now compute the logarithmic derivative of : This gives the identity Notice that the series on the right hand side converges for . From Step II above, we know that is holomorphic on , and so is meromorphic on with a simple pole at . Likewise, will be meromorphic with a pole at of order 2. Then is also a meromorphic function on with poles at and at the zeros of , which implies for , which is that we have a meromorphic extension of to with poles at and the zeros of .  Now let's analyze the zeros. First, because , we see that if is zero of then so is . Now let . If is a zero of of order , then for some holomorphic function that is non-zero near . Computing the logarithmic derivative gets us for some function holomorphic near . The function then has a simple pole at , and by the residue theorem   Now, consider and note that the terms are positive for . Then Multiplying this out gives From Part II, as noted above we have that is a simple pole of with residue 1, and so Then and so . As we intend to show that , we need more. So assume as well that has a zero at with order . (That is, we are admitting the possibility that there is no zero at those points.) Again, note that Then the same idea applied to produces the equation This requires that since . We have shown that if has a zero of the form , then it must have order 0, and hence not be a zero. That is, has no zeros on the line .  Finally, recall that the poles of are and the zeros of , none of which can lie on . If we trace through the form of from and the implications of Step II, we conclude that is holomorphic on .    "
+},
+{
+  "id": "theorem-28",
+  "level": "2",
+  "url": "section-15.html#theorem-28",
+  "type": "Theorem",
+  "number": "3.3.1",
+  "title": "Prime number theorem.",
+  "body": "Prime number theorem    "
+},
+{
+  "id": "theorem-29",
+  "level": "2",
+  "url": "section-15.html#theorem-29",
+  "type": "Theorem",
+  "number": "3.3.2",
+  "title": "Step 1: product formula.",
+  "body": "Step 1: product formula  For ,   "
+},
+{
+  "id": "theorem-30",
+  "level": "2",
+  "url": "section-15.html#theorem-30",
+  "type": "Theorem",
+  "number": "3.3.3",
+  "title": "Step II: continuation across the critical strip.",
+  "body": "Step II: continuation across the critical strip  The function analytically continues to the set .  "
+},
+{
+  "id": "proof-15",
+  "level": "2",
+  "url": "section-15.html#proof-15",
+  "type": "Proof",
+  "number": "3.3.1.1",
+  "title": "",
+  "body": " The idea is to write the function as a power series and show that it converges absolutely by comparison. Both functions are analytic on , so we'll use that as a basis for our series. In order to leverage bounding in integral, note that we can write in a sort of continuous -series form via Then,   The terms themselves look like the output of a definite integral - indeed, Then, invoking the ML inequality, Thus, while we defined the series for , the terms of the series will converge absolutely for , (for example by successive application of the -test on an appropriate family of half-disks).  "
+},
+{
+  "id": "theorem-31",
+  "level": "2",
+  "url": "section-15.html#theorem-31",
+  "type": "Theorem",
+  "number": "3.3.4",
+  "title": "Step III: Order of <span class=\"process-math\">\\(\\th\\)<\/span>.",
+  "body": "Step III: Order of  For ,   "
+},
+{
+  "id": "proof-16",
+  "level": "2",
+  "url": "section-15.html#proof-16",
+  "type": "Proof",
+  "number": "3.3.1.2",
+  "title": "",
+  "body": " The argument is combinatorial-esque. For , we have  This implies that for any for all for some whose choice depends on . Now, given some large value of , consider the sequence . The corresponding inequalities are Adding these results in the inequality and so, noting that , we get or in order notation as .  "
+},
+{
+  "id": "theorem-32",
+  "level": "2",
+  "url": "section-15.html#theorem-32",
+  "type": "Theorem",
+  "number": "3.3.5",
+  "title": "Step IV: zeros of <span class=\"process-math\">\\(\\zeta\\)<\/span>.",
+  "body": "Step IV: zeros of  on . Also, is holomorphic on .  "
+},
+{
+  "id": "proof-17",
+  "level": "2",
+  "url": "section-15.html#proof-17",
+  "type": "Proof",
+  "number": "3.3.1.3",
+  "title": "",
+  "body": " Start with the assumption that . Now compute the logarithmic derivative of : This gives the identity Notice that the series on the right hand side converges for . From Step II above, we know that is holomorphic on , and so is meromorphic on with a simple pole at . Likewise, will be meromorphic with a pole at of order 2. Then is also a meromorphic function on with poles at and at the zeros of , which implies for , which is that we have a meromorphic extension of to with poles at and the zeros of .  Now let's analyze the zeros. First, because , we see that if is zero of then so is . Now let . If is a zero of of order , then for some holomorphic function that is non-zero near . Computing the logarithmic derivative gets us for some function holomorphic near . The function then has a simple pole at , and by the residue theorem   Now, consider and note that the terms are positive for . Then Multiplying this out gives From Part II, as noted above we have that is a simple pole of with residue 1, and so Then and so . As we intend to show that , we need more. So assume as well that has a zero at with order . (That is, we are admitting the possibility that there is no zero at those points.) Again, note that Then the same idea applied to produces the equation This requires that since . We have shown that if has a zero of the form , then it must have order 0, and hence not be a zero. That is, has no zeros on the line .  Finally, recall that the poles of are and the zeros of , none of which can lie on . If we trace through the form of from and the implications of Step II, we conclude that is holomorphic on .  "
 }
 ]
 

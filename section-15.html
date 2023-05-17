@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2023-05-15T21:45:21-07:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,43 +14,172 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Notes on complex analysis">
 <meta property="book:author" content="Ryan Tully-Doyle">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\RE}{Re}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="comp411.html"><span class="title">Notes on complex analysis</span></a></h1>
+<p class="byline">Ryan Tully-Doyle</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-14.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-3.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\RE}{Re}
   \DeclareMathOperator{\IM}{Im}
   \DeclareMathOperator{\ess}{ess}
   \DeclareMathOperator{\intr}{int}
@@ -164,110 +290,154 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="comp411.html"><span class="title">Notes on complex analysis</span></a></h1>
-<p class="byline">Ryan Tully-Doyle</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-14.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-14.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a></li>
-<li class="link">
-<a href="chapter-1.html" data-scroll="chapter-1" class="internal"><span class="codenumber">1</span> <span class="title">Conformal maps and linear fractional transformations</span></a><ul>
-<li><a href="section-1.html" data-scroll="section-1" class="internal">Conformal maps</a></li>
-<li><a href="section-2.html" data-scroll="section-2" class="internal">Simply connected sets, boundaries, and the Riemann mapping theorem</a></li>
-<li><a href="section-3.html" data-scroll="section-3" class="internal">(optional) A proof of the Riemann Mapping Theorem</a></li>
-<li><a href="section-4.html" data-scroll="section-4" class="internal">Interlude: Liouville's Theorem</a></li>
-<li><a href="section-5.html" data-scroll="section-5" class="internal">Exercise set 1</a></li>
-<li><a href="section-6.html" data-scroll="section-6" class="internal">Linear fractional tranformations</a></li>
-<li><a href="section-7.html" data-scroll="section-7" class="internal">Exercises 2</a></li>
-<li><a href="section-8.html" data-scroll="section-8" class="internal">Reflection across a circle</a></li>
-<li><a href="section-9.html" data-scroll="section-9" class="internal">Conformal maps and harmonic equations</a></li>
-<li><a href="section-10.html" data-scroll="section-10" class="internal">Exercises 3</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="chapter-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Conformal maps and linear fractional transformations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Conformal maps</span></a></div></li>
+<li><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Simply connected sets, boundaries, and the Riemann mapping theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">(optional) A proof of the Riemann Mapping Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Interlude: Liouville's Theorem</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercise set 1</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-5.html#exercises-1" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-6.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Linear fractional tranformations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-7.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Exercises 2</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-7.html#exercises-2" class="internal"><span class="codenumber">1.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-8.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Reflection across a circle</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-9.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Conformal maps and harmonic equations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-9.html#subsection-1" class="internal"><span class="codenumber">1.9.1</span> <span class="title">Vector fields and harmonic functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-2" class="internal"><span class="codenumber">1.9.2</span> <span class="title">The Dirichlet problem on the disk</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-3" class="internal"><span class="codenumber">1.9.3</span> <span class="title">Neumann conditions</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-4" class="internal"><span class="codenumber">1.9.4</span> <span class="title">Standard solutions and conformal maps</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-5" class="internal"><span class="codenumber">1.9.5</span> <span class="title">Half plane solutions</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chapter-2.html" data-scroll="chapter-2" class="internal"><span class="codenumber">2</span> <span class="title">Special functions and analytic continuation</span></a><ul>
-<li><a href="section-11.html" data-scroll="section-11" class="internal">The Gamma Function</a></li>
-<li><a href="section-12.html" data-scroll="section-12" class="internal">Analytic continuation</a></li>
+<li>
+<div class="toc-item"><a href="section-10.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Exercises 3</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-10.html#exercises-3" class="internal"><span class="codenumber">1.10</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
-<li class="link">
-<a href="chapter-3.html" data-scroll="chapter-3" class="internal"><span class="codenumber">3</span> <span class="title">The prime number theorem</span></a><ul>
-<li><a href="section-13.html" data-scroll="section-13" class="internal">Prerequisites</a></li>
-<li><a href="section-14.html" data-scroll="section-14" class="internal">Infinite products and the zeta function</a></li>
-<li><a href="section-15.html" data-scroll="section-15" class="active">The prime number theorem</a></li>
+<li>
+<div class="toc-item"><a href="chapter-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Special functions and analytic continuation</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Gamma Function</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-11.html#subsection-6" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Interpolation</span></a></div></li>
+<li><div class="toc-item"><a href="section-11.html#subsection-7" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Gamma Function</span></a></div></li>
 </ul>
 </li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-15"><h2 class="heading hide-type">
+<li><div class="toc-item"><a href="section-12.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Analytic continuation</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-3.html" class="internal"><span class="codenumber">3</span> <span class="title">The prime number theorem</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-13.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Prerequisites</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-13.html#subsection-8" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Complex analysis</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-9" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Measure theory</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-14.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Infinite products and the zeta function</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-14.html#subsection-10" class="internal"><span class="codenumber">3.2.1</span> <span class="title">The zeta function</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#subsection-11" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Infinite products</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#subsection-12" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Product formula for the zeta function</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#subsection-13" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Properties of the zeta function</span></a></div></li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The prime number theorem</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-15.html#subsection-14" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Preliminaries</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-15"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">The prime number theorem</span>
 </h2>
 <section class="subsection" id="subsection-14"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">Preliminaries</span>
 </h3>
-<p id="p-211">Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I'm referencing here is "Newman's short proof of the prime number theorem", by D. Zagler, which appeared in the American Mathematical Monthly. Tao's notes follow a similar line, but works through a different set of functions. We aim to prove the following description of the asymptotic density of the primes in the integers. Let <span class="process-math">\(\pi(x)\)</span> denote the number of primes less than or equal to <span class="process-math">\(x\text{.}\)</span> We will use the notation <span class="process-math">\(f \sim g\)</span> (that is, <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are asymptotically equal) to mean <span class="process-math">\(\lim_{x \to \infty} f(x)/g(x) = 1\text{.}\)</span> We will also use the order notation <span class="process-math">\(g = \mathrm{O}(f)\)</span> as <span class="process-math">\(x \to \infty\)</span> to mean that there exists some <span class="process-math">\(C&gt;0\)</span> so that <span class="process-math">\(\abs{g(x)} \leq Cf(x)\)</span> for all sufficiently large <span class="process-math">\(x\text{.}\)</span> (Every order argument we make in this section will be at infinity, so we may sometimes just write <span class="process-math">\(g = \mathrm{O}(x)\text{.}\)</span>)</p>
+<div class="para" id="p-211">Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I'm referencing here is a very nice exposition of Newman's paper by D. Zagier. Tao's notes follow a similar line, but works through a different set of functions.</div>
+<aside class="aside aside-like" id="aside-2"><div class="para logical" id="p-212">
+<div class="para">See:</div>
+<ol class="decimal">
+<li id="li-38"><div class="para" id="p-derived-li-38">D.J Newman, Simple Analytic Proof of the Prime Number Theorem. <em class="emphasis">Amer. Math. Monthly</em> 87 (1980)</div></li>
+<li id="li-39"><div class="para" id="p-derived-li-39">D. Zagier. Newman's Short Proof of the Prime Number Theorem. <em class="emphasis">Amer. Math. Monthly</em> 104 (1997)</div></li>
+</ol>
+</div></aside><div class="para" id="p-213">We aim to prove the following description of the asymptotic density of the primes in the integers. Let <span class="process-math">\(\pi(x)\)</span> denote the number of primes less than or equal to <span class="process-math">\(x\text{.}\)</span> We will use the notation <span class="process-math">\(f \sim g\)</span> (that is, <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are asymptotically equal) to mean <span class="process-math">\(\lim_{x \to \infty} f(x)/g(x) = 1\text{.}\)</span> We will also use the order notation <span class="process-math">\(g = \mathrm{O}(f)\)</span> as <span class="process-math">\(x \to \infty\)</span> to mean that there exists some <span class="process-math">\(C&gt;0\)</span> so that <span class="process-math">\(\abs{g(x)} \leq Cf(x)\)</span> for all sufficiently large <span class="process-math">\(x\text{.}\)</span> (Every order argument we make in this section will be at infinity, so we may sometimes just write <span class="process-math">\(g = \mathrm{O}(x)\text{.}\)</span>)</div>
 <article class="theorem theorem-like" id="theorem-28"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Prime number theorem.</span>
 </h4>
-<div class="displaymath process-math" id="p-212">
+<div class="para logical" id="p-214"><div class="displaymath process-math">
 \begin{equation*}
 \pi(x) \sim \frac{\log x}{x}.
 \end{equation*}
-</div></article><p id="p-213">Let us introduce our dramatis personae. Our primary character is, of course, the zeta function</p>
+</div></div></article><div class="para logical" id="p-215">
+<div class="para">Let us introduce our dramatis personae. Our primary character is, of course, the zeta function</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}.
 \end{equation*}
 </div>
-<p class="continuation">From the logarithmic derivative (<span class="process-math">\(f\dd/f\)</span>) of <span class="process-math">\(\zeta\text{,}\)</span> we'll consider the function</p>
+<div class="para">From the logarithmic derivative (<span class="process-math">\(f\dd/f\)</span>) of <span class="process-math">\(\zeta\text{,}\)</span> we'll consider the function</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \Phi(s) = \sum_p \frac{\log p}{p^s}.
 \end{equation*}
 </div>
-<p class="continuation">Finally, our asymptotic prime checking will be done by the function</p>
+<div class="para">Finally, our asymptotic prime checking will be done by the function</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \th(s) = \sum_{p \leq x} \log p.
 \end{equation*}
 </div>
-<p id="p-214">Essentially, the argument goes by showing that there can be no zeros of <span class="process-math">\(\zeta\)</span> on the line <span class="process-math">\(\RE(s) = 1\text{,}\)</span> and then using that fact to force an asymptotic estimate on <span class="process-math">\(\th\text{.}\)</span> The steps to the proof are as follows:</p>
+</div>
+<div class="para logical" id="p-216">
+<div class="para">Essentially, the argument goes by showing that there can be no zeros of <span class="process-math">\(\zeta\)</span> on the line <span class="process-math">\(\RE(s) = 1\text{,}\)</span> and then using that fact to force an asymptotic estimate on <span class="process-math">\(\th\text{.}\)</span> The steps to the proof are as follows:</div>
 <ol class="decimal">
-<li id="li-38">
-<span class="heading"><span class="title">Product formula.</span></span><p id="p-derived-li-38"> Prove the product formula for <span class="process-math">\(\zeta\)</span> for <span class="process-math">\(\RE s &gt; 1\text{.}\)</span> That is,<div class="displaymath process-math">
+<li id="li-40">
+<span class="heading"><span class="title">Product formula.</span></span><div class="para" id="p-derived-li-40"> Prove the product formula for <span class="process-math">\(\zeta\)</span> for <span class="process-math">\(\RE s &gt; 1\text{.}\)</span> That is,<div class="displaymath process-math">
 \begin{equation*}
 \zeta(s) = \prod_{p} (1 - p^{-s})\inv.
 \end{equation*}
-</div></p>
+</div>
+</div>
 </li>
-<li id="li-39">
-<span class="heading"><span class="title">Continuation across the critical strip.</span></span><p id="p-derived-li-39"> Show that the function<div class="displaymath process-math">
+<li id="li-41">
+<span class="heading"><span class="title">Continuation across the critical strip.</span></span><div class="para" id="p-derived-li-41"> Show that the function<div class="displaymath process-math">
 \begin{equation*}
 \zeta(s) - \frac{1}{s -1}
 \end{equation*}
-</div>has an analytic continuation to <span class="process-math">\(\RE s &gt; 0\text{.}\)</span></p>
+</div>has an analytic continuation to <span class="process-math">\(\RE s &gt; 0\text{.}\)</span>
+</div>
 </li>
-<li id="li-40">
-<span class="heading"><span class="title">Order asymptotic for <span class="process-math">\(\th\)</span>.</span></span><p id="p-derived-li-40"> Show that<div class="displaymath process-math">
+<li id="li-42">
+<span class="heading"><span class="title">Order asymptotic for <span class="process-math">\(\th\)</span>.</span></span><div class="para" id="p-derived-li-42"> Show that<div class="displaymath process-math">
 \begin{equation*}
 \th(x) = \mathrm{O}(x).
 \end{equation*}
-</div></p>
+</div>
+</div>
 </li>
-<li id="li-41">
-<span class="heading"><span class="title">No zeros on <span class="process-math">\(\RE s = 1\)</span>.</span></span><p id="p-derived-li-41"> Show that<div class="displaymath process-math">
+<li id="li-43">
+<span class="heading"><span class="title">No zeros on <span class="process-math">\(\RE s = 1\)</span>.</span></span><div class="para" id="p-derived-li-43"> Show that<div class="displaymath process-math">
 \begin{equation*}
 \zeta(s) \neq 0 \text{ on } \RE s \geq 1
 \end{equation*}
@@ -275,87 +445,105 @@
 \begin{equation*}
 \Phi(s) - \frac{1}{s-1} \text{ is holomorphic on } \RE s \geq 1.
 \end{equation*}
-</div></p>
+</div>
+</div>
 </li>
-<li id="li-42">
-<span class="heading"><span class="title">Integral estimate.</span></span><p id="p-derived-li-42"> Show that<div class="displaymath process-math">
+<li id="li-44">
+<span class="heading"><span class="title">Integral estimate.</span></span><div class="para" id="p-derived-li-44"> Show that<div class="displaymath process-math">
 \begin{equation*}
 \int_1^\infty \frac{\th(x) - x}{x^2} \, dx \text{ converges.}
 \end{equation*}
-</div></p>
+</div>
+</div>
 </li>
-<li id="li-43">
-<span class="heading"><span class="title">Exact asymptotic for <span class="process-math">\(\th\)</span>.</span></span><p id="p-derived-li-43"> Show that<div class="displaymath process-math">
+<li id="li-45">
+<span class="heading"><span class="title">Exact asymptotic for <span class="process-math">\(\th\)</span>.</span></span><div class="para" id="p-derived-li-45"> Show that<div class="displaymath process-math">
 \begin{equation*}
 \th(x) \sim x.
 \end{equation*}
-</div></p>
+</div>
+</div>
 </li>
-<li id="li-44">
-<span class="heading"><span class="title">Prime number theorem.</span></span><p id="p-derived-li-44"> Conclude that<div class="displaymath process-math">
+<li id="li-46">
+<span class="heading"><span class="title">Prime number theorem.</span></span><div class="para" id="p-derived-li-46"> Conclude that<div class="displaymath process-math">
 \begin{equation*}
 \pi(x) \sim \frac{x}{\log x}.
 \end{equation*}
-</div></p>
+</div>
+</div>
 </li>
 </ol>
-<p id="p-215">We will prove these as a series of theorems</p>
+</div>
+<div class="para" id="p-217">We will prove these as a series of theorems</div>
 <article class="theorem theorem-like" id="theorem-29"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Step 1: product formula.</span>
 </h4>
-<p id="p-216">For <span class="process-math">\(\RE s &gt; 1\text{,}\)</span></p>
+<div class="para logical" id="p-218">
+<div class="para">For <span class="process-math">\(\RE s &gt; 1\text{,}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s} = \prod_{p} (1 - p^{-s})\inv.
 \end{equation*}
-</div></article><p id="p-217">This theorem was proved in the earlier section.</p>
+</div>
+</div></article><div class="para" id="p-219">This theorem was proved in the earlier section.</div>
 <article class="theorem theorem-like" id="theorem-30"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Step II: continuation across the critical strip.</span>
 </h4>
-<p id="p-218">The function</p>
+<div class="para logical" id="p-220">
+<div class="para">The function</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \zeta(s) - \frac{1}{s-1}
 \end{equation*}
 </div>
-<p class="continuation">analytically continues to the set <span class="process-math">\(\RE s &gt; 0\text{.}\)</span></p></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><p id="p-219">The idea is to write the function as a power series and show that it converges absolutely by comparison. Both functions are analytic on <span class="process-math">\(\RE s &gt; 1\text{,}\)</span> so we'll use that as a basis for our series. In order to leverage bounding in integral, note that we can write <span class="process-math">\(1/(s-1)\)</span> in a sort of continuous <span class="process-math">\(p\)</span>-series form via</p>
+<div class="para">analytically continues to the set <span class="process-math">\(\RE s &gt; 0\text{.}\)</span>
+</div>
+</div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><div class="para logical" id="p-221">
+<div class="para">The idea is to write the function as a power series and show that it converges absolutely by comparison. Both functions are analytic on <span class="process-math">\(\RE s &gt; 1\text{,}\)</span> so we'll use that as a basis for our series. In order to leverage bounding in integral, note that we can write <span class="process-math">\(1/(s-1)\)</span> in a sort of continuous <span class="process-math">\(p\)</span>-series form via</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{1}{s-1} = \int_1^\infty \frac{1}{x^s}\, dx.
 \end{equation*}
 </div>
-<p class="continuation">Then,</p>
-<div class="displaymath process-math">
+<div class="para">Then,</div>
+<div class="displaymath process-math" id="md-9">
 \begin{align*}
 \zeta(s) - \frac{1}{s-1} \amp= \sum_{n=1}^\infty \frac{1}{n^s} - \int_1^\infty \frac{1}{x^s}\, dx\\
 \amp= \sum_{n=1}^\infty \int_n^{n+1} (\frac{1}{n^s} - \frac{1}{x^s})\, dx.
 \end{align*}
 </div>
-<p id="p-220">The terms <span class="process-math">\(1/n^s - 1/x^s\)</span> themselves look like the output of a definite integral - indeed,</p>
+</div> <div class="para logical" id="p-222">
+<div class="para">The terms <span class="process-math">\(1/n^s - 1/x^s\)</span> themselves look like the output of a definite integral - indeed,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_n^x \frac{s}{u^{s+1}}\, dx = \frac{1}{n^s} - \frac{1}{x^s}.
 \end{equation*}
 </div>
-<p class="continuation">Then, invoking the ML inequality,</p>
-<div class="displaymath process-math">
+<div class="para">Then, invoking the ML inequality,</div>
+<div class="displaymath process-math" id="md-10">
 \begin{align*}
 \abs{ \int_n^{n+1} (\frac{1}{n^s} - \frac{1}{x^s})\, dx} \amp= \abs{s \int_n^{n+1} \int_n^x \frac{1}{u^{s+1}}\, du dx}\\
 \amp\leq \max_{n \leq u \leq n+1} \abs{\frac{s}{u^{s+1}}}\\
 \amp= \frac{\abs{s}}{n^{\RE s + 1}}.
 \end{align*}
 </div>
-<p class="continuation">Thus, while we defined the series for <span class="process-math">\(\RE s &gt; 1\text{,}\)</span> the terms of the series will converge absolutely for <span class="process-math">\(\RE s &gt; 0\text{,}\)</span> (for example by successive application of the <span class="process-math">\(M\)</span>-test on the strips <span class="process-math">\(1/N \leq \RE s \leq N\)</span>) which gives the desired continuation.</p></article></div>
+<div class="para">Thus, while we defined the series for <span class="process-math">\(\RE s &gt; 1\text{,}\)</span> the terms of the series will converge absolutely for <span class="process-math">\(\RE s &gt; 0\text{,}\)</span> (for example by successive application of the <span class="process-math">\(M\)</span>-test on an appropriate family of half-disks).</div>
+</div></article></div>
 <article class="theorem theorem-like" id="theorem-31"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Step III: Order of <span class="process-math">\(\th\)</span>.</span>
 </h4>
-<p id="p-221">For <span class="process-math">\(x \to \infty\text{,}\)</span></p>
+<div class="para logical" id="p-223">
+<div class="para">For <span class="process-math">\(x \to \infty\text{,}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \th(x) = \sum_{p \leq x} \log p = \mathrm{O}(x).
 \end{equation*}
-</div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><p id="p-222">The argument is combinatorial-esque. For <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> we have</p>
-<div class="displaymath process-math">
+</div>
+</div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof"><div class="para logical" id="p-224">
+<div class="para">The argument is combinatorial-esque. For <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="md-11">
 \begin{align*}
 2^{2n} = (1+1)^{2n} \amp= \binom{2n}{0} + \ldots \binom{2n}{2n} \\
 \amp\geq \binom{2n}{n}\\
@@ -363,20 +551,21 @@
 \amp= \exp(\th(2n) - \th(n)).
 \end{align*}
 </div>
-<p id="p-223">This implies that</p>
+</div> <div class="para logical" id="p-225">
+<div class="para">This implies that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \th(x) - \th(\frac{x}{2}) \leq C x
 \end{equation*}
 </div>
-<p class="continuation">for any <span class="process-math">\(C &gt; \log 2\)</span> for all <span class="process-math">\(x &gt; x_0\)</span> for some <span class="process-math">\(x_0\)</span> whose choice depends on <span class="process-math">\(C\text{.}\)</span> Now, given some large value of <span class="process-math">\(x\text{,}\)</span> consider the sequence</p>
+<div class="para">for any <span class="process-math">\(C &gt; \log 2\)</span> for all <span class="process-math">\(x &gt; x_0\)</span> for some <span class="process-math">\(x_0\)</span> whose choice depends on <span class="process-math">\(C\text{.}\)</span> Now, given some large value of <span class="process-math">\(x\text{,}\)</span> consider the sequence</div>
 <div class="displaymath process-math">
 \begin{equation*}
 x, \frac{x}{2}, \frac{x}{4}, \ldots, \frac{x}{2^r} \geq x_0 \geq \frac{x}{2^{r+1}}.\text{.}
 \end{equation*}
 </div>
-<p class="continuation">The corresponding inequalities are</p>
-<div class="displaymath process-math">
+<div class="para">The corresponding inequalities are</div>
+<div class="displaymath process-math" id="md-12">
 \begin{align*}
 \th(x) - \th(\frac{x}{2}) \amp\leq Cx\\
 \th(\frac{x}{2}) - \th(\frac{x}{4}) \amp\leq C\frac{x}{2}\\
@@ -384,25 +573,142 @@ x, \frac{x}{2}, \frac{x}{4}, \ldots, \frac{x}{2^r} \geq x_0 \geq \frac{x}{2^{r+1
 \th(\frac{x}{2^{r}})- \th(\frac{x}{2^r+1}) \amp\leq C\frac{x}{2^{r}}
 \end{align*}
 </div>
-<p class="continuation">Adding these results in the inequality</p>
+<div class="para">Adding these results in the inequality</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \th(x) - \th(\frac{x}{2^{r+1}}) \leq (1 + \frac{1}{2} + \ldots + \frac{1}{2^{r}})Cx \leq 2Cx,
 \end{equation*}
 </div>
-<p class="continuation">and so, noting that <span class="process-math">\(\th(\frac{x}{2^{r+1}}) \leq \th(x_0)\text{,}\)</span> we get</p>
+<div class="para">and so, noting that <span class="process-math">\(\th(\frac{x}{2^{r+1}}) \leq \th(x_0)\text{,}\)</span> we get</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \th(x) \leq 2Cx + \th(x_0),
 \end{equation*}
 </div>
-<p class="continuation">or in order notation</p>
+<div class="para">or in order notation</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \th(x) = \mathrm{O}(x) \text{ as } x\to \infty
 \end{equation*}
 </div>
-<p class="continuation">as <span class="process-math">\(\th(x_0) = \mathrm{O}(1)\text{.}\)</span></p></article></div></section></section></div></main>
+<div class="para">as <span class="process-math">\(\th(x_0) = \mathrm{O}(1)\text{.}\)</span>
+</div>
+</div></article></div>
+<div class="para" id="p-226">We now arrive at the crucial step, which the assertion that <span class="process-math">\(\zeta\)</span> has no zeros on the line <span class="process-math">\(\RE s = 1\text{.}\)</span>
+</div>
+<article class="theorem theorem-like" id="theorem-32"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Step IV: zeros of <span class="process-math">\(\zeta\)</span>.</span>
+</h4>
+<div class="para" id="p-227">
+<span class="process-math">\(\zeta(s) \neq 0\)</span> on <span class="process-math">\(\RE s \geq 1\text{.}\)</span> Also, <span class="process-math">\(\Phi(s) - 1/(s-1)\)</span> is holomorphic on <span class="process-math">\(\RE s \geq 1\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof"><div class="para logical" id="p-228">
+<div class="para">Start with the assumption that <span class="process-math">\(\RE s &gt; 1\text{.}\)</span> Now compute the logarithmic derivative of <span class="process-math">\(\zeta\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="md-13">
+\begin{align*}
+\frac{\zeta\dd}{\zeta} \amp= \frac{d}{ds} \log \zeta(s) = \frac{d}{ds} \log \prod_p (1 - p^{-s})\inv\\
+\amp= \frac{d}{ds} \sum_p \log (1-p^{-s})\inv\\
+\amp= -\sum_p \frac{d}{ds} \log (1-p^{-s})\\
+\amp= -\sum_p \frac{\log p} {p^s(1-p^{-s})}\\
+\amp= -(\sum_p \frac{\log p}{p^s} + \sum_p \frac{\log p}{p^s(p^s - 1)}).\\
+\amp= -(\Phi(s) + \sum_p \frac{\log p}{p^s(p^s - 1)})
+\end{align*}
+</div>
+<div class="para">This gives the identity</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{\zeta\dd}{\zeta} = \Phi(s) + \sum_p\frac{\log p}{p^s(p^s - 1)}.
+\end{equation*}
+</div>
+<div class="para">Notice that the series on the right hand side converges for <span class="process-math">\(\RE s &gt; \frac{1}{2}\text{.}\)</span> From Step II above, we know that <span class="process-math">\(\zeta - \frac{1}{s-1}\)</span> is holomorphic on <span class="process-math">\(\RE s &gt; 0\text{,}\)</span> and so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\zeta = (\zeta -\frac{1}{s-1}) + \frac{1}{s-1}
+\end{equation*}
+</div>
+<div class="para">is meromorphic on <span class="process-math">\(\RE s \geq 0\)</span> with a simple pole at <span class="process-math">\(s = 1\text{.}\)</span> Likewise, <span class="process-math">\(\zeta\dd\)</span> will be meromorphic with a pole at <span class="process-math">\(s = 1\)</span> of order 2. Then <span class="process-math">\(\zeta\dd/\zeta\)</span> is also a meromorphic function on <span class="process-math">\(\RE s &gt; 0\)</span> with poles at <span class="process-math">\(s = 1\)</span> and at the zeros of <span class="process-math">\(\zeta\text{,}\)</span> which implies for <span class="process-math">\(\Phi\text{,}\)</span> which is</div>
+<div class="displaymath process-math" id="eq-phiform">
+\begin{equation}
+\Phi = -\frac{\zeta\dd}{\zeta} -  \sum_p\frac{\log p}{p^s(p^s - 1)},\tag{3.3.1}
+\end{equation}
+</div>
+<div class="para">that we have a meromorphic extension of <span class="process-math">\(\Phi\)</span> to <span class="process-math">\(\RE s &gt; \frac{1}{2}\)</span> with poles at <span class="process-math">\(s = 1\)</span> and the zeros of <span class="process-math">\(\zeta\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="p-229">
+<div class="para">Now let's analyze the zeros. First, because <span class="process-math">\(\zeta(s) = \cc{\zeta(\cc s)}\text{,}\)</span> we see that if <span class="process-math">\(s\)</span> is zero of <span class="process-math">\(\zeta\)</span> then so is <span class="process-math">\(\cc{s}\text{.}\)</span> Now let <span class="process-math">\(a\in \R\text{.}\)</span> If <span class="process-math">\(s_0 = 1 + ia\)</span> is a zero of <span class="process-math">\(\zeta\)</span> of order <span class="process-math">\(\mu \geq 0\text{,}\)</span> then <span class="process-math">\(\zeta = (s - s_0)^\mu h(s)\)</span> for some holomorphic function <span class="process-math">\(h\)</span> that is non-zero near <span class="process-math">\(s_0\text{.}\)</span> Computing the logarithmic derivative gets us</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{\zeta\dd}{\zeta} = -\frac{\mu}{s - s_0} + H(s)
+\end{equation*}
+</div>
+<div class="para">for some function <span class="process-math">\(H = \log h\)</span> holomorphic near <span class="process-math">\(s_0\text{.}\)</span> The function <span class="process-math">\(\Phi(s_0 + \eps)\)</span> then has a simple pole at <span class="process-math">\(\eps = 0\text{,}\)</span> and by the residue theorem</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{\eps \to 0} \eps \Phi(1 + \eps + ia) = -\mu.
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-230">
+<div class="para">Now, consider</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Phi(1+\eps) = \sum_p \frac{\log p}{p^{1 + \eps}},
+\end{equation*}
+</div>
+<div class="para">and note that the terms are positive for <span class="process-math">\(\eps &gt; 0\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_p \frac{\log p}{p^{1 + \eps}}(p^{\frac{ia}{2}} + p^{\frac{-ia}{2}})^2 \geq 0.
+\end{equation*}
+</div>
+<div class="para">Multiplying this out gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Phi(1 + \eps -ia) + 2\Phi(1 + \eps) + \Phi(1 + \eps + ia) \geq 0.
+\end{equation*}
+</div>
+<div class="para">From Part II, as noted above we have that <span class="process-math">\(s = 1\)</span> is a simple pole of <span class="process-math">\(-\zeta\dd/\zeta\)</span> with residue 1, and so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{\eps \to 0} \eps \Phi(1_+ \eps) = 1.
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math" id="md-14">
+\begin{align*}
+\amp\lim_{\eps \to 0} \eps(\Phi(1 + \eps -ia) + 2\Phi(1 + \eps) + \Phi(1 + \eps + ia))\\
+\amp= -2\mu + 2 \geq 0
+\end{align*}
+</div>
+<div class="para">and so <span class="process-math">\(0 \leq \mu \leq 1\text{.}\)</span> As we intend to show that <span class="process-math">\(\mu = 0\text{,}\)</span> we need more. So assume as well that <span class="process-math">\(\zeta\)</span> has a zero at <span class="process-math">\(s_1 = 1 \pm i2a\)</span> with order <span class="process-math">\(\nu \geq 0\text{.}\)</span> (That is, we are admitting the possibility that there is no zero at those points.) Again, note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{\eps \to 0} \eps \Phi(1 + \eps \pm i2a) = -\nu.
+\end{equation*}
+</div>
+<div class="para">Then the same idea applied to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_p \frac{\log p}{p^{1 + \eps}}(p^{\frac{ia}{2}} + p^{\frac{-ia}{2}})^4 \geq 0
+\end{equation*}
+</div>
+<div class="para">produces the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+6 - 8 \mu - 2 \nu \geq 0.
+\end{equation*}
+</div>
+<div class="para">This requires that <span class="process-math">\(\mu = 0\)</span> since <span class="process-math">\(\mu, \nu \geq 0\text{.}\)</span> We have shown that if <span class="process-math">\(\zeta\)</span> has a zero of the form <span class="process-math">\(s_0 = 1 + ia\text{,}\)</span> then it must have order 0, and hence not be a zero. That is, <span class="process-math">\(\zeta\)</span> has no zeros on the line <span class="process-math">\(\RE s &gt; 1\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-231">Finally, recall that the poles of <span class="process-math">\(\Phi\)</span> are <span class="process-math">\(s = 1\)</span> and the zeros of <span class="process-math">\(\zeta\text{,}\)</span> none of which can lie on <span class="process-math">\(\RE s = 1\text{.}\)</span> If we trace through the form of <span class="process-math">\(\Phi\)</span> from <a href="" class="xref" data-knowl="./knowl/eq-phiform.html" title="Equation 3.3.1">(3.3.1)</a> and the implications of Step II, we conclude that <span class="process-math">\(\Phi - \frac{1}{s-1}\)</span> is holomorphic on <span class="process-math">\(\RE s \geq 1\text{.}\)</span>
+</div></article></div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-14.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>

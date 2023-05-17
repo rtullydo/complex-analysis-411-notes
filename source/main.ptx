@@ -1410,7 +1410,11 @@
 
         <section><title>The prime number theorem</title>
             <subsection><title>Preliminaries</title>
-            <p>Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I'm referencing here is "Newman's short proof of the prime number theorem", by D. Zagler, which appeared in the American Mathematical Monthly. Tao's notes follow a similar line, but works through a different set of functions. We aim to prove the following description of the asymptotic density of the primes in the integers. Let <m>\pi(x)</m> denote the number of primes less than or equal to <m>x</m>. We will use the notation <m>f \sim g</m> (that is, <m>f</m> and <m>g</m> are asymptotically equal) to mean <m>\lim_{x \to \infty} f(x)/g(x) = 1</m>. We will also use the order notation <m>g = \mathrm{O}(f)</m> as <m>x \to \infty</m> to mean that there exists some <m>C>0</m> so that <m>\abs{g(x)} \leq Cf(x)</m> for all sufficiently large <m>x</m>. (Every order argument we make in this section will be at infinity, so we may sometimes just write <m>g = \mathrm{O}(x)</m>.)  </p>
+            <p>Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I'm referencing here is a very nice exposition of Newman's paper by D. Zagier. Tao's notes follow a similar line, but works through a different set of functions. </p>
+            <aside>
+                <p>See: <ol><li>D.J Newman, Simple Analytic Proof of the Prime Number Theorem. <em>Amer. Math. Monthly</em> 87 (1980)</li><li>D. Zagier. Newman's Short Proof of the Prime Number Theorem. <em>Amer. Math. Monthly</em> 104 (1997)</li></ol></p></aside> 
+
+            <p>We aim to prove the following description of the asymptotic density of the primes in the integers. Let <m>\pi(x)</m> denote the number of primes less than or equal to <m>x</m>. We will use the notation <m>f \sim g</m> (that is, <m>f</m> and <m>g</m> are asymptotically equal) to mean <m>\lim_{x \to \infty} f(x)/g(x) = 1</m>. We will also use the order notation <m>g = \mathrm{O}(f)</m> as <m>x \to \infty</m> to mean that there exists some <m>C>0</m> so that <m>\abs{g(x)} \leq Cf(x)</m> for all sufficiently large <m>x</m>. (Every order argument we make in this section will be at infinity, so we may sometimes just write <m>g = \mathrm{O}(x)</m>.)  </p>
 
             <theorem><title>Prime number theorem</title>
             <p>
@@ -1511,7 +1515,7 @@
                         <mrow>\amp\leq \max_{n \leq u \leq n+1} \abs{\frac{s}{u^{s+1}}}</mrow>
                         <mrow>\amp= \frac{\abs{s}}{n^{\RE s + 1}}.</mrow>
                     </md>
-                   Thus, while we defined the series for <m>\RE s > 1</m>, the terms of the series will converge absolutely for <m>\RE s > 0</m>, (for example by successive application of the <m>M</m>-test on the strips <m>1/N \leq \RE s \leq N</m>) which gives the desired continuation.</p>
+                   Thus, while we defined the series for <m>\RE s > 1</m>, the terms of the series will converge absolutely for <m>\RE s > 0</m>, (for example by successive application of the <m>M</m>-test on an appropriate family of half-disks).</p>
                 </proof>
 
                 <theorem><title>Step III: Order of <m>\th</m></title>
@@ -1555,6 +1559,83 @@
                         </me>
                         or in order notation 
                         <me>\th(x) = \mathrm{O}(x) \text{ as } x\to \infty</me> as <m>\th(x_0) = \mathrm{O}(1)</m>.</p>
+                    </proof>
+
+                    <p>We now arrive at the crucial step, which the assertion that <m>\zeta</m> has no zeros on the line <m>\RE s = 1</m>.</p>
+
+                    <theorem><title>Step IV: zeros of <m>\zeta</m></title>
+                        <p><m>\zeta(s) \neq 0</m> on <m>\RE s \geq 1</m>. Also, <m>\Phi(s) - 1/(s-1)</m> is holomorphic on <m>\RE s \geq 1</m>.</p>
+                    </theorem>
+                    <proof>
+                        <p> Start with the assumption that <m>\RE s > 1</m>. Now compute the logarithmic derivative of <m>\zeta</m>:
+                        <md>
+                            <mrow> \frac{\zeta\dd}{\zeta} \amp= \frac{d}{ds} \log \zeta(s) = \frac{d}{ds} \log \prod_p (1 - p^{-s})\inv</mrow>
+                            <mrow>\amp= \frac{d}{ds} \sum_p \log (1-p^{-s})\inv</mrow>
+                            <mrow>\amp= -\sum_p \frac{d}{ds} \log (1-p^{-s})</mrow>
+                            <mrow>\amp= -\sum_p \frac{\log p} {p^s(1-p^{-s})}</mrow>
+                            <mrow>\amp= -(\sum_p \frac{\log p}{p^s} + \sum_p \frac{\log p}{p^s(p^s - 1)}).</mrow>
+                            <mrow>\amp= -(\Phi(s) + \sum_p \frac{\log p}{p^s(p^s - 1)})</mrow>
+                        </md>
+                        This gives the identity
+                        <me>
+                            -\frac{\zeta\dd}{\zeta} = \Phi(s) + \sum_p\frac{\log p}{p^s(p^s - 1)}.
+                        </me>
+                        Notice that the series on the right hand side converges for <m>\RE s > \frac{1}{2}</m>. From Step II above, we know that <m>\zeta - \frac{1}{s-1}</m> is holomorphic on <m>\RE s > 0</m>, and so 
+                        <me>
+                            \zeta = (\zeta -\frac{1}{s-1}) + \frac{1}{s-1}
+                        </me>
+                        is meromorphic on <m>\RE s \geq 0</m> with a simple pole at <m>s = 1</m>. Likewise, <m>\zeta\dd</m> will be meromorphic with a pole at <m>s = 1</m> of order 2. Then <m>\zeta\dd/\zeta</m> is also a meromorphic function on <m>\RE s > 0</m> with poles at <m>s = 1</m> and at the zeros of <m>\zeta</m>, which implies for <m>\Phi</m>, which is
+                        <men xml:id="eq-phiform">
+                            \Phi = -\frac{\zeta\dd}{\zeta} -  \sum_p\frac{\log p}{p^s(p^s - 1)},
+                        </men>
+                        that we have a meromorphic extension of <m>\Phi</m> to <m>\RE s > \frac{1}{2}</m> with poles at <m>s = 1</m> and the zeros of <m>\zeta</m>.</p>
+
+                        <p>Now let's analyze the zeros. First, because <m>\zeta(s) = \cc{\zeta(\cc s)}</m>, we see that if <m>s</m> is zero of <m>\zeta</m> then so is <m>\cc{s}</m>. Now let <m>a\in \R</m>. If <m>s_0 = 1 + ia</m> is a zero of <m>\zeta</m> of order <m>\mu \geq 0</m>, then <m>\zeta = (s - s_0)^\mu h(s)</m> for some holomorphic function <m>h</m> that is non-zero near <m>s_0</m>. Computing the logarithmic derivative gets us
+                        <me>
+                            -\frac{\zeta\dd}{\zeta} = -\frac{\mu}{s - s_0} + H(s)
+                        </me>
+                        for some function <m>H = \log h</m> holomorphic near <m>s_0</m>. The function <m>\Phi(s_0 + \eps)</m> then has a simple pole at <m>\eps = 0</m>, and by the residue theorem
+                        <me>
+                            \lim_{\eps \to 0} \eps \Phi(1 + \eps + ia) = -\mu.
+                        </me> </p>
+
+                        <p>Now, consider 
+                            <me>
+                                \Phi(1+\eps) = \sum_p \frac{\log p}{p^{1 + \eps}},
+                            </me>
+                            and note that the terms are positive for <m>\eps > 0</m>. Then
+                            <me>
+                                \sum_p \frac{\log p}{p^{1 + \eps}}(p^{\frac{ia}{2}} + p^{\frac{-ia}{2}})^2 \geq 0.
+                            </me>
+                            Multiplying this out gives
+                            <me>
+                                \Phi(1 + \eps -ia) + 2\Phi(1 + \eps) + \Phi(1 + \eps + ia) \geq 0.
+                            </me>
+                            From Part II, as noted above we have that <m>s = 1</m> is a simple pole of <m>-\zeta\dd/\zeta</m> with residue 1, and so 
+                            <me>
+                                \lim_{\eps \to 0} \eps \Phi(1_+ \eps) = 1.
+                            </me>
+                            Then 
+                            <md>
+                                <mrow>\amp\lim_{\eps \to 0} \eps(\Phi(1 + \eps -ia) + 2\Phi(1 + \eps) + \Phi(1 + \eps + ia))</mrow>
+                                <mrow>\amp= -2\mu + 2 \geq 0</mrow>
+                            </md>
+                            and so <m>0 \leq \mu \leq 1</m>. As we intend to show that <m>\mu = 0</m>, we need more. So assume as well that <m>\zeta</m> has a zero at <m>s_1 = 1 \pm i2a</m> with order <m>\nu \geq 0</m>. (That is, we are admitting the possibility that there is no zero at those points.) Again, note that
+                            <me>
+                                \lim_{\eps \to 0} \eps \Phi(1 + \eps \pm i2a) = -\nu.
+                            </me>
+                            Then the same idea applied to
+                            <me>
+                                 \sum_p \frac{\log p}{p^{1 + \eps}}(p^{\frac{ia}{2}} + p^{\frac{-ia}{2}})^4 \geq 0
+                             </me>
+                             produces the equation 
+                             <me>
+                                6 - 8 \mu - 2 \nu \geq 0.
+                            </me>
+                            This requires that <m>\mu = 0</m> since <m>\mu, \nu \geq 0</m>. We have shown that if <m>\zeta</m> has a zero of the form <m>s_0 = 1 + ia</m>, then it must have order 0, and hence not be a zero. That is, <m>\zeta</m> has no zeros on the line <m>\RE s > 1</m>.</p>
+
+                            <p>Finally, recall that the poles of <m>\Phi</m> are <m>s = 1</m> and the zeros of <m>\zeta</m>, none of which can lie on <m>\RE s = 1</m>. If we trace through the form of <m>\Phi</m> from <xref ref="eq-phiform"/> and the implications of Step II, we conclude that <m>\Phi - \frac{1}{s-1}</m> is holomorphic on <m>\RE s \geq 1</m>.</p>
+
                     </proof>
             </subsection>
 
