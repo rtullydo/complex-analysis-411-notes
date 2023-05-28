@@ -1410,16 +1410,16 @@
 
         <section><title>The prime number theorem</title>
             <subsection><title>Preliminaries</title>
-            <p>Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I'm referencing here is a very nice exposition of Newman's paper by D. Zagier. Tao's notes follow a similar line, but works through a different set of functions. </p>
+            <p>Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I'm referencing here is a very nice exposition of Newman's paper by D. Zagier. There is a wonderful stroll through the Zagier paper in Helgason's notes for a complex analysis class on MIT's OCW. Tao's notes follow a similar line, but works through a different set of functions. </p>
             <aside>
-                <p>See: <ol><li>D.J Newman, Simple Analytic Proof of the Prime Number Theorem. <em>Amer. Math. Monthly</em> 87 (1980)</li><li>D. Zagier. Newman's Short Proof of the Prime Number Theorem. <em>Amer. Math. Monthly</em> 104 (1997)</li></ol></p></aside> 
+                <p>See: <ol><li>D.J Newman, Simple Analytic Proof of the Prime Number Theorem. <em>Amer. Math. Monthly</em> 87 (1980)</li><li>D. Zagier. Newman's Short Proof of the Prime Number Theorem. <em>Amer. Math. Monthly</em> 104 (1997)</li><li>S. Helgason. Course Notes for 18-112, 2008.</li> </ol></p></aside> 
 
             <p>We aim to prove the following description of the asymptotic density of the primes in the integers. Let <m>\pi(x)</m> denote the number of primes less than or equal to <m>x</m>. We will use the notation <m>f \sim g</m> (that is, <m>f</m> and <m>g</m> are asymptotically equal) to mean <m>\lim_{x \to \infty} f(x)/g(x) = 1</m>. We will also use the order notation <m>g = \mathrm{O}(f)</m> as <m>x \to \infty</m> to mean that there exists some <m>C>0</m> so that <m>\abs{g(x)} \leq Cf(x)</m> for all sufficiently large <m>x</m>. (Every order argument we make in this section will be at infinity, so we may sometimes just write <m>g = \mathrm{O}(x)</m>.)  </p>
 
             <theorem><title>Prime number theorem</title>
             <p>
                 <me>
-                    \pi(x) \sim \frac{\log x}{x}.
+                    \pi(x) \sim \frac{x}{\log x}.
                 </me>
             </p></theorem>
 
@@ -1636,6 +1636,133 @@
 
                             <p>Finally, recall that the poles of <m>\Phi</m> are <m>s = 1</m> and the zeros of <m>\zeta</m>, none of which can lie on <m>\RE s = 1</m>. If we trace through the form of <m>\Phi</m> from <xref ref="eq-phiform"/> and the implications of Step II, we conclude that <m>\Phi - \frac{1}{s-1}</m> is holomorphic on <m>\RE s \geq 1</m>.</p>
 
+                    </proof>
+
+                    <p>In the next step, we hone our understanding of the behavior of <m>\th</m>.</p>
+
+                    <theorem><title>Step V: Integral estimate</title>
+                    <p>The integral
+                        <me>
+                            \int_1^\infty \frac{\th(x) - x}{x^2} \, dx \text { converges.}
+                        </me>
+                    </p></theorem>
+                    <proof>
+                        <p>We'll use Stieltjes integrals and their properties. Assume that <m>\RE s > 1</m>. First, note that <m>\th</m> is a step function increasing with a step at each new prime number <m>p</m>. Then we can take the view that
+                        <me>
+                            \Phi(s) = \sum_{p} \frac{\log p}{p^s} \, ds = \int_1^\infty \frac{d\th(s)}{x^s}.
+                        </me>
+                        Now, applying the integration by parts formula for Stieltjes integrals, we get
+                        <me> 
+                            \int_1^\infty \frac{d\th(s)}{x^s} = \int_1^\infty \th(x) \,d(x^{-s}) = s\int_1^\infty \frac{\th(x)}{x^{s+1}}\, dx
+                        </me>
+                        and finally under the change of variables <m>x = e^t</m>, we get
+                        <men xml:id="eq-g">
+                            \Phi(s) = s\int_0^\infty \th(e^t) e^{-st}\, dt.
+                        </men>
+                        </p>
+                        <p>We're setting up to invoke a sort of dominated integral theorem from Newman's original paper, so we now introduce functions <m>f</m> and <m>g</m>. Define the functions
+                        <md>
+                            <mrow>f(t) \amp= \th(e^t)e^{-t} - 1</mrow>
+                            <mrow>g(s) \amp= \frac{\Phi(s+1)}{s+1} - \frac{1}{s}</mrow>
+                        </md>
+                        By Step III, <m>\th</m> is <m>O(x)</m>, and so <m>f</m> is bounded. Proceeding formally for a moment, (that is, ignoring issues of convergence, which will be pinned down shortly) the same change of variables from above will give
+                        <me>
+                            \int_1^\infty \frac{\th(x) - x}{x^2} \, dx = \int_0^\infty f(t) \, dt.
+                        </me></p>
+                        <p>The function <m>\Phi(s) - 1/(s-1)</m> is holomorphic on <m>\RE s \geq 1</m> by Step IV, and so 
+                        <me>
+                            \Phi(s + 1) = h(s) + \frac{1}{s}
+                        </me>
+                        for some holomorphic function <m>h</m> on <m>\RE z \geq 0</m>. As a consequence,
+                        <me>
+                            g(s) = \frac{\Phi(s+1)}{s+1} - \frac{1}{s} = \frac{h(s) -1}{s+1}
+                        </me>
+                        is holomorphic on <m>\RE s \geq 0</m>. On the other hand, for <m>\RE s > 0</m>, we have by <xref ref="eq-g"/>
+                        <md>
+                            <mrow>g(s) \amp= \int_0^\infty e^{-st}(f(t) + 1)\, dt - \int_0^\infty e^{-st}\, dt</mrow>
+                            <mrow>\amp= \int_0^\infty e^{-st}f(t)\, dt.</mrow>
+                        </md></p>
+
+                        <p>All of the pieces are set up. We now need Newman's Analytic Theorem (which we defer the proof of until later).
+                            <lemma><title>Analytic Theorem</title>
+                                <p>Let <m>f(t)</m> be bounded and locally integrable for <m>t \geq 0</m>, and assume that
+                                <me>
+                                    g(s) = \int_0^\infty e^{-st}f(t)\, dt \text{ with } \RE s > 0
+                                </me>
+                                extends to a holomorphic function on <m>\RE s \geq 0</m>. Then
+                                <me>
+                                    \int_0^\infty f(t)\, dt \text{ converges}
+                                </me>
+                                and equals <m>g(0)</m>.</p>
+                            </lemma>
+                            Notice that <m>f</m> and <m>g</m> as we have defined them satisfy the hypotheses of the lemma, and so 
+                            <me>
+                            \int_1^\infty \frac{\th(x) - x}{x^2} \, dx = \int_0^\infty f(t) \, dt \text{ converges},
+                             </me>
+                        which establishes the theorem.
+                        </p>
+
+                    </proof>
+
+                    <theorem><title>Step VI: Asymptotic equality</title>
+                        <p>For <m>x \to \infty</m>,
+                        <me>
+                            \th(x) \sim x.
+                        </me></p>
+                    </theorem>
+
+                    <proof>
+                        <p>We'll proceed by cases on the assumption that <m>\th(x) \nsim x</m>. First, assume that there exists <m>\la > 1</m> so that <m>\th(x) > \la x</m> for sufficiently large <m>x</m>. Given such an <m>x</m>, as <m>\th</m> is an increasing function,
+                        <me>
+                            \int_x^{\la x} \frac{\th(t) - t}{t^2} \, dt \geq \int_x^{\la x} \frac{\la x - t}{t^2}\, dt = \int_1^\la \frac{\la - s}{s^2} \, ds > 0,
+                        </me>
+                        where this constant does not depend on <m>x</m>. However, the convergence in Step V means that for all <m>\eps > 0</m>, there exists some <m>M</m> for which <m>M_1, M_2 \geq M</m> we have
+                        <me>
+                           \int_{M_1}^{M_2} \frac{\th(x) - x}{x^2} \, dx \lt \eps,
+                       </me>
+                        and so such a <m>\la</m> cannot exist.  </p>
+                        <p>Likewise, if there exists <m>\la \lt 1</m> with <m>\th(x) \leq \la x</m> for sufficiently large <m>x</m>, then for <m>t \leq x,</m> 
+                        <me>
+                            \th(t) \leq \th(x) \leq \la x,
+                        </me>
+                        and so 
+                         <me>
+                            \int_{\la x}^{x} \frac{\th(t) - t}{t^2} \, dt \geq \int_{\la x}^{ x} \frac{\la x - t}{t^2}\, dt = \int_\la^1 \frac{\la - s}{s^2} \, ds \lt 0,
+                        </me>
+                        which leads to the same contradiction. Thus, 
+                        <me>
+                            \limsup_{x \to \infty} \frac{\th(x)}{x} \leq 1 \leq \liminf_{x\to \infty} \frac{\th(x)}{x},
+                        </me>
+                        which means that <m>\th(x) \sim x</m>.</p>
+                    </proof>
+
+                    <theorem><title>Prime Number Theorem</title>
+                    <p><me> \pi(x) \sim \frac{x}{\log x}.</me></p>
+                    </theorem>
+                    <proof>
+                        <p>First,
+                            <me>
+                                \th(x) = \sum_{p \leq x} \log p \leq \sum_{p \leq x} \log x = \pi(x) \log x.
+                            </me>
+                            Thus,
+                            <me>
+                                \liminf_{x \to \infty} \frac{\pi(x) \log x}{x} \geq \liminf_{x \to \infty} \frac{\th(x)}{x} = 1.
+                            </me>
+                            In the other direction, for <m>0 \lt \eps \lt 1</m>, 
+                            <md>
+                                <mrow>\th(x) \amp\geq \sum_{x^{1 - \eps} \leq p \leq x} \log p</mrow>
+                                <mrow>\amp\geq (1 - \eps) \sum_{x^{1 - \eps} \leq p \leq x} \log x</mrow>
+                                <mrow>\amp= (1-\eps) \log x (\pi(x) + O(x^{1-\eps})).</mrow>
+                            </md>
+                            Then for each <m>\eps</m>,
+                            <me>
+                                \limsup_{x \to \infty} \frac{\pi(x) \log x}{x} \leq \frac{1}{1 - \eps} \limsup_{x \to \infty} \frac{\th(x)}{x}.
+                            </me>
+                            We conclude that
+                            <me>
+                                \lim_{x \to \infty} \frac{\pi(x) \log x}{x} = 1.
+                            </me>
+                        </p>
                     </proof>
             </subsection>
 

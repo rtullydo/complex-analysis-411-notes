@@ -2,6 +2,9 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
+<!--*       on 2023-05-27T21:41:21-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -12,9 +15,7 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
-<div class="para logical">
-<div class="para">Start with the assumption that <span class="process-math">\(\RE s &gt; 1\text{.}\)</span> Now compute the logarithmic derivative of <span class="process-math">\(\zeta\text{:}\)</span>
-</div>
+<p>Start with the assumption that <span class="process-math">\(\RE s &gt; 1\text{.}\)</span> Now compute the logarithmic derivative of <span class="process-math">\(\zeta\text{:}\)</span></p>
 <div class="displaymath process-math">
 \begin{align*}
 \frac{\zeta\dd}{\zeta} \amp= \frac{d}{ds} \log \zeta(s) = \frac{d}{ds} \log \prod_p (1 - p^{-s})\inv\\
@@ -25,92 +26,87 @@
 \amp= -(\Phi(s) + \sum_p \frac{\log p}{p^s(p^s - 1)})
 \end{align*}
 </div>
-<div class="para">This gives the identity</div>
+<p class="continuation">This gives the identity</p>
 <div class="displaymath process-math">
 \begin{equation*}
 -\frac{\zeta\dd}{\zeta} = \Phi(s) + \sum_p\frac{\log p}{p^s(p^s - 1)}.
 \end{equation*}
 </div>
-<div class="para">Notice that the series on the right hand side converges for <span class="process-math">\(\RE s &gt; \frac{1}{2}\text{.}\)</span> From Step II above, we know that <span class="process-math">\(\zeta - \frac{1}{s-1}\)</span> is holomorphic on <span class="process-math">\(\RE s &gt; 0\text{,}\)</span> and so</div>
+<p class="continuation">Notice that the series on the right hand side converges for <span class="process-math">\(\RE s &gt; \frac{1}{2}\text{.}\)</span> From Step II above, we know that <span class="process-math">\(\zeta - \frac{1}{s-1}\)</span> is holomorphic on <span class="process-math">\(\RE s &gt; 0\text{,}\)</span> and so</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \zeta = (\zeta -\frac{1}{s-1}) + \frac{1}{s-1}
 \end{equation*}
 </div>
-<div class="para">is meromorphic on <span class="process-math">\(\RE s \geq 0\)</span> with a simple pole at <span class="process-math">\(s = 1\text{.}\)</span> Likewise, <span class="process-math">\(\zeta\dd\)</span> will be meromorphic with a pole at <span class="process-math">\(s = 1\)</span> of order 2. Then <span class="process-math">\(\zeta\dd/\zeta\)</span> is also a meromorphic function on <span class="process-math">\(\RE s &gt; 0\)</span> with poles at <span class="process-math">\(s = 1\)</span> and at the zeros of <span class="process-math">\(\zeta\text{,}\)</span> which implies for <span class="process-math">\(\Phi\text{,}\)</span> which is</div>
+<p class="continuation">is meromorphic on <span class="process-math">\(\RE s \geq 0\)</span> with a simple pole at <span class="process-math">\(s = 1\text{.}\)</span> Likewise, <span class="process-math">\(\zeta\dd\)</span> will be meromorphic with a pole at <span class="process-math">\(s = 1\)</span> of order 2. Then <span class="process-math">\(\zeta\dd/\zeta\)</span> is also a meromorphic function on <span class="process-math">\(\RE s &gt; 0\)</span> with poles at <span class="process-math">\(s = 1\)</span> and at the zeros of <span class="process-math">\(\zeta\text{,}\)</span> which implies for <span class="process-math">\(\Phi\text{,}\)</span> which is</p>
 <div class="displaymath process-math">
 \begin{equation}
 \Phi = -\frac{\zeta\dd}{\zeta} -  \sum_p\frac{\log p}{p^s(p^s - 1)},\tag{3.3.1}
 \end{equation}
 </div>
-<div class="para">that we have a meromorphic extension of <span class="process-math">\(\Phi\)</span> to <span class="process-math">\(\RE s &gt; \frac{1}{2}\)</span> with poles at <span class="process-math">\(s = 1\)</span> and the zeros of <span class="process-math">\(\zeta\text{.}\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Now let's analyze the zeros. First, because <span class="process-math">\(\zeta(s) = \cc{\zeta(\cc s)}\text{,}\)</span> we see that if <span class="process-math">\(s\)</span> is zero of <span class="process-math">\(\zeta\)</span> then so is <span class="process-math">\(\cc{s}\text{.}\)</span> Now let <span class="process-math">\(a\in \R\text{.}\)</span> If <span class="process-math">\(s_0 = 1 + ia\)</span> is a zero of <span class="process-math">\(\zeta\)</span> of order <span class="process-math">\(\mu \geq 0\text{,}\)</span> then <span class="process-math">\(\zeta = (s - s_0)^\mu h(s)\)</span> for some holomorphic function <span class="process-math">\(h\)</span> that is non-zero near <span class="process-math">\(s_0\text{.}\)</span> Computing the logarithmic derivative gets us</div>
+<p class="continuation">that we have a meromorphic extension of <span class="process-math">\(\Phi\)</span> to <span class="process-math">\(\RE s &gt; \frac{1}{2}\)</span> with poles at <span class="process-math">\(s = 1\)</span> and the zeros of <span class="process-math">\(\zeta\text{.}\)</span></p>
+<p>Now let's analyze the zeros. First, because <span class="process-math">\(\zeta(s) = \cc{\zeta(\cc s)}\text{,}\)</span> we see that if <span class="process-math">\(s\)</span> is zero of <span class="process-math">\(\zeta\)</span> then so is <span class="process-math">\(\cc{s}\text{.}\)</span> Now let <span class="process-math">\(a\in \R\text{.}\)</span> If <span class="process-math">\(s_0 = 1 + ia\)</span> is a zero of <span class="process-math">\(\zeta\)</span> of order <span class="process-math">\(\mu \geq 0\text{,}\)</span> then <span class="process-math">\(\zeta = (s - s_0)^\mu h(s)\)</span> for some holomorphic function <span class="process-math">\(h\)</span> that is non-zero near <span class="process-math">\(s_0\text{.}\)</span> Computing the logarithmic derivative gets us</p>
 <div class="displaymath process-math">
 \begin{equation*}
 -\frac{\zeta\dd}{\zeta} = -\frac{\mu}{s - s_0} + H(s)
 \end{equation*}
 </div>
-<div class="para">for some function <span class="process-math">\(H = \log h\)</span> holomorphic near <span class="process-math">\(s_0\text{.}\)</span> The function <span class="process-math">\(\Phi(s_0 + \eps)\)</span> then has a simple pole at <span class="process-math">\(\eps = 0\text{,}\)</span> and by the residue theorem</div>
+<p class="continuation">for some function <span class="process-math">\(H = \log h\)</span> holomorphic near <span class="process-math">\(s_0\text{.}\)</span> The function <span class="process-math">\(\Phi(s_0 + \eps)\)</span> then has a simple pole at <span class="process-math">\(\eps = 0\text{,}\)</span> and by the residue theorem</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \lim_{\eps \to 0} \eps \Phi(1 + \eps + ia) = -\mu.
 \end{equation*}
 </div>
-</div> <div class="para logical">
-<div class="para">Now, consider</div>
+<p>Now, consider</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \Phi(1+\eps) = \sum_p \frac{\log p}{p^{1 + \eps}},
 \end{equation*}
 </div>
-<div class="para">and note that the terms are positive for <span class="process-math">\(\eps &gt; 0\text{.}\)</span> Then</div>
+<p class="continuation">and note that the terms are positive for <span class="process-math">\(\eps &gt; 0\text{.}\)</span> Then</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_p \frac{\log p}{p^{1 + \eps}}(p^{\frac{ia}{2}} + p^{\frac{-ia}{2}})^2 \geq 0.
 \end{equation*}
 </div>
-<div class="para">Multiplying this out gives</div>
+<p class="continuation">Multiplying this out gives</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \Phi(1 + \eps -ia) + 2\Phi(1 + \eps) + \Phi(1 + \eps + ia) \geq 0.
 \end{equation*}
 </div>
-<div class="para">From Part II, as noted above we have that <span class="process-math">\(s = 1\)</span> is a simple pole of <span class="process-math">\(-\zeta\dd/\zeta\)</span> with residue 1, and so</div>
+<p class="continuation">From Part II, as noted above we have that <span class="process-math">\(s = 1\)</span> is a simple pole of <span class="process-math">\(-\zeta\dd/\zeta\)</span> with residue 1, and so</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \lim_{\eps \to 0} \eps \Phi(1_+ \eps) = 1.
 \end{equation*}
 </div>
-<div class="para">Then</div>
+<p class="continuation">Then</p>
 <div class="displaymath process-math">
 \begin{align*}
 \amp\lim_{\eps \to 0} \eps(\Phi(1 + \eps -ia) + 2\Phi(1 + \eps) + \Phi(1 + \eps + ia))\\
 \amp= -2\mu + 2 \geq 0
 \end{align*}
 </div>
-<div class="para">and so <span class="process-math">\(0 \leq \mu \leq 1\text{.}\)</span> As we intend to show that <span class="process-math">\(\mu = 0\text{,}\)</span> we need more. So assume as well that <span class="process-math">\(\zeta\)</span> has a zero at <span class="process-math">\(s_1 = 1 \pm i2a\)</span> with order <span class="process-math">\(\nu \geq 0\text{.}\)</span> (That is, we are admitting the possibility that there is no zero at those points.) Again, note that</div>
+<p class="continuation">and so <span class="process-math">\(0 \leq \mu \leq 1\text{.}\)</span> As we intend to show that <span class="process-math">\(\mu = 0\text{,}\)</span> we need more. So assume as well that <span class="process-math">\(\zeta\)</span> has a zero at <span class="process-math">\(s_1 = 1 \pm i2a\)</span> with order <span class="process-math">\(\nu \geq 0\text{.}\)</span> (That is, we are admitting the possibility that there is no zero at those points.) Again, note that</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \lim_{\eps \to 0} \eps \Phi(1 + \eps \pm i2a) = -\nu.
 \end{equation*}
 </div>
-<div class="para">Then the same idea applied to</div>
+<p class="continuation">Then the same idea applied to</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_p \frac{\log p}{p^{1 + \eps}}(p^{\frac{ia}{2}} + p^{\frac{-ia}{2}})^4 \geq 0
 \end{equation*}
 </div>
-<div class="para">produces the equation</div>
+<p class="continuation">produces the equation</p>
 <div class="displaymath process-math">
 \begin{equation*}
 6 - 8 \mu - 2 \nu \geq 0.
 \end{equation*}
 </div>
-<div class="para">This requires that <span class="process-math">\(\mu = 0\)</span> since <span class="process-math">\(\mu, \nu \geq 0\text{.}\)</span> We have shown that if <span class="process-math">\(\zeta\)</span> has a zero of the form <span class="process-math">\(s_0 = 1 + ia\text{,}\)</span> then it must have order 0, and hence not be a zero. That is, <span class="process-math">\(\zeta\)</span> has no zeros on the line <span class="process-math">\(\RE s &gt; 1\text{.}\)</span>
-</div>
-</div> <div class="para">Finally, recall that the poles of <span class="process-math">\(\Phi\)</span> are <span class="process-math">\(s = 1\)</span> and the zeros of <span class="process-math">\(\zeta\text{,}\)</span> none of which can lie on <span class="process-math">\(\RE s = 1\text{.}\)</span> If we trace through the form of <span class="process-math">\(\Phi\)</span> from <a href="" class="xref" data-knowl="./knowl/eq-phiform.html" title="Equation 3.3.1">(3.3.1)</a> and the implications of Step II, we conclude that <span class="process-math">\(\Phi - \frac{1}{s-1}\)</span> is holomorphic on <span class="process-math">\(\RE s \geq 1\text{.}\)</span>
-</div></article><span class="incontext"><a href="section-15.html#proof-17" class="internal">in-context</a></span>
+<p class="continuation">This requires that <span class="process-math">\(\mu = 0\)</span> since <span class="process-math">\(\mu, \nu \geq 0\text{.}\)</span> We have shown that if <span class="process-math">\(\zeta\)</span> has a zero of the form <span class="process-math">\(s_0 = 1 + ia\text{,}\)</span> then it must have order 0, and hence not be a zero. That is, <span class="process-math">\(\zeta\)</span> has no zeros on the line <span class="process-math">\(\RE s &gt; 1\text{.}\)</span></p>
+<p>Finally, recall that the poles of <span class="process-math">\(\Phi\)</span> are <span class="process-math">\(s = 1\)</span> and the zeros of <span class="process-math">\(\zeta\text{,}\)</span> none of which can lie on <span class="process-math">\(\RE s = 1\text{.}\)</span> If we trace through the form of <span class="process-math">\(\Phi\)</span> from <a href="" class="xref" data-knowl="./knowl/eq-phiform.html" title="Equation 3.3.1">(3.3.1)</a> and the implications of Step II, we conclude that <span class="process-math">\(\Phi - \frac{1}{s-1}\)</span> is holomorphic on <span class="process-math">\(\RE s \geq 1\text{.}\)</span></p></article><span class="incontext"><a href="section-15.html#proof-17">in-context</a></span>
 </body>
 </html>
