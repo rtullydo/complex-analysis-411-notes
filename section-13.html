@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2023-05-27T21:41:19-07:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,43 +14,172 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Notes on complex analysis">
 <meta property="book:author" content="Ryan Tully-Doyle">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
-    useLabelIds: true,
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\RE}{Re}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="comp411.html"><span class="title">Notes on complex analysis</span></a></h1>
+<p class="byline">Ryan Tully-Doyle</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="chapter-3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-3.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-14.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\DeclareMathOperator{\RE}{Re}
   \DeclareMathOperator{\IM}{Im}
   \DeclareMathOperator{\ess}{ess}
   \DeclareMathOperator{\intr}{int}
@@ -123,7 +249,7 @@
   \newcommand\Htau{\mathbb{H}(\tau)}
   \newcommand{\vp}{\varphi}
   \newcommand{\ph}{\varphi}
-    \newcommand{\th}{\vartheta}
+    \newcommand{\vtheta}{\vartheta}
   \newcommand\al{\alpha}
   \newcommand\ga{\gamma}
   \newcommand\de{\delta}
@@ -164,103 +290,145 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="comp411.html"><span class="title">Notes on complex analysis</span></a></h1>
-<p class="byline">Ryan Tully-Doyle</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter-3.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-14.html" title="Next">Next</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-3.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-14.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a></li>
-<li class="link">
-<a href="chapter-1.html" data-scroll="chapter-1" class="internal"><span class="codenumber">1</span> <span class="title">Conformal maps and linear fractional transformations</span></a><ul>
-<li><a href="section-1.html" data-scroll="section-1" class="internal">Conformal maps</a></li>
-<li><a href="section-2.html" data-scroll="section-2" class="internal">Simply connected sets, boundaries, and the Riemann mapping theorem</a></li>
-<li><a href="section-3.html" data-scroll="section-3" class="internal">(optional) A proof of the Riemann Mapping Theorem</a></li>
-<li><a href="section-4.html" data-scroll="section-4" class="internal">Interlude: Liouville's Theorem</a></li>
-<li><a href="section-5.html" data-scroll="section-5" class="internal">Exercise set 1</a></li>
-<li><a href="section-6.html" data-scroll="section-6" class="internal">Linear fractional tranformations</a></li>
-<li><a href="section-7.html" data-scroll="section-7" class="internal">Exercises 2</a></li>
-<li><a href="section-8.html" data-scroll="section-8" class="internal">Reflection across a circle</a></li>
-<li><a href="section-9.html" data-scroll="section-9" class="internal">Conformal maps and harmonic equations</a></li>
-<li><a href="section-10.html" data-scroll="section-10" class="internal">Exercises 3</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li><div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="chapter-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Conformal maps and linear fractional transformations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Conformal maps</span></a></div></li>
+<li><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Simply connected sets, boundaries, and the Riemann mapping theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">(optional) A proof of the Riemann Mapping Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Interlude: Liouville’s Theorem</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercise set 1</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-5.html#exercises-1" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-6.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Linear fractional tranformations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-7.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Exercises 2</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-7.html#exercises-2" class="internal"><span class="codenumber">1.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="section-8.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Reflection across a circle</span></a></div></li>
+<li>
+<div class="toc-item"><a href="section-9.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Conformal maps and harmonic equations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-9.html#subsection-1" class="internal"><span class="codenumber">1.9.1</span> <span class="title">Vector fields and harmonic functions</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-2" class="internal"><span class="codenumber">1.9.2</span> <span class="title">The Dirichlet problem on the disk</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-3" class="internal"><span class="codenumber">1.9.3</span> <span class="title">Neumann conditions</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-4" class="internal"><span class="codenumber">1.9.4</span> <span class="title">Standard solutions and conformal maps</span></a></div></li>
+<li><div class="toc-item"><a href="section-9.html#subsection-5" class="internal"><span class="codenumber">1.9.5</span> <span class="title">Half plane solutions</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="chapter-2.html" data-scroll="chapter-2" class="internal"><span class="codenumber">2</span> <span class="title">Special functions and analytic continuation</span></a><ul>
-<li><a href="section-11.html" data-scroll="section-11" class="internal">The Gamma Function</a></li>
-<li><a href="section-12.html" data-scroll="section-12" class="internal">Analytic continuation</a></li>
+<li>
+<div class="toc-item"><a href="section-10.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Exercises 3</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="section-10.html#exercises-3" class="internal"><span class="codenumber">1.10</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
 </ul>
 </li>
-<li class="link">
-<a href="chapter-3.html" data-scroll="chapter-3" class="internal"><span class="codenumber">3</span> <span class="title">The prime number theorem</span></a><ul>
-<li><a href="section-13.html" data-scroll="section-13" class="active">Prerequisites</a></li>
-<li><a href="section-14.html" data-scroll="section-14" class="internal">Infinite products and the zeta function</a></li>
-<li><a href="section-15.html" data-scroll="section-15" class="internal">The prime number theorem</a></li>
+<li>
+<div class="toc-item"><a href="chapter-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Special functions and analytic continuation</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="section-11.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Gamma Function</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-11.html#subsection-6" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Interpolation</span></a></div></li>
+<li><div class="toc-item"><a href="section-11.html#subsection-7" class="internal"><span class="codenumber">2.1.2</span> <span class="title">The Gamma Function</span></a></div></li>
 </ul>
 </li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-13"><h2 class="heading hide-type">
+<li><div class="toc-item"><a href="section-12.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Analytic continuation</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter-3.html" class="internal"><span class="codenumber">3</span> <span class="title">The prime number theorem</span></a></div>
+<ul class="structural">
+<li class="active">
+<div class="toc-item"><a href="section-13.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Prerequisites</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-13.html#subsection-8" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Complex analysis</span></a></div></li>
+<li><div class="toc-item"><a href="section-13.html#subsection-9" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Measure theory</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-14.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Infinite products and the zeta function</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-14.html#subsection-10" class="internal"><span class="codenumber">3.2.1</span> <span class="title">The zeta function</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#subsection-11" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Infinite products</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#subsection-12" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Product formula for the zeta function</span></a></div></li>
+<li><div class="toc-item"><a href="section-14.html#subsection-13" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Properties of the zeta function</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="section-15.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The prime number theorem</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="section-15.html#subsection-14" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Preliminaries</span></a></div></li>
+<li><div class="toc-item"><a href="section-15.html#subsection-15" class="internal"><span class="codenumber">3.3.2</span> <span class="title">The analytic theorem</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-13"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Prerequisites</span>
 </h2>
 <section class="subsection" id="subsection-8"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.1</span> <span class="title">Complex analysis</span>
 </h3>
-<p id="p-137">Let us begin with a very useful sort-of converse to the Cauchy-Goursat theorem</p>
+<div class="para" id="p-137">Let us begin with a very useful sort-of converse to the Cauchy-Goursat theorem</div>
 <article class="theorem theorem-like" id="thm-cauchy-goursat"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Cauchy-Goursat.</span>
 </h4>
-<p id="p-138">Let <span class="process-math">\(f\)</span> be analytic on a simply connected domain <span class="process-math">\(D\text{.}\)</span> Then</p>
+<div class="para logical" id="p-138">
+<div class="para">Let <span class="process-math">\(f\)</span> be analytic on a simply connected domain <span class="process-math">\(D\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \oint_\gamma f \, dz = 0
 \end{equation*}
 </div>
-<p class="continuation">for any simple closed curve <span class="process-math">\(\gamma\)</span> contained in <span class="process-math">\(D\text{.}\)</span></p></article><article class="theorem theorem-like" id="thm-morera"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Morera's theorem.</span>
+<div class="para">for any simple closed curve <span class="process-math">\(\gamma\)</span> contained in <span class="process-math">\(D\text{.}\)</span>
+</div>
+</div></article><article class="theorem theorem-like" id="thm-morera"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Morera’s theorem.</span>
 </h4>
-<p id="p-139">Let <span class="process-math">\(f\)</span> be a continuous function defined on an open domain <span class="process-math">\(D\text{.}\)</span> If</p>
+<div class="para logical" id="p-139">
+<div class="para">Let <span class="process-math">\(f\)</span> be a continuous function defined on an open domain <span class="process-math">\(D\text{.}\)</span> If</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \oint_\gamma f(\xi) \, d\xi = 0
 \end{equation*}
 </div>
-<p class="continuation">for every simple closed path <span class="process-math">\(\gamma\)</span> contained in <span class="process-math">\(D\text{,}\)</span> then <span class="process-math">\(f\)</span> is analytic on <span class="process-math">\(D\text{.}\)</span></p></article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><p id="p-140">Assume without loss of generality that the domain <span class="process-math">\(D\)</span> is connected (and so path-connected). Assume that <span class="process-math">\(f\)</span> satisifies the hypotheses of the theorem. We will construct an anti-derivative for <span class="process-math">\(f\text{,}\)</span> which will allow us to conclude that <span class="process-math">\(f\)</span> is analytic.</p>
-<p id="p-141">Pick a basepoint <span class="process-math">\(z_0\)</span> in <span class="process-math">\(D\text{,}\)</span> and for any other <span class="process-math">\(z\)</span> in <span class="process-math">\(D\text{,}\)</span> let <span class="process-math">\(\gamma\)</span> be a simple path from <span class="process-math">\(z_0\)</span> to <span class="process-math">\(z\text{.}\)</span> Let <span class="process-math">\(F\)</span> be the function on <span class="process-math">\(D\)</span> given by</p>
+<div class="para">for every simple closed path <span class="process-math">\(\gamma\)</span> contained in <span class="process-math">\(D\text{,}\)</span> then <span class="process-math">\(f\)</span> is analytic on <span class="process-math">\(D\text{.}\)</span>
+</div>
+</div></article><article class="hiddenproof" id="proof-9"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><div class="para" id="p-140">Assume without loss of generality that the domain <span class="process-math">\(D\)</span> is connected (and so path-connected). Assume that <span class="process-math">\(f\)</span> satisifies the hypotheses of the theorem. We will construct an anti-derivative for <span class="process-math">\(f\text{,}\)</span> which will allow us to conclude that <span class="process-math">\(f\)</span> is analytic.</div> <div class="para logical" id="p-141">
+<div class="para">Pick a basepoint <span class="process-math">\(z_0\)</span> in <span class="process-math">\(D\text{,}\)</span> and for any other <span class="process-math">\(z\)</span> in <span class="process-math">\(D\text{,}\)</span> let <span class="process-math">\(\gamma\)</span> be a simple path from <span class="process-math">\(z_0\)</span> to <span class="process-math">\(z\text{.}\)</span> Let <span class="process-math">\(F\)</span> be the function on <span class="process-math">\(D\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 F(z) = \int_\gamma f(\xi) \, d\xi.
 \end{equation*}
 </div>
-<p id="p-142">Note that this definition does not depend on the choice of path. Assume that <span class="process-math">\(\tau\)</span> is another path from <span class="process-math">\(z_0\)</span> to <span class="process-math">\(z\text{.}\)</span> Then, by hypothesis,</p>
-<div class="displaymath process-math">
+</div> <div class="para logical" id="p-142">
+<div class="para">Note that this definition does not depend on the choice of path. Assume that <span class="process-math">\(\tau\)</span> is another path from <span class="process-math">\(z_0\)</span> to <span class="process-math">\(z\text{.}\)</span> Then, by hypothesis,</div>
+<div class="displaymath process-math" id="md-4">
 \begin{align*}
 0 \amp= \oint_{\tau\inv \gamma} f\\
 \amp = \oint_{\tau\inv} f + \oint_\gamma f\\
 \amp = -\oint_{\tau} f + \oint_\gamma f
 \end{align*}
 </div>
-<p class="continuation">which implies that <span class="process-math">\(\oint_\tau f = \oint_\gamma f\text{.}\)</span></p>
-<p id="p-143">Note futher that a different choice of basepoint (say <span class="process-math">\(z_1\)</span>) causes the resulting function to differ from <span class="process-math">\(F\)</span> only by the constant <span class="process-math">\(C = \oint_C f\)</span> where <span class="process-math">\(C\)</span> is any simple path from <span class="process-math">\(z_1\)</span> to <span class="process-math">\(z_0\text{.}\)</span> Thus, choice of basepoint does not affect the derivative.</p>
-<p id="p-144">It remains to show that <span class="process-math">\(\frac{d}{dz} F(z) = f(z)\text{.}\)</span> This boils down to a difference quotient argument. Consider <span class="process-math">\(F(z + h)\)</span> for some small complex number <span class="process-math">\(h\text{.}\)</span> Then</p>
+<div class="para">which implies that <span class="process-math">\(\oint_\tau f = \oint_\gamma f\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-143">Note futher that a different choice of basepoint (say <span class="process-math">\(z_1\)</span>) causes the resulting function to differ from <span class="process-math">\(F\)</span> only by the constant <span class="process-math">\(C = \oint_C f\)</span> where <span class="process-math">\(C\)</span> is any simple path from <span class="process-math">\(z_1\)</span> to <span class="process-math">\(z_0\text{.}\)</span> Thus, choice of basepoint does not affect the derivative.</div> <div class="para logical" id="p-144">
+<div class="para">It remains to show that <span class="process-math">\(\frac{d}{dz} F(z) = f(z)\text{.}\)</span> This boils down to a difference quotient argument. Consider <span class="process-math">\(F(z + h)\)</span> for some small complex number <span class="process-math">\(h\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 F(z+h) - F(z) = \int_{z_0}^{z+h} f(\xi) \, d\xi - \int_{z_0}^z f(\xi) \, d\xi = \int_z^{z+h} f(\xi) \, d\xi.
 \end{equation*}
 </div>
-<p class="continuation">(The notation is justified by the path independence of integrals of <span class="process-math">\(f\text{.}\)</span>)  Now,</p>
-<div class="displaymath process-math">
+<div class="para">(The notation is justified by the path independence of integrals of <span class="process-math">\(f\text{.}\)</span>)  Now,</div>
+<div class="displaymath process-math" id="md-5">
 \begin{align*}
 \frac{1}{h} (F(z + h) - F(z)) - f(z) \amp= \frac{1}{h} (F(z + h) - F(z)) - \frac{1}{h} hf(z) \\
 \amp = \frac{1}{h} (\int_z^{z + h} f(\xi) \, d\xi - h f(z))\\
@@ -268,145 +436,181 @@ F(z+h) - F(z) = \int_{z_0}^{z+h} f(\xi) \, d\xi - \int_{z_0}^z f(\xi) \, d\xi = 
 \amp= \frac{1}{h} \int_z^{z+h} f(\xi) - f(z) \, d\xi.
 \end{align*}
 </div>
-<p class="continuation">Since <span class="process-math">\(f\)</span> has path independent line integrals, choose the line segment between <span class="process-math">\(z\)</span> and <span class="process-math">\(z + h\text{.}\)</span> Since <span class="process-math">\(f\)</span> is continuous,</p>
+<div class="para">Since <span class="process-math">\(f\)</span> has path independent line integrals, choose the line segment between <span class="process-math">\(z\)</span> and <span class="process-math">\(z + h\text{.}\)</span> Since <span class="process-math">\(f\)</span> is continuous,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \abs{\frac{F(z + h) - F(z)}{h} - f(z)} \leq \frac{1}{h} \int_z^{z+h} \abs{f(\xi) - f(z)} \, d\xi \to 0 \text{ as } \abs{h} \to 0.
 \end{equation*}
 </div>
-<p id="p-145">We conclude that <span class="process-math">\(F\)</span> is differentiable at <span class="process-math">\(z\)</span> and thus analytic at <span class="process-math">\(z\)</span> with derivative <span class="process-math">\(f\text{,}\)</span> which implies that <span class="process-math">\(f\)</span> is analytic. Since this holds for all <span class="process-math">\(z\in D\text{,}\)</span> we conclude that <span class="process-math">\(f\)</span> is analytic on <span class="process-math">\(D\text{.}\)</span></p></article></div>
-<p id="p-146">Morera's theorem is often used with weaker (equivalent) hypotheses - that is, we need only check that</p>
+</div> <div class="para" id="p-145">We conclude that <span class="process-math">\(F\)</span> is differentiable at <span class="process-math">\(z\)</span> and thus analytic at <span class="process-math">\(z\)</span> with derivative <span class="process-math">\(f\text{,}\)</span> which implies that <span class="process-math">\(f\)</span> is analytic. Since this holds for all <span class="process-math">\(z\in D\text{,}\)</span> we conclude that <span class="process-math">\(f\)</span> is analytic on <span class="process-math">\(D\text{.}\)</span>
+</div></article></div>
+<div class="para logical" id="p-146">
+<div class="para">Morera’s theorem is often used with weaker (equivalent) hypotheses - that is, we need only check that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_{\partial T} f\, dz = 0
 \end{equation*}
 </div>
-<p class="continuation">around the boundary of any closed triangle <span class="process-math">\(T\)</span> contained in <span class="process-math">\(D\text{.}\)</span></p>
-<p id="p-147">Morera's theorem is the standard method used to prove that a constructed function is holomorphic. The theorem is used so often and so widely that it may sometimes be invoked without reference (though not in our case).</p>
-<p id="p-148">One nice immediate result that we get from Morera is parallel to the (fundamental) result from real analysis that uniform limits of continuous functions are continuous.</p>
+<div class="para">around the boundary of any closed triangle <span class="process-math">\(T\)</span> contained in <span class="process-math">\(D\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="p-147">Morera’s theorem is the standard method used to prove that a constructed function is holomorphic. The theorem is used so often and so widely that it may sometimes be invoked without reference (though not in our case).</div>
+<div class="para" id="p-148">One nice immediate result that we get from Morera is parallel to the (fundamental) result from real analysis that uniform limits of continuous functions are continuous.</div>
 <article class="theorem theorem-like" id="thm-unif-holo"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
 </h4>
-<p id="p-149">The uniform limit of a sequence of analytic functions is analytic.</p></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><p id="p-150">Suppose that a sequence <span class="process-math">\(f_n\)</span> of analytic functions converges uniformly to a continuous limit function <span class="process-math">\(f\)</span> on an open disk. The Cauchy-Goursat theorem implies that, for all <span class="process-math">\(n\text{,}\)</span></p>
+<div class="para" id="p-149">The uniform limit of a sequence of analytic functions is analytic.</div></article><article class="hiddenproof" id="proof-10"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><div class="para logical" id="p-150">
+<div class="para">Suppose that a sequence <span class="process-math">\(f_n\)</span> of analytic functions converges uniformly to a continuous limit function <span class="process-math">\(f\)</span> on an open disk. The Cauchy-Goursat theorem implies that, for all <span class="process-math">\(n\text{,}\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \oint_C f_n \, dz = 0
 \end{equation*}
 </div>
-<p class="continuation">for any simple closed curve <span class="process-math">\(C\)</span> contained in the disk. Using uniform converge to push the limit through the integral, we get</p>
+<div class="para">for any simple closed curve <span class="process-math">\(C\)</span> contained in the disk. Using uniform converge to push the limit through the integral, we get</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \oint_C f \, dz = \oint_C \lim_n f_n \, dz = \lim_n \oint_C f_n \, dz = 0.
 \end{equation*}
 </div>
-<p class="continuation">for every simple closed curve <span class="process-math">\(C\)</span> in the disk, and so by Morera's theorem, <span class="process-math">\(f\)</span> must be analytic on the disk.</p>
-<p id="p-151">This result extends to domains, as we can recreate this argument in a neighborhood of any <span class="process-math">\(z_0\)</span> in <span class="process-math">\(D\text{.}\)</span></p></article></div>
-<p id="p-152">Since we'll be considering functions defined as series, it will be useful to combine the results above with a test for uniform convergence called the Weierstrass M-test.</p>
+<div class="para">for every simple closed curve <span class="process-math">\(C\)</span> in the disk, and so by Morera’s theorem, <span class="process-math">\(f\)</span> must be analytic on the disk.</div>
+</div> <div class="para" id="p-151">This result extends to domains, as we can recreate this argument in a neighborhood of any <span class="process-math">\(z_0\)</span> in <span class="process-math">\(D\text{.}\)</span>
+</div></article></div>
+<div class="para" id="p-152">Since we’ll be considering functions defined as series, it will be useful to combine the results above with a test for uniform convergence called the Weierstrass M-test.</div>
 <article class="theorem theorem-like" id="thm-M-test"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">M-test.</span>
 </h4>
-<p id="p-153">Supposet that <span class="process-math">\(\{f_n\}\)</span> is a sequence of functions on a common domain <span class="process-math">\(D\)</span> and that there exists a sequence of non-negative numbers <span class="process-math">\(\{M_n\}\)</span> satisfying</p>
+<div class="para logical" id="p-153">
+<div class="para">Supposet that <span class="process-math">\(\{f_n\}\)</span> is a sequence of functions on a common domain <span class="process-math">\(D\)</span> and that there exists a sequence of non-negative numbers <span class="process-math">\(\{M_n\}\)</span> satisfying</div>
 <ol class="decimal">
-<li id="li-21"><p id="p-derived-li-21"><span class="process-math">\(\abs{f_n(z)} \lt M_n\)</span> for all <span class="process-math">\(n \in \N\text{;}\)</span></p></li>
-<li id="li-22"><p id="p-derived-li-22"><span class="process-math">\(\displaystyle \sum_{n=1}^\infty M_n \lt \infty\text{.}\)</span></p></li>
+<li id="li-21"><div class="para" id="p-derived-li-21">
+<span class="process-math">\(\abs{f_n(z)} \lt M_n\)</span> for all <span class="process-math">\(n \in \N\text{;}\)</span>
+</div></li>
+<li id="li-22"><div class="para" id="p-derived-li-22"><span class="process-math">\(\displaystyle \sum_{n=1}^\infty M_n \lt \infty\text{.}\)</span></div></li>
 </ol>
-<p class="continuation">Then <span class="process-math">\(\sum_{n=1}^\infty f_n\)</span> converges absolutely and uniformly on <span class="process-math">\(D\text{.}\)</span></p></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<div class="para">Then <span class="process-math">\(\sum_{n=1}^\infty f_n\)</span> converges absolutely and uniformly on <span class="process-math">\(D\text{.}\)</span>
+</div>
+</div></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.2</span> <span class="title">Measure theory</span>
 </h3>
-<p id="p-154">To be rigorous about convergence, we're going to need some extremely useful tools from analysis. The discussion here will mostly bracket out proofs, which are typically done in a graduate course in real analysis.</p>
-<p id="p-155">A <dfn class="terminology">measure</dfn> is a function that assigns a numerical value to a set. The idea comes from an effort to generalize the notion of the length of an interval. A brief overview of the setup follows. We have a set <span class="process-math">\(X\)</span> (for example, <span class="process-math">\(X=\R\)</span>), and we want to define a function <span class="process-math">\(\mu: A \subset X \to [0,\infty]\)</span> (note the inclusion of <span class="process-math">\(\infty\)</span>). It turns out that we can't measure every subset of <span class="process-math">\(X\)</span> (that darn axiom of choice). So we equip <span class="process-math">\(X\)</span> with a sort of topology called a <span class="process-math">\(\sigma\)</span>-algebra consisting of so called measurable sets.</p>
+<div class="para" id="p-154">To be rigorous about convergence, we’re going to need some extremely useful tools from analysis. The discussion here will mostly bracket out proofs, which are typically done in a graduate course in real analysis.</div>
+<div class="para" id="p-155">A <dfn class="terminology">measure</dfn> is a function that assigns a numerical value to a set. The idea comes from an effort to generalize the notion of the length of an interval. A brief overview of the setup follows. We have a set <span class="process-math">\(X\)</span> (for example, <span class="process-math">\(X=\R\)</span>), and we want to define a function <span class="process-math">\(\mu: A \subset X \to [0,\infty]\)</span> (note the inclusion of <span class="process-math">\(\infty\)</span>). It turns out that we can’t measure every subset of <span class="process-math">\(X\)</span> (that darn axiom of choice). So we equip <span class="process-math">\(X\)</span> with a sort of topology called a <span class="process-math">\(\sigma\)</span>-algebra consisting of so called measurable sets.</div>
 <article class="definition definition-like" id="definition-4"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
 </h4>
-<p id="p-156">Given a set <span class="process-math">\(X\text{,}\)</span> a <span class="process-math">\(\sigma\)</span>-algebra on <span class="process-math">\(X\)</span> is a non-empty collection <span class="process-math">\(\Sigma\)</span> of subsets of <span class="process-math">\(X\)</span> that is closed under complements, countable unions, and countable intersections.</p></article><article class="definition definition-like" id="definition-5"><h4 class="heading">
+<div class="para" id="p-156">Given a set <span class="process-math">\(X\text{,}\)</span> a <span class="process-math">\(\sigma\)</span>-algebra on <span class="process-math">\(X\)</span> is a non-empty collection <span class="process-math">\(\Sigma\)</span> of subsets of <span class="process-math">\(X\)</span> that is closed under complements, countable unions, and countable intersections.</div></article><article class="definition definition-like" id="definition-5"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
 </h4>
-<p id="p-157">Let <span class="process-math">\(X\)</span> be a set and <span class="process-math">\(\Sigma\)</span> a <span class="process-math">\(\sigma\)</span>-algebra on <span class="process-math">\(X\text{.}\)</span> A set function <span class="process-math">\(\mu:\Sigma \to [0,\infty]\)</span> is a measure if</p>
+<div class="para logical" id="p-157">
+<div class="para">Let <span class="process-math">\(X\)</span> be a set and <span class="process-math">\(\Sigma\)</span> a <span class="process-math">\(\sigma\)</span>-algebra on <span class="process-math">\(X\text{.}\)</span> A set function <span class="process-math">\(\mu:\Sigma \to [0,\infty]\)</span> is a measure if</div>
 <ul class="disc">
-<li id="li-23"><p id="p-derived-li-23">For all <span class="process-math">\(E \in \Sigma\text{,}\)</span> <span class="process-math">\(\mu(E) \geq 0\text{.}\)</span></p></li>
-<li id="li-24"><p id="p-derived-li-24"><span class="process-math">\(\mu(\emptyset) = 0\text{.}\)</span></p></li>
-<li id="li-25"><p id="p-derived-li-25">For all countable collections <span class="process-math">\(\{E_j\} \subset \Sigma\)</span> of pairwise disjoint sets,<div class="displaymath process-math">
+<li id="li-23"><div class="para" id="p-derived-li-23">For all <span class="process-math">\(E \in \Sigma\text{,}\)</span> <span class="process-math">\(\mu(E) \geq 0\text{.}\)</span>
+</div></li>
+<li id="li-24"><div class="para" id="p-derived-li-24"><span class="process-math">\(\mu(\emptyset) = 0\text{.}\)</span></div></li>
+<li id="li-25"><div class="para" id="p-derived-li-25">For all countable collections <span class="process-math">\(\{E_j\} \subset \Sigma\)</span> of pairwise disjoint sets,<div class="displaymath process-math">
 \begin{equation*}
 \mu(\bigcup_j E_j) = \sum_j \mu(E_j).
 \end{equation*}
-</div></p></li>
-</ul></article><p id="p-158">One important example of a measure is <dfn class="terminology">Lebesgue measure</dfn>, which directly generalizes the length of intervals. Lebesgue measure is usually defined on the Borel sets <span class="process-math">\(\mathcal B\text{,}\)</span> which is the <span class="process-math">\(\sigma\)</span>-algebra constructed by starting with the open intervals in <span class="process-math">\(\R\)</span> and combining them in all ways to ensure that the conditions for a <span class="process-math">\(\sigma\)</span>-algebra are met. Measures can be far stranger than Lebesgue measure. The Dirac measure at <span class="process-math">\(x_0\text{,}\)</span> also called a point mass, is a measure that assigns a value of 1 to any set <span class="process-math">\(E\)</span> containing <span class="process-math">\(x_0\)</span> and <span class="process-math">\(0\)</span> otherwise.</p>
-<p id="p-159">To work with measures, we'll also need a family of compatible functions.</p>
+</div>
+</div></li>
+</ul>
+</div></article><div class="para" id="p-158">One important example of a measure is <dfn class="terminology">Lebesgue measure</dfn>, which directly generalizes the length of intervals. Lebesgue measure is usually defined on the Borel sets <span class="process-math">\(\mathcal B\text{,}\)</span> which is the <span class="process-math">\(\sigma\)</span>-algebra constructed by starting with the open intervals in <span class="process-math">\(\R\)</span> and combining them in all ways to ensure that the conditions for a <span class="process-math">\(\sigma\)</span>-algebra are met. Measures can be far stranger than Lebesgue measure. The Dirac measure at <span class="process-math">\(x_0\text{,}\)</span> also called a point mass, is a measure that assigns a value of 1 to any set <span class="process-math">\(E\)</span> containing <span class="process-math">\(x_0\)</span> and <span class="process-math">\(0\)</span> otherwise.</div>
+<div class="para" id="p-159">To work with measures, we’ll also need a family of compatible functions.</div>
 <article class="definition definition-like" id="definition-6"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
 </h4>
-<p id="p-160">Suppose that <span class="process-math">\(X\)</span> is a set and <span class="process-math">\(\Sigma\)</span> is a <span class="process-math">\(\sigma\)</span>-algebra on <span class="process-math">\(X\text{.}\)</span> A function <span class="process-math">\(f: X \to \R\)</span> is measurable if</p>
+<div class="para logical" id="p-160">
+<div class="para">Suppose that <span class="process-math">\(X\)</span> is a set and <span class="process-math">\(\Sigma\)</span> is a <span class="process-math">\(\sigma\)</span>-algebra on <span class="process-math">\(X\text{.}\)</span> A function <span class="process-math">\(f: X \to \R\)</span> is measurable if</div>
 <div class="displaymath process-math">
 \begin{equation*}
 f\inv(B) \in \Sigma
 \end{equation*}
 </div>
-<p class="continuation">for every Borel set <span class="process-math">\(B \in \mathcal B\text{.}\)</span></p></article><p id="p-161">Measures allow a powerful generalization of integrals, replacing the familiar “<span class="process-math">\(dx\)</span>”, which can be thought of as the length of a small interval, with <span class="process-math">\(d\mu\text{.}\)</span> The essential approach is to approximate a function from below by step functions, which is called <dfn class="terminology">Lebesgue integration</dfn>. That is, given a set <span class="process-math">\(X\text{,}\)</span> a <span class="process-math">\(\sigma\)</span>-algebra <span class="process-math">\(\Sigma\text{,}\)</span> a measure <span class="process-math">\(\mu\)</span> (together called a <dfn class="terminology">measure space</dfn> (X, <span class="process-math">\(\Sigma, \mu)\)</span>) and a function <span class="process-math">\(f:X \to [0,\infty]\text{,}\)</span> any partition of <span class="process-math">\(X\)</span> by subsets <span class="process-math">\(A_i\)</span> of <span class="process-math">\(\Sigma\)</span> leads to the integral-ish sum</p>
+<div class="para">for every Borel set <span class="process-math">\(B \in \mathcal B\text{.}\)</span>
+</div>
+</div></article><div class="para logical" id="p-161">
+<div class="para">Measures allow a powerful generalization of integrals, replacing the familiar “<span class="process-math">\(dx\)</span>”, which can be thought of as the length of a small interval, with <span class="process-math">\(d\mu\text{.}\)</span> The essential approach is to approximate a function from below by step functions, which is called <dfn class="terminology">Lebesgue integration</dfn>. That is, given a set <span class="process-math">\(X\text{,}\)</span> a <span class="process-math">\(\sigma\)</span>-algebra <span class="process-math">\(\Sigma\text{,}\)</span> a measure <span class="process-math">\(\mu\)</span> (together called a <dfn class="terminology">measure space</dfn> (X, <span class="process-math">\(\Sigma, \mu)\)</span>) and a function <span class="process-math">\(f:X \to [0,\infty]\text{,}\)</span> any partition of <span class="process-math">\(X\)</span> by subsets <span class="process-math">\(A_i\)</span> of <span class="process-math">\(\Sigma\)</span> leads to the integral-ish sum</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_{i=1}^m \mu(A_i) \inf_{A_i} f.
 \end{equation*}
 </div>
-<p class="continuation">You can view this as in the spirit of a Riemann sum - we're cutting <span class="process-math">\(X\)</span> up into pieces (but that need not be intervals) and under-estimating <span class="process-math">\(f\)</span> on those pieces. While this isn't strictly the area of a rectangle as in the Riemann case (as the <span class="process-math">\(A_i\)</span> can be very non-interval), the idea is similar.</p>
+<div class="para">You can view this as in the spirit of a Riemann sum - we’re cutting <span class="process-math">\(X\)</span> up into pieces (but that need not be intervals) and under-estimating <span class="process-math">\(f\)</span> on those pieces. While this isn’t strictly the area of a rectangle as in the Riemann case (as the <span class="process-math">\(A_i\)</span> can be very non-interval), the idea is similar.</div>
+</div>
 <article class="definition definition-like" id="definition-7"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
 </h4>
-<p id="p-162">When such a sum has a supremum over all <span class="process-math">\(\Sigma\)</span>-partitions of <span class="process-math">\(X\text{,}\)</span> we can define the <dfn class="terminology">integral of f with respect to <span class="process-math">\(\mu\)</span></dfn> by</p>
+<div class="para logical" id="p-162">
+<div class="para">When such a sum has a supremum over all <span class="process-math">\(\Sigma\)</span>-partitions of <span class="process-math">\(X\text{,}\)</span> we can define the <dfn class="terminology">integral of f with respect to <span class="process-math">\(\mu\)</span></dfn> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int f \, d\mu = \sup \{\sum_{i=1}^m \mu(A_i) \inf_{A_j} f: A_1, \ldots A_m \text{ is a } \Sigma-\text{partition of } X\}.
 \end{equation*}
-</div></article><p id="p-163">Lebesgue measure gives rise to integrals that directly generalize the Riemann integral - that is, if a function is Riemann integrable, then it is Lebesgue integrable and the integrals agree. (Note: unlike some authors, I do not admit improper Riemann integrals into the class of Riemann integrable functions.)</p>
-<p id="p-164">A more interesting example is to consider the Dirac measure <span class="process-math">\(\delta_a\)</span> where <span class="process-math">\(a \in X\text{.}\)</span> That is, <span class="process-math">\(\delta_a(E) = 1\)</span> if <span class="process-math">\(a \in E\)</span> and <span class="process-math">\(0\)</span> otherwise. Notice that for any partition of <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\(a \in A_i\)</span> for exactly one <span class="process-math">\(k\text{.}\)</span> So</p>
+</div>
+</div></article><div class="para" id="p-163">Lebesgue measure gives rise to integrals that directly generalize the Riemann integral - that is, if a function is Riemann integrable, then it is Lebesgue integrable and the integrals agree. (Note: unlike some authors, I do not admit improper Riemann integrals into the class of Riemann integrable functions.)</div>
+<div class="para logical" id="p-164">
+<div class="para">A more interesting example is to consider the Dirac measure <span class="process-math">\(\delta_a\)</span> where <span class="process-math">\(a \in X\text{.}\)</span> That is, <span class="process-math">\(\delta_a(E) = 1\)</span> if <span class="process-math">\(a \in E\)</span> and <span class="process-math">\(0\)</span> otherwise. Notice that for any partition of <span class="process-math">\(X\text{,}\)</span> <span class="process-math">\(a \in A_i\)</span> for exactly one <span class="process-math">\(k\text{.}\)</span> So</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum_{i=1}^m \delta_a(A_i) \inf_{A_i} f = 1 \inf_{A_k} f
 \end{equation*}
 </div>
-<p class="continuation">and that the sup of these sums will be <span class="process-math">\(f(a)\text{!.}\)</span> That is,</p>
+<div class="para">and that the sup of these sums will be <span class="process-math">\(f(a)\text{!.}\)</span> That is,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_X f \, d\delta_a = f(a).
 \end{equation*}
 </div>
-<p id="p-165">All this new machinery isn't much good if we don't get beefy new tools to work with. One of the big problems that Lebesgue integration is meant to solve is the failure in Riemann integration of being able to push limits inside integrals. In the Lebesgue setting, we have very powerful theorems describing when this can be done.</p>
-<p id="p-166">A sequence of functions <span class="process-math">\(f_k:X \to [0,\infty]\)</span> is called <dfn class="terminology">increasing</dfn> if for each <span class="process-math">\(x \in X\text{,}\)</span> we have <span class="process-math">\(f_1(x) \leq f_2(x) \leq \ldots\text{.}\)</span></p>
+</div>
+<div class="para" id="p-165">All this new machinery isn’t much good if we don’t get beefy new tools to work with. One of the big problems that Lebesgue integration is meant to solve is the failure in Riemann integration of being able to push limits inside integrals. In the Lebesgue setting, we have very powerful theorems describing when this can be done.</div>
+<div class="para" id="p-166">A sequence of functions <span class="process-math">\(f_k:X \to [0,\infty]\)</span> is called <dfn class="terminology">increasing</dfn> if for each <span class="process-math">\(x \in X\text{,}\)</span> we have <span class="process-math">\(f_1(x) \leq f_2(x) \leq \ldots\text{.}\)</span>
+</div>
 <article class="theorem theorem-like" id="thm-mct"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Monotone convergence theorem.</span>
 </h4>
-<p id="p-167">Suppose that <span class="process-math">\((X, \Sigma, \mu)\)</span> is a measure space and that <span class="process-math">\(0 \leq f_1 \leq f_2 \leq \ldots\)</span> is an increasing sequence of measurable functions. Define <span class="process-math">\(f: X \to [0,\infty]\)</span> by</p>
+<div class="para logical" id="p-167">
+<div class="para">Suppose that <span class="process-math">\((X, \Sigma, \mu)\)</span> is a measure space and that <span class="process-math">\(0 \leq f_1 \leq f_2 \leq \ldots\)</span> is an increasing sequence of measurable functions. Define <span class="process-math">\(f: X \to [0,\infty]\)</span> by</div>
 <div class="displaymath process-math">
 \begin{equation*}
 f(x) = \lim_{k \to \infty} f_k(x).
 \end{equation*}
 </div>
-<p class="continuation">Then</p>
+<div class="para">Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \lim_{k \to \infty} \int f_k \, d\mu = \int f \, d\mu.
 \end{equation*}
-</div></article><p id="p-168">An even beefier theorem states that we can push limits into integrals when the sequence of functions is dominated by a function with bounded integral. Note: I'm not covering the leap to complex measures here, but one can imagine that a real-valued measure is a sum of two positive measures, and that a complex measure is a sum of real measures in the obvious way.</p>
+</div>
+</div></article><div class="para" id="p-168">An even beefier theorem states that we can push limits into integrals when the sequence of functions is dominated by a function with bounded integral. Note: I’m not covering the leap to complex measures here, but one can imagine that a real-valued measure is a sum of two positive measures, and that a complex measure is a sum of real measures in the obvious way.</div>
 <article class="theorem theorem-like" id="theorem-19"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Dominated convergence theorem.</span>
 </h4>
-<p id="p-169">Suppose that <span class="process-math">\((X, \Sigma, \mu)\)</span> is a measure space and that <span class="process-math">\(f_n\)</span> is a sequence of complex-valued measurable functions. Suppose that <span class="process-math">\(f_n\)</span> converges pointwise to <span class="process-math">\(f\)</span> and that there exists a measurable function <span class="process-math">\(g\)</span> such that</p>
+<div class="para logical" id="p-169">
+<div class="para">Suppose that <span class="process-math">\((X, \Sigma, \mu)\)</span> is a measure space and that <span class="process-math">\(f_n\)</span> is a sequence of complex-valued measurable functions. Suppose that <span class="process-math">\(f_n\)</span> converges pointwise to <span class="process-math">\(f\)</span> and that there exists a measurable function <span class="process-math">\(g\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \abs{f_n(x)} \leq g(x)
 \end{equation*}
 </div>
-<p class="continuation">for all <span class="process-math">\(x\in X\)</span> and all <span class="process-math">\(n\)</span> and</p>
+<div class="para">for all <span class="process-math">\(x\in X\)</span> and all <span class="process-math">\(n\)</span> and</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int g \, d\mu \lt \infty.
 \end{equation*}
 </div>
-<p class="continuation">Then <span class="process-math">\(f\)</span> is integrable and</p>
+<div class="para">Then <span class="process-math">\(f\)</span> is integrable and</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \lim_{n\to \infty} \int f_n \, d\mu = \int f \, d\mu.
 \end{equation*}
-</div></article></section></section></div></main>
+</div>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="chapter-3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-14.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>

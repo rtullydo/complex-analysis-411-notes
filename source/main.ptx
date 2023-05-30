@@ -3,6 +3,9 @@
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <docinfo>
+        <latex-image-preamble>
+        \usepackage{tikz}
+        </latex-image-preamble>
         <macros>
         \DeclareMathOperator{\RE}{Re}
           \DeclareMathOperator{\IM}{Im}
@@ -74,7 +77,7 @@
           \newcommand\Htau{\mathbb{H}(\tau)}
           \newcommand{\vp}{\varphi}
           \newcommand{\ph}{\varphi}
-            \newcommand{\th}{\vartheta}
+            \newcommand{\vtheta}{\vartheta}
           \newcommand\al{\alpha}
           \newcommand\ga{\gamma}
           \newcommand\de{\delta}
@@ -1433,10 +1436,10 @@
                 </me>
             Finally, our asymptotic prime checking will be done by the function
                 <me>
-                    \th(s) = \sum_{p \leq x} \log p.
+                    \vtheta(s) = \sum_{p \leq x} \log p.
                 </me></p>
 
-            <p>Essentially, the argument goes by showing that there can be no zeros of <m>\zeta</m> on the line <m>\RE(s) = 1</m>, and then using that fact to force an asymptotic estimate on <m>\th</m>. The steps to the proof are as follows:
+            <p>Essentially, the argument goes by showing that there can be no zeros of <m>\zeta</m> on the line <m>\RE(s) = 1</m>, and then using that fact to force an asymptotic estimate on <m>\vtheta</m>. The steps to the proof are as follows:
                 <ol>
                     <li><title>Product formula</title> Prove the product formula for <m>\zeta</m> for <m>\RE s > 1</m>. That is,
                     <me>
@@ -1447,9 +1450,9 @@
                             \zeta(s) - \frac{1}{s -1}
                         </me>
                         has an analytic continuation to <m>\RE s > 0</m>.</li>
-                    <li> <title>Order asymptotic for <m>\th</m></title> Show that 
+                    <li> <title>Order asymptotic for <m>\vtheta</m></title> Show that 
                         <me>
-                            \th(x) = \mathrm{O}(x).
+                            \vtheta(x) = \mathrm{O}(x).
                         </me>
                     </li>
                     <li><title>No zeros on <m>\RE s = 1</m></title> Show that 
@@ -1463,11 +1466,11 @@
                     <li><title>Integral estimate</title>
                         Show that 
                         <me>
-                            \int_1^\infty \frac{\th(x) - x}{x^2} \, dx \text{ converges.}
+                            \int_1^\infty \frac{\vtheta(x) - x}{x^2} \, dx \text{ converges.}
                         </me></li>
-                    <li> <title>Exact asymptotic for <m>\th</m></title> Show that 
+                    <li> <title>Exact asymptotic for <m>\vtheta</m></title> Show that 
                         <me>
-                            \th(x) \sim x.
+                            \vtheta(x) \sim x.
                         </me>
                     </li>
                     <li><title>Prime number theorem</title> Conclude that <me>\pi(x) \sim \frac{x}{\log x}.</me>
@@ -1518,10 +1521,10 @@
                    Thus, while we defined the series for <m>\RE s > 1</m>, the terms of the series will converge absolutely for <m>\RE s > 0</m>, (for example by successive application of the <m>M</m>-test on an appropriate family of half-disks).</p>
                 </proof>
 
-                <theorem><title>Step III: Order of <m>\th</m></title>
+                <theorem><title>Step III: Order of <m>\vtheta</m></title>
                     <p> For <m>x \to \infty</m>,
                         <me>
-                            \th(x) = \sum_{p \leq x} \log p = \mathrm{O}(x).
+                            \vtheta(x) = \sum_{p \leq x} \log p = \mathrm{O}(x).
                         </me>
                     </p>
                 </theorem>
@@ -1531,12 +1534,12 @@
                         <mrow>2^{2n} = (1+1)^{2n} \amp= \binom{2n}{0} + \ldots \binom{2n}{2n} </mrow>
                         <mrow>\amp\geq \binom{2n}{n}</mrow>
                         <mrow> \amp\geq \prod_{n \leq p \leq 2n} p</mrow>
-                        <mrow> \amp= \exp(\th(2n) - \th(n)).</mrow>
+                        <mrow> \amp= \exp(\vtheta(2n) - \vtheta(n)).</mrow>
                     </md></p>
 
                     <p>This implies that
                         <me>
-                            \th(x) - \th(\frac{x}{2}) \leq C x
+                            \vtheta(x) - \vtheta(\frac{x}{2}) \leq C x
                         </me>
                         for any <m>C > \log 2</m> for all <m>x > x_0</m> for some <m>x_0</m> whose choice depends on <m>C</m>. Now, given some large value of <m>x</m>, consider the sequence 
                         <me>
@@ -1544,21 +1547,21 @@
                         </me>.
                         The corresponding inequalities are
                         <md>
-                            <mrow>\th(x) - \th(\frac{x}{2}) \amp\leq Cx</mrow>
-                            <mrow>\th(\frac{x}{2}) - \th(\frac{x}{4}) \amp\leq C\frac{x}{2}</mrow>
+                            <mrow>\vtheta(x) - \vtheta(\frac{x}{2}) \amp\leq Cx</mrow>
+                            <mrow>\vtheta(\frac{x}{2}) - \vtheta(\frac{x}{4}) \amp\leq C\frac{x}{2}</mrow>
                             <mrow>\vdots</mrow>
-                            <mrow>\th(\frac{x}{2^{r}})- \th(\frac{x}{2^r+1}) \amp\leq C\frac{x}{2^{r}}</mrow>.
+                            <mrow>\vtheta(\frac{x}{2^{r}})- \vtheta(\frac{x}{2^r+1}) \amp\leq C\frac{x}{2^{r}}</mrow>.
                         </md>
                         Adding these results in the inequality
                         <me>
-                            \th(x) - \th(\frac{x}{2^{r+1}}) \leq (1 + \frac{1}{2} + \ldots + \frac{1}{2^{r}})Cx \leq 2Cx,
+                            \vtheta(x) - \vtheta(\frac{x}{2^{r+1}}) \leq (1 + \frac{1}{2} + \ldots + \frac{1}{2^{r}})Cx \leq 2Cx,
                         </me>
-                        and so, noting that <m>\th(\frac{x}{2^{r+1}}) \leq \th(x_0)</m>, we get
+                        and so, noting that <m>\vtheta(\frac{x}{2^{r+1}}) \leq \vtheta(x_0)</m>, we get
                         <me>
-                            \th(x) \leq 2Cx + \th(x_0),
+                            \vtheta(x) \leq 2Cx + \vtheta(x_0),
                         </me>
                         or in order notation 
-                        <me>\th(x) = \mathrm{O}(x) \text{ as } x\to \infty</me> as <m>\th(x_0) = \mathrm{O}(1)</m>.</p>
+                        <me>\vtheta(x) = \mathrm{O}(x) \text{ as } x\to \infty</me> as <m>\vtheta(x_0) = \mathrm{O}(1)</m>.</p>
                     </proof>
 
                     <p>We now arrive at the crucial step, which the assertion that <m>\zeta</m> has no zeros on the line <m>\RE s = 1</m>.</p>
@@ -1638,36 +1641,36 @@
 
                     </proof>
 
-                    <p>In the next step, we hone our understanding of the behavior of <m>\th</m>.</p>
+                    <p>In the next step, we hone our understanding of the behavior of <m>\vtheta</m>.</p>
 
                     <theorem><title>Step V: Integral estimate</title>
                     <p>The integral
                         <me>
-                            \int_1^\infty \frac{\th(x) - x}{x^2} \, dx \text { converges.}
+                            \int_1^\infty \frac{\vtheta(x) - x}{x^2} \, dx \text { converges.}
                         </me>
                     </p></theorem>
                     <proof>
-                        <p>We'll use Stieltjes integrals and their properties. Assume that <m>\RE s > 1</m>. First, note that <m>\th</m> is a step function increasing with a step at each new prime number <m>p</m>. Then we can take the view that
+                        <p>We'll use Stieltjes integrals and their properties. Assume that <m>\RE s > 1</m>. First, note that <m>\vtheta</m> is a step function increasing with a step at each new prime number <m>p</m>. Then we can take the view that
                         <me>
-                            \Phi(s) = \sum_{p} \frac{\log p}{p^s} \, ds = \int_1^\infty \frac{d\th(s)}{x^s}.
+                            \Phi(s) = \sum_{p} \frac{\log p}{p^s} \, ds = \int_1^\infty \frac{d\vtheta(s)}{x^s}.
                         </me>
                         Now, applying the integration by parts formula for Stieltjes integrals, we get
                         <me> 
-                            \int_1^\infty \frac{d\th(s)}{x^s} = \int_1^\infty \th(x) \,d(x^{-s}) = s\int_1^\infty \frac{\th(x)}{x^{s+1}}\, dx
+                            \int_1^\infty \frac{d\vtheta(s)}{x^s} = \int_1^\infty \vtheta(x) \,d(x^{-s}) = s\int_1^\infty \frac{\vtheta(x)}{x^{s+1}}\, dx
                         </me>
                         and finally under the change of variables <m>x = e^t</m>, we get
                         <men xml:id="eq-g">
-                            \Phi(s) = s\int_0^\infty \th(e^t) e^{-st}\, dt.
+                            \Phi(s) = s\int_0^\infty \vtheta(e^t) e^{-st}\, dt.
                         </men>
                         </p>
                         <p>We're setting up to invoke a sort of dominated integral theorem from Newman's original paper, so we now introduce functions <m>f</m> and <m>g</m>. Define the functions
                         <md>
-                            <mrow>f(t) \amp= \th(e^t)e^{-t} - 1</mrow>
+                            <mrow>f(t) \amp= \vtheta(e^t)e^{-t} - 1</mrow>
                             <mrow>g(s) \amp= \frac{\Phi(s+1)}{s+1} - \frac{1}{s}</mrow>
                         </md>
-                        By Step III, <m>\th</m> is <m>O(x)</m>, and so <m>f</m> is bounded. Proceeding formally for a moment, (that is, ignoring issues of convergence, which will be pinned down shortly) the same change of variables from above will give
+                        By Step III, <m>\vtheta</m> is <m>O(x)</m>, and so <m>f</m> is bounded. Proceeding formally for a moment, (that is, ignoring issues of convergence, which will be pinned down shortly) the same change of variables from above will give
                         <me>
-                            \int_1^\infty \frac{\th(x) - x}{x^2} \, dx = \int_0^\infty f(t) \, dt.
+                            \int_1^\infty \frac{\vtheta(x) - x}{x^2} \, dx = \int_0^\infty f(t) \, dt.
                         </me></p>
                         <p>The function <m>\Phi(s) - 1/(s-1)</m> is holomorphic on <m>\RE s \geq 1</m> by Step IV, and so 
                         <me>
@@ -1697,7 +1700,7 @@
                             </lemma>
                             Notice that <m>f</m> and <m>g</m> as we have defined them satisfy the hypotheses of the lemma, and so 
                             <me>
-                            \int_1^\infty \frac{\th(x) - x}{x^2} \, dx = \int_0^\infty f(t) \, dt \text{ converges},
+                            \int_1^\infty \frac{\vtheta(x) - x}{x^2} \, dx = \int_0^\infty f(t) \, dt \text{ converges},
                              </me>
                         which establishes the theorem.
                         </p>
@@ -1707,33 +1710,33 @@
                     <theorem><title>Step VI: Asymptotic equality</title>
                         <p>For <m>x \to \infty</m>,
                         <me>
-                            \th(x) \sim x.
+                            \vtheta(x) \sim x.
                         </me></p>
                     </theorem>
 
                     <proof>
-                        <p>We'll proceed by cases on the assumption that <m>\th(x) \nsim x</m>. First, assume that there exists <m>\la > 1</m> so that <m>\th(x) > \la x</m> for sufficiently large <m>x</m>. Given such an <m>x</m>, as <m>\th</m> is an increasing function,
+                        <p>We'll proceed by cases on the assumption that <m>\vtheta(x) \nsim x</m>. First, assume that there exists <m>\la > 1</m> so that <m>\vtheta(x) > \la x</m> for sufficiently large <m>x</m>. Given such an <m>x</m>, as <m>\vtheta</m> is an increasing function,
                         <me>
-                            \int_x^{\la x} \frac{\th(t) - t}{t^2} \, dt \geq \int_x^{\la x} \frac{\la x - t}{t^2}\, dt = \int_1^\la \frac{\la - s}{s^2} \, ds > 0,
+                            \int_x^{\la x} \frac{\vtheta(t) - t}{t^2} \, dt \geq \int_x^{\la x} \frac{\la x - t}{t^2}\, dt = \int_1^\la \frac{\la - s}{s^2} \, ds > 0,
                         </me>
                         where this constant does not depend on <m>x</m>. However, the convergence in Step V means that for all <m>\eps > 0</m>, there exists some <m>M</m> for which <m>M_1, M_2 \geq M</m> we have
                         <me>
-                           \int_{M_1}^{M_2} \frac{\th(x) - x}{x^2} \, dx \lt \eps,
+                           \int_{M_1}^{M_2} \frac{\vtheta(x) - x}{x^2} \, dx \lt \eps,
                        </me>
                         and so such a <m>\la</m> cannot exist.  </p>
-                        <p>Likewise, if there exists <m>\la \lt 1</m> with <m>\th(x) \leq \la x</m> for sufficiently large <m>x</m>, then for <m>t \leq x,</m> 
+                        <p>Likewise, if there exists <m>\la \lt 1</m> with <m>\vtheta(x) \leq \la x</m> for sufficiently large <m>x</m>, then for <m>t \leq x,</m> 
                         <me>
-                            \th(t) \leq \th(x) \leq \la x,
+                            \vtheta(t) \leq \vtheta(x) \leq \la x,
                         </me>
                         and so 
                          <me>
-                            \int_{\la x}^{x} \frac{\th(t) - t}{t^2} \, dt \geq \int_{\la x}^{ x} \frac{\la x - t}{t^2}\, dt = \int_\la^1 \frac{\la - s}{s^2} \, ds \lt 0,
+                            \int_{\la x}^{x} \frac{\vtheta(t) - t}{t^2} \, dt \geq \int_{\la x}^{ x} \frac{\la x - t}{t^2}\, dt = \int_\la^1 \frac{\la - s}{s^2} \, ds \lt 0,
                         </me>
                         which leads to the same contradiction. Thus, 
                         <me>
-                            \limsup_{x \to \infty} \frac{\th(x)}{x} \leq 1 \leq \liminf_{x\to \infty} \frac{\th(x)}{x},
+                            \limsup_{x \to \infty} \frac{\vtheta(x)}{x} \leq 1 \leq \liminf_{x\to \infty} \frac{\vtheta(x)}{x},
                         </me>
-                        which means that <m>\th(x) \sim x</m>.</p>
+                        which means that <m>\vtheta(x) \sim x</m>.</p>
                     </proof>
 
                     <theorem><title>Prime Number Theorem</title>
@@ -1742,21 +1745,21 @@
                     <proof>
                         <p>First,
                             <me>
-                                \th(x) = \sum_{p \leq x} \log p \leq \sum_{p \leq x} \log x = \pi(x) \log x.
+                                \vtheta(x) = \sum_{p \leq x} \log p \leq \sum_{p \leq x} \log x = \pi(x) \log x.
                             </me>
                             Thus,
                             <me>
-                                \liminf_{x \to \infty} \frac{\pi(x) \log x}{x} \geq \liminf_{x \to \infty} \frac{\th(x)}{x} = 1.
+                                \liminf_{x \to \infty} \frac{\pi(x) \log x}{x} \geq \liminf_{x \to \infty} \frac{\vtheta(x)}{x} = 1.
                             </me>
                             In the other direction, for <m>0 \lt \eps \lt 1</m>, 
                             <md>
-                                <mrow>\th(x) \amp\geq \sum_{x^{1 - \eps} \leq p \leq x} \log p</mrow>
+                                <mrow>\vtheta(x) \amp\geq \sum_{x^{1 - \eps} \leq p \leq x} \log p</mrow>
                                 <mrow>\amp\geq (1 - \eps) \sum_{x^{1 - \eps} \leq p \leq x} \log x</mrow>
                                 <mrow>\amp= (1-\eps) \log x (\pi(x) + O(x^{1-\eps})).</mrow>
                             </md>
                             Then for each <m>\eps</m>,
                             <me>
-                                \limsup_{x \to \infty} \frac{\pi(x) \log x}{x} \leq \frac{1}{1 - \eps} \limsup_{x \to \infty} \frac{\th(x)}{x}.
+                                \limsup_{x \to \infty} \frac{\pi(x) \log x}{x} \leq \frac{1}{1 - \eps} \limsup_{x \to \infty} \frac{\vtheta(x)}{x}.
                             </me>
                             We conclude that
                             <me>
@@ -1764,6 +1767,114 @@
                             </me>
                         </p>
                     </proof>
+            </subsection>
+            <subsection><title>The analytic theorem</title>
+               <p>As is typical in mathematics, the technical lemma that drove our proof above, Newman's so-called Analytic Theorem, is the key to the entire enterprise. Indeed, according to J. Korevaar's <url ref=
+            "https://link.springer.com/article/10.1007/BF03024240">On Newman's quick way to the prime number theorem</url>, the simplicity of Newman's approach boils down to his proof of that theorem. Between the 1930s and the 1980s, the standard proof of the prime number theorem went by way of Fourier analysis, and a method due to Weiner called <url ref="https://en.wikipedia.org/wiki/Wiener%27s_Tauberian_theorem">Tauberian integrals</url>. In fact, the Analytic Theorem appears in a paper by Ingham from the 1930s with a different proof and more general statement. We restate Newman's result here.</p>
+
+            <theorem><title>Analytic Theorem</title>
+                <p>Let <m>f(t)</m> be bounded on <m>(0, \infty)</m> and integrable on any finite subinterval, and with the Laplace transform of <m>f</m>
+                                <me>
+                                    g(s) = \int_0^\infty e^{-st}f(t)\, dt 
+                                </me>
+                                well-defined and analytic for <m>\RE s > 0</m>. If <m>g(s)</m> extends to a holomorphic function on <m>\RE s \geq 0</m> (that is, <m>g</m> is holomorphic in a neighborhood of every point on the imaginary axis, then
+                                <me>
+                                    \int_0^\infty f(t)\, dt \text{ converges}
+                                </me>
+                                as an improper integral and equals <m>g(0)</m>.
+                </p>
+            </theorem>
+
+            <p>Korevaar points out that this is related to a very useful theorem called the <url ref="https://en.wikipedia.org/wiki/Wiener%E2%80%93Ikehara_theorem">Ikehara-Weiner theorem</url>. (The structure of this should remind you of the functions we used in the proof of the prime number theorem.)</p>
+            <theorem><title>Ikehara-Weiner</title>
+                <p>Let <m>f(x)</m> be nonnegative and nondecreasing on <m>[1,\infty)</m> and such that the Mellin transform
+                <me>
+                    g_0(s) = \int_1^\infty x^{-s} \, df(x) = -f(1) + s\int_1^s \frac{f(x)}{x^{s+1}}\,dx
+                </me>
+                exists for <m>\RE s > 1</m>. Suppose that for some constant <m>c</m>, the function
+                <me>
+                    g_0(s) - \frac{c}{s-1}
+                </me>
+                has a continuous extension to the closed half-plane <m>\RE s \geq 1</m>. Then
+                <me>
+                    \lim_{x \to \infty} \frac{f(x)}{x} = c.
+                </me></p>
+            </theorem>
+
+            <p>Korevaar notes that Newman's Analytic Theorem has as a consequence the following <q>poor-man's Ikehara-Weiner Theorem</q>.</p>
+
+            <theorem><title>Ikehara-Weiner Lite</title>
+                <p>Let <m>f(x)</m> be nonnegative, nondecreasing, and <m>O(x)</m> on <m>[1,\infty)</m> with Mellin transform
+                <me>
+                    g(s) = s \int_1^\infty \frac{f(x)}{x^{s+1}}\, dx
+                </me>
+                well-defined and analytic on <m>\RE s > 1</m>. Suppose that for some constant <m>c</m>,
+                <me>
+                    g(s) - \frac{c}{s-1}
+                </me>
+                can be continued analytically to a neighborhood of every point on the line <m>\RE s = 1</m>. Then
+                <me>
+                    \lim_{x \to \infty} \frac{f(x)}{x} = c.
+                </me></p>
+            </theorem>
+
+            <p>Notice that the content of the above theorem is essentially Steps IV-V of Newman's argument. The ideas that we're tossing around here are really ideas in analytic number theory, where complex analysis is used to analyze objects like <url ref="https://en.wikipedia.org/wiki/Dirichlet_series">Dirichlet series</url> via the theory of generating functions. Whereas the Ikehara-Weiner theorem is quite difficult, the proof of the Analytic Theorem requires little more than Cauchy's theorem and careful choice of contour. </p>
+
+            <proof><title>Proof of the Analytic Theorem</title>
+                <p>
+                I'm going to follow Korevaar's exposition here, which is quite nice.
+                <figure xml:id="fig-tikz">
+                      <caption>Illustration of main contour</caption>
+                      <image width="45%" xml:id="img-contour">
+
+                        <latex-image>
+                        \begin{tikzpicture}
+                          % Draw the real and imaginary axes
+                          \draw[->] (-3,0) -- (3,0) node[right] {Re};
+                          \draw[->] (0,-3) -- (0,3) node[above] {Im};
+
+                          % Draw the circular contour
+                          \draw[thick, red,domain=-105:105,->] plot ({2*cos(\x)}, {2*sin(\x)});
+
+                            \draw[thick, dashed, red,domain=105:180,->] plot ({2*cos(\x)}, {2*sin(\x)});
+
+                            \draw[thick, dashed, red,domain=180:255] plot ({2*cos(\x)}, {2*sin(\x)});
+
+                          % Draw the vertical line segment
+                          \draw[thick, blue,->]  ({2*cos(105)},{2*sin(105)}) -- ({2*cos(105)},{2*sin(-105)});
+                          \fill ({2*cos(105)},0) circle (2pt);
+
+                           % Labels
+                          \node[above right] at (2,0) {$C_1$};
+                          \node[above left] at (-1/2,1) {$C_2$};
+                          \node[above left] at (-1.5,1) {$C_3$};
+                          \node[below left] at ({2*cos(105)},0) {$-\delta$};
+                        \end{tikzpicture}
+                        </latex-image>
+                      </image>
+
+                </figure>
+                By assumption, the Laplace transform of <m>f</m> given by
+                <me>
+                    g(s) = \int_0^\infty e^{-st} f(t)\, dt
+                </me>
+                extends holomorphically to <m>\RE s \geq 0</m>. Choose some radius <m>R</m> and then choose a small <m>\delta</m> so that <m>g</m> is analytic on and inside the contour <m>C_1 \cup C_2</m>. Set the function
+                <me>
+                    g_T(z) = \int_0^T e^{-st} f(t)\, dt,
+                </me>
+                which is holomorphic in <m>\C</m> (say by Morera's theorem). We will show that 
+                <me>
+                    \lim_{T \to \infty} g_T(0) = \int_0^\infty f(t)\, dt = g(0).
+                </me>
+                As <m>g, g_T</m> are analytic on and across <m>C</m>, the Cauchy Integral Formula gives us
+                <me>
+                    g(0) - g_T(0) = \frac{1}{2\pi i}\int_C \frac{g(z) - g_T(z)}{z} \, dz.
+                </me>
+
+
+            </p>
+
+            </proof>
             </subsection>
 
         </section>

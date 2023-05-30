@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"> <div class="para logical">
+<div class="para">I’m going to follow Korevaar’s exposition here, which is quite nice. <figure class="figure figure-like"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="generated/latex-image/img-contour.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.13<span class="period">.</span></span><span class="space"> </span>Illustration of main contour</figcaption></figure> By assumption, the Laplace transform of <span class="process-math">\(f\)</span> given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(s) = \int_0^\infty e^{-st} f(t)\, dt
+\end{equation*}
+</div>
+<div class="para">extends holomorphically to <span class="process-math">\(\RE s \geq 0\text{.}\)</span> Choose some radius <span class="process-math">\(R\)</span> and then choose a small <span class="process-math">\(\delta\)</span> so that <span class="process-math">\(g\)</span> is analytic on and inside the contour <span class="process-math">\(C_1 \cup C_2\text{.}\)</span> Set the function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g_T(z) = \int_0^T e^{-st} f(t)\, dt,
+\end{equation*}
+</div>
+<div class="para">which is holomorphic in <span class="process-math">\(\C\)</span> (say by Morera’s theorem). We will show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{T \to \infty} g_T(0) = \int_0^\infty f(t)\, dt = g(0).
+\end{equation*}
+</div>
+<div class="para">As <span class="process-math">\(g, g_T\)</span> are analytic on and across <span class="process-math">\(C\text{,}\)</span> the Cauchy Integral Formula gives us</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(0) - g_T(0) = \frac{1}{2\pi i}\int_C \frac{g(z) - g_T(z)}{z} \, dz.
+\end{equation*}
+</div>
+</div></article></body>
+</html>

@@ -258,7 +258,7 @@ var ptx_lunr_docs = [
   "url": "section-4.html",
   "type": "Section",
   "number": "1.4",
-  "title": "Interlude: Liouville's Theorem",
+  "title": "Interlude: Liouville’s Theorem",
   "body": " Interlude: Liouville's Theorem  In the calculus of real functions, it isn't at all unusual to deal with power series that converge everywhere in that represent bounded functions. (A whole class of these in the real world are signals that can be expressed as Fourier series). For example, has a power series representation valid for all real and it bounded in absolute value by 1. The extension theorem tells us that this same series should have infinite radius of convergence on as well, but we should note what happens to the size of the values of the function. Let . Then and which will be unbounded as we let . So even though remains a function with a convergent power series representation on (a so-called entire function), it is an unbounded function. Liouville's theorem asserts that this is the general situation - an entire function that is bounded must necessarily be a constant function.  The proof of Liouville's theorem follows from a useful set of estimates about the behavior of derivatives of bounded analytic functions called the Cauchy inequalities. First, recall that Cauchy's integral theorem for derivatives gives where is a simple closed curve about inside the domain of .   Cauchy inequalities  Let be an analytic function on a domain with bound on , and let be a circle of radius centered at a point with . Then    Suppose that parametrizes . Note that restricted to , we have . By the integral theorem for derivatives, we have where the inequality follows from the ML-inequality.   We're now ready for the main result of this section   Liouville's Theorem  A bounded entire function is necessarily constant.    Let be a complex number and let be a circle of radius centered at . Suppose that is bounded in modulus on by a constant . Now apply the Cauchy inequality with to at . This gives This inequality holds for all radii , because every circle centered at is contained in the domain of . In particular, this means that as we let , we have which means that . Since this holds for every , we have and so for some constant .   "
 },
 {
@@ -294,7 +294,7 @@ var ptx_lunr_docs = [
   "url": "section-4.html#theorem-9",
   "type": "Theorem",
   "number": "1.4.2",
-  "title": "Liouville's Theorem.",
+  "title": "Liouville’s Theorem.",
   "body": " Liouville's Theorem  A bounded entire function is necessarily constant.  "
 },
 {
@@ -924,7 +924,7 @@ var ptx_lunr_docs = [
   "url": "section-13.html#thm-morera",
   "type": "Theorem",
   "number": "3.1.2",
-  "title": "Morera's theorem.",
+  "title": "Morera’s theorem.",
   "body": "Morera's theorem  Let be a continuous function defined on an open domain . If for every simple closed path contained in , then is analytic on .  "
 },
 {
@@ -1267,7 +1267,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "The prime number theorem",
-  "body": "The prime number theorem  Preliminaries  Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I'm referencing here is a very nice exposition of Newman's paper by D. Zagier. Tao's notes follow a similar line, but works through a different set of functions.   See: D.J Newman, Simple Analytic Proof of the Prime Number Theorem. Amer. Math. Monthly 87 (1980) D. Zagier. Newman's Short Proof of the Prime Number Theorem. Amer. Math. Monthly 104 (1997)  We aim to prove the following description of the asymptotic density of the primes in the integers. Let denote the number of primes less than or equal to . We will use the notation (that is, and are asymptotically equal) to mean . We will also use the order notation as to mean that there exists some so that for all sufficiently large . (Every order argument we make in this section will be at infinity, so we may sometimes just write .)  Prime number theorem     Let us introduce our dramatis personae. Our primary character is, of course, the zeta function From the logarithmic derivative ( ) of , we'll consider the function Finally, our asymptotic prime checking will be done by the function  Essentially, the argument goes by showing that there can be no zeros of on the line , and then using that fact to force an asymptotic estimate on . The steps to the proof are as follows:  Product formula Prove the product formula for for . That is,   Continuation across the critical strip Show that the function has an analytic continuation to .   Order asymptotic for Show that   No zeros on Show that and that  Integral estimate Show that   Exact asymptotic for Show that   Prime number theorem Conclude that    We will prove these as a series of theorems  Step 1: product formula  For ,    This theorem was proved in the earlier section.  Step II: continuation across the critical strip  The function analytically continues to the set .    The idea is to write the function as a power series and show that it converges absolutely by comparison. Both functions are analytic on , so we'll use that as a basis for our series. In order to leverage bounding in integral, note that we can write in a sort of continuous -series form via Then,   The terms themselves look like the output of a definite integral - indeed, Then, invoking the ML inequality, Thus, while we defined the series for , the terms of the series will converge absolutely for , (for example by successive application of the -test on an appropriate family of half-disks).   Step III: Order of  For ,     The argument is combinatorial-esque. For , we have  This implies that for any for all for some whose choice depends on . Now, given some large value of , consider the sequence . The corresponding inequalities are Adding these results in the inequality and so, noting that , we get or in order notation as .   We now arrive at the crucial step, which the assertion that has no zeros on the line .  Step IV: zeros of  on . Also, is holomorphic on .    Start with the assumption that . Now compute the logarithmic derivative of : This gives the identity Notice that the series on the right hand side converges for . From Step II above, we know that is holomorphic on , and so is meromorphic on with a simple pole at . Likewise, will be meromorphic with a pole at of order 2. Then is also a meromorphic function on with poles at and at the zeros of , which implies for , which is that we have a meromorphic extension of to with poles at and the zeros of .  Now let's analyze the zeros. First, because , we see that if is zero of then so is . Now let . If is a zero of of order , then for some holomorphic function that is non-zero near . Computing the logarithmic derivative gets us for some function holomorphic near . The function then has a simple pole at , and by the residue theorem   Now, consider and note that the terms are positive for . Then Multiplying this out gives From Part II, as noted above we have that is a simple pole of with residue 1, and so Then and so . As we intend to show that , we need more. So assume as well that has a zero at with order . (That is, we are admitting the possibility that there is no zero at those points.) Again, note that Then the same idea applied to produces the equation This requires that since . We have shown that if has a zero of the form , then it must have order 0, and hence not be a zero. That is, has no zeros on the line .  Finally, recall that the poles of are and the zeros of , none of which can lie on . If we trace through the form of from and the implications of Step II, we conclude that is holomorphic on .    "
+  "body": "The prime number theorem  Preliminaries  Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I'm referencing here is a very nice exposition of Newman's paper by D. Zagier. There is a wonderful stroll through the Zagier paper in Helgason's notes for a complex analysis class on MIT's OCW. Tao's notes follow a similar line, but works through a different set of functions.   See: D.J Newman, Simple Analytic Proof of the Prime Number Theorem. Amer. Math. Monthly 87 (1980) D. Zagier. Newman's Short Proof of the Prime Number Theorem. Amer. Math. Monthly 104 (1997) S. Helgason. Course Notes for 18-112, 2008.   We aim to prove the following description of the asymptotic density of the primes in the integers. Let denote the number of primes less than or equal to . We will use the notation (that is, and are asymptotically equal) to mean . We will also use the order notation as to mean that there exists some so that for all sufficiently large . (Every order argument we make in this section will be at infinity, so we may sometimes just write .)  Prime number theorem     Let us introduce our dramatis personae. Our primary character is, of course, the zeta function From the logarithmic derivative ( ) of , we'll consider the function Finally, our asymptotic prime checking will be done by the function  Essentially, the argument goes by showing that there can be no zeros of on the line , and then using that fact to force an asymptotic estimate on . The steps to the proof are as follows:  Product formula Prove the product formula for for . That is,   Continuation across the critical strip Show that the function has an analytic continuation to .   Order asymptotic for Show that   No zeros on Show that and that  Integral estimate Show that   Exact asymptotic for Show that   Prime number theorem Conclude that    We will prove these as a series of theorems  Step 1: product formula  For ,    This theorem was proved in the earlier section.  Step II: continuation across the critical strip  The function analytically continues to the set .    The idea is to write the function as a power series and show that it converges absolutely by comparison. Both functions are analytic on , so we'll use that as a basis for our series. In order to leverage bounding in integral, note that we can write in a sort of continuous -series form via Then,   The terms themselves look like the output of a definite integral - indeed, Then, invoking the ML inequality, Thus, while we defined the series for , the terms of the series will converge absolutely for , (for example by successive application of the -test on an appropriate family of half-disks).   Step III: Order of  For ,     The argument is combinatorial-esque. For , we have  This implies that for any for all for some whose choice depends on . Now, given some large value of , consider the sequence . The corresponding inequalities are Adding these results in the inequality and so, noting that , we get or in order notation as .   We now arrive at the crucial step, which the assertion that has no zeros on the line .  Step IV: zeros of  on . Also, is holomorphic on .    Start with the assumption that . Now compute the logarithmic derivative of : This gives the identity Notice that the series on the right hand side converges for . From Step II above, we know that is holomorphic on , and so is meromorphic on with a simple pole at . Likewise, will be meromorphic with a pole at of order 2. Then is also a meromorphic function on with poles at and at the zeros of , which implies for , which is that we have a meromorphic extension of to with poles at and the zeros of .  Now let's analyze the zeros. First, because , we see that if is zero of then so is . Now let . If is a zero of of order , then for some holomorphic function that is non-zero near . Computing the logarithmic derivative gets us for some function holomorphic near . The function then has a simple pole at , and by the residue theorem   Now, consider and note that the terms are positive for . Then Multiplying this out gives From Part II, as noted above we have that is a simple pole of with residue 1, and so Then and so . As we intend to show that , we need more. So assume as well that has a zero at with order . (That is, we are admitting the possibility that there is no zero at those points.) Again, note that Then the same idea applied to produces the equation This requires that since . We have shown that if has a zero of the form , then it must have order 0, and hence not be a zero. That is, has no zeros on the line .  Finally, recall that the poles of are and the zeros of , none of which can lie on . If we trace through the form of from and the implications of Step II, we conclude that is holomorphic on .   In the next step, we hone our understanding of the behavior of .  Step V: Integral estimate  The integral    We'll use Stieltjes integrals and their properties. Assume that . First, note that is a step function increasing with a step at each new prime number . Then we can take the view that Now, applying the integration by parts formula for Stieltjes integrals, we get and finally under the change of variables , we get   We're setting up to invoke a sort of dominated integral theorem from Newman's original paper, so we now introduce functions and . Define the functions By Step III, is , and so is bounded. Proceeding formally for a moment, (that is, ignoring issues of convergence, which will be pinned down shortly) the same change of variables from above will give  The function is holomorphic on by Step IV, and so for some holomorphic function on . As a consequence, is holomorphic on . On the other hand, for , we have by   All of the pieces are set up. We now need Newman's Analytic Theorem (which we defer the proof of until later). Analytic Theorem  Let be bounded and locally integrable for , and assume that extends to a holomorphic function on . Then and equals .  Notice that and as we have defined them satisfy the hypotheses of the lemma, and so which establishes the theorem.   Step VI: Asymptotic equality  For ,    We'll proceed by cases on the assumption that . First, assume that there exists so that for sufficiently large . Given such an , as is an increasing function, where this constant does not depend on . However, the convergence in Step V means that for all , there exists some for which we have and so such a cannot exist.  Likewise, if there exists with for sufficiently large , then for  and so which leads to the same contradiction. Thus, which means that .   Prime Number Theorem     First, Thus, In the other direction, for , Then for each , We conclude that     The analytic theorem  As is typical in mathematics, the technical lemma that drove our proof above, Newman's so-called Analytic Theorem, is the key to the entire enterprise. Indeed, according to J. Korevaar's On Newman's quick way to the prime number theorem , the simplicity of Newman's approach boils down to his proof of that theorem. Between the 1930s and the 1980s, the standard proof of the prime number theorem went by way of Fourier analysis, and a method due to Weiner called Tauberian integrals . In fact, the Analytic Theorem appears in a paper by Ingham from the 1930s with a different proof and more general statement. We restate Newman's result here.  Analytic Theorem  Let be bounded on and integrable on any finite subinterval, and with the Laplace transform of  well-defined and analytic for . If extends to a holomorphic function on (that is, is holomorphic in a neighborhood of every point on the imaginary axis, then as an improper integral and equals .   Korevaar points out that this is related to a very useful theorem called the Ikehara-Weiner theorem . (The structure of this should remind you of the functions we used in the proof of the prime number theorem.)  Ikehara-Weiner  Let be nonnegative and nondecreasing on and such that the Mellin transform exists for . Suppose that for some constant , the function has a continuous extension to the closed half-plane . Then   Korevaar notes that Newman's Analytic Theorem has as a consequence the following poor-man's Ikehara-Weiner Theorem .  Ikehara-Weiner Lite  Let be nonnegative, nondecreasing, and on with Mellin transform well-defined and analytic on . Suppose that for some constant , can be continued analytically to a neighborhood of every point on the line . Then   Notice that the content of the above theorem is essentially Steps IV-V of Newman's argument. The ideas that we're tossing around here are really ideas in analytic number theory, where complex analysis is used to analyze objects like Dirichlet series via the theory of generating functions. Whereas the Ikehara-Weiner theorem is quite difficult, the proof of the Analytic Theorem requires little more than Cauchy's theorem and careful choice of contour.  Proof of the Analytic Theorem  I'm going to follow Korevaar's exposition here, which is quite nice.  Illustration of main contour     By assumption, the Laplace transform of given by extends holomorphically to . Choose some radius and then choose a small so that is analytic on and inside the contour . Set the function which is holomorphic in (say by Morera's theorem). We will show that As are analytic on and across , the Cauchy Integral Formula gives us     "
 },
 {
   "id": "theorem-28",
@@ -1311,7 +1311,7 @@ var ptx_lunr_docs = [
   "url": "section-15.html#theorem-31",
   "type": "Theorem",
   "number": "3.3.4",
-  "title": "Step III: Order of <span class=\"process-math\">\\(\\th\\)<\/span>.",
+  "title": "Step III: Order of <span class=\"process-math\">\\(\\vtheta\\)<\/span>.",
   "body": "Step III: Order of  For ,   "
 },
 {
@@ -1340,6 +1340,96 @@ var ptx_lunr_docs = [
   "number": "3.3.1.3",
   "title": "",
   "body": " Start with the assumption that . Now compute the logarithmic derivative of : This gives the identity Notice that the series on the right hand side converges for . From Step II above, we know that is holomorphic on , and so is meromorphic on with a simple pole at . Likewise, will be meromorphic with a pole at of order 2. Then is also a meromorphic function on with poles at and at the zeros of , which implies for , which is that we have a meromorphic extension of to with poles at and the zeros of .  Now let's analyze the zeros. First, because , we see that if is zero of then so is . Now let . If is a zero of of order , then for some holomorphic function that is non-zero near . Computing the logarithmic derivative gets us for some function holomorphic near . The function then has a simple pole at , and by the residue theorem   Now, consider and note that the terms are positive for . Then Multiplying this out gives From Part II, as noted above we have that is a simple pole of with residue 1, and so Then and so . As we intend to show that , we need more. So assume as well that has a zero at with order . (That is, we are admitting the possibility that there is no zero at those points.) Again, note that Then the same idea applied to produces the equation This requires that since . We have shown that if has a zero of the form , then it must have order 0, and hence not be a zero. That is, has no zeros on the line .  Finally, recall that the poles of are and the zeros of , none of which can lie on . If we trace through the form of from and the implications of Step II, we conclude that is holomorphic on .  "
+},
+{
+  "id": "theorem-33",
+  "level": "2",
+  "url": "section-15.html#theorem-33",
+  "type": "Theorem",
+  "number": "3.3.6",
+  "title": "Step V: Integral estimate.",
+  "body": "Step V: Integral estimate  The integral  "
+},
+{
+  "id": "proof-18",
+  "level": "2",
+  "url": "section-15.html#proof-18",
+  "type": "Proof",
+  "number": "3.3.1.4",
+  "title": "",
+  "body": " We'll use Stieltjes integrals and their properties. Assume that . First, note that is a step function increasing with a step at each new prime number . Then we can take the view that Now, applying the integration by parts formula for Stieltjes integrals, we get and finally under the change of variables , we get   We're setting up to invoke a sort of dominated integral theorem from Newman's original paper, so we now introduce functions and . Define the functions By Step III, is , and so is bounded. Proceeding formally for a moment, (that is, ignoring issues of convergence, which will be pinned down shortly) the same change of variables from above will give  The function is holomorphic on by Step IV, and so for some holomorphic function on . As a consequence, is holomorphic on . On the other hand, for , we have by   All of the pieces are set up. We now need Newman's Analytic Theorem (which we defer the proof of until later). Analytic Theorem  Let be bounded and locally integrable for , and assume that extends to a holomorphic function on . Then and equals .  Notice that and as we have defined them satisfy the hypotheses of the lemma, and so which establishes the theorem.  "
+},
+{
+  "id": "theorem-34",
+  "level": "2",
+  "url": "section-15.html#theorem-34",
+  "type": "Theorem",
+  "number": "3.3.8",
+  "title": "Step VI: Asymptotic equality.",
+  "body": "Step VI: Asymptotic equality  For ,  "
+},
+{
+  "id": "proof-19",
+  "level": "2",
+  "url": "section-15.html#proof-19",
+  "type": "Proof",
+  "number": "3.3.1.5",
+  "title": "",
+  "body": " We'll proceed by cases on the assumption that . First, assume that there exists so that for sufficiently large . Given such an , as is an increasing function, where this constant does not depend on . However, the convergence in Step V means that for all , there exists some for which we have and so such a cannot exist.  Likewise, if there exists with for sufficiently large , then for  and so which leads to the same contradiction. Thus, which means that .  "
+},
+{
+  "id": "theorem-35",
+  "level": "2",
+  "url": "section-15.html#theorem-35",
+  "type": "Theorem",
+  "number": "3.3.9",
+  "title": "Prime Number Theorem.",
+  "body": "Prime Number Theorem   "
+},
+{
+  "id": "proof-20",
+  "level": "2",
+  "url": "section-15.html#proof-20",
+  "type": "Proof",
+  "number": "3.3.1.6",
+  "title": "",
+  "body": " First, Thus, In the other direction, for , Then for each , We conclude that   "
+},
+{
+  "id": "theorem-36",
+  "level": "2",
+  "url": "section-15.html#theorem-36",
+  "type": "Theorem",
+  "number": "3.3.10",
+  "title": "Analytic Theorem.",
+  "body": "Analytic Theorem  Let be bounded on and integrable on any finite subinterval, and with the Laplace transform of  well-defined and analytic for . If extends to a holomorphic function on (that is, is holomorphic in a neighborhood of every point on the imaginary axis, then as an improper integral and equals .  "
+},
+{
+  "id": "theorem-37",
+  "level": "2",
+  "url": "section-15.html#theorem-37",
+  "type": "Theorem",
+  "number": "3.3.11",
+  "title": "Ikehara-Weiner.",
+  "body": "Ikehara-Weiner  Let be nonnegative and nondecreasing on and such that the Mellin transform exists for . Suppose that for some constant , the function has a continuous extension to the closed half-plane . Then  "
+},
+{
+  "id": "theorem-38",
+  "level": "2",
+  "url": "section-15.html#theorem-38",
+  "type": "Theorem",
+  "number": "3.3.12",
+  "title": "Ikehara-Weiner Lite.",
+  "body": "Ikehara-Weiner Lite  Let be nonnegative, nondecreasing, and on with Mellin transform well-defined and analytic on . Suppose that for some constant , can be continued analytically to a neighborhood of every point on the line . Then  "
+},
+{
+  "id": "proof-21",
+  "level": "2",
+  "url": "section-15.html#proof-21",
+  "type": "Proof",
+  "number": "3.3.2.1",
+  "title": "Proof of the Analytic Theorem.",
+  "body": "Proof of the Analytic Theorem  I'm going to follow Korevaar's exposition here, which is quite nice.  Illustration of main contour     By assumption, the Laplace transform of given by extends holomorphically to . Choose some radius and then choose a small so that is analytic on and inside the contour . Set the function which is holomorphic in (say by Morera's theorem). We will show that As are analytic on and across , the Cauchy Integral Formula gives us   "
 }
 ]
 

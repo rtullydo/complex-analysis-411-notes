@@ -2,9 +2,6 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2023-05-27T21:41:21-07:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -13,36 +10,41 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body class="ignore-math"><article class="hiddenproof"><p>We'll proceed by cases on the assumption that <span class="process-math">\(\th(x) \nsim x\text{.}\)</span> First, assume that there exists <span class="process-math">\(\la &gt; 1\)</span> so that <span class="process-math">\(\th(x) &gt; \la x\)</span> for sufficiently large <span class="process-math">\(x\text{.}\)</span> Given such an <span class="process-math">\(x\text{,}\)</span> as <span class="process-math">\(\th\)</span> is an increasing function,</p>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">We’ll proceed by cases on the assumption that <span class="process-math">\(\vtheta(x) \nsim x\text{.}\)</span> First, assume that there exists <span class="process-math">\(\la &gt; 1\)</span> so that <span class="process-math">\(\vtheta(x) &gt; \la x\)</span> for sufficiently large <span class="process-math">\(x\text{.}\)</span> Given such an <span class="process-math">\(x\text{,}\)</span> as <span class="process-math">\(\vtheta\)</span> is an increasing function,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\int_x^{\la x} \frac{\th(t) - t}{t^2} \, dt \geq \int_x^{\la x} \frac{\la x - t}{t^2}\, dt = \int_1^\la \frac{\la - s}{s^2} \, ds &gt; 0,
+\int_x^{\la x} \frac{\vtheta(t) - t}{t^2} \, dt \geq \int_x^{\la x} \frac{\la x - t}{t^2}\, dt = \int_1^\la \frac{\la - s}{s^2} \, ds &gt; 0,
 \end{equation*}
 </div>
-<p class="continuation">where this constant does not depend on <span class="process-math">\(x\text{.}\)</span> However, the convergence in Step V means that for all <span class="process-math">\(\eps &gt; 0\text{,}\)</span> there exists some <span class="process-math">\(M\)</span> for which <span class="process-math">\(M_1, M_2 \geq M\)</span> we have</p>
+<div class="para">where this constant does not depend on <span class="process-math">\(x\text{.}\)</span> However, the convergence in Step V means that for all <span class="process-math">\(\eps &gt; 0\text{,}\)</span> there exists some <span class="process-math">\(M\)</span> for which <span class="process-math">\(M_1, M_2 \geq M\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\int_{M_1}^{M_2} \frac{\th(x) - x}{x^2} \, dx \lt \eps,
+\int_{M_1}^{M_2} \frac{\vtheta(x) - x}{x^2} \, dx \lt \eps,
 \end{equation*}
 </div>
-<p class="continuation">and so such a <span class="process-math">\(\la\)</span> cannot exist.</p>
-<p>Likewise, if there exists <span class="process-math">\(\la \lt 1\)</span> with <span class="process-math">\(\th(x) \leq \la x\)</span> for sufficiently large <span class="process-math">\(x\text{,}\)</span> then for <span class="process-math">\(t \leq x,\)</span></p>
+<div class="para">and so such a <span class="process-math">\(\la\)</span> cannot exist.</div>
+</div> <div class="para logical">
+<div class="para">Likewise, if there exists <span class="process-math">\(\la \lt 1\)</span> with <span class="process-math">\(\vtheta(x) \leq \la x\)</span> for sufficiently large <span class="process-math">\(x\text{,}\)</span> then for <span class="process-math">\(t \leq x,\)</span>
+</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\th(t) \leq \th(x) \leq \la x,
+\vtheta(t) \leq \vtheta(x) \leq \la x,
 \end{equation*}
 </div>
-<p class="continuation">and so</p>
+<div class="para">and so</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\int_{\la x}^{x} \frac{\th(t) - t}{t^2} \, dt \geq \int_{\la x}^{ x} \frac{\la x - t}{t^2}\, dt = \int_\la^1 \frac{\la - s}{s^2} \, ds \lt 0,
+\int_{\la x}^{x} \frac{\vtheta(t) - t}{t^2} \, dt \geq \int_{\la x}^{ x} \frac{\la x - t}{t^2}\, dt = \int_\la^1 \frac{\la - s}{s^2} \, ds \lt 0,
 \end{equation*}
 </div>
-<p class="continuation">which leads to the same contradiction. Thus,</p>
+<div class="para">which leads to the same contradiction. Thus,</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\limsup_{x \to \infty} \frac{\th(x)}{x} \leq 1 \leq \liminf_{x\to \infty} \frac{\th(x)}{x},
+\limsup_{x \to \infty} \frac{\vtheta(x)}{x} \leq 1 \leq \liminf_{x\to \infty} \frac{\vtheta(x)}{x},
 \end{equation*}
 </div>
-<p class="continuation">which means that <span class="process-math">\(\th(x) \sim x\text{.}\)</span></p></article></body>
+<div class="para">which means that <span class="process-math">\(\vtheta(x) \sim x\text{.}\)</span>
+</div>
+</div></article></body>
 </html>
