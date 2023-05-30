@@ -44,7 +44,7 @@ window.MathJax = {
     )}
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -302,7 +302,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Conformal maps</span></a></div></li>
 <li><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Simply connected sets, boundaries, and the Riemann mapping theorem</span></a></div></li>
 <li><div class="toc-item"><a href="section-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">(optional) A proof of the Riemann Mapping Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Interlude: Liouville’s Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Interlude: Liouville's Theorem</span></a></div></li>
 <li>
 <div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercise set 1</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="section-5.html#exercises-1" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
@@ -378,12 +378,12 @@ window.MathJax = {
 <section class="subsection" id="subsection-14"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">Preliminaries</span>
 </h3>
-<div class="para" id="p-211">Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I’m referencing here is a very nice exposition of Newman’s paper by D. Zagier. There is a wonderful stroll through the Zagier paper in Helgason’s notes for a complex analysis class on MIT’s OCW. Tao’s notes follow a similar line, but works through a different set of functions.</div>
+<div class="para" id="p-211">Our first proof of the prime number theorem will run through a complex analytic argument due to Newman. The particular paper I'm referencing here is a very nice exposition of Newman's paper by D. Zagier. There is a wonderful stroll through the Zagier paper in Helgason's notes for a complex analysis class on MIT's OCW. Tao's notes follow a similar line, but works through a different set of functions.</div>
 <aside class="aside aside-like" id="aside-2"><div class="para logical" id="p-212">
 <div class="para">See:</div>
 <ol class="decimal">
 <li id="li-38"><div class="para" id="p-derived-li-38">D.J Newman, Simple Analytic Proof of the Prime Number Theorem. <em class="emphasis">Amer. Math. Monthly</em> 87 (1980)</div></li>
-<li id="li-39"><div class="para" id="p-derived-li-39">D. Zagier. Newman’s Short Proof of the Prime Number Theorem. <em class="emphasis">Amer. Math. Monthly</em> 104 (1997)</div></li>
+<li id="li-39"><div class="para" id="p-derived-li-39">D. Zagier. Newman's Short Proof of the Prime Number Theorem. <em class="emphasis">Amer. Math. Monthly</em> 104 (1997)</div></li>
 <li id="li-40"><div class="para" id="p-derived-li-40">S. Helgason. Course Notes for 18-112, 2008.</div></li>
 </ol>
 </div></aside><div class="para" id="p-213">We aim to prove the following description of the asymptotic density of the primes in the integers. Let <span class="process-math">\(\pi(x)\)</span> denote the number of primes less than or equal to <span class="process-math">\(x\text{.}\)</span> We will use the notation <span class="process-math">\(f \sim g\)</span> (that is, <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are asymptotically equal) to mean <span class="process-math">\(\lim_{x \to \infty} f(x)/g(x) = 1\text{.}\)</span> We will also use the order notation <span class="process-math">\(g = \mathrm{O}(f)\)</span> as <span class="process-math">\(x \to \infty\)</span> to mean that there exists some <span class="process-math">\(C&gt;0\)</span> so that <span class="process-math">\(\abs{g(x)} \leq Cf(x)\)</span> for all sufficiently large <span class="process-math">\(x\text{.}\)</span> (Every order argument we make in this section will be at infinity, so we may sometimes just write <span class="process-math">\(g = \mathrm{O}(x)\text{.}\)</span>)</div>
@@ -401,7 +401,7 @@ window.MathJax = {
 \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}.
 \end{equation*}
 </div>
-<div class="para">From the logarithmic derivative (<span class="process-math">\(f\dd/f\)</span>) of <span class="process-math">\(\zeta\text{,}\)</span> we’ll consider the function</div>
+<div class="para">From the logarithmic derivative (<span class="process-math">\(f\dd/f\)</span>) of <span class="process-math">\(\zeta\text{,}\)</span> we'll consider the function</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \Phi(s) = \sum_p \frac{\log p}{p^s}.
@@ -505,7 +505,7 @@ window.MathJax = {
 <div class="para">analytically continues to the set <span class="process-math">\(\RE s &gt; 0\text{.}\)</span>
 </div>
 </div></article><article class="hiddenproof" id="proof-15"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-15"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-15"><article class="hiddenproof"><div class="para logical" id="p-221">
-<div class="para">The idea is to write the function as a power series and show that it converges absolutely by comparison. Both functions are analytic on <span class="process-math">\(\RE s &gt; 1\text{,}\)</span> so we’ll use that as a basis for our series. In order to leverage bounding in integral, note that we can write <span class="process-math">\(1/(s-1)\)</span> in a sort of continuous <span class="process-math">\(p\)</span>-series form via</div>
+<div class="para">The idea is to write the function as a power series and show that it converges absolutely by comparison. Both functions are analytic on <span class="process-math">\(\RE s &gt; 1\text{,}\)</span> so we'll use that as a basis for our series. In order to leverage bounding in integral, note that we can write <span class="process-math">\(1/(s-1)\)</span> in a sort of continuous <span class="process-math">\(p\)</span>-series form via</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{1}{s-1} = \int_1^\infty \frac{1}{x^s}\, dx.
@@ -640,7 +640,7 @@ x, \frac{x}{2}, \frac{x}{4}, \ldots, \frac{x}{2^r} \geq x_0 \geq \frac{x}{2^{r+1
 <div class="para">that we have a meromorphic extension of <span class="process-math">\(\Phi\)</span> to <span class="process-math">\(\RE s &gt; \frac{1}{2}\)</span> with poles at <span class="process-math">\(s = 1\)</span> and the zeros of <span class="process-math">\(\zeta\text{.}\)</span>
 </div>
 </div> <div class="para logical" id="p-229">
-<div class="para">Now let’s analyze the zeros. First, because <span class="process-math">\(\zeta(s) = \cc{\zeta(\cc s)}\text{,}\)</span> we see that if <span class="process-math">\(s\)</span> is zero of <span class="process-math">\(\zeta\)</span> then so is <span class="process-math">\(\cc{s}\text{.}\)</span> Now let <span class="process-math">\(a\in \R\text{.}\)</span> If <span class="process-math">\(s_0 = 1 + ia\)</span> is a zero of <span class="process-math">\(\zeta\)</span> of order <span class="process-math">\(\mu \geq 0\text{,}\)</span> then <span class="process-math">\(\zeta = (s - s_0)^\mu h(s)\)</span> for some holomorphic function <span class="process-math">\(h\)</span> that is non-zero near <span class="process-math">\(s_0\text{.}\)</span> Computing the logarithmic derivative gets us</div>
+<div class="para">Now let's analyze the zeros. First, because <span class="process-math">\(\zeta(s) = \cc{\zeta(\cc s)}\text{,}\)</span> we see that if <span class="process-math">\(s\)</span> is zero of <span class="process-math">\(\zeta\)</span> then so is <span class="process-math">\(\cc{s}\text{.}\)</span> Now let <span class="process-math">\(a\in \R\text{.}\)</span> If <span class="process-math">\(s_0 = 1 + ia\)</span> is a zero of <span class="process-math">\(\zeta\)</span> of order <span class="process-math">\(\mu \geq 0\text{,}\)</span> then <span class="process-math">\(\zeta = (s - s_0)^\mu h(s)\)</span> for some holomorphic function <span class="process-math">\(h\)</span> that is non-zero near <span class="process-math">\(s_0\text{.}\)</span> Computing the logarithmic derivative gets us</div>
 <div class="displaymath process-math">
 \begin{equation*}
 -\frac{\zeta\dd}{\zeta} = -\frac{\mu}{s - s_0} + H(s)
@@ -719,7 +719,7 @@ x, \frac{x}{2}, \frac{x}{4}, \ldots, \frac{x}{2^r} \geq x_0 \geq \frac{x}{2^{r+1
 \end{equation*}
 </div>
 </div></article><article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><div class="para logical" id="p-234">
-<div class="para">We’ll use Stieltjes integrals and their properties. Assume that <span class="process-math">\(\RE s &gt; 1\text{.}\)</span> First, note that <span class="process-math">\(\vtheta\)</span> is a step function increasing with a step at each new prime number <span class="process-math">\(p\text{.}\)</span> Then we can take the view that</div>
+<div class="para">We'll use Stieltjes integrals and their properties. Assume that <span class="process-math">\(\RE s &gt; 1\text{.}\)</span> First, note that <span class="process-math">\(\vtheta\)</span> is a step function increasing with a step at each new prime number <span class="process-math">\(p\text{.}\)</span> Then we can take the view that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \Phi(s) = \sum_{p} \frac{\log p}{p^s} \, ds = \int_1^\infty \frac{d\vtheta(s)}{x^s}.
@@ -738,7 +738,7 @@ x, \frac{x}{2}, \frac{x}{4}, \ldots, \frac{x}{2^r} \geq x_0 \geq \frac{x}{2^{r+1
 \end{equation}
 </div>
 </div> <div class="para logical" id="p-235">
-<div class="para">We’re setting up to invoke a sort of dominated integral theorem from Newman’s original paper, so we now introduce functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{.}\)</span> Define the functions</div>
+<div class="para">We're setting up to invoke a sort of dominated integral theorem from Newman's original paper, so we now introduce functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\text{.}\)</span> Define the functions</div>
 <div class="displaymath process-math" id="md-15">
 \begin{align*}
 f(t) \amp= \vtheta(e^t)e^{-t} - 1\\
@@ -773,7 +773,7 @@ g(s) \amp= \int_0^\infty e^{-st}(f(t) + 1)\, dt - \int_0^\infty e^{-st}\, dt\\
 \end{align*}
 </div>
 </div> <div class="para logical" id="p-237">
-<div class="para">All of the pieces are set up. We now need Newman’s Analytic Theorem (which we defer the proof of until later). <article class="lemma theorem-like" id="lemma-2"><h4 class="heading">
+<div class="para">All of the pieces are set up. We now need Newman's Analytic Theorem (which we defer the proof of until later). <article class="lemma theorem-like" id="lemma-2"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Analytic Theorem.</span>
 </h4>
 <div class="para logical" id="p-238">
@@ -811,7 +811,7 @@ g(s) = \int_0^\infty e^{-st}f(t)\, dt \text{ with } \RE s &gt; 0
 \end{equation*}
 </div>
 </div></article><article class="hiddenproof" id="proof-19"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof"><div class="para logical" id="p-240">
-<div class="para">We’ll proceed by cases on the assumption that <span class="process-math">\(\vtheta(x) \nsim x\text{.}\)</span> First, assume that there exists <span class="process-math">\(\la &gt; 1\)</span> so that <span class="process-math">\(\vtheta(x) &gt; \la x\)</span> for sufficiently large <span class="process-math">\(x\text{.}\)</span> Given such an <span class="process-math">\(x\text{,}\)</span> as <span class="process-math">\(\vtheta\)</span> is an increasing function,</div>
+<div class="para">We'll proceed by cases on the assumption that <span class="process-math">\(\vtheta(x) \nsim x\text{.}\)</span> First, assume that there exists <span class="process-math">\(\la &gt; 1\)</span> so that <span class="process-math">\(\vtheta(x) &gt; \la x\)</span> for sufficiently large <span class="process-math">\(x\text{.}\)</span> Given such an <span class="process-math">\(x\text{,}\)</span> as <span class="process-math">\(\vtheta\)</span> is an increasing function,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_x^{\la x} \frac{\vtheta(t) - t}{t^2} \, dt \geq \int_x^{\la x} \frac{\la x - t}{t^2}\, dt = \int_1^\la \frac{\la - s}{s^2} \, ds &gt; 0,
@@ -835,7 +835,7 @@ g(s) = \int_0^\infty e^{-st}f(t)\, dt \text{ with } \RE s &gt; 0
 <div class="para">and so</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\int_{\la x}^{x} \frac{\vtheta(t) - t}{t^2} \, dt \geq \int_{\la x}^{ x} \frac{\la x - t}{t^2}\, dt = \int_\la^1 \frac{\la - s}{s^2} \, ds \lt 0,
+\int_{\la x}^{x} \frac{\vtheta(t) - t}{t^2} \, dt \leq \int_{\la x}^{ x} \frac{\la x - t}{t^2}\, dt = \int_\la^1 \frac{\la - s}{s^2} \, ds \lt 0,
 \end{equation*}
 </div>
 <div class="para">which leads to the same contradiction. Thus,</div>
@@ -892,7 +892,7 @@ g(s) = \int_0^\infty e^{-st}f(t)\, dt \text{ with } \RE s &gt; 0
 </div></article></div></section><section class="subsection" id="subsection-15"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">The analytic theorem</span>
 </h3>
-<div class="para" id="p-244">As is typical in mathematics, the technical lemma that drove our proof above, Newman’s so-called Analytic Theorem, is the key to the entire enterprise. Indeed, according to J. Korevaar’s <a class="external" href="" target="_blank">On Newman’s quick way to the prime number theorem</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a>, the simplicity of Newman’s approach boils down to his proof of that theorem. Between the 1930s and the 1980s, the standard proof of the prime number theorem went by way of Fourier analysis, and a method due to Weiner called <a class="external" href="" target="_blank">Tauberian integrals</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 2 </sup></a>. In fact, the Analytic Theorem appears in a paper by Ingham from the 1930s with a different proof and more general statement. We restate Newman’s result here.</div>
+<div class="para" id="p-244">As is typical in mathematics, the technical lemma that drove our proof above, Newman's so-called Analytic Theorem, is the key to the entire enterprise. Indeed, according to J. Korevaar's <a class="external" href="" target="_blank">On Newman's quick way to the prime number theorem</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a>, the simplicity of Newman's approach boils down to his proof of that theorem. Between the 1930s and the 1980s, the standard proof of the prime number theorem went by way of Fourier analysis, and a method due to Weiner called <a class="external" href="" target="_blank">Tauberian integrals</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 2 </sup></a>. In fact, the Analytic Theorem appears in a paper by Ingham from the 1930s with a different proof and more general statement. We restate Newman's result here.</div>
 <article class="theorem theorem-like" id="theorem-36"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Analytic Theorem.</span>
 </h4>
@@ -935,7 +935,7 @@ g_0(s) - \frac{c}{s-1}
 \lim_{x \to \infty} \frac{f(x)}{x} = c.
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-248">Korevaar notes that Newman’s Analytic Theorem has as a consequence the following “poor-man’s Ikehara-Weiner Theorem”.</div>
+</div></article><div class="para" id="p-248">Korevaar notes that Newman's Analytic Theorem has as a consequence the following “poor-man's Ikehara-Weiner Theorem”.</div>
 <article class="theorem theorem-like" id="theorem-38"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Ikehara-Weiner Lite.</span>
 </h4>
@@ -959,9 +959,9 @@ g(s) - \frac{c}{s-1}
 \lim_{x \to \infty} \frac{f(x)}{x} = c.
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-250">Notice that the content of the above theorem is essentially Steps IV-V of Newman’s argument. The ideas that we’re tossing around here are really ideas in analytic number theory, where complex analysis is used to analyze objects like <a class="external" href="" target="_blank">Dirichlet series</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 4 </sup></a> via the theory of generating functions. Whereas the Ikehara-Weiner theorem is quite difficult, the proof of the Analytic Theorem requires little more than Cauchy’s theorem and careful choice of contour.</div>
+</div></article><div class="para" id="p-250">Notice that the content of the above theorem is essentially Steps IV-V of Newman's argument. The ideas that we're tossing around here are really ideas in analytic number theory, where complex analysis is used to analyze objects like <a class="external" href="" target="_blank">Dirichlet series</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 4 </sup></a> via the theory of generating functions. Whereas the Ikehara-Weiner theorem is quite difficult, the proof of the Analytic Theorem requires little more than Cauchy's theorem and careful choice of contour.</div>
 <article class="hiddenproof" id="proof-21"><a href="" data-knowl="" class="id-ref proof-knowl original has-image" data-refid="hk-proof-21"><h4 class="heading"><span class="title">Proof of the Analytic Theorem.</span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-21"><article class="hiddenproof"> <div class="para logical" id="p-251">
-<div class="para">I’m going to follow Korevaar’s exposition here, which is quite nice. <figure class="figure figure-like" id="fig-tikz"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="generated/latex-image/img-contour.svg" role="img" class="contained"></div>
+<div class="para">I'm going to follow Korevaar's exposition here, which is quite nice. <figure class="figure figure-like" id="fig-tikz"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="generated/latex-image/img-contour.svg" role="img" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.13<span class="period">.</span></span><span class="space"> </span>Illustration of main contour</figcaption></figure> By assumption, the Laplace transform of <span class="process-math">\(f\)</span> given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -974,7 +974,7 @@ g(s) = \int_0^\infty e^{-st} f(t)\, dt
 g_T(z) = \int_0^T e^{-st} f(t)\, dt,
 \end{equation*}
 </div>
-<div class="para">which is holomorphic in <span class="process-math">\(\C\)</span> (say by Morera’s theorem). We will show that</div>
+<div class="para">which is holomorphic in <span class="process-math">\(\C\)</span> (say by Morera's theorem). We will show that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \lim_{T \to \infty} g_T(0) = \int_0^\infty f(t)\, dt = g(0).
@@ -995,8 +995,10 @@ g(0) - g_T(0) = \frac{1}{2\pi i}\int_C \frac{g(z) - g_T(z)}{z} \, dz.
 <a class="previous-button button" href="section-14.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon">&gt;</span></span>
 </div></main>
 </div>
-<div id="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>

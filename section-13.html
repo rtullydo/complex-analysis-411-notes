@@ -44,7 +44,7 @@ window.MathJax = {
     )}
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -302,7 +302,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="section-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Conformal maps</span></a></div></li>
 <li><div class="toc-item"><a href="section-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Simply connected sets, boundaries, and the Riemann mapping theorem</span></a></div></li>
 <li><div class="toc-item"><a href="section-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">(optional) A proof of the Riemann Mapping Theorem</span></a></div></li>
-<li><div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Interlude: Liouville’s Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="section-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Interlude: Liouville's Theorem</span></a></div></li>
 <li>
 <div class="toc-item"><a href="section-5.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercise set 1</span></a></div>
 <ul class="structural"><li><div class="toc-item"><a href="section-5.html#exercises-1" class="internal"><span class="codenumber">1.5</span> <span class="title">Exercises</span></a></div></li></ul>
@@ -391,7 +391,7 @@ window.MathJax = {
 <div class="para">for any simple closed curve <span class="process-math">\(\gamma\)</span> contained in <span class="process-math">\(D\text{.}\)</span>
 </div>
 </div></article><article class="theorem theorem-like" id="thm-morera"><h4 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Morera’s theorem.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Morera's theorem.</span>
 </h4>
 <div class="para logical" id="p-139">
 <div class="para">Let <span class="process-math">\(f\)</span> be a continuous function defined on an open domain <span class="process-math">\(D\text{.}\)</span> If</div>
@@ -445,7 +445,7 @@ F(z+h) - F(z) = \int_{z_0}^{z+h} f(\xi) \, d\xi - \int_{z_0}^z f(\xi) \, d\xi = 
 </div> <div class="para" id="p-145">We conclude that <span class="process-math">\(F\)</span> is differentiable at <span class="process-math">\(z\)</span> and thus analytic at <span class="process-math">\(z\)</span> with derivative <span class="process-math">\(f\text{,}\)</span> which implies that <span class="process-math">\(f\)</span> is analytic. Since this holds for all <span class="process-math">\(z\in D\text{,}\)</span> we conclude that <span class="process-math">\(f\)</span> is analytic on <span class="process-math">\(D\text{.}\)</span>
 </div></article></div>
 <div class="para logical" id="p-146">
-<div class="para">Morera’s theorem is often used with weaker (equivalent) hypotheses - that is, we need only check that</div>
+<div class="para">Morera's theorem is often used with weaker (equivalent) hypotheses - that is, we need only check that</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_{\partial T} f\, dz = 0
@@ -454,7 +454,7 @@ F(z+h) - F(z) = \int_{z_0}^{z+h} f(\xi) \, d\xi - \int_{z_0}^z f(\xi) \, d\xi = 
 <div class="para">around the boundary of any closed triangle <span class="process-math">\(T\)</span> contained in <span class="process-math">\(D\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="p-147">Morera’s theorem is the standard method used to prove that a constructed function is holomorphic. The theorem is used so often and so widely that it may sometimes be invoked without reference (though not in our case).</div>
+<div class="para" id="p-147">Morera's theorem is the standard method used to prove that a constructed function is holomorphic. The theorem is used so often and so widely that it may sometimes be invoked without reference (though not in our case).</div>
 <div class="para" id="p-148">One nice immediate result that we get from Morera is parallel to the (fundamental) result from real analysis that uniform limits of continuous functions are continuous.</div>
 <article class="theorem theorem-like" id="thm-unif-holo"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
@@ -473,10 +473,10 @@ F(z+h) - F(z) = \int_{z_0}^{z+h} f(\xi) \, d\xi - \int_{z_0}^z f(\xi) \, d\xi = 
 \oint_C f \, dz = \oint_C \lim_n f_n \, dz = \lim_n \oint_C f_n \, dz = 0.
 \end{equation*}
 </div>
-<div class="para">for every simple closed curve <span class="process-math">\(C\)</span> in the disk, and so by Morera’s theorem, <span class="process-math">\(f\)</span> must be analytic on the disk.</div>
+<div class="para">for every simple closed curve <span class="process-math">\(C\)</span> in the disk, and so by Morera's theorem, <span class="process-math">\(f\)</span> must be analytic on the disk.</div>
 </div> <div class="para" id="p-151">This result extends to domains, as we can recreate this argument in a neighborhood of any <span class="process-math">\(z_0\)</span> in <span class="process-math">\(D\text{.}\)</span>
 </div></article></div>
-<div class="para" id="p-152">Since we’ll be considering functions defined as series, it will be useful to combine the results above with a test for uniform convergence called the Weierstrass M-test.</div>
+<div class="para" id="p-152">Since we'll be considering functions defined as series, it will be useful to combine the results above with a test for uniform convergence called the Weierstrass M-test.</div>
 <article class="theorem theorem-like" id="thm-M-test"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">M-test.</span>
 </h4>
@@ -493,8 +493,8 @@ F(z+h) - F(z) = \int_{z_0}^{z+h} f(\xi) \, d\xi - \int_{z_0}^z f(\xi) \, d\xi = 
 </div></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">3.1.2</span> <span class="title">Measure theory</span>
 </h3>
-<div class="para" id="p-154">To be rigorous about convergence, we’re going to need some extremely useful tools from analysis. The discussion here will mostly bracket out proofs, which are typically done in a graduate course in real analysis.</div>
-<div class="para" id="p-155">A <dfn class="terminology">measure</dfn> is a function that assigns a numerical value to a set. The idea comes from an effort to generalize the notion of the length of an interval. A brief overview of the setup follows. We have a set <span class="process-math">\(X\)</span> (for example, <span class="process-math">\(X=\R\)</span>), and we want to define a function <span class="process-math">\(\mu: A \subset X \to [0,\infty]\)</span> (note the inclusion of <span class="process-math">\(\infty\)</span>). It turns out that we can’t measure every subset of <span class="process-math">\(X\)</span> (that darn axiom of choice). So we equip <span class="process-math">\(X\)</span> with a sort of topology called a <span class="process-math">\(\sigma\)</span>-algebra consisting of so called measurable sets.</div>
+<div class="para" id="p-154">To be rigorous about convergence, we're going to need some extremely useful tools from analysis. The discussion here will mostly bracket out proofs, which are typically done in a graduate course in real analysis.</div>
+<div class="para" id="p-155">A <dfn class="terminology">measure</dfn> is a function that assigns a numerical value to a set. The idea comes from an effort to generalize the notion of the length of an interval. A brief overview of the setup follows. We have a set <span class="process-math">\(X\)</span> (for example, <span class="process-math">\(X=\R\)</span>), and we want to define a function <span class="process-math">\(\mu: A \subset X \to [0,\infty]\)</span> (note the inclusion of <span class="process-math">\(\infty\)</span>). It turns out that we can't measure every subset of <span class="process-math">\(X\)</span> (that darn axiom of choice). So we equip <span class="process-math">\(X\)</span> with a sort of topology called a <span class="process-math">\(\sigma\)</span>-algebra consisting of so called measurable sets.</div>
 <article class="definition definition-like" id="definition-4"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
 </h4>
@@ -515,7 +515,7 @@ F(z+h) - F(z) = \int_{z_0}^{z+h} f(\xi) \, d\xi - \int_{z_0}^z f(\xi) \, d\xi = 
 </div></li>
 </ul>
 </div></article><div class="para" id="p-158">One important example of a measure is <dfn class="terminology">Lebesgue measure</dfn>, which directly generalizes the length of intervals. Lebesgue measure is usually defined on the Borel sets <span class="process-math">\(\mathcal B\text{,}\)</span> which is the <span class="process-math">\(\sigma\)</span>-algebra constructed by starting with the open intervals in <span class="process-math">\(\R\)</span> and combining them in all ways to ensure that the conditions for a <span class="process-math">\(\sigma\)</span>-algebra are met. Measures can be far stranger than Lebesgue measure. The Dirac measure at <span class="process-math">\(x_0\text{,}\)</span> also called a point mass, is a measure that assigns a value of 1 to any set <span class="process-math">\(E\)</span> containing <span class="process-math">\(x_0\)</span> and <span class="process-math">\(0\)</span> otherwise.</div>
-<div class="para" id="p-159">To work with measures, we’ll also need a family of compatible functions.</div>
+<div class="para" id="p-159">To work with measures, we'll also need a family of compatible functions.</div>
 <article class="definition definition-like" id="definition-6"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
 </h4>
@@ -535,7 +535,7 @@ f\inv(B) \in \Sigma
 \sum_{i=1}^m \mu(A_i) \inf_{A_i} f.
 \end{equation*}
 </div>
-<div class="para">You can view this as in the spirit of a Riemann sum - we’re cutting <span class="process-math">\(X\)</span> up into pieces (but that need not be intervals) and under-estimating <span class="process-math">\(f\)</span> on those pieces. While this isn’t strictly the area of a rectangle as in the Riemann case (as the <span class="process-math">\(A_i\)</span> can be very non-interval), the idea is similar.</div>
+<div class="para">You can view this as in the spirit of a Riemann sum - we're cutting <span class="process-math">\(X\)</span> up into pieces (but that need not be intervals) and under-estimating <span class="process-math">\(f\)</span> on those pieces. While this isn't strictly the area of a rectangle as in the Riemann case (as the <span class="process-math">\(A_i\)</span> can be very non-interval), the idea is similar.</div>
 </div>
 <article class="definition definition-like" id="definition-7"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
@@ -562,7 +562,7 @@ f\inv(B) \in \Sigma
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-165">All this new machinery isn’t much good if we don’t get beefy new tools to work with. One of the big problems that Lebesgue integration is meant to solve is the failure in Riemann integration of being able to push limits inside integrals. In the Lebesgue setting, we have very powerful theorems describing when this can be done.</div>
+<div class="para" id="p-165">All this new machinery isn't much good if we don't get beefy new tools to work with. One of the big problems that Lebesgue integration is meant to solve is the failure in Riemann integration of being able to push limits inside integrals. In the Lebesgue setting, we have very powerful theorems describing when this can be done.</div>
 <div class="para" id="p-166">A sequence of functions <span class="process-math">\(f_k:X \to [0,\infty]\)</span> is called <dfn class="terminology">increasing</dfn> if for each <span class="process-math">\(x \in X\text{,}\)</span> we have <span class="process-math">\(f_1(x) \leq f_2(x) \leq \ldots\text{.}\)</span>
 </div>
 <article class="theorem theorem-like" id="thm-mct"><h4 class="heading">
@@ -581,7 +581,7 @@ f(x) = \lim_{k \to \infty} f_k(x).
 \lim_{k \to \infty} \int f_k \, d\mu = \int f \, d\mu.
 \end{equation*}
 </div>
-</div></article><div class="para" id="p-168">An even beefier theorem states that we can push limits into integrals when the sequence of functions is dominated by a function with bounded integral. Note: I’m not covering the leap to complex measures here, but one can imagine that a real-valued measure is a sum of two positive measures, and that a complex measure is a sum of real measures in the obvious way.</div>
+</div></article><div class="para" id="p-168">An even beefier theorem states that we can push limits into integrals when the sequence of functions is dominated by a function with bounded integral. Note: I'm not covering the leap to complex measures here, but one can imagine that a real-valued measure is a sum of two positive measures, and that a complex measure is a sum of real measures in the obvious way.</div>
 <article class="theorem theorem-like" id="theorem-19"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Dominated convergence theorem.</span>
 </h4>
@@ -609,8 +609,10 @@ f(x) = \lim_{k \to \infty} f_k(x).
 <a class="previous-button button" href="chapter-3.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-14.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
 </div>
-<div id="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>

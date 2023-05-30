@@ -1730,7 +1730,7 @@
                         </me>
                         and so 
                          <me>
-                            \int_{\la x}^{x} \frac{\vtheta(t) - t}{t^2} \, dt \geq \int_{\la x}^{ x} \frac{\la x - t}{t^2}\, dt = \int_\la^1 \frac{\la - s}{s^2} \, ds \lt 0,
+                            \int_{\la x}^{x} \frac{\vtheta(t) - t}{t^2} \, dt \leq \int_{\la x}^{ x} \frac{\la x - t}{t^2}\, dt = \int_\la^1 \frac{\la - s}{s^2} \, ds \lt 0,
                         </me>
                         which leads to the same contradiction. Thus, 
                         <me>

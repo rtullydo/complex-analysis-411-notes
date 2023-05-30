@@ -11,7 +11,7 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math"><article class="hiddenproof"><div class="para logical">
-<div class="para">We’ll proceed by cases on the assumption that <span class="process-math">\(\vtheta(x) \nsim x\text{.}\)</span> First, assume that there exists <span class="process-math">\(\la &gt; 1\)</span> so that <span class="process-math">\(\vtheta(x) &gt; \la x\)</span> for sufficiently large <span class="process-math">\(x\text{.}\)</span> Given such an <span class="process-math">\(x\text{,}\)</span> as <span class="process-math">\(\vtheta\)</span> is an increasing function,</div>
+<div class="para">We'll proceed by cases on the assumption that <span class="process-math">\(\vtheta(x) \nsim x\text{.}\)</span> First, assume that there exists <span class="process-math">\(\la &gt; 1\)</span> so that <span class="process-math">\(\vtheta(x) &gt; \la x\)</span> for sufficiently large <span class="process-math">\(x\text{.}\)</span> Given such an <span class="process-math">\(x\text{,}\)</span> as <span class="process-math">\(\vtheta\)</span> is an increasing function,</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_x^{\la x} \frac{\vtheta(t) - t}{t^2} \, dt \geq \int_x^{\la x} \frac{\la x - t}{t^2}\, dt = \int_1^\la \frac{\la - s}{s^2} \, ds &gt; 0,
@@ -35,7 +35,7 @@
 <div class="para">and so</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\int_{\la x}^{x} \frac{\vtheta(t) - t}{t^2} \, dt \geq \int_{\la x}^{ x} \frac{\la x - t}{t^2}\, dt = \int_\la^1 \frac{\la - s}{s^2} \, ds \lt 0,
+\int_{\la x}^{x} \frac{\vtheta(t) - t}{t^2} \, dt \leq \int_{\la x}^{ x} \frac{\la x - t}{t^2}\, dt = \int_\la^1 \frac{\la - s}{s^2} \, ds \lt 0,
 \end{equation*}
 </div>
 <div class="para">which leads to the same contradiction. Thus,</div>
